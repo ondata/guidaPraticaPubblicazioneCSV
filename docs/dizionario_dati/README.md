@@ -1,3 +1,10 @@
+---
+hide:
+   - navigation
+title: Dizionari di dati
+---
+
+
 # Dizionari di dati
 
 Il dizionario dei dati è un complemento essenziale per qualsiasi serie di dati, poiché fornisce all'utente dei dati informazioni sufficienti per elaborare e comprendere il suo contenuto senza ambiguità.
