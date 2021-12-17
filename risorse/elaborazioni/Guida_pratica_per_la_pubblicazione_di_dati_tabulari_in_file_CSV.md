@@ -1,14 +1,14 @@
-> ![](./myMediaFolder/media/image1.png)
-> 
-> Per ulteriori informazioni, visita [www.DeepL.com/pro.](https://www.deepl.com/pro?cta=edit-document&pdf=1)
+![](./myMediaFolder/media/image1.png)
+
+Per ulteriori informazioni, visita [www.DeepL.com/pro.](https://www.deepl.com/pro?cta=edit-document&pdf=1)
 
 Guida pratica
 
 per la pubblicazione di dati tabulari in file
 
-> CSV
-> 
-> **Contenuto preparato da Carlos de la Fuente García, esperto di dati aperti.**
+CSV
+
+**Contenuto preparato da Carlos de la Fuente García, esperto di dati aperti.**
 
 *Questo studio è stato sviluppato nell'ambito dell'Iniziativa Aporta, sviluppata dal Ministero degli Affari Economici e della Trasformazione Digitale, attraverso l'Ente Pubblico Commerciale Red.es.*
 
@@ -20,13 +20,13 @@ per la pubblicazione di dati tabulari in file
 
 • *Alicia Martínez Domingo (Esperto di dati aperti).* • *Jorge López Pérez (Scienziato dei dati)* • *Jorge Cimentada Báez (Ricercatore)* • *Comunità Databeers Malaga:*
 
-> • *María Sánchez Gonzalez (Università di Malaga).*
-> 
-> • *David Bueno Vallejo (Consiglio comunale di Malaga)*
-> 
-> • *Nuria PortilloPoblador( UniversitatPolitècnicadeValència)*
-> 
-> • *Roberto Magro Pedroviejo (Consiglio Comunale di Alcobendas)*
+• *María Sánchez Gonzalez (Università di Malaga).*
+
+• *David Bueno Vallejo (Consiglio comunale di Malaga)*
+
+• *Nuria PortilloPoblador( UniversitatPolitècnicadeValència)*
+
+• *Roberto Magro Pedroviejo (Consiglio Comunale di Alcobendas)*
 
 ![](./myMediaFolder/media/image2.jpeg)
 
@@ -34,13 +34,13 @@ per la pubblicazione di dati tabulari in file
 
 ![](./myMediaFolder/media/image6.jpeg)
 
-> 01
-> 
-> 02
-> 
-> 03
-> 
-> 04
+01
+
+02
+
+03
+
+04
 
 [Introduzione04](#page5)
 
@@ -54,7 +54,7 @@ per la pubblicazione di dati tabulari in file
 
 [**P1:**](#page18)
 
-> [......................................................................... lin](#page18)
+[......................................................................... lin](#page18)
 
 <table>
 <tbody>
@@ -180,7 +180,7 @@ per la pubblicazione di dati tabulari in file
 
 ![](./myMediaFolder/media/image10.jpeg)
 
-> 3
+3
 
 0
 
@@ -196,53 +196,53 @@ Allegat o I
 
 ![](./myMediaFolder/media/image12.jpeg)
 
-> [Linee guida per l'esportazione/importazione di dati tabulari da](#page59)
-> 
-> [strumenti a foglio elettronico a CSV51 .................................................](#page59)
+[Linee guida per l'esportazione/importazione di dati tabulari da](#page59)
+
+[strumenti a foglio elettronico a CSV51 .................................................](#page59)
 
 [Altre considerazioni sul file ................................................................... CSV53](#page61)
 
-> [Toolbox per i file .................................................................................... CSV54](#page63)
-> 
-> [Dove trovare buoni esempi di dati in formato .................................... CSV59](#page68)
-> 
-> [Link utili66](#page75)
-> 
-> [Tassonomie e liste di .................................. codici comunemente usati67](#page76)
+[Toolbox per i file .................................................................................... CSV54](#page63)
+
+[Dove trovare buoni esempi di dati in formato .................................... CSV59](#page68)
+
+[Link utili66](#page75)
+
+[Tassonomie e liste di .................................. codici comunemente usati67](#page76)
 
 ![](./myMediaFolder/media/image13.jpeg)
 
-> 4
-> 
-> ![](./myMediaFolder/media/image16.png) **Introduzione**
-> 
-> Oggi abbiamo sempre più fonti di dati a portata di mano. Paradossalmente, però, anche se i dati sono più accessibili che mai, le possibilità di riutilizzarli sono piuttosto limitate. I potenziali utenti di questi dati spesso affrontano molteplici barriere all'accesso e all'uso: bassa qualità dei dati, metadati poco descrittivi e standardizzati, licenze imprecise o formati inappropriati.
-> 
-> Queste difficoltà nel riutilizzare i dati sono menzionate ancora e ancora in [diversi studi di riferimento come l'<span class="underline">Open Data Barometer</span>o il <span class="underline">Global OpenData</span>](https://blog.okfn.org/files/2017/06/FinalreportTheStateofOpenGovernmentDatain2017.pdf) <span class="underline"> </span> [<span class="underline">Index</span>, e sono in gran parte dovute alla convinzione iniziale dei](https://blog.okfn.org/files/2017/06/FinalreportTheStateofOpenGovernmentDatain2017.pdf) <span class="underline">produttori</span> di <span class="underline"> </span> dati che l'importante era pubblicare più informazioni possibili il più presto possibile, indipendentemente dalla loro qualità.
-> 
-> Di conseguenza, i cataloghi di dati pubblicano decine di migliaia di set di dati con carenze di qualità che possono essere identificate solo dopo aver iniziato il processo di riutilizzo, generando un carico di pulizia e preparazione che in molti casi è insopportabile per l'utente dei dati aperti. Questo fatto produce frustrazione e perdita di interesse nel settore del riutilizzo, colpendo la credibilità delle istituzioni editoriali e abbassando notevolmente le aspettative di ritorno e generazione di valore dal riutilizzo dei dati aperti.
-> 
-> Per tutte queste ragioni, e tenendo conto dell'attuale stato di maturità delle iniziative sui dati aperti, è il momento di rafforzare il miglioramento della qualità dei dati che vengono pubblicati. Questa guida è la prima pubblicazione di un compendio di linee guida compilato con lo scopo di guidare gli editori nell'uso appropriato di formati e mezzi di accesso ai dati aperti. In questa occasione, il focus è sul formato CSV, che è il formato più utilizzato nella pubblicazione di dati aperti.
+4
+
+![](./myMediaFolder/media/image16.png) **Introduzione**
+
+Oggi abbiamo sempre più fonti di dati a portata di mano. Paradossalmente, però, anche se i dati sono più accessibili che mai, le possibilità di riutilizzarli sono piuttosto limitate. I potenziali utenti di questi dati spesso affrontano molteplici barriere all'accesso e all'uso: bassa qualità dei dati, metadati poco descrittivi e standardizzati, licenze imprecise o formati inappropriati.
+
+Queste difficoltà nel riutilizzare i dati sono menzionate ancora e ancora in [diversi studi di riferimento come l'<span class="underline">Open Data Barometer</span>o il <span class="underline">Global OpenData</span>](https://blog.okfn.org/files/2017/06/FinalreportTheStateofOpenGovernmentDatain2017.pdf) <span class="underline"> </span> [<span class="underline">Index</span>, e sono in gran parte dovute alla convinzione iniziale dei](https://blog.okfn.org/files/2017/06/FinalreportTheStateofOpenGovernmentDatain2017.pdf) <span class="underline">produttori</span> di <span class="underline"> </span> dati che l'importante era pubblicare più informazioni possibili il più presto possibile, indipendentemente dalla loro qualità.
+
+Di conseguenza, i cataloghi di dati pubblicano decine di migliaia di set di dati con carenze di qualità che possono essere identificate solo dopo aver iniziato il processo di riutilizzo, generando un carico di pulizia e preparazione che in molti casi è insopportabile per l'utente dei dati aperti. Questo fatto produce frustrazione e perdita di interesse nel settore del riutilizzo, colpendo la credibilità delle istituzioni editoriali e abbassando notevolmente le aspettative di ritorno e generazione di valore dal riutilizzo dei dati aperti.
+
+Per tutte queste ragioni, e tenendo conto dell'attuale stato di maturità delle iniziative sui dati aperti, è il momento di rafforzare il miglioramento della qualità dei dati che vengono pubblicati. Questa guida è la prima pubblicazione di un compendio di linee guida compilato con lo scopo di guidare gli editori nell'uso appropriato di formati e mezzi di accesso ai dati aperti. In questa occasione, il focus è sul formato CSV, che è il formato più utilizzato nella pubblicazione di dati aperti.
 
 4
 
 ![](./myMediaFolder/media/image17.png)
 
-> ![](./myMediaFolder/media/image18.jpeg) **Perché CSV?**
+![](./myMediaFolder/media/image18.jpeg) **Perché CSV?**
 
-  - > La forma tabellare dei dati è la forma più comune di trasferimento e scambio di informazioni e viene prodotta in diversi modi: file di dati con colonne delimitate o campi di lunghezza fissa, fogli di calcolo, tabelle HTML o download di tabelle di dati SQL, tra gli altri.
+  - La forma tabellare dei dati è la forma più comune di trasferimento e scambio di informazioni e viene prodotta in diversi modi: file di dati con colonne delimitate o campi di lunghezza fissa, fogli di calcolo, tabelle HTML o download di tabelle di dati SQL, tra gli altri.
 
-  - > Questo è il formato più popolare e ampiamente utilizzato nel contesto del riutilizzo degli Open Data. La maggior parte delle risorse disponibili nei cataloghi Open Data sono in formato CSV.
+  - Questo è il formato più popolare e ampiamente utilizzato nel contesto del riutilizzo degli Open Data. La maggior parte delle risorse disponibili nei cataloghi Open Data sono in formato CSV.
 
-  - > Il portale europeo dei dati ha più di 120.000 set di dati [in formato CSV, il](https://www.europeandataportal.eu/data/datasets?locale=es) [formato più abbondante in questo<span class="underline">catalogoOpenData</span>.](https://www.europeandataportal.eu/data/datasets?locale=es)
+  - Il portale europeo dei dati ha più di 120.000 set di dati [in formato CSV, il](https://www.europeandataportal.eu/data/datasets?locale=es) [formato più abbondante in questo<span class="underline">catalogoOpenData</span>.](https://www.europeandataportal.eu/data/datasets?locale=es)
 
-  - > Da parte sua, il catalogo nazionale [<span class="underline">datos.gob.es</span>](https://datos.gob.es/es/catalogo) ha quasi 14 mila set di dati in formato CSV, che è anche il formato più comune.
+  - Da parte sua, il catalogo nazionale [<span class="underline">datos.gob.es</span>](https://datos.gob.es/es/catalogo) ha quasi 14 mila set di dati in formato CSV, che è anche il formato più comune.
 
-  - > È conciso, facile da interpretare sia per gli uomini che per le macchine e adatto alla struttura naturale della maggior parte dei dati. È caratterizzato da [<span class="underline">dati disposti in forma di tabella,</span>](https://datos.gob.es/es/documentacion/como-generar-valor-partir-de-los-datos-formatos-tecnicas-y-herramientas-para-analizar%20que%20cataloga%20el%20CSV%20como%20un%20formato%20que%20para%20personas%20y%20para%20m%C3%A1quinas%20\(hibrido\)) dove i campi sono separati da un carattere separatore e i record da interruzioni di riga.
+  - È conciso, facile da interpretare sia per gli uomini che per le macchine e adatto alla struttura naturale della maggior parte dei dati. È caratterizzato da [<span class="underline">dati disposti in forma di tabella,</span>](https://datos.gob.es/es/documentacion/como-generar-valor-partir-de-los-datos-formatos-tecnicas-y-herramientas-para-analizar%20que%20cataloga%20el%20CSV%20como%20un%20formato%20que%20para%20personas%20y%20para%20m%C3%A1quinas%20\(hibrido\)) dove i campi sono separati da un carattere separatore e i record da interruzioni di riga.
 
-  - > Nessun software specifico è richiesto per aprire i file CSV, basta usare qualsiasi editor di testo disponibile su tutti i sistemi operativi.
+  - Nessun software specifico è richiesto per aprire i file CSV, basta usare qualsiasi editor di testo disponibile su tutti i sistemi operativi.
 
-> **Ma...**
+**Ma...**
 
   - > La semplicità di CSV ha il compromesso che il formato non include alcun meccanismo per indicare che tipo di dati sono in una colonna o se i valori in una colonna devono essere espressi in modo obbligatorio. È quindi incline a errori come i valori mancanti o la mescolanza di diversi tipi di dati all'interno di una colonna.
 
@@ -252,25 +252,25 @@ Allegat o I
 
 5
 
-> ![](./myMediaFolder/media/image23.png) **Formato di Dati tabellari**
-> 
-> 2****Le serie di **dati tabulari** ben organizzate sono conformi a uno schema predefinito, sono facili da manipolare, modellare e visualizzare, e hanno una struttura specifica basata sulle seguenti regole:
+![](./myMediaFolder/media/image23.png) **Formato di Dati tabellari**
+
+2****Le serie di **dati tabulari** ben organizzate sono conformi a uno schema predefinito, sono facili da manipolare, modellare e visualizzare, e hanno una struttura specifica basata sulle seguenti regole:
 
 ![](./myMediaFolder/media/image24.jpeg)
 
-> • Ogni variabile è una **colonna**.
+• Ogni variabile è una **colonna**.
 
 ![](./myMediaFolder/media/image25.jpeg)
 
-> • Ogni osservazione o registrazione è una **riga**.
+• Ogni osservazione o registrazione è una **riga**.
 
 ![](./myMediaFolder/media/image26.jpeg)
 
-> • Ogni intersezione di riga e colonna è una **cella**.
+• Ogni intersezione di riga e colonna è una **cella**.
 
 ![](./myMediaFolder/media/image27.jpeg)
 
-> • Ogni serie di osservazioni è una **tabella**.
+• Ogni serie di osservazioni è una **tabella**.
 
   - > **Esempio:** caratteristiche delle auto d'epoca <sup>1</sup>
 
@@ -406,7 +406,7 @@ Allegat o I
 
 2
 
-> Anche se non esiste uno standard ufficiale per il formato "valori separati da virgola" (CSV), l'*Internet Engineering Task Force* (IETF) pubblica il documento di riferimento [<span class="underline">RFC4180.</span>](https://tools.ietf.org/html/rfc4180)
+Anche se non esiste uno standard ufficiale per il formato "valori separati da virgola" (CSV), l'*Internet Engineering Task Force* (IETF) pubblica il documento di riferimento [<span class="underline">RFC4180.</span>](https://tools.ietf.org/html/rfc4180)
 
 ![](./myMediaFolder/media/image29.jpeg)
 
@@ -440,11 +440,11 @@ Allegat o I
 
 ![](./myMediaFolder/media/image31.png)
 
-> 7
+7
 
 ![](./myMediaFolder/media/image32.png)
 
-> ![](./myMediaFolder/media/image33.jpeg) **Esempio di file CSV**
+![](./myMediaFolder/media/image33.jpeg) **Esempio di file CSV**
 
 <table>
 <tbody>
@@ -694,15 +694,15 @@ Allegat o I
 
 ![](./myMediaFolder/media/image34.png)
 
-> marca, anno, cilindri, consumo di carburante, potenza, accelerazione "chevrolet chevelle malibu",70,8,18,130,12
-> 
-> "buick skylark 320",70,8,15,165,11.5
-> 
-> "plymouth satellite",70,8,18,150,11
-> 
-> "amc rebel sst",70,8,16,150,12
-> 
-> "ford Torino",70,8,17,140,10.5
+marca, anno, cilindri, consumo di carburante, potenza, accelerazione "chevrolet chevelle malibu",70,8,18,130,12
+
+"buick skylark 320",70,8,15,165,11.5
+
+"plymouth satellite",70,8,18,150,11
+
+"amc rebel sst",70,8,16,150,12
+
+"ford Torino",70,8,17,140,10.5
 
 0
 
@@ -724,7 +724,7 @@ Allegat o I
 
   - > Quello che segue è un esempio di un dizionario di dati espresso come un file di testo che può essere fornito attraverso un server web. Per esempio,
 
-> tramite l'URL: [<span class="underline">http://example.org/automoviles.csv-metadata.txt.</span>](http://example.org/automoviles.csv-metadata.txt)
+tramite l'URL: [<span class="underline">http://example.org/automoviles.csv-metadata.txt.</span>](http://example.org/automoviles.csv-metadata.txt)
 
 ![](./myMediaFolder/media/image36.png)
 
@@ -744,55 +744,55 @@ tabella con dati sulle auto d'epoca Editore: Autore di esempi
 
 Colonna 1:
 
-> Titolo: marchio
-> 
-> Descrizione: Questo campo contiene informazioni sulla marca e il modello di ogni veicolo.
-> 
-> Tipo di dati: stringa
+Titolo: marchio
+
+Descrizione: Questo campo contiene informazioni sulla marca e il modello di ogni veicolo.
+
+Tipo di dati: stringa
 
 Colonna 2:
 
-> Titolo: anno
-> 
-> Descrizione: Questo campo contiene informazioni sull'anno di
-> 
-> fabbricazione di ogni veicolo.
-> 
-> Tipo di dati: data
+Titolo: anno
+
+Descrizione: Questo campo contiene informazioni sull'anno di
+
+fabbricazione di ogni veicolo.
+
+Tipo di dati: data
 
 Colonna 3:
 
-> Titolo: cilindri
-> 
-> Descrizione: Questo campo contiene informazioni sul numero di cilindri di ogni veicolo.
-> 
-> Tipo di dati: intero
+Titolo: cilindri
+
+Descrizione: Questo campo contiene informazioni sul numero di cilindri di ogni veicolo.
+
+Tipo di dati: intero
 
 Colonna 4:
 
-> Titolo: consumo
-> 
-> Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in litri / 100 km.
-> 
-> Tipo di dati: decimale
+Titolo: consumo
+
+Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in litri / 100 km.
+
+Tipo di dati: decimale
 
 Colonna 5:
 
-> Titolo: potenza
-> 
-> Descrizione: Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV.
-> 
-> Tipo di dati: decimale
+Titolo: potenza
+
+Descrizione: Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV.
+
+Tipo di dati: decimale
 
 Colonna 6:
 
-> Titolo: accelerazione
-> 
-> Descrizione: Questo campo contiene dati sull'accelerazione di ogni veicolo, misurata in m/sec2.
-> 
-> Tipo di dati: decimale
-> 
-> 10
+Titolo: accelerazione
+
+Descrizione: Questo campo contiene dati sull'accelerazione di ogni veicolo, misurata in m/sec2.
+
+Tipo di dati: decimale
+
+10
 
 0
 
@@ -809,25 +809,25 @@ Colonna 6:
   - [<span class="underline">Il</span>](https://www.w3.org/TR/tabular-data-model/) W3C raccomanda un [<span class="underline">modello per i dati tabulari</span>](https://www.w3.org/TR/tabular-data-model/) e propone un <span class="underline">vocabolario per la descrizione di queste proprietà.</span>
 
   - Il vocabolario W3C è molto esaustivo, tuttavia, ci sono un certo numero di proprietà che è consigliabile prendere in considerazione per qualsiasi file tabellare:
-    
+
       - > Per i tavoli:
-        
+
           - > Titolo della tabella **\["dc:title"\].**
-        
+
           - > Descrizione **\["dc:description"\]**
-        
+
           - > Editore **\["dc:creator"\].**
-        
+
           - > Posizione del file da descrivere **\["url"\].**
-    
+
       - > Per le colonne:
-        
+
           - > Colonna name**\["name"\]**
-        
+
           - > Titolo della colonna **\["titoli"\].**
-        
+
           - > Descrizione**\["dc:description"\]**
-        
+
           - > Tipi di dati: **\["datatype"\].**
 
   - Inoltre, è possibile annotare attraverso l'uso di diverse proprietà, tra gli altri metadati, quanto segue: ordine delle colonne, valori attesi, valori richiesti, valori unici, chiavi esterne, elenchi di valori, lingue di stringa, formati, restrizioni, validazioni, istruzioni per la trasformazione del CSV in un altro formato.
@@ -848,79 +848,79 @@ Colonna 6:
 
 **usando il formato json-ld**
 
-> {
-> 
-> "@context": "http://www.w3.org/ns/csvw",
-> 
-> "@type": "Table",
-> 
-> "url": ["http://example.org/automoviles.csv",](http://example.org/automoviles.csv)
-> 
-> "dc:description": "Tabella con dati sulle auto classiche"
-> 
-> "dc:creator": "Autore dell'esempio".
-> 
-> "tableSchema": {
-> 
-> "colonne": \[{
-> 
-> "nome": "identificatore",
-> 
-> "titoli": "marchio",
-> 
-> "dc:description": "Questo campo contiene informazioni sulla marca e il modello di ogni veicolo".
-> 
-> "datatype": "string" },
-> 
-> {"nome": "annio",
-> 
-> "titoli": "anno",
-> 
-> "dc:description": "Questo campo contiene informazioni su l'anno di fabbricazione di ogni veicolo".
-> 
-> "datatype": {
-> 
-> "base": "data". ,
-> 
-> "formato": "aaaa"}},
-> 
-> {"nome": "cilindri",
-> 
-> "titoli": cilindri",
-> 
-> "dc:description": "Questo campo contiene informazioni sul numero di cilindri di ogni veicolo".
-> 
-> "datatype": "integer" },
-> 
-> {"nome": "consumo",
-> 
-> "titoli": "consumo",
-> 
-> "dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in litri / 100 km".
-> 
-> "datatype": "decimal" },
-> 
-> {"nome": "potenza",
-> 
-> "titoli": "potenza",
-> 
-> "dc:description": "Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV". "datatype": "decimal" },
-> 
-> {"nome":
-> 
-> "accelerazione",
-> 
-> "titoli":
-> 
-> "accelerazione",
-> 
-> "dc:description": "Questo campo contiene dati sull'accelerazione di ogni veicolo misurata in m/sec2" "datatype": "decimal" "dc:description": "Questo campo contiene dati sull'accelerazione di ogni veicolo misurata in m/sec2" "datatype": "decimal".
-> 
-> }}\]
-> 
-> }
-> 
-> }
+{
+
+"@context": "http://www.w3.org/ns/csvw",
+
+"@type": "Table",
+
+"url": ["http://example.org/automoviles.csv",](http://example.org/automoviles.csv)
+
+"dc:description": "Tabella con dati sulle auto classiche"
+
+"dc:creator": "Autore dell'esempio".
+
+"tableSchema": {
+
+"colonne": \[{
+
+"nome": "identificatore",
+
+"titoli": "marchio",
+
+"dc:description": "Questo campo contiene informazioni sulla marca e il modello di ogni veicolo".
+
+"datatype": "string" },
+
+{"nome": "annio",
+
+"titoli": "anno",
+
+"dc:description": "Questo campo contiene informazioni su l'anno di fabbricazione di ogni veicolo".
+
+"datatype": {
+
+"base": "data". ,
+
+"formato": "aaaa"}},
+
+{"nome": "cilindri",
+
+"titoli": cilindri",
+
+"dc:description": "Questo campo contiene informazioni sul numero di cilindri di ogni veicolo".
+
+"datatype": "integer" },
+
+{"nome": "consumo",
+
+"titoli": "consumo",
+
+"dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in litri / 100 km".
+
+"datatype": "decimal" },
+
+{"nome": "potenza",
+
+"titoli": "potenza",
+
+"dc:description": "Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV". "datatype": "decimal" },
+
+{"nome":
+
+"accelerazione",
+
+"titoli":
+
+"accelerazione",
+
+"dc:description": "Questo campo contiene dati sull'accelerazione di ogni veicolo misurata in m/sec2" "datatype": "decimal" "dc:description": "Questo campo contiene dati sull'accelerazione di ogni veicolo misurata in m/sec2" "datatype": "decimal".
+
+}}\]
+
+}
+
+}
 
 ![](./myMediaFolder/media/image46.jpeg)
 
@@ -948,7 +948,7 @@ Colonna 6:
 
 ![](./myMediaFolder/media/image48.jpeg)
 
-> 13
+13
 
 0
 
@@ -964,23 +964,23 @@ Colonna 6:
 
 **di un file <sub>CSV</sub>**
 
-> La seguente sezione di questa guida fornisce linee guida sugli aspetti più comuni della preparazione dei dati tabulari per la pubblicazione come file CSV.
+La seguente sezione di questa guida fornisce linee guida sugli aspetti più comuni della preparazione dei dati tabulari per la pubblicazione come file CSV.
 
 ![](./myMediaFolder/media/image51.png)
 
-> [P1-Singola fila di testate](#page18)
+[P1-Singola fila di testate](#page18)
 
 ![](./myMediaFolder/media/image53.png)
 
-> [P4-Strutture di dati](#page27) [verticale vs. orizzontale](#page27)
-> 
-> 1 2 3
-> 
-> [P7-Tipi di dati](#page37)
-> 
-> **...ABCD**
-> 
-> [P10-Campi di testo](#page43)
+[P4-Strutture di dati](#page27) [verticale vs. orizzontale](#page27)
+
+1 2 3
+
+[P7-Tipi di dati](#page37)
+
+**...ABCD**
+
+[P10-Campi di testo](#page43)
 
 ![](./myMediaFolder/media/image54.png)
 
@@ -994,17 +994,17 @@ Colonna 6:
 
 ![](./myMediaFolder/media/image59.png)
 
-> [P8-Standardizzazione](#page39)
-> 
-> dei valori dei campi
-> 
-> **1 2 3**
-> 
-> **4 5 6**
-> 
-> **7 8 9**
-> 
-> [P13- Campi con](#page52)
+[P8-Standardizzazione](#page39)
+
+dei valori dei campi
+
+**1 2 3**
+
+**4 5 6**
+
+**7 8 9**
+
+[P13- Campi con](#page52)
 
 ![](./myMediaFolder/media/image60.jpeg)
 
@@ -1014,21 +1014,21 @@ AB C
 
   - > \-
 
-> x =
-> 
-> [P6-Subtotali, totali](#page34)
-> 
-> [o raggruppamento](#page34)
+x =
+
+[P6-Subtotali, totali](#page34)
+
+[o raggruppamento](#page34)
 
 ![](./myMediaFolder/media/image61.jpeg)
 
-> [Campi codificati P9](#page41)
+[Campi codificati P9](#page41)
 
 [numeri di telefono](#page52)
 
 ![](./myMediaFolder/media/image62.jpeg)
 
-> 14
+14
 
 <table>
 <tbody>
@@ -1149,9 +1149,9 @@ AB C
 
 ![](./myMediaFolder/media/image74.png)
 
-> **Dati sulle vendite di auto (anni 1998 - 1999)**
-> 
-> Unità espresse in migliaia
+**Dati sulle vendite di auto (anni 1998 - 1999)**
+
+Unità espresse in migliaia
 
 <table>
 <tbody>
@@ -1282,7 +1282,7 @@ vendite\_per\_anno
 
 3,57
 
-> Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "description".
+Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "description".
 
 ![](./myMediaFolder/media/image76.jpeg)
 
@@ -1475,38 +1475,38 @@ P2 Singolo record per riga
 <!-- end list -->
 
   - > Da prendere in considerazione:
-    
+
       - > Ogni record o riga è contrassegnato da una sequenza di uno o più caratteri invisibili chiamati caratteri di controllo, cioè il *ritorno a capo* (CR) e l'*avanzamento di linea* (LF). Sfortunatamente, i sistemi operativi rappresentano i feed di linea usando sequenze diverse:
-        
+
           - > Tutte le versioni DOS / Microsoft Windows rappresentano i fine riga come CR seguito da LF, cioè CRLF o "fine riga".
-        
+
           - > UNIX e sistemi operativi simili, incluso MacOS, rappresentano le terminazioni di riga come LF o "LF".
-    
+
     <!-- end list -->
-    
+
       - > Il documento di riferimento RFC4180 per i dati in formato CSV definisce che le righe devono essere terminate con caratteri di controllo CRLF. Pertanto, è importante essere consapevoli che questo problema può causare alcuni problemi quando si scambiano, importano o esportano file CSV provenienti da diversi sistemi operativi.
-    
+
       - > L'esistenza di caratteri di ritorno a capo \[CR\] all'interno di un valore di campo, per esempio campi che contengono più righe o commenti, devono sempre essere racchiusi in doppi apici.
 
 ![](./myMediaFolder/media/image88.jpeg)
 
-> 19
+19
 
 ![](./myMediaFolder/media/image92.png)
 
   - > **Esempio 1**: comportamento di un'importazione di un file CSV contenente spazi vuoti e/o ritorni a capo in varie circostanze.
-    
+
       - > **Caso 1: Importazione di un** CSV con valori di campo che includono spazi bianchi tra virgolette e separati da ','.
 
 ![](./myMediaFolder/media/image93.png)
 
-> marca, anno, cilindri
-> 
-> "chevrolet chevelle malibu",1970,8
-> 
-> "buick skylark 320",1970,8
-> 
-> "plymouth satellite",1970,8
+marca, anno, cilindri
+
+"chevrolet chevelle malibu",1970,8
+
+"buick skylark 320",1970,8
+
+"plymouth satellite",1970,8
 
 <table>
 <tbody>
@@ -1588,13 +1588,13 @@ P2 Singolo record per riga
 
 ![](./myMediaFolder/media/image94.png)
 
-> marca, anno, cilindri
-> 
-> chevrolet chevelleCRmalibu,1970,8
-> 
-> buick skylark 320,1970,8
-> 
-> satellite plymouth, 1970, 8
+marca, anno, cilindri
+
+chevrolet chevelleCRmalibu,1970,8
+
+buick skylark 320,1970,8
+
+satellite plymouth, 1970, 8
 
 <table>
 <tbody>
@@ -1689,19 +1689,19 @@ P2 Singolo record per riga
 
 ![](./myMediaFolder/media/image95.png)
 
-> Nell'esempio precedente, il carattere di controllo carriage return (CR) è incluso a scopo illustrativo.
-> 
-> Entrambi i caratteri 'CR' e 'LF' non sono visibili.
+Nell'esempio precedente, il carattere di controllo carriage return (CR) è incluso a scopo illustrativo.
+
+Entrambi i caratteri 'CR' e 'LF' non sono visibili.
 
 ![](./myMediaFolder/media/image96.jpeg)
 
-> 20
+20
 
 ![](./myMediaFolder/media/image99.png)
 
   - > **Esempio 2**: comportamento nell'esportazione di una tabella con campi che includono spazi vuoti o interruzioni di riga nei loro valori.
 
-> Il **CSV** generato dalla tabella deve contenere il valore di ogni campo tra virgolette, compresi i caratteri di controllo, in un unico record.
+Il **CSV** generato dalla tabella deve contenere il valore di ogni campo tra virgolette, compresi i caratteri di controllo, in un unico record.
 
 <table>
 <tbody>
@@ -1940,21 +1940,21 @@ P2 Singolo record per riga
 
 ![](./myMediaFolder/media/image100.png)
 
-> "AaaCRLFaaaaaaaaaa"," Bbbbb bbb bbb bb"," CccCRLFccccccc "LF
-> 
-> I caratteri di controllo di fine linea (LF) e di ritorno a capo (CR) sono inclusi a scopo illustrativo, poiché non sono visibili.
+"AaaCRLFaaaaaaaaaa"," Bbbbb bbb bbb bb"," CccCRLFccccccc "LF
+
+I caratteri di controllo di fine linea (LF) e di ritorno a capo (CR) sono inclusi a scopo illustrativo, poiché non sono visibili.
 
 ![](./myMediaFolder/media/image101.jpeg)
 
-> 21
-> 
-> ![](./myMediaFolder/media/image105.png)
-> 
-> P3 Denominazione delle
-> 
-> colonne
-> 
-> **** I nomi dei campi o delle colonne in una tabella di dati devono essere comprensibili
+21
+
+![](./myMediaFolder/media/image105.png)
+
+P3 Denominazione delle
+
+colonne
+
+**** I nomi dei campi o delle colonne in una tabella di dati devono essere comprensibili
 
 <table>
 <tbody>
@@ -1983,28 +1983,28 @@ P2 Singolo record per riga
   - > In molti casi, le colonne delle tabelle di dati mantengono i nomi assegnati dai sistemi di gestione di database, di solito soggetti a convenzioni tecniche che sono difficili da capire per le persone.
 
   - > Alcune raccomandazioni per la nomina dei campi:
-    
+
       - > Non ripetere i nomi dei campi.
-    
+
       - > Usate nomi brevi (nell'ordine di 20 caratteri) ma tenendo sempre presente che il risparmio di caratteri non deve portare a un'errata interpretazione del nome del campo.
-    
+
       - > Evitare di usare abbreviazioni.
-    
+
       - > Usa solo caratteri ASCII minuscoli (a-z; 0-9)
-    
+
       - > Non usare caratteri speciali (per esempio äüöàéèê, ecc.).
-    
+
       - > Non includere accenti o segni di punteggiatura.
-    
+
       - > Usate i trattini bassi "\_" per separare le parole che compongono i nomi delle colonne invece degli spazi bianchi.
-    
+
       - > Evitare l'uso di codici, e se assolutamente necessario, dovrebbe
 
 ![](./myMediaFolder/media/image106.jpeg)
 
 22
 
-> essere completamente spiegato nel dizionario dei dati che documenta il set di dati.
+essere completamente spiegato nel dizionario dei dati che documenta il set di dati.
 
   - > I nomi dei campi devono corrispondere a quelli specificati nel dizionario dei dati.
 
@@ -2611,7 +2611,7 @@ P2 Singolo record per riga
 
   - > Se c'è un'entità che comprende diverse caratteristiche separate in diversi campi, è conveniente iniziare a nominare i campi con quell'entità e poi con gli attributi più specifici (dal più generale al più specifico). Per esempio:
 
-> nome\_cliente
+nome\_cliente
 
 addebito al cliente
 
@@ -2625,7 +2625,7 @@ numero del documento del richiedente
 
 ![](./myMediaFolder/media/image117.png)
 
-> dealer\_id
+dealer\_id
 
 ![](./myMediaFolder/media/image118.jpeg)
 
@@ -2633,7 +2633,7 @@ nome\_concessionario
 
 ![](./myMediaFolder/media/image120.jpeg)
 
-> 24
+24
 
 ![](./myMediaFolder/media/image122.png)
 
@@ -2764,7 +2764,7 @@ nome\_concessionario
   - > In generale, è più facile identificare le relazioni tra le variabili nelle colonne che tra le righe, ed è più facile fare confronti tra gruppi di osservazioni nelle righe che tra gruppi di colonne.
 
   - > Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze di aggiornamento dei dati:
-    
+
       - > Se è necessario registrare nuove variabili o attributi che non sono stati registrati in precedenza, per esempio una serie temporale, allora è ragionevole far crescere la struttura dei dati orizzontalmente, cioè aggiungere nuove colonne. Questo permetterà di inserire le osservazioni per le nuove variabili mantenendo i valori vuoti nelle osservazioni pre-aggiornamento per queste nuove colonne, se non esiste un valore assegnabile per quelle osservazioni. Quando si aggiungono nuove osservazioni, si devono necessariamente inserire nuove righe.
 
 ![](./myMediaFolder/media/image123.jpeg)
@@ -3133,9 +3133,9 @@ nome\_concessionario
 </tbody>
 </table>
 
-> L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, 'type\_averia' e 'number\_of\_averias', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
-> 
-> D'altra parte, quando vengono pubblicate serie temporali, per esempio la storia della domanda di veicoli per gli anni 1972- 1977, la crescita orizzontale della struttura è ragionevole se si presenta la necessità, per esempio, di completare la serie temporale per gli anni '70.
+L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, 'type\_averia' e 'number\_of\_averias', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
+
+D'altra parte, quando vengono pubblicate serie temporali, per esempio la storia della domanda di veicoli per gli anni 1972- 1977, la crescita orizzontale della struttura è ragionevole se si presenta la necessità, per esempio, di completare la serie temporale per gli anni '70.
 
 ![](./myMediaFolder/media/image129.png)
 
@@ -3265,7 +3265,7 @@ nome\_concessionario
 
 ![](./myMediaFolder/media/image130.png)?
 
-> Trattamento di P5 valori sconosciuti
+Trattamento di P5 valori sconosciuti
 
 0
 
@@ -3276,19 +3276,19 @@ nome\_concessionario
   - Come regola generale, tutte le celle di una tabella dovrebbero essere riempite e un codice comune dovrebbe essere tenuto per i dati sconosciuti.
 
   - Da prendere in considerazione:
-    
+
       - > I valori sconosciuti, se lasciati inspiegabili o semplicemente assenti, portano spesso a confusione, specialmente quando la colonna di dati è numerica. D'altra parte, generano risultati errati nei compiti di ordinamento.
-    
+
       - > Raccomandazioni per evitare valori di dati sconosciuti:
-        
+
           - > Se la cella vuota rappresenta uno zero, allora il valore deve essere 0.
-        
+
           - > Se la cella vuota rappresenta un valore "sconosciuto" o "non ottenuto", allora questa possibilità deve essere spiegata nel dizionario dei dati e indicata con un codice specifico.
-        
+
           - > Se un valore vuoto ha un significato, dovrebbe essere considerata l'opzione di aggiungere una nuova colonna per includere la spiegazione del valore "vuoto" come possibile valore.
-        
+
           - > Una terminologia accettata per indicare valori sconosciuti o mancanti è il valore specifico o il codice NA o N/A. <sup>1</sup>
-        
+
           - > Il codice usato per indicare valori sconosciuti o mancanti, ad esempio NA, deve essere specificato nel dizionario dei dati.
 
 ![](./myMediaFolder/media/image132.png)
@@ -4226,7 +4226,7 @@ nome\_concessionario
 
 ![](./myMediaFolder/media/image140.png)
 
-> Nell'esempio si può vedere che un valore di 0 nella colonna "vendite" indica che per quell'anno le vendite di auto di quel modello sono state 0. Tutti i valori sconosciuti in qualsiasi colonna sono indicati con lo stesso codice: NA.
+Nell'esempio si può vedere che un valore di 0 nella colonna "vendite" indica che per quell'anno le vendite di auto di quel modello sono state 0. Tutti i valori sconosciuti in qualsiasi colonna sono indicati con lo stesso codice: NA.
 
 ![](./myMediaFolder/media/image141.jpeg)
 
@@ -5196,9 +5196,9 @@ nome\_concessionario
 </tbody>
 </table>
 
-> Nell'esempio viene aggiunta una nuova colonna per spiegare il significato del valore mancante nella colonna "vendite".
-> 
-> Ci sono circostanze in cui certe misurazioni non possono essere registrate, perché i dispositivi o i sistemi usati per misurare certe quantità registrano solo valori al di sopra di una certa soglia (per esempio un sensore di inquinamento ambientale). In questi casi, deve essere
+Nell'esempio viene aggiunta una nuova colonna per spiegare il significato del valore mancante nella colonna "vendite".
+
+Ci sono circostanze in cui certe misurazioni non possono essere registrate, perché i dispositivi o i sistemi usati per misurare certe quantità registrano solo valori al di sopra di una certa soglia (per esempio un sensore di inquinamento ambientale). In questi casi, deve essere
 
 ![](./myMediaFolder/media/image149.jpeg)
 
@@ -5210,27 +5210,27 @@ spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
 
 31
 
-> ![](./myMediaFolder/media/image156.png)
-> 
-> x =
-> 
-> Subtotali, totali o Raggruppamenti P6
+![](./myMediaFolder/media/image156.png)
+
+x =
+
+Subtotali, totali o Raggruppamenti P6
 
   - > Nessuna riga o colonna di totali o subtotali dovrebbe essere inclusa a meno che non sia assolutamente necessario, mantenendo il massimo livello di disaggregazione dei dati.
 
 04possibile .
 
-> **** Da prendere in considerazione:
-> 
-> • Un file contenente risultati e/o operazioni eseguite sui dati non può essere considerato un file di dati in senso stretto, ma un file contenente i risultati di una determinata analisi dei dati.
-> 
-> • Quando si includono righe o colonne con valori di dati aggregati, per esempio come risultato di un'operazione, è molto difficile e a volte impossibile recuperare i dati disaggregati.
-> 
-> • Un set di dati deve essere coerente nel livello di granularità dei dati che contiene. Se il livello di granularità è impostato secondo una certa dimensione, per esempio le vendite mensili, i dati con un altro livello di granularità, per esempio le vendite annuali, non dovrebbero essere mescolati.
-> 
-> • Un livello superiore di granularità può sempre essere ottenuto da un livello inferiore, ma non viceversa. Seguendo l'esempio, è possibile ricavare le vendite annuali dai dati di vendita mensili, ma non è possibile recuperare i dati di vendita mensili dalle vendite annuali.
-> 
-> • Il raggruppamento di righe relative a un'entità lasciando alcune celle vuote ripetendo l'entità per tutte le righe del raggruppamento dovrebbe essere evitato. Questo problema è comune e può causare problemi quando si cambia l'ordine originale delle righe.
+**** Da prendere in considerazione:
+
+• Un file contenente risultati e/o operazioni eseguite sui dati non può essere considerato un file di dati in senso stretto, ma un file contenente i risultati di una determinata analisi dei dati.
+
+• Quando si includono righe o colonne con valori di dati aggregati, per esempio come risultato di un'operazione, è molto difficile e a volte impossibile recuperare i dati disaggregati.
+
+• Un set di dati deve essere coerente nel livello di granularità dei dati che contiene. Se il livello di granularità è impostato secondo una certa dimensione, per esempio le vendite mensili, i dati con un altro livello di granularità, per esempio le vendite annuali, non dovrebbero essere mescolati.
+
+• Un livello superiore di granularità può sempre essere ottenuto da un livello inferiore, ma non viceversa. Seguendo l'esempio, è possibile ricavare le vendite annuali dai dati di vendita mensili, ma non è possibile recuperare i dati di vendita mensili dalle vendite annuali.
+
+• Il raggruppamento di righe relative a un'entità lasciando alcune celle vuote ripetendo l'entità per tutte le righe del raggruppamento dovrebbe essere evitato. Questo problema è comune e può causare problemi quando si cambia l'ordine originale delle righe.
 
 ![](./myMediaFolder/media/image157.png)
 
@@ -5974,7 +5974,7 @@ spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
 
 34
 
-> ![](./myMediaFolder/media/image169.png)
+![](./myMediaFolder/media/image169.png)
 
 2
 
@@ -6144,7 +6144,7 @@ spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
 </table>
 
   - > Da prendere in considerazione:
-    
+
       - > Mantenere la formattazione corretta delle celle in base al tipo di dati che contengono aumenta la probabilità che un'esportazione in un altro formato abbia successo e rende i dati più operativi nella tabella dati stessa.
 
 ![](./myMediaFolder/media/image170.png)
@@ -6395,7 +6395,7 @@ spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
 </tbody>
 </table>
 
-> La buona pratica indica che le unità di misura dovrebbero essere descritte nel dizionario dei dati e non nella denominazione dei campi. Come ultima risorsa, se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio 'litri \_consumo' o 'hp\_potenza', purché tutti i valori della colonna abbiano la stessa unità di misura associata.
+La buona pratica indica che le unità di misura dovrebbero essere descritte nel dizionario dei dati e non nella denominazione dei campi. Come ultima risorsa, se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio 'litri \_consumo' o 'hp\_potenza', purché tutti i valori della colonna abbiano la stessa unità di misura associata.
 
 ![](./myMediaFolder/media/image174.jpeg)
 
@@ -6403,7 +6403,7 @@ spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
 
 ![](./myMediaFolder/media/image178.png)
 
-> Standardizzazione di Valori del campo P8
+Standardizzazione di Valori del campo P8
 
 0
 
@@ -6412,19 +6412,19 @@ spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
   - L'uso di valori standardizzati permette la correlazione dei dati tra insiemi di dati, il confronto tra amministrazioni (tra agenzie e/o settori), l'interoperabilità e il collegamento dei dati. Per questo, i valori di certi campi devono essere coerenti tra le serie di dati.
 
   - Da prendere in considerazione:
-    
+
       - > È possibile sapere se una grandezza è grande o piccola solo se può essere confrontata con un'altra grandezza tenendo conto di somiglianze e differenze, per esempio, tra serie di dati provenienti da diverse amministrazioni.
-    
+
       - > Lo [<span class="underline">standardAENOR137801:2015,SmartCities,OpenData,</span>](http://vocab.linkeddata.es/datosabiertos/) considera dati tecnicamente corretti quelli che, tra le altre caratteristiche:
-        
+
           - > Usano la stessa codifica e normalizzazione per lo stesso tipo di dati pubblicati in diverse serie di dati di un catalogo. Per esempio, gli indirizzi sono sempre pubblicati con la stessa struttura, tipo, formati in qualsiasi set di dati e gli elementi di georeferenziazione usano lo stesso sistema di coordinate di riferimento.
-        
+
           - > La codifica e la standardizzazione utilizzate si basano su alcuni standard comuni riconosciuti e utilizzati da altre organizzazioni di codifica. Per esempio: norme approvate da [<span class="underline">EUROSTAT</span>](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) o [<span class="underline">INE.</span>](https://www.ine.es/ss/Satellite?L=0&c=Page&cid=1254735839296&p=1254735839296&pagename=MetodologiaYEstandares%2FINELayout)
-    
+
       - > Si raccomanda:
-        
+
           - > Utilizzare vocabolari comunemente usati per standardizzare la struttura e i valori delle informazioni pubblicate nei set di dati. <sup>2</sup>
-        
+
           - > Nel caso in cui non si utilizzino vocabolari di riferimento, il valore assegnato a un dato attributo deve essere unico e coerente in tutta la tabella. In altre parole, se si sceglie di usare il valore "Barcellona" per riferirsi a questa città, non si dovrebbe usare il valore "Città di Barcellona".
 
 ![](./myMediaFolder/media/image179.png)
@@ -6441,19 +6441,19 @@ spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
 
 ![](./myMediaFolder/media/image184.png)
 
-> marchio
+marchio
 
 attività\_vendite
 
-> chevrolet
+chevrolet
 
 Vendite di auto
 
-> buick
+buick
 
 Vendita di veicoli
 
-> plymouth
+plymouth
 
 Vendita
 
@@ -6588,7 +6588,7 @@ Vendita
 </tbody>
 </table>
 
-> [Inquestoesempio, i valoridelcampo"dealer\_code"sonoquellicorrispondenti<span class="underline">allaclassificazione</span>](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) <span class="underline"> </span> [<span class="underline">statistica</span>](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) EUROSTAT [<span class="underline">delle attività economiche della Comunità europea</span>(NACE Rev. 2)](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) <span class="underline">per</span> la <span class="underline"> </span> standardizzazione delle attività economiche dei concessionari di veicoli.
+[Inquestoesempio, i valoridelcampo"dealer\_code"sonoquellicorrispondenti<span class="underline">allaclassificazione</span>](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) <span class="underline"> </span> [<span class="underline">statistica</span>](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) EUROSTAT [<span class="underline">delle attività economiche della Comunità europea</span>(NACE Rev. 2)](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) <span class="underline">per</span> la <span class="underline"> </span> standardizzazione delle attività economiche dei concessionari di veicoli.
 
 ![](./myMediaFolder/media/image186.jpeg)
 
@@ -6605,20 +6605,20 @@ P9 Campi codificati
   - > Riferirsi correttamente agli schemi concettuali, cioè alle *liste di codici* e alle tassonomie di termini come valori prescritti per proprietà o attributi definiti.
 
   - > Da prendere in considerazione:
-    
+
       - > Sono molto utili per eseguire analisi di dati categorizzati (ad esempio per estrarre modelli, filtrare, riassumere, ordinare, ecc.), ma possono essere difficili da interpretare per le persone che non hanno familiarità con tali codifiche, se non sono spiegate con precisione nel set di dati stesso o attraverso il Dizionario dei dati.
-    
+
       - > L'[<span class="underline">allegato I</span>](#page75) di questa guida fornisce una panoramica dei termini riutilizzabili, comprese le tassonomie, le classificazioni e gli standard nazionali e internazionali armonizzati.
-    
+
       - > Se possibile, si dovrebbe aggiungere una colonna che includa il valore standard dell'attributo in questione. Per esempio, se il campo si riferisce ai Consigli Comunali, è consigliabile mantenere due colonne: "Codice del
 
-> Consiglio Comunale" e ["Consiglio Comunale". Il](https://administracionelectronica.gob.es/ctt/dir3) [codicesaràquelloindicatonel<span class="underline">"Repertoriocomunedelleunitàorganizzativee</span>](https://administracionelectronica.gob.es/ctt/dir3) <span class="underline"> </span> [<span class="underline">degliuffici"(DIR3)</span>eilvaloredellacolonna](https://administracionelectronica.gob.es/ctt/dir3) <span class="underline">"Comune",</span> il nome di questa <span class="underline"> </span> istituzione.
+Consiglio Comunale" e ["Consiglio Comunale". Il](https://administracionelectronica.gob.es/ctt/dir3) [codicesaràquelloindicatonel<span class="underline">"Repertoriocomunedelleunitàorganizzativee</span>](https://administracionelectronica.gob.es/ctt/dir3) <span class="underline"> </span> [<span class="underline">degliuffici"(DIR3)</span>eilvaloredellacolonna](https://administracionelectronica.gob.es/ctt/dir3) <span class="underline">"Comune",</span> il nome di questa <span class="underline"> </span> istituzione.
 
   - > In linea con quanto detto sopra, il nome del campo non dovrebbe essere incluso nel valore del campo. Per esempio, se il nome della colonna è "City Council" il valore in ogni riga non dovrebbe includere le parole "City Council of".
 
 ![](./myMediaFolder/media/image191.jpeg)
 
-> 35
+35
 
 ![](./myMediaFolder/media/image195.png)
 
@@ -7257,7 +7257,7 @@ P9 Campi codificati
 
 ![](./myMediaFolder/media/image197.jpeg)
 
-> 36
+36
 
 0
 
@@ -7267,14 +7267,14 @@ P9 Campi codificati
 
 ![](./myMediaFolder/media/image202.png)
 
-> P10Campi di tipo testo
+P10Campi di tipo testo
 
   - I campi di tipo testo devono contenere stringhe di testo senza spazi vuoti iniziali o finali. Se questo non è il caso, i caratteri (spazi o tabulazioni) adiacenti ai separatori di campo saranno ignorati.
 
   - Da prendere in considerazione:
-    
+
       - > I campi di testo possono sempre essere delimitati da doppi apici e le applicazioni che eseguono operazioni di lettura dei dati analizzeranno e scarteranno tali delimitatori.
-    
+
       - > Se il valore di un campo contiene una qualsiasi stringa di testo che ha uno dei seguenti casi, deve essere trattato come indicato:
 
 <!-- end list -->
@@ -7295,7 +7295,7 @@ P9 Campi codificati
 
 ![](./myMediaFolder/media/image203.jpeg)
 
-> 37
+37
 
 <table>
 <tbody>
@@ -7636,31 +7636,31 @@ In questi esempi, gli spazi vuoti sono indicati con il carattere "B" a scopo ill
 
 4
 
-> **...1234**
+**...1234**
 
 ![](./myMediaFolder/media/image214.png)
 
-> Campi di tipo
+Campi di tipo
 
 P11numerico
 
   - > I campi numerici devono essere codificati esclusivamente come tipi di dati numerici (interi o decimali). Se questo non è il caso, alcune operazioni sui dati, come l'ordinamento, possono causare problemi inaspettati.
 
   - > Da prendere in considerazione:
-    
+
       - > In generale:
 
-> o I mille separatori non devono essere usati. Gli spazi vuoti non dovrebbero essere usati come separatori.
-> 
-> o Il separatore decimale può essere un ',' o un '.', a seconda della configurazione regionale delle applicazioni di elaborazione dati. In Spagna, Francia o Germania, tra gli altri paesi, si usa il ',' e nell'area anglosassone il '. L'uso dell'uno o dell'altro carattere separatore può implicare la pre-elaborazione dei dati per il riutilizzo con certi strumenti e linguaggi di programmazione.
-> 
-> o I valori negativi devono essere preceduti da un segno meno (-). Non usare le parentesi per indicare valori negativi.
-> 
-> o Se una colonna contiene sia valori interi che decimali, il tipo di dati deve essere decimale e quindi il separatore ',' o '.' e il numero appropriato di posizioni decimali, normalmente due, devono essere inclusi.
-> 
-> o Se una colonna contiene solo valori interi, essi devono essere espressi senza separatore decimale.
-> 
-> o Non mischiare testo e valori numerici. Per esempio: non usare €50 o 27 km come valore in un campo numerico.
+o I mille separatori non devono essere usati. Gli spazi vuoti non dovrebbero essere usati come separatori.
+
+o Il separatore decimale può essere un ',' o un '.', a seconda della configurazione regionale delle applicazioni di elaborazione dati. In Spagna, Francia o Germania, tra gli altri paesi, si usa il ',' e nell'area anglosassone il '. L'uso dell'uno o dell'altro carattere separatore può implicare la pre-elaborazione dei dati per il riutilizzo con certi strumenti e linguaggi di programmazione.
+
+o I valori negativi devono essere preceduti da un segno meno (-). Non usare le parentesi per indicare valori negativi.
+
+o Se una colonna contiene sia valori interi che decimali, il tipo di dati deve essere decimale e quindi il separatore ',' o '.' e il numero appropriato di posizioni decimali, normalmente due, devono essere inclusi.
+
+o Se una colonna contiene solo valori interi, essi devono essere espressi senza separatore decimale.
+
+o Non mischiare testo e valori numerici. Per esempio: non usare €50 o 27 km come valore in un campo numerico.
 
   - > Raccomandazioni nel caso della valuta:
 
@@ -7668,7 +7668,7 @@ P11numerico
 
 15. > I valori numerici devono essere espressi senza decimali o con 2 decimali.
 
-> o Il numero di cifre decimali utilizzato per formattare l'intera colonna di valori non deve variare. Se varia, la caratteristica di coerenza dei dati è violata.
+o Il numero di cifre decimali utilizzato per formattare l'intera colonna di valori non deve variare. Se varia, la caratteristica di coerenza dei dati è violata.
 
 15. > Non includere simboli di valuta o separatori di migliaia (punti e virgole, a seconda dei casi).
 
@@ -8099,7 +8099,7 @@ P11numerico
 
 ![](./myMediaFolder/media/image227.png)
 
-> In questo esempio, la valuta usata per tutti i valori nel campo "sales\_revenue" è la stessa e sarà descritta nel dizionario dei dati. In alternativa, il nome del campo potrebbe essere "sales\_revenue\_euros".
+In questo esempio, la valuta usata per tutti i valori nel campo "sales\_revenue" è la stessa e sarà descritta nel dizionario dei dati. In alternativa, il nome del campo potrebbe essere "sales\_revenue\_euros".
 
   - > **Esempio 2**: utilizzare il numero di decimali appropriato per ogni tipo di dati numerici. Usa il segno meno (-) per i valori negativi. Digita degli zeri significativi come valori di con testo.
 
@@ -8356,7 +8356,7 @@ P11numerico
 
 **** **Caso 1**: risultato corretto dopo un processo di ordinamento quando il campo
 
-> "classifica" è di tipo "numerico".
+"classifica" è di tipo "numerico".
 
 |                           |          |  |
 | ------------------------- | -------- |  |
@@ -8394,7 +8394,7 @@ P11numerico
 
 **** **Caso 2**: risultato errato dopo un processo di ordinamento quando il campo
 
-> "Classifica" è di tipo "testo".
+"Classifica" è di tipo "testo".
 
 |                           |           |  |
 | ------------------------- | --------- |  |
@@ -8430,17 +8430,17 @@ P11numerico
 
 ![](./myMediaFolder/media/image232.png)
 
-> In quest'ultimo esempio, le virgolette intorno ad ogni stringa di numeri sono incluse per rendere l'esempio più esplicito, ma in un foglio elettronico reale non devono essere visibili anche se il campo è di tipo "testo".
+In quest'ultimo esempio, le virgolette intorno ad ogni stringa di numeri sono incluse per rendere l'esempio più esplicito, ma in un foglio elettronico reale non devono essere visibili anche se il campo è di tipo "testo".
 
 ![](./myMediaFolder/media/image233.png)
 
-> Una buona pratica è quella di controllare nel sistema o nel foglio di calcolo in cui viene generato il file o per mezzo di uno strumento di convalida come quelli dettagliati nella sezione [<span class="underline">"ToolboxperfileCSV"</span>](#page63) ogni tipo di dati prima della pubblicazione.
+Una buona pratica è quella di controllare nel sistema o nel foglio di calcolo in cui viene generato il file o per mezzo di uno strumento di convalida come quelli dettagliati nella sezione [<span class="underline">"ToolboxperfileCSV"</span>](#page63) ogni tipo di dati prima della pubblicazione.
 
 ![](./myMediaFolder/media/image234.jpeg)
 
 43
 
-> ![](./myMediaFolder/media/image236.png)
+![](./myMediaFolder/media/image236.png)
 
 0
 
@@ -8475,20 +8475,20 @@ Campi di tipo P12Date
 <!-- end list -->
 
 15. > Se sono disponibili solo dati mensili, l'opzione migliore è quella di includere una data completa aggiustata all'ultimo giorno del mese. Per esempio, per settembre, 2019-09-30.
-    
+
     15. > Se la data completa non può essere inclusa, è preferibile esprimere anno e mese in colonne separate. È persino ragionevole includere una colonna per indicare il nome del mese.
 
 <!-- end list -->
 
   - > Raccomandazioni in caso di ore:
-    
+
     15. > È preferibile usare il formato 24 ore (HH:MM:SS) piuttosto che il formato 12 ore AM/PM (HH:MM:SS AM/PM).
 
 ![](./myMediaFolder/media/image237.png)
 
-> o È preferibile usare un unico campo per includere i valori che rappresentano la data e l'ora combinate usando il formato YYYYY-MM- DDTHH:MM:SS.
-> 
-> 44
+o È preferibile usare un unico campo per includere i valori che rappresentano la data e l'ora combinate usando il formato YYYYY-MM- DDTHH:MM:SS.
+
+44
 
 <table>
 <tbody>
@@ -8831,33 +8831,33 @@ Campi di tipo P12Date
 
 45
 
-> ![](./myMediaFolder/media/image243.png) **2** **3**
-> 
-> **4** **5** **6**
+![](./myMediaFolder/media/image243.png) **2** **3**
+
+**4** **5** **6**
 
 |       |       |       |
 | ----- | ----- | ----- |
 | **7** | **8** | **9** |
 |       | **0** |       |
 
-> Campi con numeri
-> 
-> P13del
+Campi con numeri
+
+P13del
 
 0
 
 4
 
-> telefono
+telefono
 
   - > Quando si includono valori con numeri di telefono, la cosa più importante è assicurare la coerenza del formato di questi numeri in tutti i valori della colonna. Cioè, potresti usare +34-6660000 o (34)6660000 o 34-666-00-00, ma sempre lo stesso formato.
 
   - Da prendere in considerazione:
-    
+
       - > Quando è necessario includere più di un numero di telefono come valore di campo, devono essere aggiunti nuovi campi.
-    
+
       - > Si consiglia di includere il prefisso del paese prima del numero di telefono.
-    
+
       - > Per i numeri di telefono che richiedono l'inclusione di un numero interno, per esempio un'estensione, si dovrebbe considerare l'inclusione di un altro campo di tipo testo, poiché i numeri per uso interno possono includere certi caratteri. Per esempio: "\*86", "\#36", ecc.
 
 ![](./myMediaFolder/media/image244.png)
@@ -9019,28 +9019,28 @@ Campi di tipo P12Date
 
 4
 
-> Campi con
+Campi con
 
 ![](./myMediaFolder/media/image254.png)
 
-> P14indirizzi postali
+P14indirizzi postali
 
   - Utilizzare una codifica accurata degli indirizzi postali è essenziale per gestire le dimensioni geografiche con i dati. Indirizzi postali ben strutturati possono essere geolocalizzati, generando coordinate di latitudine e longitudine, utilizzando applicazioni specifiche.
 
   - Da prendere in considerazione:
-    
+
       - > [Anche se esiste uno standard tecnico per la<span class="underline">progettazione dei record dei file</span>](https://www.ine.es/ss/Satellite?L=es_ES&c=Page&cid=1259952026632&p=1259952026632&pagename=ProductosYServicios%2FPYSLayout) <span class="underline"> </span> [<span class="underline">discambio diinformazioni del registrocomunale</span>(INE,](https://www.ine.es/ss/Satellite?L=es_ES&c=Page&cid=1259952026632&p=1259952026632&pagename=ProductosYServicios%2FPYSLayout) <span class="underline">Callejero</span> de Censo <span class="underline"> </span> Electoral), è consigliabile codificare un indirizzo postale come una stringa di caratteri con gli elementi necessari per localizzare un indirizzo all'interno di una località.
-    
+
       - > Questi elementi sono:
 
 <!-- end list -->
 
 15. > tipo di strada (strada, viale, piazza, ...)
-    
+
     15. > nome della strada, numero, blocco, piano, lettera, ecc. o località (nome)
-    
+
     <!-- end list -->
-    
+
     15. > codice postale (5 caratteri numerici)
 
 <!-- end list -->
@@ -9049,7 +9049,7 @@ Campi di tipo P12Date
 
 ![](./myMediaFolder/media/image255.png)
 
-> 47
+47
 
 ![](./myMediaFolder/media/image256.png)
 
@@ -9057,15 +9057,15 @@ Campi di tipo P12Date
 
 ![](./myMediaFolder/media/image257.png)
 
-> Marchio
+Marchio
 
 Indirizzo del rivenditore
 
-> chevrolet chevelle malibu
+chevrolet chevelle malibu
 
 Calle Automoción, 23, Bajo, Alicante
 
-> buick skylark 320
+buick skylark 320
 
 C/ Industria, 33, 33201, Asturias
 
@@ -9250,31 +9250,31 @@ C/ Industria, 33, 33201, Asturias
 
 4
 
-> Campi con
+Campi con
 
 ![](./myMediaFolder/media/image263.png)
 
-> P15Coordinate geografiche
+P15Coordinate geografiche
 
   - Il formato più adattabile per rappresentare le coordinate geografiche sulle mappe
-    
+
       - > la specificazione della latitudine e della longitudine in gradi decimali, i cui valori dovrebbero essere presentati in colonne separate, con intestazioni di colonna da nominare: Latitudine e Longitudine, rispettivamente.
 
   - Da prendere in considerazione:
-    
+
       - > Se è necessario specificare il nome di un'entità di cui si riportano le coordinate, si usano i suffissi "\_latitude" e "\_longitude".
-    
+
       - > Si possono usare convertitori di coordinate UTM o convertitori gradi [sessagesimaliagradidecimaliPeresempio:lo<span class="underline">strumentoconversione</span>dellaJunta](http://www.juntadeandalucia.es/economiainnovacioncienciayempleo/pam/ConvED50.action) [deAndalucía](http://www.juntadeandalucia.es/economiainnovacioncienciayempleo/pam/ConvED50.action)
-    
+
       - > Per i dati geografici diversi dai punti, ad esempio linee o [poligoni, si](https://www.opengeospatial.org/standards/wkt-crs)
 
-> [raccomanda diseguire la<span class="underline">specifica*Well-knowntextrepresentationsofcoordinatereferencesystems*(WKT-CRS)</span>dell'Open](https://www.opengeospatial.org/standards/wkt-crs) <span class="underline">Geospatial</span> Consortium.
+[raccomanda diseguire la<span class="underline">specifica*Well-knowntextrepresentationsofcoordinatereferencesystems*(WKT-CRS)</span>dell'Open](https://www.opengeospatial.org/standards/wkt-crs) <span class="underline">Geospatial</span> Consortium.
 
   - > È consigliabile, ogni volta che si pubblicano dati geografici in formati come [<span class="underline">SHP</span>](https://es.wikipedia.org/wiki/Shapefile) o [<span class="underline">KML</span>,](https://es.wikipedia.org/wiki/KML) <span class="underline">accompagnare</span> questi file con un file CSV in cui sono incluse <span class="underline"> </span> anche le coordinate geografiche per facilitare il loro riutilizzo.
 
 ![](./myMediaFolder/media/image264.png)
 
-> 49
+49
 
 ![](./myMediaFolder/media/image265.png)
 
@@ -9430,13 +9430,13 @@ Linee guida per esportazione/importazione di dati tabulari da strumenti di fogli
 
 ![](./myMediaFolder/media/image272.png)
 
-> 5****Gli strumenti di elaborazione dei fogli di calcolo, ad esempio Microsoft Excel o Libreoffice Calc, possono causare problemi se le tabelle di dati vengono esportate direttamente perché possono contenere: celle unite, formule, macro, schede di espansione dati, o altre caratteristiche derivate dall'applicazione delle funzionalità proprie di questi strumenti.
-> 
-> **** Da prendere in considerazione:
-> 
-> • Per esportare correttamente i dati tabulari dagli strumenti di elaborazione dei fogli di calcolo, è necessario considerare le seguenti linee guida:
-> 
-> o A seconda delle impostazioni regionali, può essere più conveniente usare ";" come separatore piuttosto che ",". In Europa, il "," non è un separatore appropriato poiché è usato come separatore decimale, quindi, è preferibile usare ";". D'altra parte, in paesi come il Regno Unito o gli Stati Uniti, il separatore appropriato è ",", poiché il separatore decimale usato è ". Tuttavia, per evitare ambiguità, si usa spesso un altro tipo di separatore, come il separatore "*pipe*", "|".
+5****Gli strumenti di elaborazione dei fogli di calcolo, ad esempio Microsoft Excel o Libreoffice Calc, possono causare problemi se le tabelle di dati vengono esportate direttamente perché possono contenere: celle unite, formule, macro, schede di espansione dati, o altre caratteristiche derivate dall'applicazione delle funzionalità proprie di questi strumenti.
+
+**** Da prendere in considerazione:
+
+• Per esportare correttamente i dati tabulari dagli strumenti di elaborazione dei fogli di calcolo, è necessario considerare le seguenti linee guida:
+
+o A seconda delle impostazioni regionali, può essere più conveniente usare ";" come separatore piuttosto che ",". In Europa, il "," non è un separatore appropriato poiché è usato come separatore decimale, quindi, è preferibile usare ";". D'altra parte, in paesi come il Regno Unito o gli Stati Uniti, il separatore appropriato è ",", poiché il separatore decimale usato è ". Tuttavia, per evitare ambiguità, si usa spesso un altro tipo di separatore, come il separatore "*pipe*", "|".
 
 15. > Non usare celle unite.
 
@@ -9464,13 +9464,13 @@ Linee guida per esportazione/importazione di dati tabulari da strumenti di fogli
 
 ![](./myMediaFolder/media/image277.jpeg)
 
-> o I fogli di calcolo Excel che contengono alcuni simboli speciali, come la lettera "ñ", gli accenti, gli accenti, ecc. o altri caratteri speciali, possono causare problemi durante l'esportazione in CSV e il successivo recupero, perché il comando "Save as CSV" distorce qualsiasi carattere non-ASCII.
-> 
-> o Se la versione di Excel utilizzata non salva direttamente il file di dati codificato come UTF- 8, è consigliabile utilizzare una procedura di conversione di formato che garantisca questa codifica di caratteri. Oltre a Excel (dalla versione 16 in poi), strumenti utili per questo compito sono Google Spreadsheet e LibreOffice Calc.
+o I fogli di calcolo Excel che contengono alcuni simboli speciali, come la lettera "ñ", gli accenti, gli accenti, ecc. o altri caratteri speciali, possono causare problemi durante l'esportazione in CSV e il successivo recupero, perché il comando "Save as CSV" distorce qualsiasi carattere non-ASCII.
+
+o Se la versione di Excel utilizzata non salva direttamente il file di dati codificato come UTF- 8, è consigliabile utilizzare una procedura di conversione di formato che garantisca questa codifica di caratteri. Oltre a Excel (dalla versione 16 in poi), strumenti utili per questo compito sono Google Spreadsheet e LibreOffice Calc.
 
 ![](./myMediaFolder/media/image278.jpeg)
 
-> 52
+52
 
 0
 
@@ -9490,23 +9490,23 @@ CSV
 
   - > Il tipo MIME più appropriato per indicare il tipo di contenuto dei file CSV trasmessi su Internet è indicato dal seguente valore della proprietà *Content-Type*:
 
-> **Tipo di contenuto: testo/csv**
+**Tipo di contenuto: testo/csv**
 
   - > Può anche, ma meno comunemente, essere espresso usando:
 
-> **Content-Type: application/octet-stream**
-> 
-> **Content-Type: text/comma-separated-values**
+**Content-Type: application/octet-stream**
+
+**Content-Type: text/comma-separated-values**
 
   - > Come indicato sopra, si raccomanda di codificare i file CSV usando UTF-8, se viene usato un altro tipo di *codifica*, può essere specificato attraverso il parametro *charset* nell'intestazione Content-Type. Per esempio:
 
-> **Content-Type: text/csv;charset=ISO-8859-1**
+**Content-Type: text/csv;charset=ISO-8859-1**
 
   - > Se un file CSV non contiene una riga di intestazione, è possibile indicarlo usando il parametro *header* del tipo MIME. Per esempio:
 
 ![](./myMediaFolder/media/image283.png)
 
-> **Content-Type: text/csv;header=absent**
+**Content-Type: text/csv;header=absent**
 
 ![](./myMediaFolder/media/image284.jpeg)
 
@@ -9652,9 +9652,9 @@ CSV
 
 ![](./myMediaFolder/media/image295.png)
 
-> Disponibile su:
-> 
-> [<span class="underline">https://csvlint.io/</span>](https://csvlint.io/)
+Disponibile su:
+
+[<span class="underline">https://csvlint.io/</span>](https://csvlint.io/)
 
 ![](./myMediaFolder/media/image296.jpeg)
 
@@ -9682,9 +9682,9 @@ CSV
 
 ![](./myMediaFolder/media/image301.png)
 
-> Disponibile su: [<span class="underline">https://goodtables.io/</span>](https://goodtables.io/)
-> 
-> 57
+Disponibile su: [<span class="underline">https://goodtables.io/</span>](https://goodtables.io/)
+
+57
 
 0
 
@@ -9710,7 +9710,7 @@ CSV
 
 ![](./myMediaFolder/media/image304.png)
 
-> Disponibile su: [<span class="underline">https://github.com/ODIQueensland/data-curator</span>](https://github.com/ODIQueensland/data-curator)
+Disponibile su: [<span class="underline">https://github.com/ODIQueensland/data-curator</span>](https://github.com/ODIQueensland/data-curator)
 
 ![](./myMediaFolder/media/image305.jpeg)
 
@@ -9718,7 +9718,7 @@ CSV
 
 ![](./myMediaFolder/media/image308.png)
 
-> ![](./myMediaFolder/media/image309.jpeg) **Strumento: Csvkit**
+![](./myMediaFolder/media/image309.jpeg) **Strumento: Csvkit**
 
   - > **CSVkit** è un insieme di strumenti a riga di comando da usare in ambienti Linux / MacOS per convertire e lavorare con i file CSV.
 
@@ -9743,7 +9743,7 @@ CSV
 </tbody>
 </table>
 
-> Disponibile su: [<span class="underline">https://csvkit.readthedocs.io/en/latest/</span>](https://csvkit.readthedocs.io/en/latest/)
+Disponibile su: [<span class="underline">https://csvkit.readthedocs.io/en/latest/</span>](https://csvkit.readthedocs.io/en/latest/)
 
 59
 
@@ -9753,17 +9753,17 @@ CSV
 
 ![](./myMediaFolder/media/image310.png)
 
-> 8**** Quella che segue è una descrizione di due iniziative che pubblicano set di dati aperti che sono notevoli per l'alta qualità dei set di dati disponibili in formato CSV:
-> 
-> • [<span class="underline">Datahub.io</span>](https://datahub.io/)
-> 
-> • [<span class="underline">Kaggle.com</span>](https://www.kaggle.com/)
-> 
-> **** Di particolare importanza in queste piattaforme è la qualità del modo in cui i dati vengono pubblicati, data la forte comprensione della natura multi-scopo dell'uso dei dati e il trattamento professionale dei dati, che è al centro di entrambe le iniziative.
-> 
-> **** Datahub, si distingue per l'implementazione di un supporto completo per la trasformazione, la convalida e la pubblicazione di dati di qualità e Kaggle è uno dei più importanti depositi di set di dati e conoscenze intorno all'analisi professionale dei dati di riferimento.
-> 
-> **** Entrambe le iniziative sono esempi reali di buone pratiche nel trattamento dei file CSV che possono essere presi in considerazione quando si tratta di processi di preparazione e pubblicazione degli Open Data.
+8**** Quella che segue è una descrizione di due iniziative che pubblicano set di dati aperti che sono notevoli per l'alta qualità dei set di dati disponibili in formato CSV:
+
+• [<span class="underline">Datahub.io</span>](https://datahub.io/)
+
+• [<span class="underline">Kaggle.com</span>](https://www.kaggle.com/)
+
+**** Di particolare importanza in queste piattaforme è la qualità del modo in cui i dati vengono pubblicati, data la forte comprensione della natura multi-scopo dell'uso dei dati e il trattamento professionale dei dati, che è al centro di entrambe le iniziative.
+
+**** Datahub, si distingue per l'implementazione di un supporto completo per la trasformazione, la convalida e la pubblicazione di dati di qualità e Kaggle è uno dei più importanti depositi di set di dati e conoscenze intorno all'analisi professionale dei dati di riferimento.
+
+**** Entrambe le iniziative sono esempi reali di buone pratiche nel trattamento dei file CSV che possono essere presi in considerazione quando si tratta di processi di preparazione e pubblicazione degli Open Data.
 
 ![](./myMediaFolder/media/image311.jpeg)
 
@@ -9785,21 +9785,21 @@ CSV
 
   - > Datahub contiene collezioni di dati di alto valore conformi agli
 
-> Open Data, come: cambiamenti climatici, dati e
-> 
-> indicatorieconomici,
-> 
-> statistiche,logistica,
-> 
-> documenti aziendali provenienti da fonti ufficiali.
+Open Data, come: cambiamenti climatici, dati e
+
+indicatorieconomici,
+
+statistiche,logistica,
+
+documenti aziendali provenienti da fonti ufficiali.
 
   - > Ogni voce di dati disponibile contiene una serie di elementi per visualizzare le proprietà del dataset (schema e risorse di dati), opzioni per scaricare i dati in vari formati tra cui CSV, viste delle tabelle di dati e semplici visualizzazioni.
-    
+
       - > Fornisce anche un accesso diretto ai dati di importazione utilizzando una varietà di strumenti comunemente usati nel contesto professionale: R, Python, JavaScript e SQL.
 
 ![](./myMediaFolder/media/image317.jpeg)
 
-> 61
+61
 
 ![](./myMediaFolder/media/image320.png)
 
@@ -9839,37 +9839,37 @@ CSV
 
 ![](./myMediaFolder/media/image322.jpeg)
 
-> Data, data decimale, media, interpolata , tendenza, numero di giorni
-> 
-> 1958-03-01,1958.208,315.71,315.71,314.62,-1
-> 
-> 1958-04-01,1958.292,317.45,317.45,315.29,-1
-> 
-> 1958-05-01,1958.375,317.50,317.50,314.71,-1
-> 
-> 1958-06-01,1958.458,-99.99,317.10,314.85,-1
-> 
-> 1958-07-01,1958.542,315.86,315.86,314.98,-1
-> 
-> 1958-08-01,1958.625,314.93,314.93,315.94,-1
-> 
-> 1958-09-01,1958.708,313.20,313.20,315.91,-1
-> 
-> 1958-10-01,1958.792,-99.99,312.66,315.61,-1
-> 
-> 1958-11-01,1958.875,313.33,313.33,315.31,-1
-> 
-> 1958-12-01,1958.958,314.67,314.67,315.61,-1
-> 
-> 1959-01-01,1959.042,315.62,315.62,315.70,-1
-> 
-> 1959-02-01,1959.125,316.38,316.38,315.88,-1
-> 
-> 1959-03-01,1959.208,316.71,316.71,315.62,-1
-> 
-> 1959-04-01,1959.292,317.72,317.72,315.56,-1
-> 
-> 1959-05-01,1959.375,318.29,318.29,315.50,-1
+Data, data decimale, media, interpolata , tendenza, numero di giorni
+
+1958-03-01,1958.208,315.71,315.71,314.62,-1
+
+1958-04-01,1958.292,317.45,317.45,315.29,-1
+
+1958-05-01,1958.375,317.50,317.50,314.71,-1
+
+1958-06-01,1958.458,-99.99,317.10,314.85,-1
+
+1958-07-01,1958.542,315.86,315.86,314.98,-1
+
+1958-08-01,1958.625,314.93,314.93,315.94,-1
+
+1958-09-01,1958.708,313.20,313.20,315.91,-1
+
+1958-10-01,1958.792,-99.99,312.66,315.61,-1
+
+1958-11-01,1958.875,313.33,313.33,315.31,-1
+
+1958-12-01,1958.958,314.67,314.67,315.61,-1
+
+1959-01-01,1959.042,315.62,315.62,315.70,-1
+
+1959-02-01,1959.125,316.38,316.38,315.88,-1
+
+1959-03-01,1959.208,316.71,316.71,315.62,-1
+
+1959-04-01,1959.292,317.72,317.72,315.56,-1
+
+1959-05-01,1959.375,318.29,318.29,315.50,-1
 
 1959-06-01,1959.458,318.15,318.15,315.92,-1
 
@@ -9885,33 +9885,33 @@ CSV
 
 1959-12-01,1959.958,315.58,315.58,316.52,-1
 
-> ...
-> 
-> 2014-12-01,2014.958,398.91,398.91,399.64,29
-> 
-> 2015-01-01,2015.042,399.98,399.98,399.69,30
-> 
-> 2015-02-01,2015.125,400.28,400.28,399.51,27
-> 
-> 2015-03-01,2015.208,401.54,401.54,400.05,24
-> 
-> 2015-04-01,2015.292,403.28,403.28,400.49,27
-> 
-> 2015-05-01,2015.375,403.96,403.96,400.63,30
-> 
-> 2015-06-01,2015.458,402.80,402.80,400.50,28
-> 
-> 2015-07-01,2015.542,401.31,401.31,400.92,23
-> 
-> 2015-08-01,2015.625,398.93,398.93,400.84,28
-> 
-> 2015-09-01,2015.708,397.63,397.63,401.15,25
-> 
-> 2015-10-01,2015.792,398.29,398.29,401.59,28
+...
+
+2014-12-01,2014.958,398.91,398.91,399.64,29
+
+2015-01-01,2015.042,399.98,399.98,399.69,30
+
+2015-02-01,2015.125,400.28,400.28,399.51,27
+
+2015-03-01,2015.208,401.54,401.54,400.05,24
+
+2015-04-01,2015.292,403.28,403.28,400.49,27
+
+2015-05-01,2015.375,403.96,403.96,400.63,30
+
+2015-06-01,2015.458,402.80,402.80,400.50,28
+
+2015-07-01,2015.542,401.31,401.31,400.92,23
+
+2015-08-01,2015.625,398.93,398.93,400.84,28
+
+2015-09-01,2015.708,397.63,397.63,401.15,25
+
+2015-10-01,2015.792,398.29,398.29,401.59,28
 
 ![](./myMediaFolder/media/image324.jpeg)
 
-> 63
+63
 
 0
 
@@ -9923,13 +9923,13 @@ CSV
 
   - > [<span class="underline">Kaggle</span>](https://www.kaggle.com/) è una piattaforma web in cui aziende e istituzioni propongono problemi strategici o di business in modo che gruppi con interesse o esperienza nell'analisi dei dati
 
-> competano,in modo
-> 
-> pagato, per creare e proporre
-> 
-> le migliori soluzioni.
-> 
-> **** La piattaforma presenta qualsiasi tipo di problema da risolvere che può essere trovato in diversi domini del mondo reale, come i servizi finanziari, l'energia, la società, la tecnologia dell'informazione, ecc.
+competano,in modo
+
+pagato, per creare e proporre
+
+le migliori soluzioni.
+
+**** La piattaforma presenta qualsiasi tipo di problema da risolvere che può essere trovato in diversi domini del mondo reale, come i servizi finanziari, l'energia, la società, la tecnologia dell'informazione, ecc.
 
   - > Oltre alle competizioni proposte e alla disponibilità di risorse di codice per analizzare qualsiasi set di dati, Kaggle ospita centinaia di set di dati di tutti i tipi e dimensioni che possono essere scaricati e utilizzati gratuitamente, per lo più in formato CSV.
 
@@ -9937,7 +9937,7 @@ CSV
 
 ![](./myMediaFolder/media/image328.jpeg)
 
-> 64
+64
 
 0
 
@@ -9951,20 +9951,20 @@ CSV
 
 ![](./myMediaFolder/media/image331.png)
 
-> 65
+65
 
 ![](./myMediaFolder/media/image332.jpeg)
 
   - > Il file CSV scaricabile del set di dati "*Border crossing entry data*" ha le seguenti caratteristiche:
-    
+
       - > Dizionario di dati specificato in forma di tabella ma non elaborabile a macchina. Un aspetto di miglioramento è la sua disponibilità in formato JSON collegato dal sito di download.
-    
+
       - > Riga di intestazione singola.
-    
+
       - > Singolo record per riga.
-    
+
       - > Denominazione comprensibile delle colonne.
-    
+
       - > Struttura dati verticale.
 
 <table>
@@ -10017,33 +10017,33 @@ CSV
 </tbody>
 </table>
 
-> geografico di latitudine-longitudine.
+geografico di latitudine-longitudine.
 
 ![](./myMediaFolder/media/image333.png)
 
-> Nome del porto, stato, codice del porto, confine, data, misura, valore, posizione
-> 
-> Calexico East,California,2507,US-Mexico Border,03/01/2019 12:00:00 AM,Trucks,34447,POINT (-115.48433000000001 32.67524)
-> 
-> Van Buren,Maine,108,Confine USA-Canada,03/01/2019 12:00:00 AM,Contenitori ferroviari pieni,428,PUNTO (- 67.94271 47.16207)
-> 
-> Otay Mesa,California,2506,US-Mexico Border,03/01/2019 12:00:00 AM,Trucks,81217,POINT (-117.05333 32.57333)
-> 
-> Nogales,Arizona,2604,Confine USA-Messico,03/01/2019 12:00:00 AM,Treni,62,PUNTO (-110.93361 31.340279999999996)
-> 
-> Trout River,New York,715,US-Canada Border,03/01/2019 12:00:00 AM,Passeggeri di veicoli personali,16377,POINT (-73.44253 44.990010000000005)
-> 
-> Madawaska,Maine,109,Confine USA-Canada,03/01/2019 12:00:00 AM,Camion,179,PUNTO (-68.3271 47.35446)
-> 
-> Pembina,North Dakota,3401,US-Canada Border,03/01/2019 12:00:00 AM,Bus Passengers,1054,POINT (-97.24333 48.96639)
-> 
-> Progreso,Texas,2309,US-Mexico Border,03/01/2019 12:00:00 AM,Truck Containers Empty,1808,POINT (-97.94889 26.061670000000003)
-> 
-> Portal,North Dakota,3403,US-Canada Border,03/01/2019 12:00:00 AM,Rail Containers Empty,6685,POINT (-102.54917 48.99583)
-> 
-> Champlain-Rouses Point,New York,712,Confine USA-Canada,03/01/2019 12:00:00:00 AM,Trucks,24759,POINT (-73.44694 44.98639)
-> 
-> Opheim,Montana,3317,Confine USA-Canada,03/01/2019 12:00:00 AM,Veicoli personali,235,POINT (- 106.40265 48.85574)
+Nome del porto, stato, codice del porto, confine, data, misura, valore, posizione
+
+Calexico East,California,2507,US-Mexico Border,03/01/2019 12:00:00 AM,Trucks,34447,POINT (-115.48433000000001 32.67524)
+
+Van Buren,Maine,108,Confine USA-Canada,03/01/2019 12:00:00 AM,Contenitori ferroviari pieni,428,PUNTO (- 67.94271 47.16207)
+
+Otay Mesa,California,2506,US-Mexico Border,03/01/2019 12:00:00 AM,Trucks,81217,POINT (-117.05333 32.57333)
+
+Nogales,Arizona,2604,Confine USA-Messico,03/01/2019 12:00:00 AM,Treni,62,PUNTO (-110.93361 31.340279999999996)
+
+Trout River,New York,715,US-Canada Border,03/01/2019 12:00:00 AM,Passeggeri di veicoli personali,16377,POINT (-73.44253 44.990010000000005)
+
+Madawaska,Maine,109,Confine USA-Canada,03/01/2019 12:00:00 AM,Camion,179,PUNTO (-68.3271 47.35446)
+
+Pembina,North Dakota,3401,US-Canada Border,03/01/2019 12:00:00 AM,Bus Passengers,1054,POINT (-97.24333 48.96639)
+
+Progreso,Texas,2309,US-Mexico Border,03/01/2019 12:00:00 AM,Truck Containers Empty,1808,POINT (-97.94889 26.061670000000003)
+
+Portal,North Dakota,3403,US-Canada Border,03/01/2019 12:00:00 AM,Rail Containers Empty,6685,POINT (-102.54917 48.99583)
+
+Champlain-Rouses Point,New York,712,Confine USA-Canada,03/01/2019 12:00:00:00 AM,Trucks,24759,POINT (-73.44694 44.98639)
+
+Opheim,Montana,3317,Confine USA-Canada,03/01/2019 12:00:00 AM,Veicoli personali,235,POINT (- 106.40265 48.85574)
 
 66
 
@@ -10062,7 +10062,7 @@ CSV
 </tbody>
 </table>
 
-> ![](./myMediaFolder/media/image334.png)
+![](./myMediaFolder/media/image334.png)
 
   - > Specifiche del formato CSV: [<span class="underline">https://tools.ietf.org/html/rfc4180</span>](https://tools.ietf.org/html/rfc4180)
 
@@ -10086,15 +10086,15 @@ CSV
 
 ![](./myMediaFolder/media/image339.png)
 
-> Tassonomie ed elenchi di codici comunemente usati
+Tassonomie ed elenchi di codici comunemente usati
 
 ![](./myMediaFolder/media/image340.jpeg)
 
-> Questo allegato contiene una serie di riferimenti a schemi concettuali, elenchi di codici e tassonomie di termini che possono essere usati come valori prescritti per proprietà o attributi di dati tabulari.
+Questo allegato contiene una serie di riferimenti a schemi concettuali, elenchi di codici e tassonomie di termini che possono essere usati come valori prescritti per proprietà o attributi di dati tabulari.
 
   - > Classificazioni e norme armonizzate a livello nazionale e internazionale
 
-> INE<span class="underline">[:http://www.ine.es/ss/Satellite?L=0\&c=Page\&cid=1254735839296\&p=125](http://www.ine.es/ss/Satellite?L=0&c=Page&cid=1254735839296&p=125) 4735839296\&pagename=MetodologiaYEstandares%2FINELayout</span>
+INE<span class="underline">[:http://www.ine.es/ss/Satellite?L=0\&c=Page\&cid=1254735839296\&p=125](http://www.ine.es/ss/Satellite?L=0&c=Page&cid=1254735839296&p=125) 4735839296\&pagename=MetodologiaYEstandares%2FINELayout</span>
 
   - > [Thesaurus multilingue dell'Unione europea (EUROVOC):](http://open-data.europa.eu/cs/data/dataset/eurovoc) [<span class="underline">http://open- data.europa.eu/cs/data/dataset/eurovoc</span>](http://open-data.europa.eu/cs/data/dataset/eurovoc)
 

@@ -46,6 +46,10 @@ theme:
 
 nav:
     - Home: README.md
+    - Guida:
+      - Introduzione: introduzione/README.md
+      - Formato di dati tabellari: formato_dati_tabellari/README.md
+    - Partecipa: partecipa.md
 
 extra:
  social:

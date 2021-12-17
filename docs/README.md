@@ -1,10 +1,8 @@
 ---
 hide:
-  - toc
-  - navigation
-title: Introduzione
+ - toc
+ - navigation
+title: Benvenute/i
 ---
 
-# Mondo ciao
-
-Evviva
+Questo progetto bla bla
