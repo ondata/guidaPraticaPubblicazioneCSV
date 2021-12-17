@@ -1,6 +1,6 @@
 ---
 hide:
-   - navigation
+#   - navigation
 title: Dizionari di dati
 ---
 
