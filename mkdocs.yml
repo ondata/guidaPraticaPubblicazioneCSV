@@ -50,7 +50,7 @@ nav:
     - Guida:
       - Introduzione: introduzione/README.md
       - Formato di dati tabellari: formato_dati_tabellari/README.md
-    - Dizionario: dizionario_dati/README.md
+      - Dizionario: dizionario_dati/README.md
     - Partecipa: partecipa.md
     - Note: note_redazione.md
 
