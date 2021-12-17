@@ -58,16 +58,16 @@ Colonna 6:
 - Il vocabolario W3C è molto esaustivo, tuttavia, ci sono un certo numero di proprietà che è consigliabile prendere in considerazione per qualsiasi file tabellare:
 
 - Per le righe:
-   - Titolo della tabella ["dc:title"].
-   - Descrizione ["dc:description"]
-   - Editore ["dc:creator"].
-   - Posizione del file da descrivere ["url"].
+     - Titolo della tabella ["dc:title"].
+     - Descrizione ["dc:description"]
+     - Editore ["dc:creator"].
+     - Posizione del file da descrivere ["url"].
 
 - Per le colonne:
-   - Colonna name["name"]
-   - Titolo della colonna ["titoli"].
-   - Descrizione["dc:description"]
-   - Tipi di dati: ["datatype"].
+     - Colonna name["name"]
+     - Titolo della colonna ["titoli"].
+     - Descrizione["dc:description"]
+     - Tipi di dati: ["datatype"].
 
 - Inoltre, è possibile annotare attraverso l'uso di diverse proprietà, tra gli altri metadati, quanto segue: ordine delle colonne, valori attesi, valori richiesti, valori unici, chiavi esterne, elenchi di valori, lingue di stringa, formati, restrizioni, validazioni, istruzioni per la trasformazione del CSV in un altro formato.
 - Quello che segue è un esempio di un dizionario di dati espresso come schema in formato JSON che può essere fornito tramite un server web. Per esempio, tramite l'URL: [http://example.org/automoviles.csv-metadata.json](http://example.org/automoviles.csv-metadata.json).
