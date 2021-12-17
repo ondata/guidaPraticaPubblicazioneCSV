@@ -1,7 +1,12 @@
+---
+hide:
+# - toc
+# - navigation
+title: Benvenute/i
+---
 
 
-
-Le serie di **dati tabulari** ben organizzate, conformi a uno schema predefinito, sono facili da manipolare, modellare e visualizzare, e hanno una struttura specifica basata sulle seguenti regole:
+Le serie di **dati tabellari** ben organizzate, conformi a uno schema predefinito, sono facili da manipolare, modellare e visualizzare, e hanno una struttura specifica basata sulle seguenti regole:
 
 - Ogni variabile è una **colonna**.
 - Ogni osservazione è una **riga**.
