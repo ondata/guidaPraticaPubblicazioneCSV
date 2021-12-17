@@ -19,7 +19,7 @@ La cartella [risorse](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tre
 
 ## File CSV di esempio
 
-Nella [guida originale](https://github.com/ondata/guidaPraticaPubblicazioneCSV/blob/main/risorse/guia_csv_vf.pdf) sono presenti diverse tabelle. Quelle da riportare nelle pagine di questa, è bene salvarle in CSV nella cartella [docs/risorse/tabelle](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs/isorse/tabelle), con questo schema di nome: `pagXX_tab_XX.csv`, quindi ad esempio per la prima tabella di pagina 6, il nome file sarà `pag06_tab01.csv`.
+Nella [guida originale](https://github.com/ondata/guidaPraticaPubblicazioneCSV/blob/main/risorse/guia_csv_vf.pdf) sono presenti diverse tabelle. Quelle da riportare nelle pagine di questa, è bene salvarle in CSV nella cartella [docs/risorse/tabelle](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs/risorse/tabelle), con questo schema di nome: `pagXX_tab_XX.csv`, quindi ad esempio per la prima tabella di pagina 6, il nome file sarà `pag06_tab01.csv`.
 
 !!! note "Nota bene"
 
