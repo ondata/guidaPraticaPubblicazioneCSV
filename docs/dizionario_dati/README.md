@@ -19,7 +19,7 @@ Il dizionario dei dati è un complemento essenziale per qualsiasi serie di dati,
 ## Esempio di dizionario dei dati espresso come file di testo
 
 ```
-File di dati: [`automobili.csv`](../risorse/tabelle/automobili.csv)
+File di dati: https://ondata.github.io/guidaPraticaPubblicazioneCSV/risorse/tabelle/automobili.csv
 Descrizione: tabella con dati sulle auto d'epoca
 Editore: Autore di esempi
 Colonna 1:
