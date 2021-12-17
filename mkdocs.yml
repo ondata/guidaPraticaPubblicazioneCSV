@@ -1,0 +1,104 @@
+site_name: Guida per la pubblicazione di CSV
+site_url:  https://ondata.github.io/guidaPraticaPubblicazioneCSV/
+site_description: Guida pratica per la pubblicazione di dati tabellari in formato CSV
+
+
+repo_url: https://github.com/ondata/guidaPraticaPubblicazioneCSV
+repo_name: guidaPraticaPubblicazioneCSV
+edit_uri: edit/master/docs/
+
+copyright: 'Questa guida è un progetto dell''<a href="https://twitter.com/ondatait" target="_blank">associazione onData</a> | licenza <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it" target="_blank">CC BY-SA 4.0</a>'
+
+theme:
+  name: material
+  icon:
+    logo: material/table
+  highlightjs: true
+  custom_dir: overrides
+  favicon: imgs/favicon.ico
+  palette:
+    - scheme: preference
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  language: it
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    - search.highlight
+    - search.share
+    - search.suggest
+#    - navigation.instant
+    - navigation.tracking
+  font:
+    text: Montserrat
+    #code: Cutive Mono
+    code: Fira Code
+
+
+nav:
+    - Home: README.md
+
+extra:
+ social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/ondatait
+
+# foglio di stile personalizzato
+extra_css:
+  - stylesheets/style.css
+
+plugins:
+  - search:
+      lang: it
+  - mkdocstrings
+  - mermaid2
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+  - javascripts/varie.js
+  - https://unpkg.com/mermaid/dist/mermaid.min.js
+
+markdown_extensions:
+- admonition
+- md_in_html
+- attr_list
+- footnotes
+- meta
+- mkdocs-click
+- pymdownx.keys
+- pymdownx.betterem:
+      smart_enable: all
+- pymdownx.caret
+- pymdownx.critic:
+      mode: view
+- pymdownx.details
+- pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+- pymdownx.highlight
+- pymdownx.mark
+- pymdownx.smartsymbols
+- pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+- pymdownx.tabbed
+- pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: true
+- pymdownx.tilde
+- toc:
+      permalink: true
+      toc_depth: 3
+
