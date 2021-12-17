@@ -11,7 +11,7 @@ A seguire alcune note utili ai redattori della guida
 
 ## Modalità di pubblicazione
 
-La guida è basato su [MkDocs](https://www.mkdocs.org/) e sul tema [Material](https://squidfunk.github.io/mkdocs-material/).
+La guida è basata su [MkDocs](https://www.mkdocs.org/) e sul tema [Material](https://squidfunk.github.io/mkdocs-material/).
 
 ## File originali della guida
 
