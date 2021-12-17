@@ -18,12 +18,13 @@ theme:
   favicon: imgs/favicon.ico
   palette:
     - scheme: preference
+      primary: deep purple
       accent: orange
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: indigo
+      primary: deep purple
       accent: orange
       toggle:
         icon: material/weather-sunny
@@ -50,6 +51,7 @@ nav:
       - Introduzione: introduzione/README.md
       - Formato di dati tabellari: formato_dati_tabellari/README.md
     - Partecipa: partecipa.md
+    - Note: note_redazione.md
 
 extra:
  social:
