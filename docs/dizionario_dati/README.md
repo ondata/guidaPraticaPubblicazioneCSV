@@ -26,33 +26,51 @@ Editore: Autore di esempi
 
 
 Colonna 1:
+   
    Titolo: marchio
+   
    Descrizione: Questo campo contiene informazioni sulla marca e il modello di ogni veicolo.
+   
    Tipo di dati: stringa 
    
 Colonna 2:
+  
    Titolo: anno
+   
    Descrizione: Questo campo contiene informazioni sull'anno di fabbricazione di ogni veicolo.
+   
    Tipo di dati: data 
    
 Colonna 3:
+   
    Titolo: cilindri
+   
    Descrizione: Questo campo contiene informazioni sul numero di cilindri di ogni veicolo.
+   
    Tipo di dati: intero 
    
 Colonna 4:
+   
    Titolo: consumo
+   
    Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in litri / 100 km.
+   
    Tipo di dati: decimale 
    
 Colonna 5:
+   
    Titolo: potenza
+   
    Descrizione: Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV.
+   
    Tipo di dati: decimale
 
 Colonna 6:
+   
    Titolo: accelerazione
+   
    Descrizione: Questo campo contiene dati sull'accelerazione di ogni veicolo, misurata in m/sec2.
+   
    Tipo di dati: decimale
 
 
@@ -123,6 +141,6 @@ Il dizionario dei dati mostrato come esempio è associato al set di dati mostrat
 - La proprietà "`datatype`" è usata per descrivere i tipi di dati in cui il <kbd>  manca una parola </kbd>
 esprime ogni valore nella colonna corrispondente.
 - La proprietà "description" permette di includere un testo descrittivo del contenuto di ogni colonna.
-- Strumenti come quelli descritti nella sezione"Toolbox forCSVfiles"di questa guida, per esempio CSVlint, permettono di controllare la coerenza del dataset confrontando il contenuto del dizionario dei dati e la struttura del file dei dati.
+- Strumenti come quelli descritti nella sezione "Toolbox forCSVfiles" di questa guida, per esempio CSVlint, permettono di controllare la coerenza del dataset confrontando il contenuto del dizionario dei dati e la struttura del file dei dati.
 - Tra gli altri controlli, è possibile convalidare il numero di colonne e i loro nomi, il tipo di valori ammessi, se questi valori devono essere unici o se ci sono collegamenti di questi valori ad altre tabelle (chiavi esterne).
 
