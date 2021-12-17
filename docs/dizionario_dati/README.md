@@ -11,7 +11,7 @@ Il dizionario dei dati è un complemento essenziale per qualsiasi serie di dati,
 
 ## Esempio di dizionario dei dati espresso come file di testo
 
-File di dati: http://example.org/automoviles.csv 
+File di dati: [http://example.org/automoviles.csv](http://example.org/automoviles.csv) 
 
 Descrizione: tabella con dati sulle auto d'epoca 
 
@@ -49,26 +49,26 @@ Colonna 6:
    Tipo di dati: decimale
 ```
 
+È buona pratica che il dizionario dei dati sia espresso in un formato azionabile, ad esempio `JSON` o `JSON-LD`, utilizzando un vocabolario standardizzato per definire ciascuna delle caratteristiche o annotazioni su ciascuno degli elementi del file di dati.
 
-È buona pratica che il dizionario dei dati sia espresso in un formato azionabile, ad esempio JSON o JSON-LD, utilizzando un vocabolario standardizzato per definire ciascuna delle caratteristiche o annotazioni su ciascuno degli elementi del file di dati.
+- In alcune piattaforme Open Data, ad esempio quelle implementate con CKAN, il dizionario dei dati è specificato come una sezione associata a ciascuna risorsa in un set di dati. 
+- Secondo il Technical Standard for Information Resources Interoperability (TSI), il modo di specificare il modello di dati è usando la proprietà "dct:relation" nei metadati di distribuzione delle risorse del dataset.
+- Quando si impostano i valori delle proprietà, è consigliabile usare un linguaggio chiaro e conciso, poiché gli utenti finali dei dati potrebbero non avere necessariamente familiarità con i dati.
+- Il W3C raccomanda un modello per i dati tabulari e propone un vocabolario per la descrizione di queste proprietà.
+- Il vocabolario W3C è molto esaustivo, tuttavia, ci sono un certo numero di proprietà che è consigliabile prendere in considerazione per qualsiasi file tabellare:
 
- In alcune piattaforme Open Data, ad esempio quelle implementate con CKAN, il dizionario dei dati è specificato come una sezione associata a ciascuna risorsa in un set di dati.
- Secondo il Technical Standard for Information Resources Interoperability (TSI), il modo di specificare il modello di dati è usando la proprietà "dct:relation" nei metadati di distribuzione delle risorse del dataset.
- Quando si impostano i valori delle proprietà, è consigliabile usare un linguaggio chiaro e conciso, poiché gli utenti finali dei dati potrebbero non avere necessariamente familiarità con i dati.
- Il W3C raccomanda un modello per i dati tabulari e propone un vocabolario per la descrizione di queste proprietà.
- Il vocabolario W3C è molto esaustivo, tuttavia, ci sono un certo numero di proprietà che è consigliabile prendere in considerazione per qualsiasi file tabellare:
+- Per le tabelle:
+   - Titolo della tabella ["dc:title"].
+   - Descrizione ["dc:description"]
+   - Editore ["dc:creator"].
+   - Posizione del file da descrivere ["url"].
 
- Per i tavoli:
-    Titolo della tabella ["dc:title"].
-    Descrizione ["dc:description"]
-    Editore ["dc:creator"].
-    Posizione del file da descrivere ["url"].
+- Per le colonne:
+   - Colonna name["name"]
+   - Titolo della colonna ["titoli"].
+   - Descrizione["dc:description"]
+   - Tipi di dati: ["datatype"].
 
- Per le colonne:
-    Colonna name["name"]
-    Titolo della colonna ["titoli"].
-    Descrizione["dc:description"]
-    Tipi di dati: ["datatype"].
+- Inoltre, è possibile annotare attraverso l'uso di diverse proprietà, tra gli altri metadati, quanto segue: ordine delle colonne, valori attesi, valori richiesti, valori unici, chiavi esterne, elenchi di valori, lingue di stringa, formati, restrizioni, validazioni, istruzioni per la trasformazione del CSV in un altro formato.
+- Quello che segue è un esempio di un dizionario di dati espresso come schema in formato JSON che può essere fornito tramite un server web. Per esempio, tramite l'URL: [http://example.org/automoviles.csv-metadata.json](http://example.org/automoviles.csv-metadata.json).
 
- Inoltre, è possibile annotare attraverso l'uso di diverse proprietà, tra gli altri metadati, quanto segue: ordine delle colonne, valori attesi, valori richiesti, valori unici, chiavi esterne, elenchi di valori, lingue di stringa, formati, restrizioni, validazioni, istruzioni per la trasformazione del CSV in un altro formato.
- Quello che segue è un esempio di un dizionario di dati espresso come schema in formato JSON che può essere fornito tramite un server web. Per esempio, tramite l'URL: http://example.org/automoviles.csv-metadata.json.
