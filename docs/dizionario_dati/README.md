@@ -58,16 +58,16 @@ Colonna 6:
 - Il vocabolario W3C è molto esaustivo, tuttavia, ci sono un certo numero di proprietà che è consigliabile prendere in considerazione per qualsiasi file tabellare:
 
 - Per le righe:
-     - Titolo della tabella ["`dc:title`"].
-     - Descrizione ["`dc:description`"]
-     - Editore ["`dc:creator`"].
-     - Posizione del file da descrivere ["`url`"].
+     - Titolo della tabella `["dc:title"]`
+     - Descrizione `["dc:description"]`
+     - Editore `["dc:creator"]`
+     - Posizione del file da descrivere `["url"]`
 
 - Per le colonne:
-     - Colonna name["`name`"]
-     - Titolo della colonna ["`titoli`"].
-     - Descrizione["`dc:description`"]
-     - Tipi di dati: ["`datatype`"].
+     - Colonna name `["name"]`
+     - Titolo della colonna `["titoli"]`
+     - Descrizione `["dc:description"]`
+     - Tipi di dati: ["datatype"]
 
 - Inoltre, è possibile annotare attraverso l'uso di diverse proprietà, tra gli altri metadati, quanto segue: ordine delle colonne, valori attesi, valori richiesti, valori unici, chiavi esterne, elenchi di valori, lingue di stringa, formati, restrizioni, validazioni, istruzioni per la trasformazione del CSV in un altro formato.
 - Quello che segue è un esempio di un dizionario di dati espresso come schema in formato JSON che può essere fornito tramite un server web. Per esempio, tramite l'URL: [http://example.org/automoviles.csv-metadata.json](http://example.org/automoviles.csv-metadata.json).
@@ -91,7 +91,7 @@ Colonna 6:
         "datatype": "string"
       },
       {
-        "name": "annio",
+        "name": "anno",
         "title": "anno",
         "dc:description": "Questo campo contiene informazioni su l'anno di fabbricazione di ogni veicolo",
         "datatype": {
@@ -131,10 +131,10 @@ Colonna 6:
 
 Il dizionario dei dati mostrato come esempio è associato al set di dati mostrato in questa guida.
 
-- Tra le altre proprietà, il nome di ogni colonna viene descritto utilizzando la proprietà "`name`".
-- L'uso della proprietà "`title`" è usato per specificare la riga di intestazione della tabella. L'assenza di questa proprietà indica che la tabella non ha una riga di intestazione.
+- Tra le altre proprietà, il nome di ogni colonna viene descritto utilizzando la proprietà `name`.
+- L'uso della proprietà `title` è usato per specificare la riga di intestazione della tabella. L'assenza di questa proprietà indica che la tabella non ha una riga di intestazione.
 - Questa intestazione per ogni colonna può essere accompagnata da un codice di lingua in modo che la riga di intestazione possa essere espressa in diverse lingue.
-- La proprietà "`datatype`" è usata per descrivere i tipi di dati in cui il <kbd>  manca una parola </kbd>
+- La proprietà `datatype` è usata per descrivere i tipi di dati in cui il <kbd>  manca una parola </kbd>
 esprime ogni valore nella colonna corrispondente.
 - La proprietà "description" permette di includere un testo descrittivo del contenuto di ogni colonna.
 - Strumenti come quelli descritti nella sezione "Toolbox forCSVfiles" di questa guida, per esempio CSVlint, permettono di controllare la coerenza del dataset confrontando il contenuto del dizionario dei dati e la struttura del file dei dati.
