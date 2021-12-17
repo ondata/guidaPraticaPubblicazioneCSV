@@ -2,7 +2,7 @@
 hide:
   - toc
   - navigation
-title: Ciao mondo
+title: Introduzione
 ---
 
 # Mondo ciao
