@@ -18,65 +18,40 @@ Il dizionario dei dati è un complemento essenziale per qualsiasi serie di dati,
 
 ## Esempio di dizionario dei dati espresso come file di testo
 
-File di dati: [http://example.org/automoviles.csv](http://example.org/automoviles.csv) 
-
-Descrizione: tabella con dati sulle auto d'epoca 
-
+```
+File di dati: [`automobili.csv`](../risorse/tabelle/automobili.csv)<br>
+Descrizione: tabella con dati sulle auto d'epoca<br>
 Editore: Autore di esempi
-
-
 Colonna 1:
-   
       Titolo: marchio
-
       Descrizione: Questo campo contiene informazioni sulla marca e il modello di ogni veicolo.
-
-      Tipo di dati: stringa 
-   
+      Tipo di dati: stringa
 Colonna 2:
-  
       Titolo: anno
-
       Descrizione: Questo campo contiene informazioni sull'anno di fabbricazione di ogni veicolo.
-
-      Tipo di dati: data 
-   
+      Tipo di dati: data
 Colonna 3:
-   
       Titolo: cilindri
-
       Descrizione: Questo campo contiene informazioni sul numero di cilindri di ogni veicolo.
-
-      Tipo di dati: intero 
-   
+      Tipo di dati: intero
 Colonna 4:
-   
       Titolo: consumo
-
       Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in litri / 100 km.
-
-      Tipo di dati: decimale 
-   
+      Tipo di dati: decimale
 Colonna 5:
-   
       Titolo: potenza
-
       Descrizione: Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV.
-
       Tipo di dati: decimale
-
 Colonna 6:
-   
       Titolo: accelerazione
-
       Descrizione: Questo campo contiene dati sull'accelerazione di ogni veicolo, misurata in m/sec2.
-
       Tipo di dati: decimale
+```
 
 
-È buona pratica che il dizionario dei dati sia espresso in un formato azionabile, ad esempio `JSON` o `JSON-LD`, utilizzando un vocabolario standardizzato per definire ciascuna delle caratteristiche o annotazioni su ciascuno degli elementi del file di dati.
+È buona pratica che il dizionario dei dati sia espresso in un formato *machine readable*, ad esempio `JSON` o `JSON-LD`, utilizzando un vocabolario standardizzato per definire ciascuna delle caratteristiche o annotazioni su ciascuno degli elementi del file di dati.
 
-- In alcune piattaforme Open Data, ad esempio quelle implementate con CKAN, il dizionario dei dati è specificato come una sezione associata a ciascuna risorsa in un set di dati. 
+- In alcune piattaforme Open Data, ad esempio quelle implementate con CKAN, il dizionario dei dati è specificato come una sezione associata a ciascuna risorsa in un set di dati.
 - Secondo il Technical Standard for Information Resources Interoperability (TSI), il modo di specificare il modello di dati è usando la proprietà "`dct:relation`" nei metadati di distribuzione delle risorse del dataset.
 - Quando si impostano i valori delle proprietà, è consigliabile usare un linguaggio chiaro e conciso, poiché gli utenti finali dei dati potrebbero non avere necessariamente familiarità con i dati.
 - Il W3C raccomanda un modello per i dati tabulari e propone un vocabolario per la descrizione di queste proprietà.
