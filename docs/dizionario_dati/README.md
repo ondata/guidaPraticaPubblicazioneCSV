@@ -74,38 +74,59 @@ Colonna 6:
 
 
 ## Esempio di dizionario di dati usando il formato json-ld
-```
+
+```json
 {
-"@context": "http://www.w3.org/ns/csvw", "@type": "Table",
-"url": "http://example.org/automoviles.csv", "dc:description": "Tabella con dati sulle auto classiche" "dc:creator": "Autore dell'esempio".
-"tableSchema": {
-                  "colonne": [{
-                                 "nome": "identificatore",
-                                 "titoli": "marchio",
-                                 "dc:description": "Questo campo contiene informazioni sulla marca e il modello di ogni veicolo".
-                                 "datatype": "string" },
-                                 {"nome": "annio",
-                                 "titoli": "anno",
-                                 "dc:description": "Questo campo contiene informazioni su
-                                 l'anno di fabbricazione di ogni veicolo".
-                                 "datatype": {
-                                 "base": "data". ,
-                                 "formato": "aaaa"}},
-                                 {"nome": "cilindri",
-                                 "titoli": cilindri",
-                                 "dc:description": "Questo campo contiene informazioni sul numero di cilindri di ogni veicolo".
-                                 "datatype": "integer" },
-                                 {"nome": "consumo",
-                                 "titoli": "consumo",
-                                 "dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in litri / 100 km".
-                                 "datatype": "decimal" },
-                                 {"nome": "potenza",
-                                 "titoli": "potenza",
-                                 "dc:description": "Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV". "datatype": "decimal" },
-                                 {"nome": "accelerazione", "titoli": "accelerazione",
-                                 "dc:description": "Questo campo contiene dati sull'accelerazione di ogni veicolo misurata in m/sec2" "datatype": "decimal" "dc:description": "Questo campo contiene dati sull'accelerazione di ogni veicolo misurata in m/sec2" "datatype": "decimal".
-                                 }}]
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "Table",
+  "url": "https://sito_di_esempio.it/automobili.csv",
+  "dc:description": "Tabella con dati sulle auto classiche",
+  "dc:creator": "Autore dell'esempio",
+  "tableSchema": {
+    "colonne": [
+      {
+        "name": "identificatore",
+        "title": "marchio",
+        "dc:description": "Questo campo contiene informazioni sulla marca e il modello di ogni veicolo",
+        "datatype": "string"
+      },
+      {
+        "name": "annio",
+        "title": "anno",
+        "dc:description": "Questo campo contiene informazioni su l'anno di fabbricazione di ogni veicolo",
+        "datatype": {
+          "base": "data",
+          "formato": "aaaa"
+        }
+      },
+      {
+        "name": "cilindri",
+        "title": "cilindri",
+        "dc:description": "Questo campo contiene informazioni sul numero di cilindri di ogni veicolo",
+        "datatype": "integer"
+      },
+      {
+        "name": "consumo",
+        "title": "consumo",
+        "dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in litri / 100 km",
+        "datatype": "decimal"
+      },
+      {
+        "name": "potenza",
+        "title": "potenza",
+        "dc:description": "Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV",
+        "datatype": "decimal"
+      },
+      {
+        "name": "accelerazione",
+        "title": "accelerazione",
+        "dc:description": "Questo campo contiene dati sull'accelerazione di ogni veicolo misurata in m/sec2",
+        "datatype": "decimal"
+      }
+    ]
+  }
 }
+
 ```
 
 Il dizionario dei dati mostrato come esempio è associato al set di dati mostrato in questa guida.
