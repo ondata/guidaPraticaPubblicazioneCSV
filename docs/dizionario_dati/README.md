@@ -67,7 +67,7 @@ Colonna 6:
      - Colonna name `["name"]`
      - Titolo della colonna `["titoli"]`
      - Descrizione `["dc:description"]`
-     - Tipi di dati: ["datatype"]
+     - Tipi di dati: `["datatype"]`
 
 - Inoltre, è possibile annotare attraverso l'uso di diverse proprietà, tra gli altri metadati, quanto segue: ordine delle colonne, valori attesi, valori richiesti, valori unici, chiavi esterne, elenchi di valori, lingue di stringa, formati, restrizioni, validazioni, istruzioni per la trasformazione del CSV in un altro formato.
 - Quello che segue è un esempio di un dizionario di dati espresso come schema in formato JSON che può essere fornito tramite un server web. Per esempio, tramite l'URL: [http://example.org/automoviles.csv-metadata.json](http://example.org/automoviles.csv-metadata.json).
