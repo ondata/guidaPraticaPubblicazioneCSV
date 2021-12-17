@@ -57,7 +57,7 @@ Colonna 6:
 - Il W3C raccomanda un modello per i dati tabulari e propone un vocabolario per la descrizione di queste proprietà.
 - Il vocabolario W3C è molto esaustivo, tuttavia, ci sono un certo numero di proprietà che è consigliabile prendere in considerazione per qualsiasi file tabellare:
 
-- Per le tabelle:
+- Per le righe:
    - Titolo della tabella ["dc:title"].
    - Descrizione ["dc:description"]
    - Editore ["dc:creator"].
