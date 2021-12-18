@@ -37,7 +37,7 @@ Da prendere in considerazione:
     | Dati sulle vendite di auto (anni 1998 - 1999) |
     | Unità espresse in migliaia |
     | marchio | anno | vendite_per_anno |
-    |-------|----|----------------|
+    | ------- | ---- | ---------------- |
     | chevrolet chevelle malibu | 1998 | 2,50 |
     | chevrolet chevelle malibu | 1999 | 2,63 |
     | buick skylark 320 | 1998 | 3,40 |
