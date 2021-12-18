@@ -26,3 +26,4 @@ Nella [guida originale](https://github.com/ondata/guidaPraticaPubblicazioneCSV/b
     I numeri pagina e la numerazione tabella sempre in doppia cifra (quindi pagina, diventa `01`) e se c'è una sola tabella nella pagina si mantiene lo `01`.<br>
     Come numero pagina, usare quello che si legge nel piede del PDF.
 
+È stato creato un :material-table: [foglio elettronico](https://docs.google.com/spreadsheets/d/1CAR685UYBmaKVB3zE4yuRj-n0fZBL6HohFDat66Zqic/edit#gid=775453510), dove raccogliere senza alcuna formattazione, le tabelle presenti nella guida originale. Sarà comodo per produrre la versione da inserire in questa guida.
