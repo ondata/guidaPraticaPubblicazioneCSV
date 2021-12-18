@@ -35,55 +35,55 @@ Da prendere in considerazione:
     <kbd>cattiva prassi</kbd>
     
     <table>
-  <tr>
-   <td colspan="3" ><strong>Dati sulle vendite di auto (anni 1998 - 1999)</strong>
-   </td>
-  </tr>
-  <tr>
-   <td colspan="3" ><strong>Unità espresse in migliaia</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><strong>marchio</strong>
-   </td>
-   <td><strong>anno</strong>
-   </td>
-   <td><strong>vendite_per_anno</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>chevrolet chevelle malibu
-   </td>
-   <td>1998
-   </td>
-   <td>2,50
-   </td>
-  </tr>
-  <tr>
-   <td>chevrolet chevelle malibu
-   </td>
-   <td>1999
-   </td>
-   <td>2,63
-   </td>
-  </tr>
-  <tr>
-   <td>buick skylark 320
-   </td>
-   <td>1998
-   </td>
-   <td>3,40
-   </td>
-  </tr>
-  <tr>
-   <td>buick skylark 320
-   </td>
-   <td>1999
-   </td>
-   <td>3,57
-   </td>
-  </tr>
-</table> 
+    <tr>
+    <td colspan="3" ><strong>Dati sulle vendite di auto (anni 1998 - 1999)</strong>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="3" ><strong>Unità espresse in migliaia</strong>
+    </td>
+    </tr>
+    <tr>
+    <td><strong>marchio</strong>
+    </td>
+    <td><strong>anno</strong>
+    </td>
+    <td><strong>vendite_per_anno</strong>
+    </td>
+    </tr>
+    <tr>
+    <td>chevrolet chevelle malibu
+    </td>
+    <td>1998
+    </td>
+    <td>2,50
+    </td>
+    </tr>
+    <tr>
+    <td>chevrolet chevelle malibu
+    </td>
+    <td>1999
+    </td>
+    <td>2,63
+    </td>
+    </tr>
+    <tr>
+    <td>buick skylark 320
+    </td>
+    <td>1998
+    </td>
+    <td>3,40
+    </td>
+    </tr>
+    <tr>
+    <td>buick skylark 320
+    </td>
+    <td>1999
+    </td>
+    <td>3,57
+    </td>
+    </tr>
+    </table> 
     
     <kbd>buona prassi</kbd>
     
