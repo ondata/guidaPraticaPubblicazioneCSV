@@ -118,7 +118,7 @@ Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espres
     		<tr>
     			<td>buick skylark 320</td>
     			<td>mail@concesionario_buick.com</td>
-    			<td>+34-2222222</td>
+    			<td>+39-2222222</td>
     		</tr>
     	</tbody>
     </table>
@@ -141,7 +141,7 @@ Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espres
     		<tr>
     			<td>buick skylark 320</td>
     			<td>mail@concesionario_buick.com</td>
-    			<td>+34-2222222</td>
+    			<td>+39-2222222</td>
     		</tr>
     	</tbody>
     </table>
