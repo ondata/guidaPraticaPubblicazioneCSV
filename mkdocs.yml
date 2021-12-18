@@ -38,6 +38,7 @@ theme:
     - search.share
     - search.suggest
     - navigation.tracking
+#    - navigation.indexes
   font:
     text: Montserrat
     #code: Cutive Mono
@@ -47,9 +48,9 @@ theme:
 nav:
     - Home: README.md
     - Guida:
-      - Introduzione: introduzione/README.md
-      - Formato di dati tabellari: formato_dati_tabellari/README.md
-      - Dizionario: dizionario_dati/README.md
+      - Introduzione: introduzione/index.md
+      - Formato di dati tabellari: formato_dati_tabellari/index.md
+      - Dizionario: dizionario_dati/index.md
       - Linee guida pubblicazione:
           - linee_guida_pubblicazione_file/index.md
           - Singola riga intestazione: linee_guida_pubblicazione_file/P01_unica_riga_intestazione.md
