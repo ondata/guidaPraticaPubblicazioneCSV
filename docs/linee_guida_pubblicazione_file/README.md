@@ -32,7 +32,6 @@ Da prendere in considerazione:
 
 !!! example "Esempio 1: non usare celle multiple di intestazione"
     
-    |-------|----|----------------|
     |Dati sulle vendite di auto (anni 1998 - 1999)|
     |Unità espresse in migliaia|
     |marchio|anno|vendite_per_anno|
