@@ -35,7 +35,9 @@ Da prendere in considerazione:
     <kbd>cattiva prassi</kbd>
     
     | Dati sulle vendite di auto (anni 1998 - 1999) |
+    |-----------------------------------------------|
     | Unità espresse in migliaia |
+    |----------------------------|
     | marchio | anno | vendite_per_anno |
     | ------- | ---- | ---------------- |
     | chevrolet chevelle malibu | 1998 | 2,50 |
