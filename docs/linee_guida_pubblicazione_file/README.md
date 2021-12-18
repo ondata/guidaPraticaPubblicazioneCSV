@@ -35,37 +35,38 @@ Da prendere in considerazione:
     <kbd>cattiva prassi</kbd>
     
     <style>
-.cell1 { background-color: #ffffff; color: #000000; font-family: Arial; font-size: 10pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: bottom; border-left-style: solid; border-left-width: 1px; border-left-color: #666666 border-right-style: solid; border-right-width: 1px; border-right-color: #666666 border-top-style: solid; border-top-width: 1px; border-top-color: #666666 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #666666 }
+    .cell1 { background-color: #ffffff; color: #000000; font-family: Arial; font-size: 10pt; font-style: normal; font-weight: bold; text-align: center; vertical-align: bottom;   border-left-style: solid; border-left-width: 1px; border-left-color: #666666 border-right-style: solid; border-right-width: 1px; border-right-color: #666666 border-top-style: solid; border-top-width: 1px; border-top-color: #666666 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #666666 }
 .cell2 { background-color: #ffffff; color: #24292f; font-family: Arial; font-size: 10pt; font-style: normal; font-weight: bold; text-align: left; vertical-align: bottom; border-left-style: solid; border-left-width: 1px; border-left-color: #666666 border-right-style: solid; border-right-width: 1px; border-right-color: #666666 border-top-style: solid; border-top-width: 1px; border-top-color: #666666 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #666666 }
 .cell3 { background-color: #ffffff; color: #000000; font-family: Arial; font-size: 10pt; font-style: normal; font-weight: bold; text-align: left; vertical-align: bottom; border-left-style: solid; border-left-width: 1px; border-left-color: #666666 border-right-style: solid; border-right-width: 1px; border-right-color: #666666 border-top-style: solid; border-top-width: 1px; border-top-color: #666666 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #666666 }
 .cell4 { background-color: #ffffff; color: #000000; font-family: Arial; font-size: 10pt; font-style: normal; font-weight: normal; text-align: left; vertical-align: bottom; border-left-style: solid; border-left-width: 1px; border-left-color: #666666 border-right-style: solid; border-right-width: 1px; border-right-color: #666666 border-top-style: solid; border-top-width: 1px; border-top-color: #666666 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #666666 }
 .cell5 { background-color: #ffffff; color: #24292f; font-family: Arial; font-size: 10pt; font-style: normal; font-weight: normal; text-align: left; vertical-align: bottom; border-left-style: solid; border-left-width: 1px; border-left-color: #666666 border-right-style: solid; border-right-width: 1px; border-right-color: #666666 border-top-style: solid; border-top-width: 1px; border-top-color: #666666 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #666666 }
 .cell6 { background-color: #ffffff; color: #24292f; font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; font-size: 10pt; font-style: normal; font-weight: normal; text-align: left; vertical-align: bottom; border-left-style: solid; border-left-width: 1px; border-left-color: #666666 border-right-style: solid; border-right-width: 1px; border-right-color: #666666 border-top-style: solid; border-top-width: 1px; border-top-color: #666666 border-bottom-style: solid; border-bottom-width: 1px; border-bottom-color: #666666 }
-</style>
+    </style>
 
-<table style="border-collapse: collapse;">
-<colgroup>
-  <col width="169" />
-  <col width="104" />
-  <col width="133" />
-</colgroup>
-<tr height="21"><td colspan=3 class="cell1">Dati sulle vendite di auto (anni 1998 - 1999)</td></tr>
-<tr height="21"><td colspan=3 class="cell1">Unità espresse in migliaia</td></tr>
-<tr height="21"><td class="cell2">marchio </td><td class="cell3">anno</td><td class="cell3">vendite_per_anno</td></tr>
-<tr height="21"><td class="cell4">chevrolet chevelle malibu</td><td class="cell4">1998</td><td class="cell4">2,50</td></tr>
-<tr height="21"><td class="cell5">chevrolet chevelle malibu  </td><td class="cell4">1999</td><td class="cell4">2,63</td></tr>
-<tr height="21"><td class="cell4">buick skylark 320</td><td class="cell4">1998</td><td class="cell4">3,40</td></tr>
-<tr height="21"><td class="cell6">buick skylark 320</td><td class="cell4">1999</td><td class="cell4">3,57</td></tr>
-</table>
+    <table style="border-collapse: collapse;">
+    <colgroup>
+       <col width="169" />
+      <col width="104" />
+      <col width="133" />
+    </colgroup>
+    <tr height="21"><td colspan=3 class="cell1">Dati sulle vendite di auto (anni 1998 - 1999)</td></tr>
+    <tr height="21"><td colspan=3 class="cell1">Unità espresse in migliaia</td></tr>
+    <tr height="21"><td class="cell2">marchio </td><td class="cell3">anno</td><td class="cell3">vendite_per_anno</td></tr>
+    <tr height="21"><td class="cell4">chevrolet chevelle malibu</td><td class="cell4">1998</td><td class="cell4">2,50</td></tr>
+    <tr height="21"><td class="cell5">chevrolet chevelle malibu  </td><td class="cell4">1999</td><td class="cell4">2,63</td></tr>
+    <tr height="21"><td class="cell4">buick skylark 320</td><td class="cell4">1998</td><td class="cell4">3,40</td></tr>
+    <tr height="21"><td class="cell6">buick skylark 320</td><td class="cell4">1999</td><td class="cell4">3,57</td></tr>
+    </table>
     
     <kbd>buona prassi</kbd>
     
     | marchio | anno | vendite_per_anno |
-    |-------|----|----------------|
+    | ------- | ---- | ---------------- |
     | chevrolet chevelle malibu | 1998 | 2,50 |
     | chevrolet chevelle malibu | 1999 | 2,63 |
     | buick skylark 320 | 1998 | 3,40 |
     | buick skylark 320 | 1999 | 3,57 |
+    
     
     
 Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "`description`".
