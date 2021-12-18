@@ -40,6 +40,7 @@ div.md-typeset__table td {
   table-layout: fixed;
   width: 100%;
   word-break: break-word;
+  word-wrap: break-word;
 }
 
 table[class="tabella"]  td{
