@@ -22,6 +22,11 @@ div.md-typeset__table td {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* colore background intestazione tabella */
+div.md-typeset__table thead {
+  background-color: #b6c1ff;
+}
+
 /* stili per tabelle esempio */
 
 .arancione {
