@@ -12,7 +12,7 @@ tr:nth-child(even) {
 
 /* colore background intestazione tabella */
 div.md-typeset__table thead {
-  background-color: #b6c1ff;
+  c
 }
 
 
@@ -20,4 +20,32 @@ div.md-typeset__table thead {
 
 div.md-typeset__table td {
   font-family: 'Open Sans', sans-serif;
+}
+
+/* stili per tabelle esempio */
+
+.arancione {
+  background-color: #f4b183 !important;
+}
+
+.arancione_grassetto td {
+  background-color: #f4b183 !important;
+  font-weight: 700 !important;
+  min-width: 5rem;
+  padding: 0.9375em 1.25em;
+  vertical-align: top;
+}
+
+table[class="tabella"]  td{
+  padding: 0.9375em 1.25em;
+  border: .05rem solid var(--md-typeset-table-color);
+  padding: 0.9375em 1.25em;
+  border: .05rem solid var(--md-typeset-table-color);
+  font-family: 'Open Sans', sans-serif;
+  /* border-radius: 0.1rem; */
+  /* display: inline-block; */
+  font-size: .64rem;
+  max-width: 100%;
+  overflow: auto;
+  touch-action: auto;
 }

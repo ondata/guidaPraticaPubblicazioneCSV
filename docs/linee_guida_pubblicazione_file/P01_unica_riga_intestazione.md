@@ -20,83 +20,128 @@ Da prendere in considerazione:
 • Un altro modo per indicare la presenza o l'assenza della linea di intestazione è un parametro content-type quando il file di dati è trasmesso via HTTP, della forma: **Content-Type: text/csv;header=absent**.
 
 
-!!! example "Esempio 1: non usare celle multiple di intestazione"
+### Esempio 1: non usare celle multiple di intestazione
 
-    <kbd>cattiva prassi</kbd>
+!!! failure "Cattiva prassi"
 
-    <table>
-    <tr>
-    <td colspan="3" ><strong>Dati sulle vendite di auto (anni 1998 - 1999)</strong>
-    </td>
-    </tr>
-    <tr>
-    <td colspan="3" ><strong>Unità espresse in migliaia</strong>
-    </td>
-    </tr>
-    <tr>
-    <td><strong>marchio</strong>
-    </td>
-    <td><strong>anno</strong>
-    </td>
-    <td><strong>vendite_per_anno</strong>
-    </td>
-    </tr>
-    <tr>
-    <td>chevrolet chevelle malibu
-    </td>
-    <td>1998
-    </td>
-    <td>2,50
-    </td>
-    </tr>
-    <tr>
-    <td>chevrolet chevelle malibu
-    </td>
-    <td>1999
-    </td>
-    <td>2,63
-    </td>
-    </tr>
-    <tr>
-    <td>buick skylark 320
-    </td>
-    <td>1998
-    </td>
-    <td>3,40
-    </td>
-    </tr>
-    <tr>
-    <td>buick skylark 320
-    </td>
-    <td>1999
-    </td>
-    <td>3,57
-    </td>
-    </tr>
+    <table class="tabella">
+    	<tbody>
+    		<tr class="arancione_grassetto">
+    			<td rowspan="1" colspan="3">Dati sulle vendite di auto (anni 1998 - 1999)</td>
+    		</tr>
+    		<tr class="arancione_grassetto">
+    			<td rowspan="1" colspan="3">Unit&agrave; espresse in migliaia</td>
+    		</tr>
+    		<tr class="arancione_grassetto">
+    			<td>marca</td>
+    			<td>anno</td>
+    			<td>vendite_per_anno</td>
+    		</tr>
+    		<tr>
+    			<td>chevrolet chevelle malibu</td>
+    			<td>1998</td>
+    			<td>2.5</td>
+    		</tr>
+    		<tr>
+    			<td>chevrolet chevelle malibu</td>
+    			<td>1999</td>
+    			<td>2.63</td>
+    		</tr>
+    		<tr>
+    			<td>buick skylark 320</td>
+    			<td>1998</td>
+    			<td>3.4</td>
+    		</tr>
+    		<tr>
+    			<td>buick skylark 320</td>
+    			<td>1999</td>
+    			<td>3.57</td>
+    		</tr>
+    	</tbody>
     </table>
 
-    <kbd>buona prassi</kbd>
+!!! success "Buona prassi"
 
-    | marchio | anno | vendite_per_anno |
-    | ------- | ---- | ---------------- |
-    | chevrolet chevelle malibu | 1998 | 2,50 |
-    | chevrolet chevelle malibu | 1999 | 2,63 |
-    | buick skylark 320 | 1998 | 3,40 |
-    | buick skylark 320 | 1999 | 3,57 |
+    <table xmlns="http://www.w3.org/1999/xhtml" class="tabella">
+    	<tbody>
+    		<tr class="arancione_grassetto">
+    			<td>marca</td>
+    			<td>anno</td>
+    			<td>vendite_per_anno</td>
+    		</tr>
+    		<tr>
+    			<td>chevrolet chevelle malibu</td>
+    			<td>1998</td>
+    			<td>2.5</td>
+    		</tr>
+    		<tr>
+    			<td>chevrolet chevelle malibu</td>
+    			<td>1999</td>
+    			<td>2.63</td>
+    		</tr>
+    		<tr>
+    			<td>buick skylark 320</td>
+    			<td>1998</td>
+    			<td>3.4</td>
+    		</tr>
+    		<tr>
+    			<td>buick skylark 320</td>
+    			<td>1999</td>
+    			<td>3.57</td>
+    		</tr>
+    	</tbody>
+    </table>
 
 
 
 Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "`description`".
 
-!!! example "Esempio 2: non usare celle unite"
+### Esempio 2: non usare celle unite
 
-    <kbd>cattiva prassi</kbd>
+!!! failure "Cattiva prassi"
+
+    <table xmlns="http://www.w3.org/1999/xhtml" class="tabella">
+    	<tbody>
+    		<tr class="arancione_grassetto">
+    			<td rowspan="2" colspan="1">marca</td>
+    			<td rowspan="1" colspan="2">contatto_concessionario</td>
+    		</tr>
+    		<tr class="arancione_grassetto">
+    			<td>concessionario_mail</td>
+    			<td>concessionario_telefono</td>
+    		</tr>
+    		<tr>
+    			<td>chevrolet chevelle malibu</td>
+    			<td>mail@concesionario_chevrolet.com</td>
+    			<td>+39-1111111</td>
+    		</tr>
+    		<tr>
+    			<td>buick skylark 320</td>
+    			<td>mail@concesionario_buick.com</td>
+    			<td>+34-2222222</td>
+    		</tr>
+    	</tbody>
+    </table>
 
 
+!!! success "Buona prassi"
 
-
-
-
-
-
-
+    <table xmlns="http://www.w3.org/1999/xhtml" class="tabella">
+    	<tbody>
+    		<tr class="arancione_grassetto">
+    			<td>marca</td>
+    			<td>contatto_concessionario_mail</td>
+    			<td>contatto_concessionario_telefono</td>
+    		</tr>
+    		<tr>
+    			<td>chevrolet chevelle malibu</td>
+    			<td>mail@concesionario_chevrolet.com</td>
+    			<td>+39-1111111</td>
+    		</tr>
+    		<tr>
+    			<td>buick skylark 320</td>
+    			<td>mail@concesionario_buick.com</td>
+    			<td>+34-2222222</td>
+    		</tr>
+    	</tbody>
+    </table>
