@@ -31,7 +31,7 @@ Da prendere in considerazione:
 • Un altro modo per indicare la presenza o l'assenza della linea di intestazione è un parametro content-type quando il file di dati è trasmesso via HTTP, della forma: **Content-Type: text/csv;header=absent**.
 
 !!! example "Esempio 1: non usare celle multiple di intestazione"
-    
+    <kbd>cattiva prassi</kbd>
     | Dati sulle vendite di auto (anni 1998 - 1999) |
     | Unità espresse in migliaia |
     | marchio | anno | vendite_per_anno |
@@ -41,9 +41,17 @@ Da prendere in considerazione:
     | buick skylark 320 | 1998 | 3,40 |
     | buick skylark 320 | 1999 | 3,57 |
     
+    <kbd>buona prassi</kbd>
+    
+    | marchio | anno | vendite_per_anno |
+    |-------|----|----------------|
+    | chevrolet chevelle malibu | 1998 | 2,50 |
+    | chevrolet chevelle malibu | 1999 | 2,63 |
+    | buick skylark 320 | 1998 | 3,40 |
+    | buick skylark 320 | 1999 | 3,57 |
     
     
-    
+ 
     
     
     
