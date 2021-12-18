@@ -36,6 +36,11 @@ div.md-typeset__table td {
   vertical-align: top;
 }
 
+.tabella {
+  table-layout: fixed;
+  width: 100%;
+}
+
 table[class="tabella"]  td{
   padding: 0.9375em 1.25em;
   border: .05rem solid var(--md-typeset-table-color);
