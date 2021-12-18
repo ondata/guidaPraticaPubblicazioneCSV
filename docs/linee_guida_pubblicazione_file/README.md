@@ -29,3 +29,26 @@ Da prendere in considerazione:
 • Per nominare le colonne si devono usare **celle singole** e in nessun caso celle unite.
 • Si noti che non c'è alcun meccanismo per discernere automaticamente se il primo record in un CSV è una riga di intestazione, poiché è codificato come qualsiasi altro record. Pertanto, è buona pratica specificare la presenza o l'assenza di una riga di intestazione attraverso il dizionario dei dati includendo la proprietà "**`title`**".
 • Un altro modo per indicare la presenza o l'assenza della linea di intestazione è un parametro content-type quando il file di dati è trasmesso via HTTP, della forma: **Content-Type: text/csv;header=absent**.
+
+!!! example "Esempio 1: non usare celle multiple di intestazione"
+    |Dati sulle vendite di auto (anni 1998 - 1999)|
+    |Unità espresse in migliaia|
+    |marchio|anno|vendite_per_anno|
+    |-------|----|----------------|
+    |chevrolet chevelle malibu|1998|2,50|
+    |chevrolet chevelle malibu|1999|2,63
+    |buick skylark 320|1998|3,40|
+    |buick skylark 320|1999|3,57|
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
