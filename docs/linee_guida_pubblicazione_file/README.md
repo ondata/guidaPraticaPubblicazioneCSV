@@ -31,6 +31,7 @@ Da prendere in considerazione:
 • Un altro modo per indicare la presenza o l'assenza della linea di intestazione è un parametro content-type quando il file di dati è trasmesso via HTTP, della forma: **Content-Type: text/csv;header=absent**.
 
 !!! example "Esempio 1: non usare celle multiple di intestazione"
+    
     <kbd>cattiva prassi</kbd>
     | Dati sulle vendite di auto (anni 1998 - 1999) |
     | Unità espresse in migliaia |
