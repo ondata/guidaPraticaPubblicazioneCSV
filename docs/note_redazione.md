@@ -17,7 +17,7 @@ La guida è basata su [MkDocs](https://www.mkdocs.org/) e sul tema [Material](ht
 
 La cartella [risorse](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/risorse) del *repository* contiene i file "ufficiali" della guida.
 
-## Foglio con ler tabelle di esempio della guida originale
+## Foglio con le tabelle di esempio della guida originale
 
 È stato creato un :material-table: [foglio elettronico](https://docs.google.com/spreadsheets/d/1CAR685UYBmaKVB3zE4yuRj-n0fZBL6HohFDat66Zqic/edit#gid=775453510), dove raccogliere senza alcuna formattazione, le tabelle presenti nella guida originale. Sarà comodo per produrre la versione "italiana" da inserire in questa guida.
 
