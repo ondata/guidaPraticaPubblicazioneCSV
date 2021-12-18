@@ -17,13 +17,16 @@ La guida è basata su [MkDocs](https://www.mkdocs.org/) e sul tema [Material](ht
 
 La cartella [risorse](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/risorse) del *repository* contiene i file "ufficiali" della guida.
 
-## File CSV di esempio
+## Foglio con ler tabelle di esempio della guida originale
 
-Nella [guida originale](https://github.com/ondata/guidaPraticaPubblicazioneCSV/blob/main/risorse/guia_csv_vf.pdf) sono presenti diverse tabelle. Quelle da riportare nelle pagine di questa, è bene salvarle in CSV nella cartella [docs/risorse/tabelle](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs/risorse/tabelle), con questo schema di nome: `pagXX_tab_XX.csv`, quindi ad esempio per la prima tabella di pagina 6, il nome file sarà `pag06_tab01.csv`.
+È stato creato un :material-table: [foglio elettronico](https://docs.google.com/spreadsheets/d/1CAR685UYBmaKVB3zE4yuRj-n0fZBL6HohFDat66Zqic/edit#gid=775453510), dove raccogliere senza alcuna formattazione, le tabelle presenti nella guida originale. Sarà comodo per produrre la versione "italiana" da inserire in questa guida.
 
-!!! note "Nota bene"
+!!! note "Note per i nomi dei fogli"
 
     I numeri pagina e la numerazione tabella sempre in doppia cifra (quindi pagina, diventa `01`) e se c'è una sola tabella nella pagina si mantiene lo `01`.<br>
     Come numero pagina, usare quello che si legge nel piede del PDF.
 
-È stato creato un :material-table: [foglio elettronico](https://docs.google.com/spreadsheets/d/1CAR685UYBmaKVB3zE4yuRj-n0fZBL6HohFDat66Zqic/edit#gid=775453510), dove raccogliere senza alcuna formattazione, le tabelle presenti nella guida originale. Sarà comodo per produrre la versione da inserire in questa guida.
+Se per qualche ragione è utile avere anche un `CSV` delle tabelle, inserirle qui nel repo: [docs/risorse/tabelle](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs/risorse/tabelle).
+
+
+
