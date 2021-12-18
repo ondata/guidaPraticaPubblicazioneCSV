@@ -51,7 +51,9 @@ nav:
       - Introduzione: introduzione/README.md
       - Formato di dati tabellari: formato_dati_tabellari/README.md
       - Dizionario: dizionario_dati/README.md
-      - Linee guida pubblicazione: linee_guida_pubblicazione_file/README.md
+      - Linee guida pubblicazione:
+          - Introduzione: linee_guida_pubblicazione_file/README.md
+          - Singola riga intestazione: linee_guida_pubblicazione_file/P01_unica_riga_intestazione.md
     - Partecipa: partecipa.md
     - Note: note_redazione.md
 
