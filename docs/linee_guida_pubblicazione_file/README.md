@@ -35,7 +35,6 @@ Da prendere in considerazione:
     <kbd>cattiva prassi</kbd>
     
     | Dati sulle vendite di auto (anni 1998 - 1999) |
-    |-----------------------------------------------|
     | Unità espresse in migliaia |
     |----------------------------|
     | marchio | anno | vendite_per_anno |
@@ -55,7 +54,11 @@ Da prendere in considerazione:
     | buick skylark 320 | 1999 | 3,57 |
     
     
- 
+Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "`description`".
+
+!!! example "Esempio 2: non usare celle unite"
+
+    <kbd>cattiva prassi</kbd>
     
     
     
