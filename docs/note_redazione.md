@@ -28,5 +28,13 @@ La cartella [risorse](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tre
 
 Se per qualche ragione è utile avere anche un `CSV` delle tabelle, inserirle qui nel repo: [docs/risorse/tabelle](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs/risorse/tabelle).
 
+## Come creare tabelle HTML
 
+Nella guida originale in PDF sono presenti tabelle come quella sottostante:
+
+![](imgs/tabella.png)
+
+Non è possibile riprodurla con una tabella in markdown, ma è necessario usare l'HTML. Qui una [guida audio-video](https://www.youtube.com/watch?v=j1jrFGaQh9c), sul come farlo:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/j1jrFGaQh9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
