@@ -34,6 +34,8 @@ Da prendere in considerazione:
     
     <kbd>cattiva prassi</kbd>
     
+    <table>
+    <tr>
     <td colspan="3" >**Dati sulle vendite di auto (anni 1998 - 1999)**  </td>
     <td colspan="3" >**Unità espresse in migliaia**  </td>
     <td>**marchio** </td>
@@ -51,7 +53,8 @@ Da prendere in considerazione:
     <td>buick skylark 320 </td>
     <td>1999 </td>
     <td>3,57 </td>
-    
+    </tr>
+    </table>
     
     <kbd>buona prassi</kbd>
     
