@@ -23,5 +23,6 @@ Nella [guida originale](https://github.com/ondata/guidaPraticaPubblicazioneCSV/b
 
 !!! note "Nota bene"
 
-    I numeri pagina e la numerazione tabella sempre in doppia cifra (quindi pagina, diventa `01`) e se c'è una sola tabella nella pagina si mantiene lo `01`.
+    I numeri pagina e la numerazione tabella sempre in doppia cifra (quindi pagina, diventa `01`) e se c'è una sola tabella nella pagina si mantiene lo `01`.<br>
+    Come numero pagina, usare quello che si legge nel piede del PDF.
 
