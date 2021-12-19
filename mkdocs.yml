@@ -22,13 +22,13 @@ theme:
       accent: orange
       toggle:
         icon: material/weather-night
-        name: Switch to dark mode
+        name: Modalità notte
     - scheme: slate
       primary: deep purple
       accent: orange
       toggle:
         icon: material/weather-sunny
-        name: Switch to light mode
+        name: Modalità giorno
   language: it
   features:
     - navigation.indexes
