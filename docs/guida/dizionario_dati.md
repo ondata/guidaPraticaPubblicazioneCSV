@@ -17,7 +17,7 @@ title: Dizionari di dati
 
 ## Esempio di dizionario dati espresso come file di testo
 
-```
+``` title="automobili.csv-metadata.txt"
 File di dati: https://sito_di_esempio.it/automobili.csv
 Descrizione: tabella con dati sulle auto d'epoca
 Editore: Autore di esempi
@@ -70,7 +70,7 @@ Colonna 6:
 
 ## Esempio di dizionario dati in formato json-ld
 
-```json
+``` json title="automobili.csv-metadata.json"
 {
   "@context": "http://www.w3.org/ns/csvw",
   "@type": "Table",
