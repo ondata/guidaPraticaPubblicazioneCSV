@@ -32,6 +32,7 @@ marca, anno, cilindri
 |malibu buick skylark|1970|8|
 
 - Caso 2: Importazione di un CSV con valori di campo che includono spazi vuoti e un carattere CR non racchiuso tra virgolette.
+
 ```
 marca, anno, cilindri
 chevrolet chevelleCRmalibu,1970,8 
