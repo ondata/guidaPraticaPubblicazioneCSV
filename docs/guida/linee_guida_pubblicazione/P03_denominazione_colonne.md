@@ -1,7 +1,8 @@
-
-
-
-
+---
+hide:
+ - toc
+title: Denominazione delle colonne
+---
 
 # Denominazione delle colonne
 
