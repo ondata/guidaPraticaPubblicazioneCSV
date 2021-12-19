@@ -18,7 +18,7 @@ None,8028,001168
 Cella Dati,506,019028
 ```
 
-È uno dei **formati** **più** **diffusi** per la **pubblicazione** di **dati** testuali, sicuramente **il più diffuso** nei **portali *open data***.<br>È principalmente utilizzato per intermediare l'accesso ai dati, per non avere barriere di accesso, ma non come formato di "lavoro": non è possibile definire il tipo di campo (se un campo è numerico o testuale), se è obbligatorio esprimere un valore per i dati di una colonna, ecc..
+È uno dei **formati** **più** **diffusi** per la **pubblicazione** di **dati** testuali, sicuramente **il più diffuso** nei **portali *open data***.<br>È principalmente utilizzato per intermediare l'accesso ai dati, per non avere barriere tecnologiche, ma non come formato di "lavoro": non è possibile definire il tipo di campo (se un campo è numerico o testuale), se è obbligatorio esprimere un valore per i dati di una colonna, ecc..
 
 💡 Vista la loro diffusione abbiamo creato una **guida** per la **"buona" pubblicazione** di **questi file**.
 
