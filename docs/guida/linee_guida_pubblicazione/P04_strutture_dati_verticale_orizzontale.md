@@ -47,7 +47,7 @@ Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze 
     |plymouth satellite|frizione|1|
     
 
-L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, 'type_averia' e 'number_of_averias', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
+L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, '`type_averia`' e '`number_of_averias`', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
 
 D'altra parte, quando vengono pubblicate serie temporali, per esempio la storia della domanda di veicoli per gli anni 1972-1977, la crescita orizzontale della struttura è ragionevole se si presenta la necessità, per esempio, di completare la serie temporale per gli anni '70.
 
