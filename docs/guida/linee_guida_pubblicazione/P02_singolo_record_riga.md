@@ -14,7 +14,7 @@ L'esistenza di caratteri di ritorno a capo [CR] all'interno di un valore di camp
 
 **Esempio 1**: comportamento di un'importazione di un file CSV contenente spazi vuoti e/o ritorni a capo in varie circostanze.
 
-- Caso 1: Importazione di un CSV con valori di campo che includono spazi bianchi tra virgolette e separati da `,`.
+- <kbd>Caso 1</kbd>: Importazione di un CSV con valori di campo che includono spazi bianchi tra virgolette e separati da `,`.
 
 ```
 marca, anno, cilindri
@@ -31,7 +31,7 @@ marca, anno, cilindri
 |chevelle 320|1970|8|
 |malibu buick skylark|1970|8|
 
-- Caso 2: Importazione di un CSV con valori di campo che includono spazi vuoti e un carattere CR non racchiuso tra virgolette.
+- <kbd>Caso 2</kbd>: Importazione di un CSV con valori di campo che includono spazi vuoti e un carattere CR non racchiuso tra virgolette.
 
 ```
 marca, anno, cilindri
