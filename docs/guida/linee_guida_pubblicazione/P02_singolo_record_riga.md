@@ -47,6 +47,25 @@ satellite plymouth, 1970, 8
 Nell'esempio precedente, il carattere di controllo carriage return (CR) è incluso a scopo illustrativo. Entrambi i caratteri 'CR' e 'LF' non sono visibili.
 
 
+**Esempio 2**: comportamento nell'esportazione di una tabella con campi che includono spazi vuoti o interruzioni di riga nei loro valori.
+
+Il CSV generato dalla tabella deve contenere il valore di ogni campo tra virgolette, compresi i caratteri di controllo, in un unico record.
+
+|campo_1|campo_2|campo_3|
+|aaaaa|Bbbb Bbbb Bbbb Bbbb Bbbb Bb|ccccc|
+|Aa aa|Bb,bb|c|
+|Aaa aaa aaa aaaaa|Bbbbb bbb bbb bbb bb|Ccc ccc ccc ccc|
+
+↓
+
+```
+campo_1,campo_2,campo_3CRLF
+"aaaaaa", "BbbbCRLFBbbCRLFBFBbbbCRLFbb", "ccccccc "CRLF
+"Aa aa", "bb,bb", "c "CRLF
+"AaaCRLFaaaaaaaaaa"," Bbbbb bbb bbb bb"," CccCRLFccccccc "LF
+```
+
+
 
 
 
