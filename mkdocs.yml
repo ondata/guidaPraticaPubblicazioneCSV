@@ -55,6 +55,7 @@ nav:
       - Linee guida pubblicazione:
           - guida/linee_guida_pubblicazione/index.md
           - Singola riga intestazione: guida/linee_guida_pubblicazione/P01_unica_riga_intestazione.md
+          - Singolo record per riga: guida/linee_guida_pubblicazione/P02_singolo_record_riga.md
     - Partecipa: partecipa.md
     - Note: note_redazione.md
     - Grazie: grazie.md
