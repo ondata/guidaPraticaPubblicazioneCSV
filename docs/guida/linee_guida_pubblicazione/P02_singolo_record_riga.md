@@ -52,6 +52,7 @@ Nell'esempio precedente, il carattere di controllo carriage return (CR) è inclu
 Il CSV generato dalla tabella deve contenere il valore di ogni campo tra virgolette, compresi i caratteri di controllo, in un unico record.
 
 |campo_1|campo_2|campo_3|
+|-------|-------|-------|
 |aaaaa|Bbbb Bbbb Bbbb Bbbb Bbbb Bb|ccccc|
 |Aa aa|Bb,bb|c|
 |Aaa aaa aaa aaaaa|Bbbbb bbb bbb bbb bb|Ccc ccc ccc ccc|
