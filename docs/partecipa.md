@@ -31,8 +31,7 @@ Da **autore** puoi:
     - clonare il *repository* e fare dell *Pull Request*;
     - proporre delle modifiche al testo e suggerire delle correzione, utilizzando il tasto <kbd>EDIT</kbd>, che trovi in ogni pagina, in alto a destra (vedi immagine sotto) e fare sempre delle *Pull Request*, ma più "visuali", direttamente dall'interfaccia web.
 
-![](imgs/edit_page.png)
-
+[![](imgs/edit_page.png)](imgs/edit_page.png)
 
 
 ## Citare questa guida
