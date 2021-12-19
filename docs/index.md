@@ -22,7 +22,7 @@ Cella Dati,506,019028
 
 💡 Vista la loro diffusione abbiamo creato una **guida** per la **"buona" pubblicazione** di **questi file**.
 
-Questa guida è ispirata fortissimamente (ne è in parte la traduzione) dalla [**splendida guida del "Ministry of Economic Affairs and Digital Transformation” di Spagna**](https://datos.gob.es/en/documentacion/guia-practica-para-la-publicacion-de-datos-tabulares-en-archivos-csv) (a loro un grazie!), ma non ne sarà una perfetta copia. Saranno aggiunte sezioni e aggiornati alcuni contenuti.
+Questa guida è ispirata fortissimamente (ne è in parte la traduzione) dalla [**splendida guida del "Ministry of Economic Affairs and Digital Transformation” di Spagna**](https://datos.gob.es/en/documentacion/guia-practica-para-la-publicacion-de-datos-tabulares-en-archivos-csv) (a loro un grazie!), ma non ne è una perfetta copia. Saranno aggiunte sezioni e aggiornati alcuni contenuti.
 
 [Leggi la guida :fontawesome-brands-readme:](guida/index.md){ .md-button .md-button--primary }
 
