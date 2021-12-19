@@ -18,6 +18,8 @@ Il documento di riferimento RFC4180 per i dati in formato CSV definisce che le r
 
 L'esistenza di caratteri di ritorno a capo [CR] all'interno di un valore di campo, per esempio campi che contengono più righe o commenti, devono sempre essere racchiusi in doppi apici.
 
+<br></br>
+
 **Esempio 1**: comportamento di un'importazione di un file CSV contenente spazi vuoti e/o ritorni a capo in varie circostanze.
 
 - <kbd>Caso 1</kbd>: Importazione di un CSV con valori di campo che includono spazi bianchi tra virgolette e separati da `,`.
