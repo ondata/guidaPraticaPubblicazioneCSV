@@ -59,7 +59,7 @@ Nell'esempio precedente, il carattere di controllo carriage return (CR) è inclu
 
 <div>
 
-**Esempio 2**: comportamento nell'esportazione di una tabella con campi che includono spazi vuoti o interruzioni di riga nei loro valori.
+**Esempio 2** : comportamento nell'esportazione di una tabella con campi che includono spazi vuoti o interruzioni di riga nei loro valori.
 
 Il CSV generato dalla tabella deve contenere il valore di ogni campo tra virgolette, compresi i caratteri di controllo, in un unico record.
 
