@@ -20,15 +20,15 @@ theme:
     - scheme: preference
       primary: deep purple
       accent: orange
-#      toggle:
-#        icon: material/weather-night
-#        name: Modalità notte
-#    - scheme: slate
-#      primary: deep purple
-#      accent: orange
-#      toggle:
-#        icon: material/weather-sunny
-#        name: Modalità giorno
+      toggle:
+        icon: material/weather-night
+        name: Modalità notte
+    - scheme: slate
+      primary: deep purple
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Modalità giorno
   language: it
   features:
     - content.code.annotate
