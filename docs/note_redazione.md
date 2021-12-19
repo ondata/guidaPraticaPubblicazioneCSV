@@ -38,3 +38,5 @@ Non è possibile riprodurla con una tabella in markdown, ma è necessario usare 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/j1jrFGaQh9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Un tool online utilissimo per trasformare tabelle da un foglio excel a HTML è [https://www.r2h.nl/html-word-excel-table-code-cleaner/index.php](https://www.r2h.nl/html-word-excel-table-code-cleaner/index.php).
+
