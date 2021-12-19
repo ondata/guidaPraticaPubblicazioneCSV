@@ -48,12 +48,12 @@ theme:
 nav:
     - Home: index.md
     - Guida:
-      - guida/introduzione.md
+      - guida/index.md
       - Formato di dati tabellari: guida/formato_dati_tabellari.md
       - Dizionario: guida/dizionario_dati.md
       - Linee guida pubblicazione:
-          - guida/linee_guida_pubblicazione.md
-          - Singola riga intestazione: guida/P01_unica_riga_intestazione.md
+          - guida/linee_guida_pubblicazione/index.md
+          - Singola riga intestazione: guida/linee_guida_pubblicazione/P01_unica_riga_intestazione.md
     - Partecipa: partecipa.md
     - Note: note_redazione.md
 
