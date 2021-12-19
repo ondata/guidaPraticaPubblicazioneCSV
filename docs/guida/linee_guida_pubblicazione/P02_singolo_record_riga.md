@@ -29,7 +29,7 @@ marca, anno, cilindri
 "plymouth satellite",1970,8
 ```
 
-:arrow_down:
+:material-arrow-down:
 
 |marchio|anno|cilindri|
 |-------|----|--------|
@@ -46,7 +46,7 @@ buick skylark 320,1970,8
 satellite plymouth, 1970, 8
 ```
 
-:arrow_down:
+:material-arrow-down:
 
 |marchio|anno|cilindri|
 |-------|----|--------|
@@ -69,7 +69,7 @@ Il CSV generato dalla tabella deve contenere il valore di ogni campo tra virgole
 |Aa aa|Bb,bb|c|
 |Aaa aaa aaa aaaaa|Bbbbb bbb bbb bbb bb|Ccc ccc ccc ccc|
 
-:arrow_down:
+:material-arrow-down:
 
 ```
 campo_1,campo_2,campo_3CRLF
