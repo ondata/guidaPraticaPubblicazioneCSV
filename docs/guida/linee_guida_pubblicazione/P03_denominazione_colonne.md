@@ -23,18 +23,21 @@ Da prendere in considerazione:
 
 **Esempio**: denominazione comprensibile delle colonne
 
-|Identificatore_M|Annio|Cil.|Consumo_per_100_k ms_di_viaggio_urbano|HP|m/sec^2|
-|---|---|---|---|----|----|
-|chevrolet chevelle malibu|1970|8|18|130|12|
-|buick skylark 320|1970|8|15|165|11,5|
-|plymouth satellite|1970|8|18||150|11|
+!!! failure "Cattiva prassi"
 
+    |Identificatore_M|Annio|Cil.|Consumo_per_100_k ms_di_viaggio_urbano|HP|m/sec^2|
+    |---|---|---|---|----|----|
+    |chevrolet chevelle malibu|1970|8|18|130|12|
+    |buick skylark 320|1970|8|15|165|11,5|
+    |plymouth satellite|1970|8|18||150|11|
 
-|marchio|anno|cilindri|consumo|potenza|accelerazione|
-|---|---|---|---|----|----|
-|chevrolet chevelle malibu|1970|8|18|130|12|
-|buick skylark 320|1970|8|15|165|11,5|
-|plymouth satellite|1970|8|18|150|11|
+!!! success "Buona prassi"
+
+    |marchio|anno|cilindri|consumo|potenza|accelerazione|
+    |---|---|---|---|----|----|
+    |chevrolet chevelle malibu|1970|8|18|130|12|
+    |buick skylark 320|1970|8|15|165|11,5|
+    |plymouth satellite|1970|8|18|150|11|
 
 Se c'è un'entità che comprende diverse caratteristiche separate in diversi campi, è conveniente iniziare a nominare i campi con quell'entità e poi con gli attributi più specifici (dal più generale al più specifico). Per esempio:
 
