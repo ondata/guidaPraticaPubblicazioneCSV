@@ -22,7 +22,9 @@ marca, anno, cilindri
 "buick skylark 320",1970,8 
 "plymouth satellite",1970,8
 ```
+
 ↓
+
 |marchio|anno|cilindri|
 |-------|----|--------|
 |chevrolet chevrolet chevelle malibu|1970|8|
@@ -36,7 +38,9 @@ chevrolet chevelleCRmalibu,1970,8
 buick skylark 320,1970,8
 satellite plymouth, 1970, 8
 ```
+
 ↓
+
 |marchio|anno|cilindri|
 |-------|----|--------|
 |chevrolet chevelle| | |
