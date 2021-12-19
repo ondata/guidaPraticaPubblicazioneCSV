@@ -66,6 +66,7 @@ campo_1,campo_2,campo_3CRLF
 "AaaCRLFaaaaaaaaaa"," Bbbbb bbb bbb bb"," CccCRLFccccccc "LF
 ```
 
+I caratteri di controllo di fine linea (LF) e di ritorno a capo (CR) sono inclusi a scopo illustrativo, poiché non sono visibili.
 
 
 
