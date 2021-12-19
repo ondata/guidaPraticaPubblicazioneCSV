@@ -6,7 +6,7 @@ title: Grazie
 ---
 
 
-## 🙏 Grazie
+# 🙏 Grazie
 
 Se questa guida esiste, è anche grazie a:
 
