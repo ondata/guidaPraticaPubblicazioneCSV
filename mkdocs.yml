@@ -66,6 +66,7 @@ extra:
  social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/ondatait
+      name: onData su Twitter
 
 # foglio di stile personalizzato
 extra_css:
