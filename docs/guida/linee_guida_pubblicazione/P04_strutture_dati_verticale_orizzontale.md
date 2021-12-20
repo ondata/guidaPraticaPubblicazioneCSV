@@ -8,8 +8,8 @@ title: Strutture dati verticale vs orizzontale
 # Strutture dati verticale vs orizzontale
 Quando si progettano strutture di dati tabulari è consigliabile evitare la crescita orizzontale dei valori.
 
-![](../imgs/p04-wrong.png)
-![](../imgs/p04-correct.png)   
+![](/docs/imgs/p04-wrong.png)
+![](/docs/imgs/p04-correct.png)   
 
 Quando è possibile, è preferibile mettere le variabili o gli attributi dei dati nelle colonne di una tabella e aggiungere i valori corrispondenti alle osservazioni dei dati nelle righe.
 
