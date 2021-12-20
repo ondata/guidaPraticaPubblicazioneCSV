@@ -8,8 +8,8 @@ title: Strutture dati verticale vs orizzontale
 # Strutture dati verticale vs orizzontale
 Quando si progettano strutture di dati tabulari è consigliabile evitare la crescita orizzontale dei valori.
 
-![](/docs/imgs/p04-wrong.png)
-![](/docs/imgs/p04-correct.png)   
+![](../../imgs/p04-wrong.png)
+![](../../imgs/p04-correct.png)
 
 Quando è possibile, è preferibile mettere le variabili o gli attributi dei dati nelle colonne di una tabella e aggiungere i valori corrispondenti alle osservazioni dei dati nelle righe.
 
@@ -45,7 +45,7 @@ Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze 
     |plymouth satellite|carburatore|4|
     |plymouth satellite|sospensione|4|
     |plymouth satellite|frizione|1|
-    
+
 
 L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, '`type_averia`' e '`number_of_averias`', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
 
@@ -56,5 +56,5 @@ D'altra parte, quando vengono pubblicate serie temporali, per esempio la storia 
 chevrolet chevelle malibu|345|423|1234|1690|2345|2134|04|27|
 buick skylark 320|124|252|785|914|1353|896|
 plymouth satellite|57|71|165|315|1104|1561|
-    
-    
+
+
