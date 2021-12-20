@@ -13,6 +13,10 @@ A seguire alcune note utili ai redattori della guida
 
 La guida è basata su [MkDocs](https://www.mkdocs.org/) e sul tema [Material](https://squidfunk.github.io/mkdocs-material/).
 
+## Stile
+
+- creare - ove possibile - i ***link* ipertestuali** tra i **capitoli**. Quindi ad esempio aggiungere tutti gli *hyperlink* all'indice di [questa pagina](guida/index.md), o laddove si legge qualcosa come "questa possibilità deve essere spiegata nel dizionario", inserire hyperlink al [capitolo sul dizionario](guida/dizionario_dati.md);
+
 ## File originali della guida
 
 La cartella [risorse](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/risorse) del *repository* contiene i file "ufficiali" della guida.
