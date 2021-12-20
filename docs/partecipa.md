@@ -7,10 +7,6 @@ title: Partecipa
 
 Questa **guida** è un **bene comune**, sia da **lettore** che da **autore**.
 
-!!! info
-
-    Il testo della guida è quello che trovi nella cartella [`docs`](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs) di [questo *repository* GitHub](https://github.com/ondata/guidaPraticaPubblicazioneCSV/).<br>
-
 
 Da **lettore**, sei **libero** di:
 
@@ -32,6 +28,10 @@ Da **autore** puoi:
     - proporre delle modifiche al testo e suggerire delle correzione, utilizzando il tasto <kbd>EDIT</kbd>, che trovi in ogni pagina, in alto a destra (vedi immagine sotto) e fare sempre delle *Pull Request*, ma più "visuali", direttamente dall'interfaccia web.
 
 [![](imgs/edit_page.png)](imgs/edit_page.png)
+
+!!! info
+
+    Il testo della guida è quello che trovi nella cartella [`docs`](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs) di [questo *repository* GitHub](https://github.com/ondata/guidaPraticaPubblicazioneCSV/).
 
 
 ## Citare questa guida
