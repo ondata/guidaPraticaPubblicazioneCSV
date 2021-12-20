@@ -8,24 +8,22 @@ title: Partecipa
 Questa **guida** è un **bene comune**, sia da **lettore** che da **autore**.
 
 
-Da **lettore**, sei **libero** di:
+Da **lettore** 👓, sei libero di:
 
 - **Condividere** — riprodurre, distribuire, comunicare al pubblico, esporre in pubblico, rappresentare, eseguire e recitare questo materiale con qualsiasi mezzo e formato
 - **Modificare** — remixare, trasformare il materiale e basarti su di esso per le tue opere
 per qualsiasi fine, anche commerciale.
-
-Alle seguenti condizioni:
-
-- **Attribuzione** — Devi riconoscere una menzione di paternità adeguata, fornire un link alla licenza e indicare se sono state effettuate delle modifiche. Puoi fare ciò in qualsiasi maniera ragionevole possibile, ma non con modalità tali da suggerire che il licenziante avalli te o il tuo utilizzo del materiale.
-- **Divieto di restrizioni aggiuntive** — Non puoi applicare termini legali o misure tecnologiche che impongano ad altri soggetti dei vincoli giuridici su quanto la licenza consente loro di fare.
+- Alle seguenti **condizioni**:
+    - **Attribuzione** — Devi riconoscere una menzione di paternità adeguata, fornire un link alla licenza e indicare se sono state effettuate delle modifiche. Puoi fare ciò in qualsiasi maniera ragionevole possibile, ma non con modalità tali da suggerire che il licenziante avalli te o il tuo utilizzo del materiale.
+    - **Divieto di restrizioni aggiuntive** — Non puoi applicare termini legali o misure tecnologiche che impongano ad altri soggetti dei vincoli giuridici su quanto la licenza consente loro di fare.
 
 
-Da **autore** puoi:
+Da **autore** 🔧 puoi:
 
 - se **non sai usare git e GitHub**, [**aprire una nuova discussione qui**](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions), con delle proposte, suggerimenti, domande o per mostrarci per cosa ti è stata utile questa guida;
 - se **sai usare git e GitHub**:
-    - clonare il *repository* e fare dell *Pull Request*;
-    - proporre delle modifiche al testo e suggerire delle correzione, utilizzando il tasto <kbd>EDIT</kbd>, che trovi in ogni pagina, in alto a destra (vedi immagine sotto) e fare sempre delle *Pull Request*, ma più "visuali", direttamente dall'interfaccia web.
+    - clonare il *repository* e fare dell ***Pull Request***;
+    - proporre delle modifiche al testo e suggerire delle correzione, utilizzando il tasto <kbd>EDIT</kbd>, che trovi in ogni pagina, in alto a destra (vedi immagine sotto) e fare sempre delle ***Pull Request***, ma più "visuali", direttamente dall'interfaccia web.
 
 [![](imgs/edit_page.png)](imgs/edit_page.png)
 
