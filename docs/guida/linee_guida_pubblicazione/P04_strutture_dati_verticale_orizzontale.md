@@ -24,14 +24,16 @@ Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze 
 **Esempio**: crescita orizzontale vs. verticale
 
 !!! failure "Cattiva prassi"
-    |marchio|guasti al radiatore|guasti al carburatore|fallimenti_di_sospensione|fallimenti della frizione|
+
+    |marca|guasto_radiatore|guasto_carburatore|guasto_sospensione|guasto_frizione|
     |-------|-------------------|---------------------|-------------------------|-------------------------|
     |chevrolet chevelle malibu|0|7|1|0|
     |buick skylark 320|1|2|2|2|1|
 
 
 !!! succes "Buona prassi"
-    |marchio|tipo_averia|numero di possibilità|
+
+    |marca|tipo_guasto|quantita_guasti|
     |-------|-----------|---------------------|
     |chevrolet chevelle malibu|radiatore|0|
     |chevrolet chevelle malibu|carburatore|7|
@@ -47,11 +49,11 @@ Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze 
     |plymouth satellite|frizione|1|
 
 
-L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, '`type_averia`' e '`number_of_averias`', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
+L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, '`tipo_guasto`' e '`quantita_guasti`', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
 
 D'altra parte, quando vengono pubblicate serie temporali, per esempio la storia della domanda di veicoli per gli anni 1972-1977, la crescita orizzontale della struttura è ragionevole se si presenta la necessità, per esempio, di completare la serie temporale per gli anni '70.
 
-|marchio|1972|1973|1974|1975|1976|1977|
+|marca|1972|1973|1974|1975|1976|1977|
 |-------|----|----|----|----|----|----|
 |chevrolet chevelle malibu|345|423|1234|1690|2345|2134|04|27|
 |buick skylark 320|124|252|785|914|1353|896|
