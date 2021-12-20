@@ -53,8 +53,8 @@ D'altra parte, quando vengono pubblicate serie temporali, per esempio la storia 
 
 |marchio|1972|1973|1974|1975|1976|1977|
 |-------|----|----|----|----|----|----|
-chevrolet chevelle malibu|345|423|1234|1690|2345|2134|04|27|
-buick skylark 320|124|252|785|914|1353|896|
-plymouth satellite|57|71|165|315|1104|1561|
+|chevrolet chevelle malibu|345|423|1234|1690|2345|2134|04|27|
+|buick skylark 320|124|252|785|914|1353|896|
+|plymouth satellite|57|71|165|315|1104|1561|
 
 
