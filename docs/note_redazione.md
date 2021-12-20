@@ -16,6 +16,7 @@ La guida è basata su [MkDocs](https://www.mkdocs.org/) e sul tema [Material](ht
 ## Stile
 
 - creare - ove possibile - i **link ipertestuali** tra i **capitoli**. Quindi ad esempio aggiungere tutti gli *hyperlink* all'indice di [questa pagina](guida/index.md), o laddove si legge qualcosa come "questa possibilità deve essere spiegata nel dizionario", inserire hyperlink al [capitolo sul dizionario](guida/dizionario_dati.md);
+- fare attenzione a tradurre ove possibile tutto. Non lasciare nelle tabelle di esempio, i nomi colonna in spagnolo;
 
 ## File originali della guida
 
