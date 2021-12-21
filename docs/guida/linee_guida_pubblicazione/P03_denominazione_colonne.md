@@ -34,7 +34,7 @@ Da prendere in considerazione:
 
 !!! success "Buona prassi"
 
-    |marchio|anno|cilindri|consumo|potenza|accelerazione|
+    |marca|anno|cilindri|consumo|potenza|accelerazione|
     |---|---|---|---|----|----|
     |chevrolet chevelle malibu|1970|8|18|130|12|
     |buick skylark 320|1970|8|15|165|11.5|

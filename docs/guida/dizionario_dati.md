@@ -22,7 +22,7 @@ File di dati: https://sito_di_esempio.it/automobili.csv
 Descrizione: tabella con dati sulle auto d'epoca
 Editore: Autore di esempi
 Colonna 1:
-      Titolo: marchio
+      Titolo: marca
       Descrizione: Questo campo contiene informazioni sulla marca e il modello di ogni veicolo.
       Tipo di dati: stringa
 Colonna 2:
@@ -81,7 +81,7 @@ Colonna 6:
     "colonne": [
       {
         "name": "identificatore",
-        "titles": "marchio",
+        "titles": "marca",
         "dc:description": "Questo campo contiene informazioni sulla marca e il modello di ogni veicolo",
         "datatype": "string"
       },

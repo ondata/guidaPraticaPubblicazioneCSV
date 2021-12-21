@@ -36,7 +36,7 @@ marca, anno, cilindri
 
 !!! success "Importazione corretta"
 
-    |marchio|anno|cilindri|
+    |marca|anno|cilindri|
     |-------|----|--------|
     |chevrolet chevrolet chevelle malibu|1970|8|
     |chevelle 320|1970|8|
@@ -55,7 +55,7 @@ satellite plymouth, 1970, 8
 
 !!! error "Importazione problematica"
 
-    |marchio|anno|cilindri|
+    |marca|anno|cilindri|
     |-------|----|--------|
     |chevrolet chevelle| | |
     |malibu|1970|8|
