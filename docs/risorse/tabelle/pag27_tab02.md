@@ -1,4 +1,4 @@
-| marca | anno | consumo | vendite | Significato valore mancante vendire |
+| marca | anno | consumo | vendite | Significato valore mancante vendite |
 | --- | --- | --- | --- | --- |
 | chevrolet chevelle malibu | 1998 | Alto | 2.5 |  |
 | chevrolet chevelle malibu | 1999 | Bajo | 2.63 |  |
