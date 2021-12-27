@@ -1,0 +1,21 @@
+P5 Trattamento valori nulli
+P6 Subtotali, totali o Raggruppamenti
+P7 Tipi di dati
+P8 Standarizzazione valori dei campi
+P9 Campi codificati
+P10 Campi di testo
+P11 Campi numerici
+P12 Campi con date
+P13 Campi con numeri telefonici
+P14 Campi con indirizzi postali
+P15 Campi con coordinate geografiche
+Linee guida per esportazione/importazione di dati da foglio di calcolo a CSV
+Considerazioni sull'archiviazione
+Cassetta degli attrezzi
+Strumento: CSVlint
+Strumento: Goodtables
+Strumento: Data Curator
+Strumento: Csvkit
+Dove trovare buoni esempi di dati in CSV
+Link utili
+Allegato I, Tassonomie ed elenchi di codici comunemente usati
