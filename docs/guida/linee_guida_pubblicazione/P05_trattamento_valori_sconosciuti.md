@@ -81,5 +81,5 @@ Ci sono circostanze in cui determinate misurazioni non possono essere registrate
 
 
 
-[^1]: Dall'inglese, *not available* (non disponibile), *not applicable* (non applicabile al caso) o *no answer* (nessuna risposta; sebbene questo significato viene utilizzato solo in determinate situazioni). <https://es.wikipedia.org/wiki/N/a>
+[^1]: Dall'inglese, *not available* (non disponibile), *not applicable* (non applicabile al caso) o *no answer* (nessuna risposta; sebbene questo significato viene utilizzato solo in determinate situazioni). <https://en.wikipedia.org/wiki/N/A>
 
