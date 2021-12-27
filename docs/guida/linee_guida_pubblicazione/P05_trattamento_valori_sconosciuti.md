@@ -47,7 +47,7 @@ Nell'esempio si osserva che il valore `0` nella colonna "vendite", indica che pe
 
 ## Esempio 2
 
-!!! success "Cattiva prassi"
+!!! failure "Cattiva prassi"
 
     | marca | anno | consumo | vendite |
     | --- | --- | --- | ---: |
