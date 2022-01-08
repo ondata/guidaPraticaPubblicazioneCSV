@@ -1,3 +1,9 @@
+---
+hide:
+ - toc
+# - navigation
+---
+
 # Tipi di dati
 
 I valori in una tabella di dati devono essere formattati secondo il [tipo di dati](https://www.w3.org/TR/xmlschema/) relativo. In particolare, i numeri dovrebbero essere sempre nei formati/tipi di cella "Numero", i campi di tipo testo dovrebbero essere nel formato/tipo di cella "Testo" e i campi di tipo data dovrebbero essere nel formati/tipi di cella 'Data'.

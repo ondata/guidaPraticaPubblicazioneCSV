@@ -1,3 +1,9 @@
+---
+hide:
+ - toc
+# - navigation
+---
+
 # Subtotali, totali o raggruppamenti
 
 Nessuna riga o colonna con totali o subtotali dovrebbe essere inclusa, a meno che non sia assolutamente necessario, mantenendo il massimo livello possibile di disaggregazione dei dati.
