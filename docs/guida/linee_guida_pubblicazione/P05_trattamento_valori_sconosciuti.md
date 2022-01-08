@@ -10,7 +10,7 @@
          - Se la cella vuota rappresenta uno zero, allora il valore deve essere `0`.
          - Se la cella vuota rappresenta un valore "sconosciuto" o "non ottenuto", allora questa possibilità deve essere spiegata nel dizionario dei dati e indicata con un codice specifico.
          - Se un valore vuoto ha un significato, dovrebbe essere considerata l'opzione di aggiungere una nuova colonna, per includere la spiegazione del valore "vuoto" come possibile valore.
-         - Una terminologia accettata per indicare valori sconosciuti o mancanti è il valore/codice NA o N/A[^1].
+         - Una terminologia accettata per indicare valori sconosciuti o mancanti è il valore/codice `NA` o `N/A`[^1].
          - Il codice usato per indicare valori sconosciuti o mancanti, ad esempio NA, deve essere specificato nel dizionario dei dati.
 
 ## Esempio 1
