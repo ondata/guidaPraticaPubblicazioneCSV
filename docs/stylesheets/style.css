@@ -30,11 +30,11 @@ div.md-typeset__table thead {
 /* stili per tabelle esempio */
 
 .arancione {
-  background-color: #f4b183 !important;
+  background-color: #b6c1ff !important;
 }
 
 .arancione_grassetto td {
-  background-color: #f4b183 !important;
+  background-color: #b6c1ff !important;
   font-weight: 700 !important;
   min-width: 5rem;
   padding: 0.9375em 1.25em;
