@@ -1,4 +1,4 @@
-🙏 I [capitoli ancora da creare](https://github.com/ondata/guidaPraticaPubblicazioneCSV/issues?q=is%3Aissue+is%3Aopen+label%3A%22da+elaborare%22+no%3Aassignee+sort%3Acreated-asc), su cui lavorare come indicato [qui](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions/52#discussioncomment-1961960).
+🙏 I [capitoli ancora da creare](https://github.com/ondata/guidaPraticaPubblicazioneCSV/issues?q=is%3Aissue+is%3Aopen+label%3A%22da+elaborare%22+no%3Aassignee+sort%3Acreated-asc), su cui lavorare come indicato [qui](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions/52#discussion-3767439).
 
 # Guida pratica per la pubblicazione di dati tabellari in formato CSV
 
