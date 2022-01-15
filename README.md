@@ -1,3 +1,5 @@
+🙏 I [capitoli ancora da creare](https://github.com/ondata/guidaPraticaPubblicazioneCSV/issues?q=is%3Aissue+is%3Aopen+label%3A%22da+elaborare%22+no%3Aassignee+sort%3Acreated-asc), su cui lavorare come indicato [qui](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions/52#discussioncomment-1961960).
+
 # Guida pratica per la pubblicazione di dati tabellari in formato CSV
 
 Questo progetto nasce per creare una **guida** per la **pubblicazione** sul web di **dati** in **formato** **`CSV`** (*Comma Separated Values*). È un formato di testo strutturato, che può avere una riga di intestazione, in cui i valori di ogni colonna sono distinti con un separatore che di solito è la `,`.
