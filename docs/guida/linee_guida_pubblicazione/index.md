@@ -15,7 +15,7 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [P5-Trattamento dei valori sconosciuto](P05_trattamento_valori_sconosciuti.md)
 - [P6-Subtotali, totali o raggruppamento](P06_subtotali_totali_raggruppamenti.md)
 - [P7-Tipi di dati](P07_tipi_dati.md)
-- P8-Standardizzazione dei valori dei campi
+- [P8-Standardizzazione dei valori dei campi](P08_standardizzazione_valori_campi.md)
 - P9-Campi codificati
 - P10-Campi di testo
 - P11-Campi numerici
