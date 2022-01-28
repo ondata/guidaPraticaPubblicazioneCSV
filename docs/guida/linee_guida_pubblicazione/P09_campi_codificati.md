@@ -19,7 +19,7 @@ Da prendere in considerazione:
 
 
     | marca | consumo | potenza | cambio | accelerazione |
-    | --- | --- | --- | --- | --- |
+    | --- | ---: | ---: | --- | ---: |
     | chevrolet chevelle malibu | 18 | 130 | M | 12 |
     | buick skylark 320 | 15 | 165 | A | 11.5 |
     | plymouth satellite | 18 | 150 | A | 11 |
@@ -29,7 +29,7 @@ Da prendere in considerazione:
 !!! success "Buona prassi"
 
     | marca | consumo | potenza | cambio | cambio_descrizione | accelerazione |
-    | --- | --- | --- | --- | --- | --- |
+    | --- | ---: | ---: | --- | --- | ---: |
     | chevrolet chevelle malibu | 18 | 130 | M | Manuale | 12 |
     | buick skylark 320 | 15 | 165 | A | Automatico | 11.5 |
     | plymouth satellite | 18 | 150 | A | Automatico | 11 |
