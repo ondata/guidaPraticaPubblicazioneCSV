@@ -4,6 +4,8 @@ hide:
 # - navigation
 ---
 
+# Campi con coordinate geografiche
+
 Il formato più usato per rappresentare le coordinate geografiche sulle mappe è:
 
   - la latitudine e la longitudine in gradi decimali, i cui valori dovrebbero essere presentati in colonne separate, con intestazioni di colonna da nominare: Latitudine e Longitudine, rispettivamente.

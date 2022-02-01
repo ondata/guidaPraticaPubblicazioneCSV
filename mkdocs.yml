@@ -63,6 +63,7 @@ nav:
           - Tipi di dati: guida/linee_guida_pubblicazione/P07_tipi_dati.md
           - Standardizzazione valore campi: guida/linee_guida_pubblicazione/P08_standardizzazione_valori_campi.md
           - Campi codificati: guida/linee_guida_pubblicazione/P09_campi_codificati.md
+          - Campi con coordinate geografiche: guida/linee_guida_pubblicazione/P15_campi_con_coordinate_geografiche.md
     - Partecipa: partecipa.md
     - Note: note_redazione.md
     - Grazie: grazie.md
