@@ -13,7 +13,7 @@ Il formato più usato per rappresentare le coordinate geografiche sulle mappe è
 Da prendere in considerazione:
 
   - Se è necessario specificare il nome di un'entità di cui si riportano le coordinate, si usano i suffissi "\_latitudine" e "\_longitudine".
-  - Si possono usare convertitori di coordinate UTM o convertitori gradi sessagesimali a gradi decimali [qui uno strumento per conversione](http://www.geoin.it/coordinate_converter/).
+  - Si possono usare convertitori di coordinate UTM o convertitori gradi sessagesimali a gradi decimali [qui uno strumento per conversione](https://www.latlong.net/degrees-minutes-seconds-to-decimal-degrees).
   - Per i dati geografici diversi dai punti, ad esempio linee o poligoni, si raccomanda di seguire la specifica *Well-knowntext representations of coordinate reference systems* (WKT-CRS) dell'[Open Geospatial Consortium](https://www.opengeospatial.org/standards/wkt-crs).
 
 È consigliabile, ogni volta che si pubblicano dati geografici in formati come [SHP](https://es.wikipedia.org/wiki/Shapefile) o [KML](https://es.wikipedia.org/wiki/KML), accompagnare questi file con un file CSV in cui sono incluse anche le coordinate geografiche per facilitare il loro riutilizzo.
@@ -33,5 +33,5 @@ Da prendere in considerazione:
 
     | rivenditore | latitudine | longitudine |
     | ----------- | ---------: | ----------: |
-    | chevrolet   | 43.2345678 | -5.1234567  |
-    | buick       | 43.3456789 | -5.2345678  |
+    | chevrolet   | 43.2344444 | 5.07333333  |
+    | buick       | 43.3455555 | 5.23722222  |
