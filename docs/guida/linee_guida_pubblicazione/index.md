@@ -22,6 +22,6 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - P12-Campi con date
 - P13-Campi con numeri di telefono
 - P14-Campi con indirizzi postali
-- P15-Campi con coordinate geografiche
+- [P15-Campi con coordinate geografiche](P15_campi_con_coordinate_geografiche.md)
 
 
