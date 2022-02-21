@@ -24,6 +24,16 @@
         "content",
         "example"
       ]
+    },
+    {
+      "login": "patrunomeister",
+      "name": "Vincenzo Patruno",
+      "avatar_url": "https://avatars.githubusercontent.com/u/482417?v=4",
+      "profile": "https://github.com/patrunomeister",
+      "contributions": [
+        "content",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
