@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "cirospat",
+      "name": "ciro spataro",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3757525?v=4",
+      "profile": "http://cirospat.readthedocs.io",
+      "contributions": [
+        "content",
+        "example"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "guidaPraticaPubblicazioneCSV",
+  "projectOwner": "ondata",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
