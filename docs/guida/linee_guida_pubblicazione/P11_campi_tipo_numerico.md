@@ -16,7 +16,7 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
   - I **valori negativi** devono essere preceduti da un segno meno (`-`).
   - Se una colonna contiene sia valori interi che decimali, il tipo di dati deve essere decimale.
   - Se una colonna contiene solo valori interi, essi devono essere espressi senza separatore decimale.
-  - **Non mescolare** nello stesso campo **testo** e **valori numerici**. Per esempio: non usare `€50` o `27 km` come valore in un campo numerico, ma soltanto `50` o `27`.
+  - **Non mescolare** nello stesso campo **testo** e **valori numerici**. Per esempio: non usare `€50` o `27%` come valore in un campo numerico, ma soltanto `50` o `27`.
 
 ## Valute
   - I valori numerici devono essere espressi senza decimali o con 2 decimali.
