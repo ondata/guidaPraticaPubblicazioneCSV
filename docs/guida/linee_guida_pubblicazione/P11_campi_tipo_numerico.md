@@ -12,8 +12,8 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 ## In generale
 
   - Non si devono usare i **separatori delle migliaia** (quindi semplicemente `1230` e non `1.230`).
-  - Il **separatore dei decimali** può essere una `,` o un `.`, a seconda della configurazione "locale" delle applicazioni di elaborazione dati. In Italia, Spagna, Francia o Germania, tra gli altri paesi, si usa la `,`, mentre nell'area anglosassone il `.`. L'uso dell'uno o dell'altro carattere, può comportare una pre elaborazione del dato, per quei linguaggi di programmazione o programmi in cui il separatore dei decimali è soltanto di un tipo.
-  - I **valori negativi** devono essere preceduti da un segno meno (`-`).
+  - Il **separatore dei decimali** può essere una `,` o un `.`, a seconda della configurazione "locale" delle applicazioni di elaborazione dati e del sistema operativo. In Italia, Spagna, Francia o Germania, tra gli altri paesi, si usa la `,`, mentre nell'area anglosassone il `.`. L'uso dell'uno o dell'altro carattere, può comportare una pre elaborazione del dato, per quei linguaggi di programmazione o programmi in cui il separatore dei decimali è soltanto di un tipo.
+  - I **valori negativi** devono essere preceduti da un segno meno `-`. In alcuni *software* in numeri negativi sono tra parentesi tonde; non usarle per rappresentare questo tipo di valori.
   - Se una colonna contiene sia valori interi che decimali, il tipo di dati deve essere decimale.
   - Se una colonna contiene solo valori interi, essi devono essere espressi senza separatore decimale.
   - **Non mescolare** nello stesso campo **testo** e **valori numerici**. Per esempio: non usare `€50` o `27%` come valore in un campo numerico, ma soltanto `50` o `27`.
