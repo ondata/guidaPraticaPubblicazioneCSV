@@ -20,7 +20,7 @@ title: Trattamento dei valori sconosciuti o nulli
          - Una terminologia accettata per indicare valori sconosciuti o mancanti è il valore/codice `NA` o `N/A`[^1].
          - Il codice usato eventualmente per indicare valori sconosciuti o mancanti, ad esempio NA, deve essere specificato nel dizionario dei dati.
 
-!!! note
+!!! note "Nota"
 
     Per i programmi che leggono i file `CSV`, nella gran parte dei casi, è preferibile che un valore non definito, sia rappresentato da una cella vuota. Perché spesso non hanno l'opzione per mappare il codice definito come sconosciuto (come `NA`).
 
