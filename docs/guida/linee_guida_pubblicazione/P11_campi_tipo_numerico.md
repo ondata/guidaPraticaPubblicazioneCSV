@@ -21,12 +21,12 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 ## Valute
   - I valori numerici devono essere espressi senza decimali o con 2 decimali.
   - Il numero di cifre decimali utilizzato per formattare l'intera colonna di valori non deve variare. Se varia, la caratteristica di coerenza dei dati è violata.
-  - **Non includere simboli di valuta** o separatori di migliaia (punti e virgole, a seconda dei casi).
+  - **Non includere simboli di valuta** o separatori di migliaia.
 ## Unità di misura
 
   - Si deve usare il numero di decimali necessario.
-  - Si raccomanda di usare il [dizionario dei dati](../dizionario_dati.md) per esprimere le unità di misura associate ai valori numerici. Se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio `distanza_metri`, purché tutti i valori della colonna abbiano la stessa unità di misura associata.
-  - Nel caso in cui l'unità di misura sia diversa per una stessa colonna, i valori per ogni unità di misura devono essere indicati in una colonna separata da inserite subito dopo quella a cui fa riferimento.
+  - Si raccomanda di usare il [dizionario dei dati](../dizionario_dati.md) per definire le unità di misura associate ai valori numerici. Se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo - per esempio `distanza_metri` - purché tutti i valori della colonna abbiano la stessa unità di misura associata.
+  - Nel caso in cui l'unità di misura sia diversa per una stessa colonna, questa deve essere indicata in una colonna separata, da inserite subito dopo quella a cui fa riferimento.
 
 Esempio:
 
@@ -39,7 +39,9 @@ Esempio:
 
 ## Valori codificati
 
-  - Quando ci sono degli zeri iniziali, devono  essere  digitati come valori di testo, quindi tra `"` (ad esempio `"0123"`), per evitare che il valore venga troncato e che ad esempio `00000023456` sia interpretato come `23456`.
+Spesso i [campi codificati](P09_campi_codificati.md) sono composti esclusivamente da stringhe numeriche, ma non sono né numeri interi, né decimali: ad esempio un numero di telefono come `081292240`.<br>
+In questi casi, specie in presenza di uno o più `0` a inizio cella, il campo deve essere impostato come campo di testo e eventualmente dichiarato come tale nel [dizionario dei dati](../dizionario_dati.md).<br>
+Questo per evitare che il valore venga interpretato come numero e troncato (ad esempio da `081292240` a `81292240`).
 
 ## Esempi
 
@@ -67,7 +69,7 @@ Esempio:
 
 In questo esempio, la valuta usata per tutti i valori nel campo `ricavi_vendite` è la stessa e sarà descritta nel dizionario dei dati. In alternativa, il nome del campo potrebbe essere `ricavi_vendite_euro`.
 
-**Esempio 2**: : utilizzare il numero di decimali appropriato per ogni tipo di dato numerico. Usa il segno meno `-` per i valori negativi. Digita degli zeri significativi come valori di testo.
+**Esempio 2**: utilizzare il numero di decimali appropriato per ogni tipo di dato numerico. Usa il segno meno `-` per i valori negativi. Digita degli zeri significativi come valori di testo.
 
 !!! failure "Cattiva prassi"
 
