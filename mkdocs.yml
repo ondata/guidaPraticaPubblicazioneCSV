@@ -58,7 +58,7 @@ nav:
           - Singolo record per riga: guida/linee_guida_pubblicazione/P02_singolo_record_riga.md
           - Denominazione delle colonne: guida/linee_guida_pubblicazione/P03_denominazione_colonne.md
           - Struttura dati verticale vs orizzontale: guida/linee_guida_pubblicazione/P04_strutture_dati_verticale_orizzontale.md
-          - Valori sconosciuti: guida/linee_guida_pubblicazione/P05_trattamento_valori_sconosciuti.md
+          - Valori sconosciuti o nulli: guida/linee_guida_pubblicazione/P05_trattamento_valori_sconosciuti.md
           - Subtotali e raggruppamenti: guida/linee_guida_pubblicazione/P06_subtotali_totali_raggruppamenti.md
           - Tipi di dati: guida/linee_guida_pubblicazione/P07_tipi_dati.md
           - Standardizzazione valore campi: guida/linee_guida_pubblicazione/P08_standardizzazione_valori_campi.md
