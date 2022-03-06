@@ -2,9 +2,10 @@
 hide:
  - toc
 # - navigation
+title: Trattamento dei valori sconosciuti o nulli
 ---
 
-# Trattamento dei valori sconosciuti
+# Trattamento dei valori sconosciuti o nulli
 
 - I valori dei dati devono essere completi ed espressi in un modo che sia accurato e coerente con il tipo di dati del campo, in modo che possano essere trattati nei termini del loro valore effettivo.
 
