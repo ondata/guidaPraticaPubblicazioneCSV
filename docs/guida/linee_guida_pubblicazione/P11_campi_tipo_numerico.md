@@ -1,6 +1,6 @@
 ---
 hide:
- - toc
+# - toc
 # - navigation
 title: Campi di tipo numerico
 ---
@@ -9,25 +9,26 @@ title: Campi di tipo numerico
 
 I campi numerici devono essere codificati esclusivamente come tipi di dati numerici (interi o decimali). Se non si fa diversamente, alcune operazioni sui dati, come l'ordinamento, possono causare problemi inaspettati.
 
-Da prendere in considerazione:
+## In generale
 
-- In generale:
-    - Non si devono usare i separatori delle migliaia (quindi semplicemente `1230` e non `1.230`).
-    - Il separatore dei decimali può essere una `,` o un `.`, a seconda della configurazione "locale" delle applicazioni di elaborazione dati. In Italia, Spagna, Francia o Germania, tra gli altri paesi, si usa la `,`, mentre nell'area anglosassone il `.`. L'uso dell'uno o dell'altro carattere, può comportare una pre elaborazione del dato, per quei linguaggi di programmazione o programmi in cui il separatore dei decimali è soltanto di un tipo.
-    - I valori negativi devono essere preceduti da un segno meno (`-`).
-    - Se una colonna contiene sia valori interi che decimali, il tipo di dati deve essere decimale.
-    - Se una colonna contiene solo valori interi, essi devono essere espressi senza separatore decimale.
-    - Non mescolare testo e valori numerici. Per esempio: non usare `€50` o `27 km` come valore in un campo numerico, ma soltanto `50` o `27`.
-- Raccomandazioni nel caso delle valute:
-    - I valori numerici devono essere espressi senza decimali o con 2 decimali.
-    - Il numero di cifre decimali utilizzato per formattare l'intera colonna di valori non deve variare. Se varia, la caratteristica di coerenza dei dati è violata.
-    - Non includere simboli di valuta o separatori di migliaia (punti e virgole, a seconda dei casi).
-- Raccomandazioni nel caso delle unità di misura:
-    - Si devono usare il numero di decimali necessario.
-    - Si raccomanda di usare il [dizionario dei dati](../dizionario_dati.md) per esprimere le unità di misura associate ai valori numerici. Se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio "distanza_metri", purché tutti i valori della colonna abbiano la stessa unità di misura associata.
-    - Nel caso in cui l'unità di misura sia diversa per una stessa colonna, i valori per ogni unità di misura devono essere indicati in una colonna separata da inserite subito dopo quella a cui fa riferimento.
+  - Non si devono usare i separatori delle migliaia (quindi semplicemente `1230` e non `1.230`).
+  - Il separatore dei decimali può essere una `,` o un `.`, a seconda della configurazione "locale" delle applicazioni di elaborazione dati. In Italia, Spagna, Francia o Germania, tra gli altri paesi, si usa la `,`, mentre nell'area anglosassone il `.`. L'uso dell'uno o dell'altro carattere, può comportare una pre elaborazione del dato, per quei linguaggi di programmazione o programmi in cui il separatore dei decimali è soltanto di un tipo.
+  - I valori negativi devono essere preceduti da un segno meno (`-`).
+  - Se una colonna contiene sia valori interi che decimali, il tipo di dati deve essere decimale.
+  - Se una colonna contiene solo valori interi, essi devono essere espressi senza separatore decimale.
+  - Non mescolare testo e valori numerici. Per esempio: non usare `€50` o `27 km` come valore in un campo numerico, ma soltanto `50` o `27`.
 
-Per esempio:
+## Valute
+  - I valori numerici devono essere espressi senza decimali o con 2 decimali.
+  - Il numero di cifre decimali utilizzato per formattare l'intera colonna di valori non deve variare. Se varia, la caratteristica di coerenza dei dati è violata.
+  - Non includere simboli di valuta o separatori di migliaia (punti e virgole, a seconda dei casi).
+## Unità di misura
+
+  - Si devono usare il numero di decimali necessario.
+  - Si raccomanda di usare il [dizionario dei dati](../dizionario_dati.md) per esprimere le unità di misura associate ai valori numerici. Se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio "distanza_metri", purché tutti i valori della colonna abbiano la stessa unità di misura associata.
+  - Nel caso in cui l'unità di misura sia diversa per una stessa colonna, i valori per ogni unità di misura devono essere indicati in una colonna separata da inserite subito dopo quella a cui fa riferimento.
+
+Esempio:
 
 | marca | prezzo_vendita | valuta |
 | --- | --- | --- |
@@ -36,8 +37,11 @@ Per esempio:
 | plymouth satellite | 28362,65 | USD |
 | amc rebel sst | 29200,00 | USD |
 
-- Raccomandazioni nel caso di numeri che indicano valori codificati:
-    - Quando ci sono degli zeri iniziali, devono  essere  digitati come valori di testo, quindi tra `"` (ad esempio `"0123"`), per evitare che il valore venga troncato e che ad esempio `00000023456` sia interpretato come `23456`.
+## Valori codificati
+
+  - Quando ci sono degli zeri iniziali, devono  essere  digitati come valori di testo, quindi tra `"` (ad esempio `"0123"`), per evitare che il valore venga troncato e che ad esempio `00000023456` sia interpretato come `23456`.
+
+## Esempi
 
 **Esempio 1**: non usare i separatori di migliaia. Uso del separatore decimale. Coerenza nel numero di cifre decimali. Evitare di mescolare il testo con i valori numerici.
 
