@@ -25,7 +25,7 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 ## Unità di misura
 
   - Si deve usare il numero di decimali necessario.
-  - Si raccomanda di usare il [dizionario dei dati](../dizionario_dati.md) per esprimere le unità di misura associate ai valori numerici. Se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio "distanza_metri", purché tutti i valori della colonna abbiano la stessa unità di misura associata.
+  - Si raccomanda di usare il [dizionario dei dati](../dizionario_dati.md) per esprimere le unità di misura associate ai valori numerici. Se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio `distanza_metri`, purché tutti i valori della colonna abbiano la stessa unità di misura associata.
   - Nel caso in cui l'unità di misura sia diversa per una stessa colonna, i valori per ogni unità di misura devono essere indicati in una colonna separata da inserite subito dopo quella a cui fa riferimento.
 
 Esempio:
@@ -85,7 +85,7 @@ In questo esempio, la valuta usata per tutti i valori nel campo `ricavi_vendite`
 
 **Esempio 3**: cosa avviene quando si ordinano campi.
 
-- **Caso 1**: risultato corretto dopo un processo di ordinamento, quando il campo "classifica" è di tipo "numerico".
+Se il campo da ordinare contiene valori numerici, ed è impostato come tipo di dato numerico, sarà possibile ordinarlo numericamente in modo corretto.
 
 Tabella di input:
 
@@ -107,7 +107,7 @@ Output dopo ordinamento per colonna `classifica`:
 | plymouth satellite | 6 |
 | buick skylark 320 | 9 |
 
-- **Caso 2**: risultato errato dopo un processo di ordinamento, quando il campo "Classifica" è di tipo "testo".
+Se invece il campo da ordinare contiene valori numerici, ma è impostato come semplice testo, l'ordinamento numerico sarà scorretto.
 
 Tabella di input:
 
@@ -129,6 +129,6 @@ Output dopo ordinamento per colonna `classifica`:
 | ford torino | "45" |
 | buick skylark 320 | "9" |
 
-In quest'ultimo esempio, le virgolette `"` intorno ad ogni stringa di numeri sono incluse per rendere l'esempio più esplicito, ma in un foglio elettronico reale non devono essere visibili anche se il campo è di tipo "testo".
+In quest'ultimo esempio, le virgolette `"` intorno ad ogni stringa di numeri sono incluse per rendere l'esempio più esplicito, ma in un foglio elettronico reale non sono visibili anche se il campo è di tipo "testo".
 
 Una buona pratica è quella di controllare il tipo di dato prima della pubblicazione, o nel sistema/programma in cui viene generato il file, o con uno degli strumenti di convalida della sezione "[Strumenti per i file CSV](../strumenti_file_CSV.md)".
