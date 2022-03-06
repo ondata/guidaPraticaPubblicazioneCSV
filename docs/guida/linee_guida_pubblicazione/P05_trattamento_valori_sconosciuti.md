@@ -22,7 +22,7 @@ title: Trattamento dei valori sconosciuti o nulli
 
 !!! note "Nota"
 
-    Per i programmi che leggono i file `CSV`, nella gran parte dei casi, è preferibile che un valore non definito, sia rappresentato da una cella vuota. Perché spesso non hanno l'opzione per mappare il codice definito come sconosciuto (come `NA`).
+    Per i programmi che leggono i file `CSV`, nella gran parte dei casi, è preferibile che un valore non definito, sia rappresentato da una cella vuota: spesso non hanno l'opzione per mappare il codice definito come valore sconosciuto (come `NA`).
 
 ## Esempio 1
 
