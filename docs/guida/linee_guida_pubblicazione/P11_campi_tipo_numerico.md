@@ -8,7 +8,7 @@ title: Campi di tipo numerico
 # Campi di tipo numerico
 
 I campi numerici devono essere codificati esclusivamente come tipi di dati numerici (interi o decimali).<br>
-Se si fa diversamente, alcune operazioni sui dati, come l'ordinamento, i filtri (tutte le righe in cui i valori di una colonna sono superiori a una certa cifra), ecc. possono non funzionare e/o produrre risultati inattesi.
+Se si fa diversamente, alcune operazioni sui dati, come l'ordinamento, il filtraggio (tutte le righe in cui i valori di una colonna sono superiori a una certa cifra), ecc. possono non funzionare e/o produrre risultati inattesi.
 
 ## In generale
 
