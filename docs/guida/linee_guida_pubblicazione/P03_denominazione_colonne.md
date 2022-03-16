@@ -1,6 +1,7 @@
 ---
 hide:
  - toc
+# - navigation
 title: Denominazione delle colonne
 ---
 
@@ -22,7 +23,7 @@ Da prendere in considerazione:
     - evitare l'uso di codici, e se assolutamente necessario, dovrebbero essere illustrati nel [dizionario dei dati](../dizionario_dati.md) che documenta il set di dati;
     - i nomi dei campi devono corrispondere a quelli specificati nel dizionario dei dati.
 
-**Esempio**: nomi comprensibili delle colonne
+### Esempio: nomi comprensibili delle colonne
 
 !!! failure "Cattiva prassi"
 

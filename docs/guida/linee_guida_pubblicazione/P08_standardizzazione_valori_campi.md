@@ -25,7 +25,7 @@ Si raccomanda:
 [^2]: Lo standard AENOR 137801:2015 include un elenco di vocabolari di riferimento: <http://vocab.linkeddata.es/datosabiertos/>
 
 
-**Esempio**: standardizzazione del nome e del codice dell'attività economica.
+### Esempio: standardizzazione del nome e del codice dell'attività economica.
 
 !!! failure "Cattiva prassi"
 

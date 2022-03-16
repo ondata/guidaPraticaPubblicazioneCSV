@@ -16,7 +16,7 @@ Da prendere in considerazione:
 - un livello superiore di granularità può sempre essere ottenuto da un livello inferiore, ma non viceversa. Seguendo l'esempio, è possibile ricavare le vendite annuali dai dati di vendita mensili, ma non è possibile recuperare i dati di vendita mensili dalle vendite annuali;
 - il raggruppamento di righe relative a un'entità, lasciando alcune celle vuote senza ripetere l'entità per tutte le righe del raggruppamento, dovrebbe essere evitato. Questo problema è comune e può causare errori quando si cambia l'ordine originale delle righe.
 
-**Esempio 1**: vendite semestrali di automobili (in migliaia), con subtotali (mix di livelli di granularità) e senza subtotali (stesso livello di granularità).
+### Esempio 1: vendite semestrali di automobili (in migliaia), con subtotali (mix di livelli di granularità) e senza subtotali (stesso livello di granularità).
 
 !!! failure "Cattiva prassi"
 
@@ -40,7 +40,7 @@ Da prendere in considerazione:
     | buick skylark 320 | 1999 | 3.4 | 3.57 |
     | plymouth satellite | 2000 | 2.4 | 2.52 |
 
-**Esempio 2**: non usare raggruppamenti basati sull'uso di celle vuote.
+### Esempio 2: non usare raggruppamenti basati sull'uso di celle vuote.
 
 !!! failure "Cattiva prassi"
 

@@ -15,7 +15,7 @@ Da prendere in considerazione:
 
 [^1]: Indice della Pubblica Amministrazione
 
-**Esempio**: uso di campi codificati
+### Esempio: uso di campi codificati
 
 !!! failure "Cattiva prassi"
 

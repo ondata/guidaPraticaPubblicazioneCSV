@@ -24,7 +24,7 @@ title: Trattamento dei valori sconosciuti o nulli
 
     Per i programmi che leggono i file `CSV`, nella gran parte dei casi, è preferibile che un valore non definito, sia rappresentato da una cella vuota: spesso non hanno l'opzione per mappare il codice definito come valore sconosciuto (come `NA`).
 
-## Esempio 1
+### Esempio 1
 
 !!! failure "Cattiva prassi"
 
@@ -56,7 +56,7 @@ title: Trattamento dei valori sconosciuti o nulli
 
 Nell'esempio si osserva che il valore `0` nella colonna "vendite", indica che per quell'anno le vendite di auto di quel modello sono state `0`. Quando invece il dato di "vendite" e/o di "consumo" è sconosciuto, è indicato con `NA`. Tutti i valori sconosciuti in qualsiasi colonna sono indicati con lo stesso codice: `NA`.
 
-## Esempio 2
+### Esempio 2
 
 !!! failure "Cattiva prassi"
 
@@ -91,6 +91,4 @@ Nell'esempio viene aggiunta una nuova colonna per spiegare il significato del va
 Ci sono circostanze in cui determinate misurazioni non possono essere registrate, perché i dispositivi o i sistemi utilizzati per misurare determinate grandezze registrano solo valori al di sopra di una certa soglia (ad esempio un sensore di inquinamento ambientale). In questi casi, sarà spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
 
 
-
 [^1]: Dall'inglese, *not available* (non disponibile), *not applicable* (non applicabile al caso) o *no answer* (nessuna risposta; sebbene questo significato viene utilizzato solo in determinate situazioni). <https://en.wikipedia.org/wiki/N/A>
-

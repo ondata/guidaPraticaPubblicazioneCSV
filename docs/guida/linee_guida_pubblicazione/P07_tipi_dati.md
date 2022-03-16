@@ -19,7 +19,7 @@ Da tenere in considerazione:
 
 - Utilizzare un formato corretto per i campi, in base al tipo di dati che contengono, aumenta la probabilità che un'esportazione in altri formati abbia successo e rende i dati meglio utilizzabili.
 
-**Esempio**: tipi di dati in tre colonne (string, integer, integer).
+### Esempio: tipi di dati in tre colonne (string, integer, integer).
 
 !!! failure "Cattiva prassi"
 

@@ -1,35 +1,36 @@
 ---
 hide:
-# - toc
+- toc
 # - navigation
 title: Campi di tipo numerico
 ---
 
 # Campi di tipo numerico
 
-I campi numerici devono essere codificati esclusivamente come tipi di dati numerici (interi o decimali).<br>
-Se si fa diversamente, alcune operazioni sui dati, come l'ordinamento, il filtraggio (tutte le righe in cui i valori di una colonna sono superiori a una certa cifra), ecc. possono non funzionare e/o produrre risultati inattesi.
+I campi numerici devono essere codificati esclusivamente come tipi di dati numerici (interi o decimali); se si fa diversamente, alcune operazioni sui dati come l'ordinamento, il filtraggio (tutte le righe in cui i valori di una colonna sono superiori a una certa cifra), possono non funzionare e/o produrre risultati inattesi.
 
-## In generale
+## In generale:
 
-  - Non si devono usare i **separatori delle migliaia** (quindi semplicemente `1230` e non `1.230`).
-  - Il **separatore dei decimali** può essere una `,` o un `.`, a seconda della configurazione "locale" delle applicazioni di elaborazione dati e/o del sistema operativo. In Italia, Spagna, Francia o Germania, tra gli altri paesi, si usa la `,`, mentre nell'area anglosassone il `.`. L'uso dell'uno o dell'altro carattere, può comportare una pre elaborazione del dato, per quei linguaggi di programmazione o programmi in cui il separatore dei decimali è soltanto di un tipo.
-  - I **valori negativi** devono essere preceduti da un segno meno `-`. In alcuni *software* in numeri negativi sono tra parentesi tonde; non usarle per rappresentare questo tipo di valori.
-  - Se una colonna contiene sia valori interi che decimali, il tipo di dati deve essere decimale e deve essere inserito il numero corretto di cifre decimali (che può dipendere dall'entità misurata, dalla strumentazione usata per raccogliere quei valori, ecc.).
-  - Se una colonna contiene solo valori interi, essi devono essere espressi senza separatore decimale.
-  - **Non mescolare** nello stesso campo **testo** e **valori numerici**. Per esempio: non usare `€50` o `27%` come valore in un campo numerico, ma soltanto `50` o `27`.
+  - non si devono usare i **separatori delle migliaia** (quindi semplicemente `1230` e non `1.230`);
+  - il **separatore dei decimali** può essere una `,` o un `.`, a seconda della configurazione "locale" delle applicazioni di elaborazione dati e/o del sistema operativo. In Italia, Spagna, Francia o Germania, tra gli altri paesi, si usa la `,`, mentre nell'area anglosassone il `.`. L'uso dell'uno o dell'altro carattere, può comportare una pre elaborazione del dato, per quei linguaggi di programmazione o programmi in cui il separatore dei decimali è soltanto di un tipo;
+  - i **valori negativi** devono essere preceduti da un segno meno `-`. In alcuni *software* in numeri negativi sono tra parentesi tonde; non usarle per rappresentare questo tipo di valori;
+  - se una colonna contiene sia valori interi che decimali, il tipo di dati deve essere decimale e deve essere inserito il numero corretto di cifre decimali (che può dipendere dall'entità misurata, dalla strumentazione usata per raccogliere quei valori, ecc.);
+  - se una colonna contiene solo valori interi, essi devono essere espressi senza separatore decimale;
+  - **non mescolare** nello stesso campo **testo** e **valori numerici**. Per esempio: non usare `€50` o `27%` come valore in un campo numerico, ma soltanto `50` o `27`.
 
-## Valute
-  - I valori numerici devono essere espressi senza decimali o con 2 decimali.
-  - Il numero di cifre decimali utilizzato per formattare l'intera colonna di valori non deve variare. Se varia, la caratteristica di coerenza dei dati è violata.
-  - **Non includere simboli di valuta** o separatori di migliaia.
-## Unità di misura
+## Valute:
 
-  - Si deve usare il numero di decimali necessario.
-  - Si raccomanda di usare il [dizionario dei dati](../dizionario_dati.md) per definire le unità di misura associate ai valori numerici. Se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo - per esempio `distanza_metri` - purché tutti i valori della colonna abbiano la stessa unità di misura associata.
-  - Nel caso in cui l'unità di misura sia diversa per una stessa colonna, questa deve essere indicata in una colonna separata, da inserite subito dopo quella a cui fa riferimento.
+  - i valori numerici devono essere espressi senza decimali o con 2 decimali;
+  - il numero di cifre decimali utilizzato per formattare l'intera colonna di valori non deve variare. Se varia, la caratteristica di coerenza dei dati è violata;
+  - **non includere simboli di valuta** o separatori di migliaia.
 
-Esempio:
+## Unità di misura:
+
+  - si deve usare il numero di decimali necessario;
+  - si raccomanda di usare il [dizionario dei dati](../dizionario_dati.md) per definire le unità di misura associate ai valori numerici. Se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo - per esempio `distanza_metri` - purché tutti i valori della colonna abbiano la stessa unità di misura associata;
+  - nel caso in cui l'unità di misura sia diversa per una stessa colonna, questa deve essere indicata in una colonna separata, da inserite subito dopo quella a cui fa riferimento.
+
+### Esempio:
 
 | marca | prezzo_vendita | valuta |
 | --- | --- | --- |
@@ -44,9 +45,7 @@ Spesso i [campi codificati](P09_campi_codificati.md) sono composti esclusivament
 In questi casi, specie in presenza di uno o più `0` a inizio cella, il campo deve essere impostato come campo di testo e eventualmente dichiarato come tale nel [dizionario dei dati](../dizionario_dati.md).<br>
 Questo per evitare che il valore venga interpretato come numero e troncato (ad esempio da `081292240` a `81292240`).
 
-## Esempi
-
-**Esempio 1**: non usare i separatori di migliaia. Uso del separatore decimale. Coerenza nel numero di cifre decimali. Evitare di mescolare il testo con i valori numerici.
+### Esempio 1: non usare i separatori di migliaia. Uso del separatore decimale. Coerenza nel numero di cifre decimali. Evitare di mescolare il testo con i valori numerici.
 
 !!! failure "Cattiva prassi"
 
@@ -70,7 +69,7 @@ Questo per evitare che il valore venga interpretato come numero e troncato (ad e
 
 In questo esempio, la valuta usata per tutti i valori nel campo `ricavi_vendite` è la stessa e sarà descritta nel dizionario dei dati. In alternativa, il nome del campo potrebbe essere `ricavi_vendite_euro`.
 
-**Esempio 2**: utilizzare il numero di decimali appropriato per ogni tipo di dato numerico. Usa il segno meno `-` per i valori negativi. Digita degli zeri significativi come valori di testo.
+### Esempio 2: utilizzare il numero di decimali appropriato per ogni tipo di dato numerico. Usa il segno meno `-` per i valori negativi. Digita degli zeri significativi come valori di testo.
 
 !!! failure "Cattiva prassi"
 
