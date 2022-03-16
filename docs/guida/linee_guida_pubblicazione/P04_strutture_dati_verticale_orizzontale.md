@@ -5,7 +5,7 @@ title: Strutture dati verticale vs orizzontale
 ---
 
 
-# Strutture dati verticale vs orizzontale
+# Strutture dati: verticale vs orizzontale
 Quando si progettano strutture di dati tabulari è consigliabile evitare la crescita orizzontale dei valori.
 
 
@@ -48,7 +48,7 @@ Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze 
     |buick skylark 320|1|2|2|2|1|
 
 
-!!! succes "Buona prassi"
+!!! success "Buona prassi"
 
     |marca|tipo_guasto|quantita_guasti|
     |-------|-----------|---------------------|
