@@ -6,9 +6,9 @@ hide:
 
 # Tipi di dati
 
-I valori in una tabella di dati devono essere formattati secondo il [tipo di dati](https://www.w3.org/TR/xmlschema/) relativo. In particolare, i numeri dovrebbero essere sempre nei formati/tipi di cella "Numero", i campi di tipo testo dovrebbero essere nel formato/tipo di cella "Testo" e i campi di tipo data dovrebbero essere nel formati/tipi di cella 'Data'.
+I valori in una tabella di dati devono essere formattati secondo il [tipo di dati](https://www.w3.org/TR/xmlschema/) relativo. In particolare, i numeri dovrebbero essere sempre nei formati/tipi di cella "Numero", i campi di tipo testo dovrebbero essere nel formato/tipo di cella "Testo" e i campi di tipo data dovrebbero essere nel formati/tipi di cella "Data".
 
-| Dato | Tipo |
+| dato | tipo |
 | --- | --- |
 | Testo | string |
 | Numero | integer, decimal, float, double |
@@ -17,7 +17,7 @@ I valori in una tabella di dati devono essere formattati secondo il [tipo di dat
 
 Da tenere in considerazione:
 
-- Utilizzare un formato corretto per i campi, in base al tipo di dati che contengono, aumenta la probabilità che un'esportazione in altri formati abbia successo e rende i dati più utilizzabili.
+- Utilizzare un formato corretto per i campi, in base al tipo di dati che contengono, aumenta la probabilità che un'esportazione in altri formati abbia successo e rende i dati meglio utilizzabili.
 
 **Esempio**: tipi di dati in tre colonne (string, integer, integer).
 
