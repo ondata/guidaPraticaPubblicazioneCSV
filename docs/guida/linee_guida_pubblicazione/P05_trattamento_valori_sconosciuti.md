@@ -74,7 +74,7 @@ Nell'esempio si osserva che il valore `0` nella colonna "vendite", indica che pe
 
 !!! success "Buona prassi"
 
-    | marca | anno | consumo | vendite | Significato valore mancante vendite |
+    | marca | anno | consumo | vendite | significato_valore_mancante_vendite |
     | --- | --- | --- | --- | --- |
     | chevrolet chevelle malibu | 1998 | Alto | 2.5 |  |
     | chevrolet chevelle malibu | 1999 | Bajo | 2.63 |  |
