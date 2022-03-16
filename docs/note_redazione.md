@@ -24,7 +24,7 @@ La cartella [risorse](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tre
 
 ## Foglio con le tabelle di esempio della guida originale
 
-È stato creato un :material-table: [foglio elettronico](https://docs.google.com/spreadsheets/d/1CAR685UYBmaKVB3zE4yuRj-n0fZBL6HohFDat66Zqic/edit#gid=775453510), dove raccogliere senza alcuna formattazione, le tabelle presenti nella guida originale. Sarà comodo per produrre la versione "italiana" da inserire in questa guida.
+È stato creato un <!--- :material-table: --> :material-table: [foglio elettronico](https://docs.google.com/spreadsheets/d/1CAR685UYBmaKVB3zE4yuRj-n0fZBL6HohFDat66Zqic/edit#gid=775453510), dove raccogliere senza alcuna formattazione, le tabelle presenti nella guida originale. Sarà comodo per produrre la versione "italiana" da inserire in questa guida.
 
 !!! note "Note per i nomi dei fogli"
 
