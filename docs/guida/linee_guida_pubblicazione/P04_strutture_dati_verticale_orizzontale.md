@@ -39,7 +39,8 @@ Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze 
 
 - Se è necessario registrare nuove variabili o attributi che non sono stati registrati in precedenza, per esempio una serie temporale, allora è ragionevole far crescere la struttura dei dati orizzontalmente, cioè aggiungere nuove colonne. Questo permetterà di inserire le osservazioni per le nuove variabili mantenendo i valori vuoti nelle osservazioni pre-aggiornamento per queste nuove colonne, se non esiste un valore assegnabile per quelle osservazioni. Quando si aggiungono nuove osservazioni, si devono necessariamente inserire nuove righe.
 
-### Esempio: crescita orizzontale vs. verticale
+### Esempio:
+crescita orizzontale vs. verticale.
 
 !!! failure "Cattiva prassi"
 

@@ -20,7 +20,8 @@ Da prendere in considerazione:
 - Un altro modo per indicare la presenza o l'assenza della linea di intestazione è un parametro content-type quando il file di dati è trasmesso via HTTP, della forma: **Content-Type: text/csv;header=absent**.
 
 
-### Esempio 1: non usare celle multiple di intestazione
+### Esempio 1:
+non usare celle multiple di intestazione.
 
 !!! failure "Cattiva prassi"
 
@@ -96,7 +97,8 @@ Da prendere in considerazione:
 
 Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "`description`".
 
-### Esempio 2: non usare celle unite
+### Esempio 2:
+non usare celle unite.
 
 !!! failure "Cattiva prassi"
 
