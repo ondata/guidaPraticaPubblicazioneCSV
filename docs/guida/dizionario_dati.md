@@ -49,7 +49,7 @@ Colonna 6:
 
 - È buona pratica che il dizionario dei dati sia espresso in un formato *machine readable*, ad esempio [`JSON`](https://www.w3schools.com/js/js_json_intro.asp) o [`JSON-LD`](https://www.w3.org/TR/json-ld11/), utilizzando un vocabolario standardizzato per definire ciascuna delle caratteristiche o annotazioni su ciascuno degli elementi del file di dati.
 - In alcune piattaforme Open Data, ad esempio quelle implementate con [CKAN](https://ckan.org/), il dizionario dei dati è specificato come una sezione associata a ciascuna risorsa in un set di dati.
-- Secondo la "[Norma Técnica de Interoperabilidad de Reutilización de Recursos de Información](https://datos.gob.es/es/documentacion/norma-tecnica-de-interoperabilidad-de-reutilizacion-de-recursos-de-informacion)" (NTI), il modo di specificare il modello di dati è usare la proprietà "`dct:relation`" nei metadati di distribuzione delle risorse del dataset.
+- Secondo la "[Norma Técnica de Interoperabilidad de Reutilización de Recursos de Información](https://datos.gob.es/en/documentacion/norma-tecnica-de-interoperabiliad-de-reutilizacion-de-recursos-de-informacion)" (NTI), il modo di specificare il modello di dati è usare la proprietà "`dct:relation`" nei metadati di distribuzione delle risorse del dataset.
 - Quando si impostano i valori delle proprietà, è consigliabile usare un linguaggio chiaro e conciso, poiché gli utenti finali dei dati potrebbero non avere necessariamente familiarità con i dati.
 - Il W3C raccomanda un [modello per i dati tabulari](https://www.w3.org/TR/tabular-metadata/) e propone un [vocabolario per la descrizione di queste proprietà](https://www.w3.org/TR/tabular-metadata/).
 - Il vocabolario W3C è molto esaustivo, tuttavia, ci sono un certo numero di proprietà che è consigliabile prendere in considerazione per qualsiasi file tabellare:
@@ -102,7 +102,7 @@ Colonna 6:
       {
         "name": "consumo",
         "titles": "consumo",
-        "dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in litri / 100 km",
+        "dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in litri/100 km",
         "datatype": "decimal"
       },
       {
