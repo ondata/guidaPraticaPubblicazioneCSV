@@ -720,7 +720,7 @@ marca, anno, cilindri, consumo di carburante, potenza, accelerazione "chevrolet 
 
   - > Il contenuto di un dizionario di dati può essere espresso in diversi modi, anche come un file di testo che descrive il contenuto di ogni colonna del set di dati.
 
-  - > Le caratteristiche o annotazioni espresse nel Dizionario dei dati sono le proprietà delle tabelle, colonne, righe e celle che compongono l'insieme di dati.
+  - > Le caratteristiche o annotazioni espresse nel dizionario dei dati sono le proprietà delle tabelle, colonne, righe e celle che compongono l'insieme di dati.
 
   - > Quello che segue è un esempio di un dizionario di dati espresso come un file di testo che può essere fornito attraverso un server web. Per esempio,
 
@@ -1129,7 +1129,7 @@ x =
 
 ![](./myMediaFolder/media/image68.png)
 
-  - > L'esistenza di più righe di intestazione, mentre possono aumentare l'interpretabilità dei dati per gli esseri umani a causa della loro espressività e formato, rendono difficile l'elaborazione per le macchine, quindi qualsiasi informazione aggiuntiva sui dati deve essere inclusa nella descrizione dei dati utilizzando i metadati appropriati nel Dizionario dei dati.
+  - > L'esistenza di più righe di intestazione, mentre possono aumentare l'interpretabilità dei dati per gli esseri umani a causa della loro espressività e formato, rendono difficile l'elaborazione per le macchine, quindi qualsiasi informazione aggiuntiva sui dati deve essere inclusa nella descrizione dei dati utilizzando i metadati appropriati nel dizionario dei dati.
 
   - > I **nomi delle colonne** inclusi nella riga di intestazione sono un tipo di annotazione o metadati che descrivono ogni colonna e **non fanno parte dei dati**, cioè non dovrebbero essere considerati quando si conta il numero di righe di dati in una tabella.
 
@@ -6606,7 +6606,7 @@ P9 Campi codificati
 
   - > Da prendere in considerazione:
 
-      - > Sono molto utili per eseguire analisi di dati categorizzati (ad esempio per estrarre modelli, filtrare, riassumere, ordinare, ecc.), ma possono essere difficili da interpretare per le persone che non hanno familiarità con tali codifiche, se non sono spiegate con precisione nel set di dati stesso o attraverso il Dizionario dei dati.
+      - > Sono molto utili per eseguire analisi di dati categorizzati (ad esempio per estrarre modelli, filtrare, riassumere, ordinare, ecc.), ma possono essere difficili da interpretare per le persone che non hanno familiarità con tali codifiche, se non sono spiegate con precisione nel set di dati stesso o attraverso il dizionario dei dati.
 
       - > L'[<span class="underline">allegato I</span>](#page75) di questa guida fornisce una panoramica dei termini riutilizzabili, comprese le tassonomie, le classificazioni e gli standard nazionali e internazionali armonizzati.
 
