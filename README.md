@@ -20,12 +20,12 @@ Cella Dati,506,019028
 
 💡 Vista la loro diffusione abbiamo creato una **guida** per la **"buona" pubblicazione** di **questi file**.
 
-Questa guida è ispirata fortissimamente (ne è in parte la traduzione) dalla [**splendida guida del "Ministry of Economic Affairs and Digital Transformation” di Spagna**](https://datos.gob.es/en/documentacion/guia-practica-para-la-publicacion-de-datos-tabulares-en-archivos-csv) (a loro un grazie!), ma non ne è una perfetta copia. Saranno aggiunte sezioni e aggiornati alcuni contenuti.
+Questa guida è ispirata fortissimamente (ne è in parte la traduzione) dalla [**splendida guida del "Ministry of Economic Affairs and Digital Transformation” di Spagna**](https://datos.gob.es/en/documentacion/guia-practica-para-la-publicacion-de-datos-tabulares-en-archivos-csv) (a loro un grazie!), ma non ne è una perfetta copia, ci sono nuove sezioni e alcuni contenuti sono stati modificati o aggiornati.
 
 
 ## Partecipa
 
-Questa **guida** è un **bene comune**, sia da **lettore** che da **autore**.
+Questa **guida** è un **bene comune**, sia per il **lettore** che per l'**autore**.
 
 Da **lettore**, sei **libero** di:
 
@@ -41,10 +41,10 @@ Alle seguenti condizioni:
 
 Da **autore** puoi:
 
-- se **non sai usare git e GitHub**, [**aprire una nuova discussione qui**](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions), con delle proposte, suggerimenti, domande o per mostrarci per cosa ti è stata utile questa guida;
+- se **non sai usare git e GitHub**: [**aprire una nuova discussione qui**](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions), con delle proposte, suggerimenti, domande o per mostrarci per cosa ti è stata utile questa guida;
 - se **sai usare git e GitHub**:
-    - clonare il *repository* e fare dell *Pull Request*;
-    - proporre delle modifiche al testo e suggerire delle correzione, utilizzando il tasto <kbd>EDIT</kbd>, che trovi in ogni pagina, in alto a destra (vedi immagine sotto) e fare sempre delle *Pull Request*, ma più "visuali", direttamente dall'interfaccia web.
+    - clonare il *repository* e fare delle *Pull Request*;
+    - proporre delle modifiche al testo e suggerire delle correzioni, utilizzando il tasto <kbd>EDIT</kbd>, che trovi in ogni pagina, in alto a destra (vedi immagine sotto) e fare sempre delle *Pull Request*, ma più "visuali", direttamente dall'interfaccia web.
 
 [![](docs/imgs/edit_page.png)](https://ondata.github.io/guidaPraticaPubblicazioneCSV/guida/)
 
