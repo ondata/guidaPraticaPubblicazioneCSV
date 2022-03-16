@@ -4,14 +4,16 @@ hide:
 # - navigation
 ---
 
-È bene riferirsi a schemi standard, a *liste di codici* e tassonomie di termini, per valori prestabiliti  e codificati di attributi.
+È bene riferirsi a schemi standard, *liste di codici* e tassonomie di termini per valori prestabiliti  e codificati di attributi.
 
 Da prendere in considerazione:
 
-  - Sono molto utili per eseguire analisi di dati categorizzati (ad esempio per estrarre modelli, filtrare, riassumere, ordinare, ecc.), ma possono essere difficili da interpretare per le persone che non hanno familiarità con tali codifiche, se non sono spiegate con precisione nel *dataset* stesso o attraverso il [Dizionario dei Dati](../dizionario_dati.md).
-  - L'allegato I di questa guida (⚠️ **ancora da scrivere**) fornisce una panoramica dei termini riutilizzabili, comprese le tassonomie, le classificazioni e gli standard nazionali e internazionali armonizzati.
-  - Se possibile, si dovrebbe aggiungere una colonna che includa il valore standard dell'attributo in questione. Per esempio, se il campo si riferisce ai Comuni, è consigliabile mantenere due colonne: "Codice Comune" e "Comune". Il Codice sarà ad esempio (per l'Italia) il [codice IPA](https://www.indicepa.gov.it/) (Indice della Pubblica Amministrazione) del Comune, e il valore della colonna "Comune" sarà invece il nome di tale ente.
-  - In linea con quanto detto in precedenza, il nome del campo non dovrebbe essere incluso nel valore dello stesso. Per esempio, se il nome della colonna è "Comune" il valore in ogni riga non dovrebbe includere le parole "Comune di".
+  - i codici sono molto utili per eseguire analisi di dati categorizzati, ad esempio per estrarre modelli, filtrare, riassumere e ordinare, ma possono essere difficili da interpretare per le persone che non hanno familiarità con tali codifiche, se non sono spiegate con precisione nel *dataset* stesso o attraverso il [Dizionario dei dati](../dizionario_dati.md);
+  <!--- - l'allegato I di questa guida (⚠️ **ancora da scrivere**) fornisce una panoramica dei termini riutilizzabili, comprese le tassonomie, le classificazioni e gli standard nazionali e internazionali armonizzati; --->
+  - se possibile, si dovrebbe aggiungere una colonna che includa il valore standard dell'attributo in questione; per esempio, se il campo si riferisce ai **comuni**, è consigliabile mantenere due colonne: **"codice_comune"** e **"comune"**; il codice sarà ad esempio per l'Italia il [codice IPA](https://www.indicepa.gov.it/)[^1] del comune e il valore della colonna "comune" sarà invece il nome di tale ente;
+  - in linea con quanto detto in precedenza, il nome del campo non dovrebbe essere incluso nel valore dello stesso, per esempio se il nome della colonna è "comune" il valore in ogni riga non dovrebbe includere le parole "Comune di".
+
+[^1]: Indice della Pubblica Amministrazione
 
 **Esempio**: uso di campi codificati
 
