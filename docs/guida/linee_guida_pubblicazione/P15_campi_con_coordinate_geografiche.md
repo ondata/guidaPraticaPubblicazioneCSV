@@ -18,7 +18,8 @@ Da prendere in considerazione:
 
 È consigliabile, ogni volta che si pubblicano dati geografici in formati come [SHP](https://es.wikipedia.org/wiki/Shapefile) o [KML](https://es.wikipedia.org/wiki/KML), accompagnare questi file con un file CSV in cui sono incluse anche le coordinate geografiche per facilitare il loro riutilizzo.
 
-### Esempio: uso di campi codificati
+### Esempio:
+uso di campi codificati.
 
 !!! failure "Cattiva prassi"
 
