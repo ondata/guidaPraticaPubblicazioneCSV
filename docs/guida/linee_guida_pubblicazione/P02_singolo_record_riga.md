@@ -21,9 +21,11 @@ L'esistenza di caratteri di ritorno a capo `CR` all'interno di un valore di camp
 
 [^1]: [Common Format and MIME Type for Comma-Separated Values (CSV) Files](https://datatracker.ietf.org/doc/html/rfc4180)
 
-### Esempio 1: importare un file CSV contenente spazi vuoti e/o ritorni a capo in varie circostanze.
+### Esempio 1:
+importare un file CSV contenente spazi vuoti e/o ritorni a capo in varie circostanze.
 
-#### Caso 1: Importare un CSV con valori di campo che includono spazi bianchi tra virgolette e separati da `,`.
+#### Caso 1:
+importare un CSV con valori di campo che includono spazi bianchi tra virgolette e separati da `,`.
 
 
 ```
@@ -43,7 +45,8 @@ marca, anno, cilindri
     |chevelle 320|1970|8|
     |malibu buick skylark|1970|8|
 
-#### Caso 2: Importare un CSV con valori di campo che includono spazi vuoti e un carattere CR non racchiuso tra virgolette.
+#### Caso 2:
+importare un CSV con valori di campo che includono spazi vuoti e un carattere CR non racchiuso tra virgolette.
 
 ```
 marca, anno, cilindri
