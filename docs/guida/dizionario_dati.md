@@ -11,7 +11,7 @@ title: Dizionari di dati
 - Il suo scopo è quello di garantire che la struttura del *set* di dati sia definita in termini facilmente comprensibili dagli utenti.
 - Ogni *set* di dati pubblicabile deve includere il suo dizionario di dati come documento separato, di solito accessibile tramite un URL presente nello spazio di download dei dati.
 - Il contenuto di un dizionario di dati può essere espresso in diversi modi, anche come un file di testo che descrive il contenuto di ogni colonna del set di dati.
-- Le caratteristiche o annotazioni espresse nel Dizionario dei dati sono le proprietà delle tabelle, colonne, righe e celle che compongono l'insieme di dati.
+- Le caratteristiche o annotazioni espresse nel dizionario dei dati sono le proprietà delle tabelle, colonne, righe e celle che compongono l'insieme di dati.
 - Quello che segue è un esempio di un dizionario di dati espresso come file di testo, che può essere fornito attraverso un server web. Per esempio, tramite l'URL: `https://sito_di_esempio.it/automobili.csv-metadata.txt`.
 
 
@@ -20,7 +20,7 @@ title: Dizionari di dati
 ``` title="automobili.csv-metadata.txt"
 File di dati: https://sito_di_esempio.it/automobili.csv
 Descrizione: tabella con dati sulle auto d'epoca
-Editore: Autore di esempi
+Editore: Autore di esempio
 Colonna 1:
       Titolo: marca
       Descrizione: Questo campo contiene informazioni sulla marca e il modello di ogni veicolo.
@@ -35,7 +35,7 @@ Colonna 3:
       Tipo di dati: intero
 Colonna 4:
       Titolo: consumo
-      Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in litri / 100 km.
+      Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in litri/100 km.
       Tipo di dati: decimale
 Colonna 5:
       Titolo: potenza
@@ -46,7 +46,6 @@ Colonna 6:
       Descrizione: Questo campo contiene dati sull'accelerazione di ogni veicolo, misurata in m/sec2.
       Tipo di dati: decimale
 ```
-
 
 - È buona pratica che il dizionario dei dati sia espresso in un formato *machine readable*, ad esempio [`JSON`](https://www.w3schools.com/js/js_json_intro.asp) o [`JSON-LD`](https://www.w3.org/TR/json-ld11/), utilizzando un vocabolario standardizzato per definire ciascuna delle caratteristiche o annotazioni su ciascuno degli elementi del file di dati.
 - In alcune piattaforme Open Data, ad esempio quelle implementate con [CKAN](https://ckan.org/), il dizionario dei dati è specificato come una sezione associata a ciascuna risorsa in un set di dati.
