@@ -17,7 +17,7 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [P7-Tipi di dati](P07_tipi_dati.md)
 - [P8-Standardizzazione dei valori dei campi](P08_standardizzazione_valori_campi.md)
 - [P9-Campi codificati](P09_campi_codificati.md)
-- P10-Campi di testo
+- [P10-Campi di testo](P10_campi_testo.md)
 - [P11-Campi numerici](P11_campi_tipo_numerico.md)
 - P12-Campi con date
 - P13-Campi con numeri di telefono
