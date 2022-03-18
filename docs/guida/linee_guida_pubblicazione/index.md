@@ -16,12 +16,12 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [P6-Subtotali, totali o raggruppamento](P06_subtotali_totali_raggruppamenti.md)
 - [P7-Tipi di dati](P07_tipi_dati.md)
 - [P8-Standardizzazione dei valori dei campi](P08_standardizzazione_valori_campi.md)
-- P9-Campi codificati
+- [P9-Campi codificati](P09_campi_codificati.md)
 - P10-Campi di testo
-- P11-Campi numerici
+- [P11-Campi numerici](P11_campi_tipo_numerico.md)
 - P12-Campi con date
 - P13-Campi con numeri di telefono
 - P14-Campi con indirizzi postali
 - [P15-Campi con coordinate geografiche](P15_campi_con_coordinate_geografiche.md)
-
+- Allegato 1: [Tassonomie ed elenchi di codici comunemente usati](Allegato1_tassonomie_elenchi_codici.md)
 
