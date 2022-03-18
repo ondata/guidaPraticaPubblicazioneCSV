@@ -14,7 +14,7 @@ Da tenere in considerazione:
 - è possibile sapere se una grandezza è grande o piccola solo se può essere confrontata con un'altra, tenendo conto di somiglianze e differenze, per esempio, tra serie di dati provenienti da fonti diverse;
 - la [norma AENOR 137801:2015, Città intelligenti, Dati aperti](http://vocab.linkeddata.es/datosabiertos/)[^1] considera tecnicamente corretti quei dati che, tra le altre caratteristiche:
     - usano la stessa codifica e normalizzazione per lo stesso tipo di dati, pubblicati in diversi dataset di un catalogo, per esempio, gli indirizzi sono sempre pubblicati con la stessa struttura, tipo, formato, in qualsiasi dataset e i dati geografici hanno lo stesso sistema di coordinate;
-    - la codifica e la standardizzazione utilizzate si basano su alcuni standard comuni, riconosciuti e utilizzati da altre organizzazioni di codifica, per esempio: norme approvate da [EUROSTAT](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey=&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) o [INE](https://www.ine.es/ss/Satellite?L=0&c=Page&cid=1254735839296&p=1254735839296&pagename=MetodologiaYEstandares%2FINELayout).
+    - la codifica e la standardizzazione utilizzate si basano su alcuni standard comuni, riconosciuti e utilizzati da altre organizzazioni di codifica, per esempio: norme approvate da [EUROSTAT](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey=&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) o [INE](https://www.ine.es/ss/Satellite?c=Page&p=1254735839296&pagename=MetodologiaYEstandares%2FINELayout&cid=1254735839296&L=1).
 
 Si raccomanda:
 
