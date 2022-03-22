@@ -2,7 +2,7 @@
 hide:
  - toc
 # - navigation
-title: Singola linea di intestazione opzionale
+title: Tassonomie ed elenchi di codici comunemente usati
 ---
 
 Questo allegato contiene una serie di riferimenti a schemi concettuali, elenchi di codici e tassonomie di termini che possono essere usati come valori predefiniti per le proprietà o per gli attributi di dati tabelle.

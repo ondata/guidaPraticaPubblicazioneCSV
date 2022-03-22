@@ -23,5 +23,6 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [P13-Campi con numeri di telefono](P13_campi_tipo_numero_telefonico.md)
 - [P14-Campi con indirizzi postali](P14_campi_tipo_indirizzo_postale.md)
 - [P15-Campi con coordinate geografiche](P15_campi_con_coordinate_geografiche.md)
-- [Allegato 1: Tassonomie ed elenchi di codici comunemente usati](Allegato1_tassonomie_elenchi_codici.md)
+- [Linee guida per esportazione/importazione di dati tabulari da strumenti di foglio di calcolo a CSV](Linee_guida_importazione_esportazione.md)
+- [Tassonomie ed elenchi di codici comunemente usati](Allegato1_tassonomie_elenchi_codici.md)
 
