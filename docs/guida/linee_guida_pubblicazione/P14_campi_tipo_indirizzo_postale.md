@@ -2,38 +2,51 @@
 hide:
 - toc
 # - navigation
-title: Campi di tipo data
+title: Campi con indirizzi postali
 ---
 
-# Campi di tipo numero telefonico
+# Campi con indirizzi postali
 
-Quando si includono **valori con numeri di telefono**, la cosa più importante è assicurare la **coerenza del formato** di questi numeri in tutti i valori della colonna, è possibile usare `+39-0515270001` o `(39)0515270001` o anche `39-051-527-0001`, ma sempre l'importante è **utilizzare sempre lo stesso formato**.
+Utilizzare una **codifica accurata degli indirizzi postali** è essenziale per **gestire le dimensioni geografiche con i dati**. Indirizzi postali ben strutturati **possono essere geolocalizzati**, generando coordinate di latitudine e longitudine attraverso l'uso di applicazioni specifiche.
 
-Da prendere in considerazione:
+In **Italia** esiste una **regola tecnica** con le specifiche per la modellazione dei dati relativi all'**anagrafe nazionale dei numeri civici e delle strade urbane** definita da AgID[^1] , semplificando al massimo le definizioni previste possiamo raccomandare la definizione degli indirizzi attraverso i seguenti campi:
 
-- quando è necessario includere **più di un numero di telefono**, è necessario utilizzare **un campo per ogni numero**, ad esempio `ufficio` e `mobile`;
-- è consigliato **includere il prefisso del paese** prima del numero di telefono, per l'Italia `+39` oppure `0039`;
-- per i numeri di telefono che richiedono l'inclusione di un **numero interno**, si dovrebbe considerare la creazione di un **campo specifico**, ad esempio `numero_interno`, questo campo potrebbe contenere caratteri non numerici come `*86`, `#36` e dovrebbe essere un **campo di testo**.
+- **denominazione urbanistica generica** (DUG) come `campo di testo`;
+- **denominazione** come come `campo di testo`;
+- **civico** come come `campo numerico`;
+- **esponente** come come `campo di testo`;
+- **città** come come `campo di testo`;
+- **codice di avviamento postale** (CAP) come `campo numerico`.
 
-
-### Esempio:
-
-tabella con una colonna che contiene numeri di telefono
+### Esempio 1:
+definizione dell'indirizzo attraverso campi specifici.
 
 !!! failure "Cattiva prassi"
 
-    | marchio | telefono_rivenditore |
+    | marchio | indirizzo_rivenditore |
     | --- | --- |
-    | chevrolet chevelle malibu | +34-6760000 |
-    | buick skylark 320 | (34)6960001 |
-    | plymouth satellite | 34-676-00-03 |
-    | amc rebel sst | 346960004 |
+    | chevrolet chevelle malibu | Viale Mazzini n° 5A, Milano (20121) |
+    | buick skylark 320 | Località Fabbre 33, 20151 Brera |
 
 !!! success "Buona prassi"
 
-    | marchio | telefono_rivenditore |
-    | --- | --- |
-    | chevrolet chevelle malibu | +34-6760000 |
-    | buick skylark 320 | +34-6960001 |
-    | plymouth satellite | +34-6760003 |
-    | amc rebel sst | +34-6960004 |
+   | marchio | rivenditore_indirizzo_dug | rivenditore_indirizzo_denominazione | rivenditore_indirizzo_civico | rivenditore_indirizzo_esponente | rivenditore_indirizzo_citta | rivenditore_indirizzo_cap |
+   | --- | --- | --- | --- | --- | --- | --- |
+   | chevrolet chevelle malibu | Viale | Giuseppe Mazzini | 5 | A | Milano | 20100|
+   | buick skylark 320 | Località | Fabbre | 33 | `NULL` | Brera | 20151 |
+
+Nel caso precedente per evidenziare che il civico non ha esponente e quindi il campo è stato lasciato intenzionalmente vuoto e per evidenziarlo abbiamo inserito il termine `NULL`, in un caso reale nulla sarebbe stato visualizzato.
+
+**ATTENZIONE DEFINIZIONI IN CONTRASTO CON QUANTO DESCRITTO NEL CAPITOLO SUI VALORI NULL**
+
+
+Nel caso sia possibile o necessaria la **georeferenziazione degli indirizzi**, ad esempio per una visualizzazione in mappa, è consigliabile **aggiungere due campi** separati per i valori di **latitudine** e **longitudine** corrispondenti al punto geografico dell'indirizzo postale, come suggerito nel capitolo [campi con coordinate geografiche](../P15_campi_con_coordinate_geografiche.md).
+
+[^1]: [Linee guida AgID](https://geodati.gov.it/geoportale/datiterritoriali/regole-tecniche) per la modellazione dei dati relativi all'anagrafe nazionale dei numeri civici e delle strade urbane.
+
+### Esempio 2:
+definizione dell'indirizzo attraverso campi specifici e attraverso le coordinate geografiche.
+
+| marchio | rivenditore_indirizzo_dug | rivenditore_indirizzo_denominazione | rivenditore_indirizzo_civico | rivenditore_indirizzo_esponente | rivenditore_indirizzo_citta | rivenditore_indirizzo_cap | latitudine | longitudine |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| chevrolet chevelle malibu | via | Giuseppe Mazzini | 5 | A | Milano | 20100| 44.115684 | 11.123456 |
