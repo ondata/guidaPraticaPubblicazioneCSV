@@ -2,38 +2,37 @@
 hide:
 - toc
 # - navigation
-title: Campi di tipo data
+title: Campi con indirizzi postali
 ---
 
-# Campi di tipo numero telefonico
+# Campi con indirizzi postali
 
-Quando si includono **valori con numeri di telefono**, la cosa più importante è assicurare la **coerenza del formato** di questi numeri in tutti i valori della colonna, è possibile usare `+39-0515270001` o `(39)0515270001` o anche `39-051-527-0001`, ma sempre l'importante è **utilizzare sempre lo stesso formato**.
-
-Da prendere in considerazione:
-
-- quando è necessario includere **più di un numero di telefono**, è necessario utilizzare **un campo per ogni numero**, ad esempio `ufficio` e `mobile`;
-- è consigliato **includere il prefisso del paese** prima del numero di telefono, per l'Italia `+39` oppure `0039`;
-- per i numeri di telefono che richiedono l'inclusione di un **numero interno**, si dovrebbe considerare la creazione di un **campo specifico**, ad esempio `numero_interno`, questo campo potrebbe contenere caratteri non numerici come `*86`, `#36` e dovrebbe essere un **campo di testo**.
+Utilizzare una codifica accurata degli indirizzi postali   essenziale per gestire le dimensioni geografiche con i dati. Indirizzi postali ben strutturati possono essere geolocalizzati, generando coordinate di latitudine e longitudine, utilizzando applicazioni specifiche.
+  Da prendere in considerazione:
+• Anche se esiste uno standard tecnico per laprogettazione dei record dei file discambio diinformazioni del registrocomunale(INE, Callejero de Censo Electoral),   consigliabile codificare un indirizzo postale come una stringa di caratteri con gli elementi necessari per localizzare un indirizzo all'interno di una localit .
+• Questi elementi sono:
+o tipo di strada (strada, viale, piazza, ...)
+o nome della strada, numero, blocco, piano, lettera, ecc.
+o localit  (nome)
+o codice postale (5 caratteri numerici)
+• Quando   possibile,   consigliabile utilizzare anche campi separati per i valori di latitudine e longitudine corrispondenti al punto geografico dell'indirizzo postale.
 
 
 ### Esempio:
 
-tabella con una colonna che contiene numeri di telefono
+codifica degli indirizzi postali in campi separati
 
 !!! failure "Cattiva prassi"
 
-    | marchio | telefono_rivenditore |
+    | marchio | indirizzo_rivenditore |
     | --- | --- |
-    | chevrolet chevelle malibu | +34-6760000 |
-    | buick skylark 320 | (34)6960001 |
-    | plymouth satellite | 34-676-00-03 |
-    | amc rebel sst | 346960004 |
-
+    | chevrolet chevelle malibu | Viale Mazzini n° 23, Milano (20121) |
+    | buick skylark 320 | Località Fabbre 33, Brera (20151) |
+  
 !!! success "Buona prassi"
 
-    | marchio | telefono_rivenditore |
+    | marchio | rivenditore_tipo_via | rivenditore_indirizzo | rivenditore_civico | rivenditore_citta | rivenditore_cap |
     | --- | --- |
-    | chevrolet chevelle malibu | +34-6760000 |
-    | buick skylark 320 | +34-6960001 |
-    | plymouth satellite | +34-6760003 |
-    | amc rebel sst | +34-6960004 |
+   | chevrolet chevelle malibu | Viale | Giuseppe Mazzini | 23 | Milano | 20121 |
+   | buick skylark 320 | Località | Fabbre | 33 | Brera | 20151 |
+   
