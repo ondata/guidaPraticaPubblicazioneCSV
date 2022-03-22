@@ -67,7 +67,7 @@ nav:
           - Campi di tipo numerico: guida/linee_guida_pubblicazione/P11_campi_tipo_numerico.md
           - Campi di tipo data: guida/linee_guida_pubblicazione/P12_campi_tipo_data.md
           - Campi con numeri telefonici: guida/linee_guida_pubblicazione/P13_campi_tipo_numero_telefonico.md
-          - Campi con indirizzi postali: P14_campi_tipo_indirizzo_postale.md
+          - Campi con indirizzi postali: guida/linee_guida_pubblicazione/P14_campi_tipo_indirizzo_postale.md
           - Campi con coordinate geografiche: guida/linee_guida_pubblicazione/P15_campi_con_coordinate_geografiche.md
           - Tassonomie ed elenchi di codici comunemente usati: guida/linee_guida_pubblicazione/Allegato1_tassonomie_elenchi_codici.md
     - Partecipa: partecipa.md
