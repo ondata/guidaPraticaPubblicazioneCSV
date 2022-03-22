@@ -20,7 +20,7 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [P10-Campi di testo](P10_campi_tipo_testo.md)
 - [P11-Campi numerici](P11_campi_tipo_numerico.md)
 - [P12-Campi con date](P12_campi_tipo_data.md)
-- P13-Campi con numeri di telefono
+- [P13-Campi con numeri di telefono](P13_campi_tipo_numero_telefonico.md)
 - P14-Campi con indirizzi postali
 - [P15-Campi con coordinate geografiche](P15_campi_con_coordinate_geografiche.md)
 - [Allegato 1: Tassonomie ed elenchi di codici comunemente usati](Allegato1_tassonomie_elenchi_codici.md)
