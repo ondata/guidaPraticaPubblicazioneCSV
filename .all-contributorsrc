@@ -44,6 +44,16 @@
         "content",
         "example"
       ]
+    },
+    {
+      "login": "lorenzoperone",
+      "name": "lorenzo perone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5204799?v=4",
+      "profile": "https://github.com/lorenzoperone",
+      "contributions": [
+        "content",
+        "example"
+      ]
     }
   ],
   "contributorsPerLine": 7,
