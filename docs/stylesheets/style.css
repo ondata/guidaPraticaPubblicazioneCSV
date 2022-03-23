@@ -61,3 +61,11 @@ table[class="tabella"]  td{
   overflow: auto;
   touch-action: auto;
 }
+
+.spunta_verde {
+  color: #46cc12;
+}
+
+.croce_rossa {
+  color: #cc1221;
+}
