@@ -5,65 +5,60 @@ hide:
 title: Dove trovare buoni esempi di dati in CSV
 ---
 
-Ci sono **strumenti** disponibili per l'**elaborazione di file `CSV`** che forniscono una serie di **diverse funzionalità**, si tratta di **strumenti gratuiti** che di solito sono offerti come servizio, cioè sono disponibili online o richiedono l'installazione di software sul proprio computer. Sono in grado di **convalidare le strutture dei dati**, cioè la coerenza tra il numero di campi di intestazione e il numero di campi in ogni riga di dati, così come la **coerenza dei tipi e dei valori dei dati** in ogni cella. Si distinguono tra loro per la facilità d'uso e per specifiche funzionalità, sotto alcuni esempi.
+Quella che segue è una descrizione di due iniziative che pubblicano set di dati aperti, di elevata qualità, disponibili in formato `CSV`:
 
-| | Servizio/Suite di strumenti | Convalida della struttura | Pulizia dei dati | Conversione del formato |
-| --- | --- | --- | --- | --- |
-| **[CSV Lint](https://csvlint.io/)** | In linea | :material-check-bold:{ .spunta_verde } | :x: | :x: |
-| **[Goodtables](https://goodtables.io/)** | In linea | :material-check-bold:{ .spunta_verde } | :x: | :x: |
-| **[Data curator](https://github.com/qcif/data-curator)** | Suite | :material-check-bold:{ .spunta_verde } | :material-check-bold:{ .spunta_verde } | :material-check-bold:{ .spunta_verde } |
-| **[CSV kit](https://csvkit.readthedocs.io/en/latest/)** | Suite | :x: | :material-check-bold:{ .spunta_verde } | :material-check-bold:{ .spunta_verde } |
+- [Datahub.io](https://datahub.io/)
+- [Kaggle.com](https://www.kaggle.com/)
 
-## Strumento: CSV Lint
+In queste piattaforme è rilevante la qualità del modo in cui i dati vengono pubblicati, data la forte comprensione della natura multi-scopo dell'uso dei dati e il trattamento professionale dei dati che è al centro di entrambe le iniziative.
+Datahub, si distingue per l'implementazione di un supporto completo per la trasformazione, la convalida e la pubblicazione di dati di qualità e Kaggle è una delle più importanti risorse di set di dati e conoscenze che effettuano una analisi professionale dei dati di riferimento.
+Entrambe le iniziative sono esempi di buone pratiche nel trattamento dei file `CSV` che possono essere presi in considerazione quando si tratta di processi di preparazione e pubblicazione di Open Data.
 
-**:x: NON FUNZIONA TESTATO CON [CSV ISTAT](../../risorse/tabelle/demo_CSV_ISTAT.csv)**
+## Datahub.io
 
-**CSV Lint** è uno **strumento online** gestito dall'**Open Data Institute** realizzato per **verificare che un file `CSV` sia perfettamente leggibile e ben formato**, cioè verifica se contiene le colonne e i tipi di valori che dovrebbe. Permette di **convalidare file `CSV` e schemi di tabelle di dati**, l'analisi viene eseguita su file caricati direttamente su CSV Lint o disponibili online.
-L'analisi **restituisce informazioni sugli errori** invalidanti per l'utilizzo dei dati, degli avvertimenti per elementi la cui correzione aiuta gli utenti dei dati e **messaggi informativi** su alcuni **consigli e suggerimenti** per facilitare l'utilizzo dei dati.
-Lo strumento **genera un badge** che può essere **incorporato nel sito web del proprietario del file `CSV`** utilizzando il codice `HTML` corrispondente.
-Alcuni **errori di codifica dei caratteri** vengono **corretti automaticamente**, generando una nuova versione standardizzata del file `CSV` originale, CSVLint tiene un registro delle convalide e degli schemi usati di recente che può essere utile per identificare gli errori comuni.
+Datahub è una piattaforma web-based che supporta flussi di lavoro end-to-end per la preparazione e la pubblicazione di Open Data. È progettato per preparare, catalogare e pubblicare dati di alta qualità utilizzando il toolkit Frictionless Data.
+Il Frictionless Data toolbox[^1] è una raccolta di specifiche e applicazioni per la preparazione di file di dati, incluse le Goodtables, descritte nel capitolo [Cassetta degli attrezzi per i file CSV](../linee_guida_pubblicazione/Cassetta_attrezzi.md) di questa guida.
+ Datahub contiene collezioni di dati di alto valore conformi agli Open Data, come: cambiamenti climatici, dati e indicatori economici, statistiche, logistica, documenti aziendali provenienti da fonti ufficiali.
+ Ogni voce di dati disponibile contiene una serie di elementi per visualizzare le proprietà del dataset (schema e risorse di dati), opzioni per scaricare i dati in vari formati tra cui CSV, viste delle tabelle di dati e semplici visualizzazioni.
+ Fornisce anche un accesso diretto ai dati di importazione utilizzando una varietà di strumenti comunemente usati nel contesto professionale: R, Python, JavaScript e SQL.
 
 <figure markdown>
-  ![CSVlint](../../imgs/CSVlint.png)
-  <figcaption>CSVlint</figcaption>
+  ![Datahub](../../imgs/Datahub.png)
+  <figcaption>Datahub</figcaption>
 </figure>
 
-## Strumento: Goodtables
+[^1]: [Frictionless Data](https://frictionlessdata.io/)
 
-Googtables è un **servizio di validazione continua** per i dati tabulari della **Open Knowledge Foundation** (OKI) che permette la **verifica di errori e problemi comuni** nei file di dati tabulari. Goodtables può essere i**ntegrato come servizio** in diversi flussi di pubblicazione di Open Data, è in grado di convalidare dati tabellari in diversi formati: `CSV`, **file** prodotti da **Microsoft Excel** o da **LibreOffice Calc**, così come gli schemi dati in formato `JSON`. Permette anche la **convalida diretta di dati tabulari ospitati su Github o Amazon S3**, supporta `Tabular Data Package`[^1] che è un **formato semplice per la pubblicazione e la condivisione di dati** tabulari, promosso dal progetto FrictionLessData di OKI che **combina dati archiviati come `CSV`, schemi di tabella e metadati** secondo la specifica `DataPackage`[^2]. Goodtables è disponibile anche come libreria Python in modo che possa essere invocata per caricare e validare tabelle di dati.
-
-[^1]: [Tabular data package](https://specs.frictionlessdata.io/tabular-data-package/#language)
-[^2]: [Data package](https://specs.frictionlessdata.io/data-package/)
+Un [esempio](https://datahub.io/core/co2-ppm) di un set di dati CSV disponibile sulla piattaforma è quello che mostra l'andamento dell'anidride carbonica nell'atmosfera, proveniente dall'Earth System Research Laboratory del governo statunitense.
 
 <figure markdown>
-  ![Goodtables](../../imgs/Goodtables.png)
-  <figcaption>Goodtables</figcaption>
+  ![Datahub](../../imgs/Datahub2.png)
+  <figcaption>Datahub</figcaption>
 </figure>
 
-### Esempio
-
-Le tabelle contenute nel repository GitHub che contiene questa guida cono state inserite nel monitoraggio continuo e l'esito è :material-check-bold:{ .spunta_verde } [![goodtables.io](https://goodtables.io/badge/github/ondata/guidaPraticaPubblicazioneCSV.svg)](https://goodtables.io/github/ondata/guidaPraticaPubblicazioneCSV)
-
-## Strumento: Data curator
-
-**:x: NON FUNZIONA TESTATO CON [CSV ISTAT](../../risorse/tabelle/demo_CSV_ISTAT.csv)**
-
-Data Curator è uno **strumento desktop** implementato dall'Open Data Institute che **permette la modifica, la convalida e la pubblicazione** di file di dati tabulari riutilizzabili come Open Data. Con questo strumento **è possibile generare dati tabulari** in formato `CSV`, `TSV`[^3], partendo da zero o da modelli di strutture dati e schemi. **Corregge automaticamente i problemi** comuni che si trovano nei file `CSV` ed in quelli prodotti con Excel. È possibile **creare automaticamente schemi** che descrivono i campi di dati e includono **specifiche regole di convalida** (ad esempio, unico, obbligatorio, lunghezza minima o massima o soggetto a espressioni regolari), così come **descrivere la provenienza dei dati**. Lo **strumento di convalida** analizza il file di dati rispetto allo schema definito e genera un file di valori separati nei vari dialetti `CSV` (separatore `,`, `;`, `TAB` o campi a larghezza fissa). Permette inoltre l'**incapsulamento dei dati e dello schema** per l'esportazione usando la specifica `Data Package`, i **file di dati descritti e validati** possono essere **pubblicati direttamente** sui portali di dati `CKAN`.
-
-[^3]: `TSV` è un file di dati con estensione `tsv` in cui il separatore tra i campi è il `TAB` invece che la `,` come nel `CSV`.
-
 <figure markdown>
-  ![Goodtables](../../imgs/Datacurator.png)
-  <figcaption>Data curator</figcaption>
+  ![Datahub](../../imgs/Datahub3.png)
+  <figcaption>Datahub</figcaption>
 </figure>
 
-## Strumento: CSV kit
 
-CSV kit è un **insieme di strumenti a riga di comando** da usare in ambienti Linux/MacOS[^4] per **convertire e lavorare con i file `CSV`**, tra le altre utili funzionalità, CSV kit **permette di convertire file creati con Excel o file `JSON` in `CSV` e viceversa**, permette inoltre di eseguire diverse **operazioni a livello di colonna, riga o cella** e di **generare sintesi statistiche ed eseguire query `SQL` sui dati**. Esegue anche alcune **analisi dei dati** e ne deduce alcune caratteristiche come l'assenza/presenza di intestazione o di tipi di dati.
 
-[^4]: Può essere utilizzato anche in ambiente Windows attraverso il [WSL Windows Subsystem for Linux](https://docs.microsoft.com/it-it/windows/wsl/install)
+Il file CSV scaricabile del dataset "CO2 PPM - Trends in Atmospheric Carbon Dioxide" ha le seguenti caratteristiche:
+• Dizionario di dati elaborabile in formato JSON secondo la specifica Data Package.
+• Riga di intestazione singola.
+• Singolo record per riga.
+• Denominazione comprensibile delle colonne.
+• Struttura dati verticale.
+• Trattamento dei valori sconosciuti, indicati da valori di tipo -99,99 (per l'attributo 'media') e -1 (per l'attributo 'giorni').
+• Non contiene alcun totale o
+raggruppamenti.
+• Corretta digitazione dei campi.
+• Campo data codificato secondo lo standard ISO- 8601.
+• Non contiene dati con coordinate geografiche o campi codificati.
+
+## Kaggle
 
 <figure markdown>
-  ![Goodtables](../../imgs/CSVkit.png)
-  <figcaption>CSV kit</figcaption>
+  ![Kaggle](../../imgs/Kaggle.png)
+  <figcaption>Kaggle</figcaption>
 </figure>
