@@ -27,4 +27,5 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [Tassonomie ed elenchi di codici comunemente usati](Allegato1_tassonomie_elenchi_codici.md)
 - [Considerazioni sull'archiviazione dei file](Considerazioni_archiviazione.md)
 - [Cassetta degli attrezzi per i file CSV](Cassetta_attrezzi.md)
+- [Dove trovare buoni esempi di dati in CSV](Esempi_dati_CSV.md)
 
