@@ -40,7 +40,7 @@ Nel caso precedente per evidenziare che il civico non ha esponente e quindi il c
 **ATTENZIONE DEFINIZIONI IN CONTRASTO CON QUANTO DESCRITTO NEL CAPITOLO SUI VALORI NULL**
 
 
-Nel caso sia possibile o necessaria la **georeferenziazione degli indirizzi**, ad esempio per una visualizzazione in mappa, è consigliabile **aggiungere due campi** separati per i valori di **latitudine** e **longitudine** corrispondenti al punto geografico dell'indirizzo postale, come suggerito nel capitolo [campi con coordinate geografiche](../P15_campi_con_coordinate_geografiche.md).
+Nel caso sia possibile o necessaria la **georeferenziazione degli indirizzi**, ad esempio per una visualizzazione in mappa, è consigliabile **aggiungere due campi** separati per i valori di **latitudine** e **longitudine** corrispondenti al punto geografico dell'indirizzo postale, come suggerito nel capitolo [campi con coordinate geografiche](P15_campi_con_coordinate_geografiche.md).
 
 [^1]: [Linee guida AgID](https://geodati.gov.it/geoportale/datiterritoriali/regole-tecniche) per la modellazione dei dati relativi all'anagrafe nazionale dei numeri civici e delle strade urbane.
 

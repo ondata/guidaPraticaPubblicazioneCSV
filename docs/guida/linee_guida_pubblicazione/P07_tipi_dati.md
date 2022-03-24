@@ -42,4 +42,4 @@ tipi di dati in tre colonne (string, integer, integer).
     | amc rebel sst | 16 | 150 |
     | ford torino | 17 | 140 |
 
-La buona pratica indica che le unità di misura dovrebbero essere descritte nel [dizionario dei dati](../dizionario_dati.md) e non nella denominazione dei campi, o come valori delle celle. Come ultima risorsa, se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio `consumo_litri` o `potenza_cv`, purché tutti i valori della colonna abbiano la stessa unità di misura associata.
+La buona pratica indica che le unità di misura dovrebbero essere descritte nel [dizionario dei dati](../Dizionario_dati.md) e non nella denominazione dei campi, o come valori delle celle. Come ultima risorsa, se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio `consumo_litri` o `potenza_cv`, purché tutti i valori della colonna abbiano la stessa unità di misura associata.

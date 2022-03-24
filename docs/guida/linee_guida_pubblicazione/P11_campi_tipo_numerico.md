@@ -27,7 +27,7 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 ## Unità di misura:
 
   - si deve usare il **numero di decimali necessario**;
-  - si raccomanda di usare il **[dizionario dei dati](../dizionario_dati.md)** per definire le unità di misura associate ai valori numerici, se non c'è un dizionario è possibile indicare l'**unità di misura nel nome del campo** (per esempio `distanza_metri`), purché tutti i valori della colonna abbiano la stessa unità di misura associata;
+  - si raccomanda di usare il **[dizionario dei dati](../Dizionario_dati.md)** per definire le unità di misura associate ai valori numerici, se non c'è un dizionario è possibile indicare l'**unità di misura nel nome del campo** (per esempio `distanza_metri`), purché tutti i valori della colonna abbiano la stessa unità di misura associata;
   - nel caso in cui l'**unità di misura** sia diversa per una stessa colonna, questa deve essere **indicata in una colonna separata**, da inserite subito dopo quella a cui fa riferimento.
 
 ### Esempio:
@@ -42,7 +42,7 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 ## Valori codificati
 
 Spesso i [campi codificati](P09_campi_codificati.md) sono composti esclusivamente da stringhe numeriche, ma non sono né numeri interi, né decimali: ad esempio un numero di telefono come `081292240`.<br>
-In questi casi, specie in presenza di uno o più `0` a inizio cella, il campo deve essere impostato come campo di testo e eventualmente dichiarato come tale nel [dizionario dei dati](../dizionario_dati.md), questo per evitare che il valore venga interpretato come numero e troncato (ad esempio da `081292240` a `81292240`).
+In questi casi, specie in presenza di uno o più `0` a inizio cella, il campo deve essere impostato come campo di testo e eventualmente dichiarato come tale nel [dizionario dei dati](../Dizionario_dati.md), questo per evitare che il valore venga interpretato come numero e troncato (ad esempio da `081292240` a `81292240`).
 
 ### Esempio 1:
 non usare i separatori di migliaia, uso del separatore decimale, coerenza nel numero di cifre decimali, evitare di mescolare il testo con i valori numerici.
@@ -135,4 +135,4 @@ Output dopo ordinamento per colonna `classifica`:
 
 In quest'ultimo esempio, le virgolette `"` intorno ad ogni stringa di numeri sono incluse per rendere l'esempio più esplicito, ma in un foglio elettronico reale non sono visibili anche se il campo è di tipo "testo".
 
-Una buona pratica è quella di **controllare il tipo di dato prima della pubblicazione**, o nel sistema/programma in cui viene generato il file, o con uno degli strumenti di convalida della sezione [strumenti per i file CSV](../strumenti_file_CSV.md).
+Una buona pratica è quella di **controllare il tipo di dato prima della pubblicazione**, o nel sistema/programma in cui viene generato il file, o con uno degli strumenti di convalida della sezione [Cassetta degli attrezzi per i file CSV](Cassetta_attrezzi.md).

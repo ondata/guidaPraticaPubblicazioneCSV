@@ -130,5 +130,5 @@ Il dizionario dei dati mostrato come esempio è associato al set di dati mostrat
 - Il `titles` della colonna può essere accompagnato da un codice di lingua in modo che la riga di intestazione possa essere descritta in diverse lingue.
 - La proprietà `datatype` è usata per descrivere il tipo di dato in cui è espressa la colonna corrispondente.
 - La proprietà `dc:description` permette di includere un testo descrittivo del contenuto di ogni colonna.
-- Strumenti come quelli descritti nella sezione ["Strumenti per file CSV"](strumenti_file_CSV.md) di questa guida, per esempio CSVlint, permettono di controllare la coerenza del dataset confrontando il contenuto del dizionario dei dati e la struttura del file dei dati.
+- Strumenti come quelli descritti nella sezione [Cassetta degli attrezzi per i file CSV](./linee_guida_pubblicazione/Cassetta_attrezzi.md) di questa guida, per esempio CSVlint, permettono di controllare la coerenza del dataset confrontando il contenuto del dizionario dei dati e la struttura del file dei dati.
 - Tra gli altri controlli, è possibile convalidare il numero di colonne e i loro nomi, il tipo di valori ammessi, se questi valori devono essere univoci o se ci sono collegamenti di questi valori ad altre tabelle (chiavi esterne).

@@ -20,7 +20,7 @@ Da prendere in considerazione:
     - non usare caratteri speciali (per esempio äüöàéèê, ecc.);
     - non includere accenti o segni di punteggiatura;
     - usare i trattini bassi `_` per separare le parole che compongono i nomi delle colonne invece degli spazi bianchi;
-    - evitare l'uso di codici, e se assolutamente necessario, dovrebbero essere illustrati nel [dizionario dei dati](../dizionario_dati.md) che documenta il set di dati;
+    - evitare l'uso di codici, e se assolutamente necessario, dovrebbero essere illustrati nel [dizionario dei dati](../Dizionario_dati.md) che documenta il set di dati;
     - i nomi dei campi devono corrispondere a quelli specificati nel dizionario dei dati.
 
 ### Esempio:

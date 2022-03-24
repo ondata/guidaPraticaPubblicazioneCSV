@@ -24,7 +24,7 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [P14-Campi con indirizzi postali](P14_campi_tipo_indirizzo_postale.md)
 - [P15-Campi con coordinate geografiche](P15_campi_con_coordinate_geografiche.md)
 - [Linee guida per esportazione/importazione di dati tabulari da strumenti di foglio di calcolo a CSV](Linee_guida_importazione_esportazione.md)
-- [Tassonomie ed elenchi di codici comunemente usati](Allegato1_tassonomie_elenchi_codici.md)
+- [Tassonomie ed elenchi di codici comunemente usati](Tassonomie_elenchi_codici.md)
 - [Considerazioni sull'archiviazione dei file](Considerazioni_archiviazione.md)
 - [Cassetta degli attrezzi per i file CSV](Cassetta_attrezzi.md)
 - [Dove trovare buoni esempi di dati in CSV](Esempi_dati_CSV.md)
