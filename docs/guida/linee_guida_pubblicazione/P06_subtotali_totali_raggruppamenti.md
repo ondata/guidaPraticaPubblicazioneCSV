@@ -36,7 +36,7 @@ vendite semestrali di automobili (in migliaia), con subtotali (mix di livelli di
 !!! success "Buona prassi"
 
     | marca | anno | vendite_s1 | vendite_s2 |
-    | --- | --- | --- | --- |
+    | --- | ---: | ---: | ---: |
     | chevrolet chevelle malibu | 1998 | 2.5 | 2.63 |
     | buick skylark 320 | 1999 | 3.4 | 3.57 |
     | plymouth satellite | 2000 | 2.4 | 2.52 |
@@ -59,7 +59,7 @@ non usare raggruppamenti basati sull'uso di celle vuote.
 !!! success "Buona prassi"
 
     | marca | anno | vendite_semestrali |
-    | --- | --- | --- |
+    | --- | ---: | ---: |
     | chevrolet chevelle malibu | 1998 | 2.5 |
     | chevrolet chevelle malibu | 1999 | 2.63 |
     | chevrolet chevelle malibu | 2000 | 3.13 |
@@ -79,5 +79,3 @@ non usare raggruppamenti basati sull'uso di celle vuote.
     |  | 2000 | 3.13 |
     |  | 1999 | 3.57 |
     |  | 2000 | 3.97 |
-
-
