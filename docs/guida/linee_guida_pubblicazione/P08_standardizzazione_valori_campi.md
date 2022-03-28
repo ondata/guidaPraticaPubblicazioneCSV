@@ -39,7 +39,7 @@ standardizzazione del nome e del codice dell'attività economica.
 !!! success "Buona prassi"
 
     | marca | codice_venditore | attivita_vendite |
-    | --- | --- | --- |
+    | --- | ---: | --- |
     | chevrolet | 45.11 | Vendita di automobili e veicoli a motore leggeri |
     | buick | 45.11 | Vendita di automobili e veicoli a motore leggeri |
     | plymouth | 45.19 | Vendita di altri veicoli a motore |
