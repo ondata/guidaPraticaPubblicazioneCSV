@@ -7,7 +7,7 @@ title: Campi con numeri telefonici
 
 # Campi con numeri telefonici
 
-Quando si includono **valori con numeri di telefono**, la cosa più importante è assicurare la **coerenza del formato** di questi numeri in tutti i valori della colonna, è possibile usare `+39-0515270001` o `(39)0515270001` o anche `39-051-527-0001`, ma sempre l'importante è **utilizzare sempre lo stesso formato**.
+Quando si includono **valori con numeri di telefono**, la cosa più importante è assicurare la **coerenza del formato** di questi numeri in tutti i valori della colonna, è possibile usare `+39-0515270001` o `(39)0515270001` o anche `39-051-527-0001`, ma l'importante è **utilizzare sempre lo stesso formato**.
 
 Da prendere in considerazione:
 
