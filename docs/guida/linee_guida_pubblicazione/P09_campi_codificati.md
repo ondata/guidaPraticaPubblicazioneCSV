@@ -4,7 +4,7 @@ hide:
 # - navigation
 ---
 
-È bene riferirsi a schemi standard, *liste di codici* e tassonomie di termini per valori prestabiliti  e codificati di attributi.
+È bene riferirsi a schemi standard, *liste di codici* e tassonomie di termini per valori prestabiliti e codificati di attributi.
 
 Da prendere in considerazione:
 
