@@ -33,7 +33,7 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 ### Esempio:
 
 | marca | prezzo_vendita | valuta |
-| --- | --- | --- |
+| --- | ---: | --- |
 | chevrolet chevelle malibu | 23540,20 | EUR |
 | buick skylark 320 | 22189,00 | EUR |
 | plymouth satellite | 28362,65 | USD |
@@ -60,7 +60,7 @@ non usare i separatori di migliaia, uso del separatore decimale, coerenza nel nu
 !!! success "Buona prassi"
 
     | marca | ricavi_vendite |
-    | --- | --- |
+    | --- | ---: |
     | chevrolet chevelle malibu | 1234454,34 |
     | buick skylark 320 | 2345567,89 |
     | plymouth satellite | 344678,23 |
@@ -70,7 +70,7 @@ non usare i separatori di migliaia, uso del separatore decimale, coerenza nel nu
 In questo esempio, la valuta usata per tutti i valori nel campo `ricavi_vendite` è la stessa e sarà descritta nel dizionario dei dati. In alternativa, il nome del campo potrebbe essere `ricavi_vendite_euro`.
 
 ### Esempio 2:
-utilizzare il numero di decimali appropriato per ogni tipo di dato numerico, usa il segno meno `-` per i valori negativi, digita degli zeri significativi come valori di testo.
+utilizzare il numero di decimali appropriato per ogni tipo di dato numerico, usare il segno meno `-` per i valori negativi, digitare degli zeri significativi come valori di testo.
 
 !!! failure "Cattiva prassi"
 
@@ -82,7 +82,7 @@ utilizzare il numero di decimali appropriato per ogni tipo di dato numerico, usa
 !!! success "Buona prassi"
 
     | identificatore_di_marca | punto_chilometrico | latitudine | longitudine |
-    | --- | --- | --- | --- |
+    | --- | ---: | ---: | ---: |
     | 0000345600 | 2,334 | 43,2345678 | -5,1234567 |
     | 0000345601 | 12,567 | 43,3456789 | -5,2345678 |
 
@@ -94,7 +94,7 @@ Se il campo da ordinare contiene valori numerici, ed è impostato come tipo di d
 Tabella di input:
 
 | marca | classifica |
-| --- | --- |
+| --- | ---: |
 | chevrolet chevelle malibu | 1 |
 | buick skylark 320 | 9 |
 | plymouth satellite | 6 |
@@ -104,7 +104,7 @@ Tabella di input:
 Output dopo ordinamento per colonna `classifica`:
 
 | marca | classifica |
-| --- | --- |
+| --- | ---: |
 | chevrolet chevelle malibu | 1 |
 | amc rebel sst | 2 |
 | ford torino | 4 |
