@@ -7,7 +7,7 @@ title: Standardizzazione del valori dei campi
 
 # Standardizzazione del valori dei campi
 
-L'utilizzo di classificazioni, vocabolari e più in generale di metadati "standard" permette di combinare tra loro dati provenienti da fonti differenti, abilitandone in questo modo l'interoperabilità. 
+L'utilizzo di classificazioni, vocabolari e più in generale di metadati "standard" permette di combinare tra loro dati provenienti da fonti differenti, abilitandone in questo modo l'interoperabilità.
 
 Vanno considerati tecnicamente corretti quei dati che:
 
@@ -36,7 +36,7 @@ standardizzazione del nome e del codice dell'attività economica.
 !!! success "Buona prassi"
 
     | marca | codice_venditore | attivita_vendite |
-    | --- | --- | --- |
+    | --- | ---: | --- |
     | chevrolet | 45.11 | Vendita di automobili e veicoli a motore leggeri |
     | buick | 45.11 | Vendita di automobili e veicoli a motore leggeri |
     | plymouth | 45.19 | Vendita di altri veicoli a motore |
