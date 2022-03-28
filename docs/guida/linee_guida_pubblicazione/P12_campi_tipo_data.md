@@ -13,7 +13,7 @@ Codificare le **date** utilizzando uno **standard** è fondamentale per facilita
 
 Nel caso delle date è utile utilizzare le seguenti raccomandazioni:
 
-- riempire di zeri i valori 0-9 per indicare `MM`, `DD`, `HH`, `MM` e `SS`, poiché  ogni valore deve avere un numero fisso di cifre;
+- riempire di zeri i valori 0-9 per indicare `MM`, `DD`, `HH`, `MM` e `SS`, poiché ogni valore deve avere un numero fisso di cifre;
 - usare `-` come separatore per le date e `:` per le ore;
 - usare la lettera `T` come carattere separatore tra una data e un'ora quando usi la versione estesa;
 - usare preferibilmente le date complete `AAAA-MM-GG` piuttosto che indicare solo i mesi o gli anni quando i dati lo consentono;
