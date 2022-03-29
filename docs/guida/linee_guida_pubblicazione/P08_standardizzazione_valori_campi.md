@@ -22,8 +22,9 @@ Si raccomanda:
 [^1]: Lo standard AENOR 137801:2015 include un elenco di vocabolari di riferimento: <http://vocab.linkeddata.es/datosabiertos/>
 
 
-### Esempio:
-un caso che si presenta di frequente è quando abbiamo un dato in cui in una colonna compare la dimensione territoriale. Abbiamo ad esempio una colonna "Comune" oppure "Provincia" o "Regione". Spesso ci si limita a valorizzare il campo con la descrizione di quel Comune, quella Provincia o quella Regione, ma  diventa così molto facile utilizzare descrizioni non standard. Ad esempio "Reggio Emilia" al posto di "Reggio nell'Emilia" o "Reggio Calabria" al posto di "Reggio di Calabria". Generando peraltro ulteriore confusione sul fatto che andrebbe specificato se ci si sta riferendo al comune o alla provincia "Reggio di Calabria" .  Per ovviare a questo problema è possibile introdurre nel nostro dataset una nuova colonna con il codice standard Istat di quella provincia o di quel comune.
+## Esempio 1
+
+Un caso che si presenta di frequente è quando abbiamo un dato in cui in una colonna compare la dimensione territoriale. Abbiamo ad esempio una colonna "Comune" oppure "Provincia" o "Regione". Spesso ci si limita a valorizzare il campo con la descrizione di quel Comune, quella Provincia o quella Regione, ma  diventa così molto facile utilizzare descrizioni non standard. Ad esempio "Reggio Emilia" al posto di "Reggio nell'Emilia" o "Reggio Calabria" al posto di "Reggio di Calabria". Generando peraltro ulteriore confusione sul fatto che andrebbe specificato se ci si sta riferendo al comune o alla provincia "Reggio di Calabria" .  Per ovviare a questo problema è possibile introdurre nel nostro dataset una nuova colonna con il codice standard Istat di quella provincia o di quel comune.
 
 !!! failure "Cattiva prassi"
 
@@ -64,8 +65,9 @@ Tutti i dati hanno poi un "tempo" a cui si riferiscono. Poichè il dato sulla po
 
 
 
-### Esempio:
-un altro esempio lo possiamo avere con la standardizzazione del nome e del codice dell'attività economica. Nell'esempio che segue è stato introdotto nella tabella il codice NACE delle attività economiche così come descritte da EUROSTAT
+## Esempio 2
+
+Un altro esempio lo possiamo avere con la standardizzazione del nome e del codice dell'attività economica. Nell'esempio che segue è stato introdotto nella tabella il codice NACE delle attività economiche così come descritte da EUROSTAT
 
 !!! failure "Cattiva prassi"
 
