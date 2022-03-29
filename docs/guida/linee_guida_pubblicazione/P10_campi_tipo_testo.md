@@ -47,6 +47,6 @@ campo1,campo2,campo3
 
 | campo1 | campo2 | campo3 |
 | --- | --- | --- |
-| valore del campo1 | BBBvalore del campo2 | valore del campo "3" che include un dato dentro doppie virgolette |
+| valore del campo1 | ␣␣␣valore del campo2 | valore del campo "3" che include un dato dentro doppie virgolette |
 
-Nell'esempio precedente, gli spazi bianchi sono visualizzati attraverso il carattere (`B`) a scopo illustrativo, gli spazi bianchi non sono visualizzati attraverso un carattere.
+Qui sopra, gli spazi bianchi sono visualizzati attraverso il carattere (`␣`) a scopo illustrativo, gli spazi bianchi non sono visualizzati attraverso un carattere.
