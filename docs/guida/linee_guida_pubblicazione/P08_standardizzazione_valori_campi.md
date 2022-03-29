@@ -23,7 +23,49 @@ Si raccomanda:
 
 
 ### Esempio:
-standardizzazione del nome e del codice dell'attività economica.
+un caso che si presenta di frequente è quando abbiamo un dato in cui in una colonna compare la dimensione territoriale. Abbiamo ad esempio una colonna "Comune" oppure "Provincia" o "Regione". Spesso ci si limita a valorizzare il campo con la descrizione di quel Comune, quella Provincia o quella Regione, ma  diventa così molto facile utilizzare descrizioni non standard. Ad esempio "Reggio Emilia" al posto di "Reggio nell'Emilia" o "Reggio Calabria" al posto di "Reggio di Calabria". Generando peraltro ulteriore confusione sul fatto che andrebbe specificato se ci si sta riferendo al comune o alla provincia "Reggio di Calabria" .  Per ovviare a questo problema è possibile introdurre nel nostro dataset una nuova colonna con il codice standard Istat di quella provincia o di quel comune.  
+
+!!! failure "Cattiva prassi"
+
+    | territorio | popolazione_residente_al_31_dicembre |
+    | --- | --- |
+    | Reggio nell'Emilia | 524856 |
+    | Reggio di Calabria | 523791 |
+    | Napoli | 2986745 |
+
+!!! success "Buona prassi"
+
+     | territorio | codice_territorio | popolazione_residente_al_31_dicembre |
+    | --- | --- | --- |
+    | Reggio nell'Emilia | 35 | 524856 | 
+    | Reggio di Calabria | 80 | 523791 | 
+    | Napoli | 63 | 2986745 | 
+
+o, nel caso ci si sta riferendo a dati a livello comunale
+
+!!! success "Buona prassi"
+
+     | territorio | codice_territorio | popolazione_residente_al_31_dicembre |
+    | --- | --- | --- |
+    | Reggio nell'Emilia | 35033 | 170601 | 
+    | Reggio di Calabria | 80063 | 173026 | 
+    | Napoli | 63049 | 922094 | 
+    
+
+Tutti i dati hanno poi un "tempo" a cui si riferiscono. Poichè il dato sulla popolazione residente è un dato annuale, diventa importante l'inserimento di una colonna che specifichi l'anno di riferimento. La tabella con i dati comunali diventa coì la seguente
+
+!!! success "Buona prassi"
+
+     | territorio | codice_territorio | popolazione_residente_al_31_dicembre | anno |
+    | --- | --- | --- | --- |
+    | Reggio nell'Emilia | 35033 | 170601 | 2020 |
+    | Reggio di Calabria | 80063 | 173026 | 2020 |
+    | Napoli | 63049 | 922094 | 2020 |
+
+
+    
+### Esempio:
+un altro esempio lo possiamo avere con la standardizzazione del nome e del codice dell'attività economica. Nell'esempio che segue è stato introdotto nella tabella il codice NACE delle attività economiche così come descritte da EUROSTAT
 
 !!! failure "Cattiva prassi"
 
@@ -43,6 +85,6 @@ standardizzazione del nome e del codice dell'attività economica.
 
 
 
-In questo esempio, i valori del campo `codice_venditore` sono quelli corrispondenti alla [classificazione statistica EUROSTAT delle attività economiche della Comunità Europea](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey=&StrLayoutCode=HIERARCHIC&IntCurrentPage=1)[^2] per la standardizzazione delle attività economiche dei concessionari di veicoli.
+I valori del campo `codice_venditore` sono quelli corrispondenti alla [classificazione statistica EUROSTAT delle attività economiche della Comunità Europea](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey=&StrLayoutCode=HIERARCHIC&IntCurrentPage=1)[^2] per la standardizzazione delle attività economiche dei concessionari di veicoli.
 
 [^2]: NACE Rev. 2
