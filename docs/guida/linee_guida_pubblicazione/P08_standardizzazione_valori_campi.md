@@ -11,8 +11,8 @@ L'utilizzo di classificazioni, vocabolari e più in generale di metadati "standa
 
 Vanno considerati tecnicamente corretti quei dati che:
 
-    - usano la stessa codifica e normalizzazione per lo stesso tipo di dati, pubblicati in diversi dataset di un catalogo, per esempio, gli indirizzi sono sempre pubblicati con la stessa struttura, tipo, formato, in qualsiasi dataset e i dati geografici hanno lo stesso sistema di coordinate;
-    - la codifica e la standardizzazione utilizzate si basano su alcuni standard comuni proposti e utilizzati da altre organizzazioni nazionali o internazionali come ad eempio [EUROSTAT](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey=&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) o [ISTAT](https://www.istat.it/it/metodi-e-strumenti/classificazioni).
+- usano la stessa codifica e normalizzazione per lo stesso tipo di dati, pubblicati in diversi dataset di un catalogo, per esempio, gli indirizzi sono sempre pubblicati con la stessa struttura, tipo, formato, in qualsiasi dataset e i dati geografici hanno lo stesso sistema di coordinate;
+- la codifica e la standardizzazione utilizzate si basano su alcuni standard comuni proposti e utilizzati da altre organizzazioni nazionali o internazionali come ad eempio [EUROSTAT](https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2&StrLanguageCode=ES&IntPcKey=&StrLayoutCode=HIERARCHIC&IntCurrentPage=1) o [ISTAT](https://www.istat.it/it/metodi-e-strumenti/classificazioni).
 
 Si raccomanda:
 
@@ -23,7 +23,7 @@ Si raccomanda:
 
 
 ### Esempio:
-un caso che si presenta di frequente è quando abbiamo un dato in cui in una colonna compare la dimensione territoriale. Abbiamo ad esempio una colonna "Comune" oppure "Provincia" o "Regione". Spesso ci si limita a valorizzare il campo con la descrizione di quel Comune, quella Provincia o quella Regione, ma  diventa così molto facile utilizzare descrizioni non standard. Ad esempio "Reggio Emilia" al posto di "Reggio nell'Emilia" o "Reggio Calabria" al posto di "Reggio di Calabria". Generando peraltro ulteriore confusione sul fatto che andrebbe specificato se ci si sta riferendo al comune o alla provincia "Reggio di Calabria" .  Per ovviare a questo problema è possibile introdurre nel nostro dataset una nuova colonna con il codice standard Istat di quella provincia o di quel comune.  
+un caso che si presenta di frequente è quando abbiamo un dato in cui in una colonna compare la dimensione territoriale. Abbiamo ad esempio una colonna "Comune" oppure "Provincia" o "Regione". Spesso ci si limita a valorizzare il campo con la descrizione di quel Comune, quella Provincia o quella Regione, ma  diventa così molto facile utilizzare descrizioni non standard. Ad esempio "Reggio Emilia" al posto di "Reggio nell'Emilia" o "Reggio Calabria" al posto di "Reggio di Calabria". Generando peraltro ulteriore confusione sul fatto che andrebbe specificato se ci si sta riferendo al comune o alla provincia "Reggio di Calabria" .  Per ovviare a questo problema è possibile introdurre nel nostro dataset una nuova colonna con il codice standard Istat di quella provincia o di quel comune.
 
 !!! failure "Cattiva prassi"
 
@@ -37,9 +37,9 @@ un caso che si presenta di frequente è quando abbiamo un dato in cui in una col
 
      | territorio | codice_territorio | popolazione_residente_al_31_dicembre |
     | --- | --- | --- |
-    | Reggio nell'Emilia | 35 | 524856 | 
-    | Reggio di Calabria | 80 | 523791 | 
-    | Napoli | 63 | 2986745 | 
+    | Reggio nell'Emilia | 35 | 524856 |
+    | Reggio di Calabria | 80 | 523791 |
+    | Napoli | 63 | 2986745 |
 
 o, nel caso ci si sta riferendo a dati a livello comunale
 
@@ -47,10 +47,10 @@ o, nel caso ci si sta riferendo a dati a livello comunale
 
      | territorio | codice_territorio | popolazione_residente_al_31_dicembre |
     | --- | --- | --- |
-    | Reggio nell'Emilia | 35033 | 170601 | 
-    | Reggio di Calabria | 80063 | 173026 | 
-    | Napoli | 63049 | 922094 | 
-    
+    | Reggio nell'Emilia | 35033 | 170601 |
+    | Reggio di Calabria | 80063 | 173026 |
+    | Napoli | 63049 | 922094 |
+
 
 Tutti i dati hanno poi un "tempo" a cui si riferiscono. Poichè il dato sulla popolazione residente è un dato annuale, diventa importante l'inserimento di una colonna che specifichi l'anno di riferimento. La tabella con i dati comunali diventa coì la seguente
 
@@ -63,7 +63,7 @@ Tutti i dati hanno poi un "tempo" a cui si riferiscono. Poichè il dato sulla po
     | Napoli | 63049 | 922094 | 2020 |
 
 
-    
+
 ### Esempio:
 un altro esempio lo possiamo avere con la standardizzazione del nome e del codice dell'attività economica. Nell'esempio che segue è stato introdotto nella tabella il codice NACE delle attività economiche così come descritte da EUROSTAT
 
