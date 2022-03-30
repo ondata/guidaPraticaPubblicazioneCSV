@@ -59,7 +59,7 @@ Data Curator è uno **strumento desktop** implementato dall'Open Data Institute 
 
 ## Strumento: CSV kit
 
-CSV kit è un **insieme di strumenti a riga di comando** da usare in ambienti Linux/MacOS[^4] per **convertire e lavorare con i file `CSV`**, tra le altre utili funzionalità, CSV kit **permette di convertire file creati con Excel o file `JSON` in `CSV` e viceversa**, permette inoltre di eseguire diverse **operazioni a livello di colonna, riga o cella** e di **generare sintesi statistiche ed eseguire query `SQL` sui dati**. Esegue anche alcune **analisi dei dati** e ne deduce alcune caratteristiche come l'assenza/presenza di intestazione o di tipi di dati.
+[**CSV kit**](https://csvkit.readthedocs.io/en/latest/) è un **insieme di strumenti a riga di comando** da usare in ambienti Linux/MacOS[^4] per **convertire e lavorare con i file `CSV`**, tra le altre utili funzionalità, CSV kit **permette di convertire file creati con Excel o file `JSON` in `CSV` e viceversa**, permette inoltre di eseguire diverse **operazioni a livello di colonna, riga o cella** e di **generare sintesi statistiche ed eseguire query `SQL` sui dati**. Esegue anche alcune **analisi dei dati** e ne deduce alcune caratteristiche come l'assenza/presenza di intestazione o di tipi di dati.
 
 [^4]: Può essere utilizzato anche in ambiente Windows attraverso il [WSL Windows Subsystem for Linux](https://docs.microsoft.com/it-it/windows/wsl/install)
 
