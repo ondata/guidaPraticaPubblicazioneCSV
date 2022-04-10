@@ -1,6 +1,6 @@
 🙏 I [capitoli ancora da creare](https://github.com/ondata/guidaPraticaPubblicazioneCSV/issues?q=is%3Aissue+is%3Aopen+label%3A%22da+elaborare%22+no%3Aassignee+sort%3Acreated-asc), su cui lavorare come indicato [qui](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions/52#discussion-3767439).
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Guida pratica per la pubblicazione di dati tabellari in formato CSV
@@ -64,6 +64,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/patrunomeister"><img src="https://avatars.githubusercontent.com/u/482417?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vincenzo Patruno</b></sub></a><br /><a href="#content-patrunomeister" title="Content">🖋</a> <a href="#example-patrunomeister" title="Examples">💡</a></td>
     <td align="center"><a href="https://coseerobe.gbvitrano.it/"><img src="https://avatars.githubusercontent.com/u/20488693?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Giovan Battista Vitrano</b></sub></a><br /><a href="#content-gbvitrano" title="Content">🖋</a> <a href="#example-gbvitrano" title="Examples">💡</a></td>
     <td align="center"><a href="https://github.com/lorenzoperone"><img src="https://avatars.githubusercontent.com/u/5204799?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lorenzo perone</b></sub></a><br /><a href="#content-lorenzoperone" title="Content">🖋</a> <a href="#example-lorenzoperone" title="Examples">💡</a></td>
+    <td align="center"><a href="https://github.com/dennisangemi"><img src="https://avatars.githubusercontent.com/u/77018886?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dennis Angemi</b></sub></a><br /><a href="#content-dennisangemi" title="Content">🖋</a></td>
   </tr>
 </table>
 
