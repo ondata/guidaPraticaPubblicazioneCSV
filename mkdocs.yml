@@ -50,8 +50,8 @@ nav:
     - Home: index.md
     - Guida:
       - guida/index.md
-      - Formato di dati tabellari: guida/Formato_dati_tabellari.md
-      - Dizionario: guida/Dizionario_dati.md
+      - Formato di dati tabellari: guida/formato_dati_tabellari.md
+      - Dizionario: guida/dizionario_dati.md
       - Linee guida pubblicazione:
           - guida/linee_guida_pubblicazione/index.md
           - Singola riga intestazione: guida/linee_guida_pubblicazione/P01_unica_riga_intestazione.md

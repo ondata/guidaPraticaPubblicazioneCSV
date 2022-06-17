@@ -30,6 +30,10 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
   - si raccomanda di usare il **[dizionario dei dati](../Dizionario_dati.md)** per definire le unità di misura associate ai valori numerici, se non c'è un dizionario è possibile indicare l'**unità di misura nel nome del campo** (per esempio `distanza_metri`), purché tutti i valori della colonna abbiano la stessa unità di misura associata;
   - nel caso in cui l'**unità di misura** sia diversa per una stessa colonna, questa deve essere **indicata in una colonna separata**, da inserite subito dopo quella a cui fa riferimento.
 
+!!! info "UNECE Units of measure"
+
+    La Commissione economica per l'Europa delle Nazioni Unite (UNECE) gestisce il dataset "[UNECE Units of measure](https://datahub.io/core/unece-units-of-measure)" in     cui vengono definiti dei codici standard introdotti dalla Recommendation 20 al fine di rappresentare unità di misura di grandezze fisiche e non.
+
 ### Esempio:
 
 | marca | prezzo_vendita | valuta |
