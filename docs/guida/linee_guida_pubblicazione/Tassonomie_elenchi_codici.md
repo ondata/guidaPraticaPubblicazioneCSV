@@ -15,5 +15,5 @@ Questo allegato contiene una serie di riferimenti a schemi concettuali, elenchi 
 - [ISO 4217 - codici di valuta](https://www.iso.org/iso-4217-currency-codes.html)
 - [ISO 3166-1 - codici paese](https://www.iso.org/iso-3166-country-codes.html)
 - [Unità di misura UN / UN/CEFACT](https://unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_rev3_Annex3e.pdf)
-- [Ontologie e Vocabolari controllati AGID] (https://github.com/italia/daf-ontologie-vocabolari-controllati)
+- [Ontologie e Vocabolari controllati AGID](https://github.com/italia/daf-ontologie-vocabolari-controllati)
 
