@@ -40,12 +40,12 @@ Un codice standard è come una chiave uguale per tutte le porte: chi ha un altro
 ## Casi particolari
 
 - **Tra un dataset e l'altro.** È consigliato usare la stessa codifica e la stessa struttura per lo stesso tipo di dato in tutti i dataset di un catalogo: per esempio gli indirizzi hanno sempre le stesse colonne e i dati geografici lo stesso sistema di coordinate.
-- **Standard comuni.** Meglio basare codifiche e valori su standard proposti e usati da altre organizzazioni nazionali o internazionali, come le classificazioni di [Eurostat](https://ec.europa.eu/eurostat/web/nace) e di [Istat](https://www.istat.it/it/metodi-e-strumenti/classificazioni), e su vocabolari di uso comune[^1].
+- **Standard comuni.** Meglio usare gli standard che altri già usano, come le classificazioni di [Eurostat](https://ec.europa.eu/eurostat/web/nace) e di [Istat](https://www.istat.it/it/metodi-e-strumenti/classificazioni), e su vocabolari di uso comune[^1].
 - **Senza un vocabolario di riferimento.** Il valore scelto deve comunque essere unico e coerente in tutta la tabella.
 - **Attività economica.** Il riferimento è la [classificazione Ateco 2025 di Istat](https://www.istat.it/classificazione/ateco-2025/), dove `91.11` è «Attività di biblioteche». Le classificazioni hanno versioni: dichiara quella usata, per esempio nel nome della colonna (`codice_ateco_2025`).
-- **Codici che cambiano.** I codici Istat cambiano con fusioni e riforme territoriali: indica nel dizionario dei dati la data dei codici usati. Vedi [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md).
+- **Codici che cambiano.** I codici Istat cambiano con fusioni e riforme territoriali: indica nel dizionario dei dati la data dei codici usati. Vedi [Codici e classificazioni](Tassonomie_elenchi_codici.md).
 - **Tempo di riferimento.** Ogni dato si riferisce a un momento. I prestiti sono un dato annuale, quindi serve una colonna che indichi l'anno, come `anno` nell'esempio.
 
 [^1]: Le [Linee guida dell'Agenzia per l'Italia digitale (AgID)](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-arricchimento) indicano il Catalogo nazionale della semantica dei dati.
 
-Vedi anche: [Affianca una descrizione ai codici](P09_campi_codificati.md), [Dividi gli indirizzi in colonne](P14_campi_tipo_indirizzo_postale.md), [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md)
+Vedi anche: [9. Affianca una descrizione ai codici](P09_campi_codificati.md), [14. Dividi gli indirizzi in colonne](P14_campi_tipo_indirizzo_postale.md), [Codici e classificazioni](Tassonomie_elenchi_codici.md).

@@ -7,7 +7,7 @@ title: Dividi gli indirizzi in colonne
 
 # 14. Dividi gli indirizzi in colonne
 
-Meglio dividere l'indirizzo in più colonne, una per ogni parte (`dug`, `denominazione`, `civico`, `esponente`, `comune`, `cap`), invece di scriverlo tutto in una cella.
+Meglio dividere l'indirizzo in più colonne, una per ogni parte (`dug`, cioè via o piazza, `denominazione`, `civico`, `esponente`, `comune`, `cap`), invece di scriverlo tutto in una cella.
 
 ## Così sì e così no
 
@@ -43,7 +43,7 @@ Biblioteca di esempio D,Via,Cavour,20,,Roma,00184
 
 ## Perché
 
-Con le parti separate, chi riusa i dati può filtrare per comune o per CAP, incrociare gli indirizzi con ANNCSU e geolocalizzarli, cioè ricavarne latitudine e longitudine con programmi specifici. Da `Via Roma n° 10, Palermo (90133)` un programma deve indovinare dove finisce la strada e dove comincia il comune.
+Con le parti separate, chi riusa i dati può filtrare per comune o per CAP, incrociare gli indirizzi con l'archivio nazionale dei numeri civici (ANNCSU) e geolocalizzarli, cioè ricavarne latitudine e longitudine con programmi specifici. Da `Via Roma n° 10, Palermo (90133)` un programma deve indovinare dove finisce la strada e dove comincia il comune.
 
 Il CAP è un codice, non un numero: letto come numero, `00184` diventa `184`.
 
@@ -51,7 +51,7 @@ Il CAP è un codice, non un numero: letto come numero, `00184` diventa `184`.
 
 ### Le colonne e ANNCSU
 
-In Italia il riferimento nazionale per strade e numeri civici è l'[Archivio nazionale dei numeri civici e delle strade urbane](https://www.anncsu.gov.it/it/) (ANNCSU), gestito da Istat e Agenzia delle Entrate con i dati certificati dai Comuni, e pubblicato anche in [CSV aperti](https://www.anncsu.gov.it/it/consultazione-dellarchivio/open-data/) aggiornati ogni mese[^1]. In forma semplificata, consigliamo queste colonne:
+In Italia il riferimento nazionale per strade e numeri civici è l'[Archivio nazionale dei numeri civici e delle strade urbane](https://www.anncsu.gov.it/it/) (ANNCSU), gestito da Istat e Agenzia delle Entrate con i dati certificati dai Comuni, e pubblicato anche in [CSV aperti](https://www.anncsu.gov.it/it/consultazione-dellarchivio/open-data/) aggiornati ogni mese[^1]. In forma semplificata, è consigliato usare queste colonne:
 
 - **dug**: denominazione urbanistica generica (`Via`, `Piazza`), testo;
 - **denominazione**: il nome della strada, testo;

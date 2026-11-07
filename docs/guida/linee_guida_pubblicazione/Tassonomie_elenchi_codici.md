@@ -5,11 +5,13 @@ hide:
 title: Codici e classificazioni
 ---
 
-Questa pagina raccoglie elenchi di codici e classificazioni da usare come valori delle colonne.
+# Codici e classificazioni
+
+Usa questi elenchi per i valori delle colonne: chi riusa i dati può così unire il tuo file ad altri.
 
 ## Codici italiani
 
-I codici sono sempre testo, non numeri: vanno pubblicati così come sono, zeri iniziali compresi. Nella tabella i valori di esempio sono quelli del Comune di Palermo; per il civico non ne riportiamo uno, perché non abbiamo verificato il valore nell'archivio.
+I codici sono sempre testo, non numeri: vanno pubblicati così come sono, zeri iniziali compresi. Nella tabella i valori di esempio sono quelli del Comune di Palermo.
 
 | Codice | Identifica | Come si scrive | Esempio | Dove si trova |
 | --- | --- | --- | --- | --- |
@@ -38,7 +40,7 @@ Il primo comando produce l'elenco dei comuni, con il codice Istat nella colonna 
 
 ## Altri riferimenti
 
-- [Classificazioni armonizzate a livello nazionale e internazionale Istat](https://www.istat.it/it/metodi-e-strumenti/classificazioni)
+- [Classificazioni Istat, armonizzate a livello nazionale e internazionale](https://www.istat.it/it/metodi-e-strumenti/classificazioni)
 - [Thesaurus multilingue dell'Unione europea (EuroVoc)](https://eur-lex.europa.eu/browse/eurovoc.html?locale=it)
 - [Nomenclatura delle attività economiche (NACE)](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=NACE_background)
 - [Nomenclatura delle unità territoriali per la statistica (NUTS)](https://ec.europa.eu/eurostat/web/nuts)

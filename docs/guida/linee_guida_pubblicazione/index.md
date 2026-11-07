@@ -31,18 +31,18 @@ Una sola tabella per file, separatore virgola, codifica UTF-8, e un [dizionario 
 
 </div>
 
-Prima di pubblicare, apri il file con un editor di testo, controlla i [dati personali](Dati_personali.md) e validalo con uno [strumento](Cassetta_attrezzi.md).
+Prima di pubblicare, apri il file con un editor di testo, controlla i [dati personali](Dati_personali.md) e verificalo con uno degli [strumenti di controllo](Cassetta_attrezzi.md). Non aprire il CSV in Excel con un doppio clic: può finire tutto in una sola colonna, e i valori possono cambiare. [Ecco come aprirlo](Linee_guida_importazione_esportazione.md#aprire-un-csv-in-excel-senza-rovinarlo).
 
 <div class="regole-altro" markdown>
 
-## Approfondimenti
+## Altre pagine utili
 
-- [Esportare un CSV da Excel o LibreOffice](Linee_guida_importazione_esportazione.md)
-- [Tassonomie ed elenchi di codici comunemente usati](Tassonomie_elenchi_codici.md)
-- [Considerazioni sull'archiviazione dei file](Considerazioni_archiviazione.md)
+- [Esportare da Excel o LibreOffice](Linee_guida_importazione_esportazione.md)
+- [Codici e classificazioni](Tassonomie_elenchi_codici.md)
+- [Come servire i file via web](Considerazioni_archiviazione.md)
 - [Prima di pubblicare i dati personali](Dati_personali.md)
-- [Cassetta degli attrezzi per i file CSV](Cassetta_attrezzi.md)
+- [Strumenti di controllo](Cassetta_attrezzi.md)
 - [Esempi di CSV italiani](Esempi_dati_CSV.md)
-- [Link utili](Link_utili.md)
+- [Fonti](Link_utili.md)
 
 </div>

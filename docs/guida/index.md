@@ -35,7 +35,7 @@ Le regole e gli strumenti di questa guida riguardano la forma del file: struttur
 
 Le Linee guida AgID distinguono sei [livelli di validazione](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-validazione), dalla coerenza con i requisiti strutturali al confronto con i dati di altri fornitori: i controlli descritti qui si fermano, in sostanza, ai primi due, cioè alla struttura e alla coerenza all'interno del dataset. Controllare il file non basta: AgID raccomanda di garantire almeno accuratezza, coerenza, completezza e attualità dei dati ([raccomandazione 8](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#racc-8)).
 
-Nel [modello a 5 stelle](https://ondata.github.io/linee-guida-opendata/allegato-A.html) il CSV arriva a 3 stelle, il livello minimo richiesto dalle Linee guida AgID. La quarta richiede RDF e SPARQL. [Valori uniformi](linee_guida_pubblicazione/P08_standardizzazione_valori_campi.md) e [codici standard](linee_guida_pubblicazione/P09_campi_codificati.md) non fanno salire di stella, ma preparano quel passaggio.
+Nel [modello a 5 stelle](https://ondata.github.io/linee-guida-opendata/allegato-A.html) il CSV arriva a 3 stelle, il livello minimo richiesto dalle Linee guida AgID. La quarta richiede RDF, un modo di descrivere i dati collegandoli fra loro, e SPARQL, il linguaggio per interrogarli. [Valori uniformi](linee_guida_pubblicazione/P08_standardizzazione_valori_campi.md) e [codici standard](linee_guida_pubblicazione/P09_campi_codificati.md) non fanno salire di stella, ma preparano quel passaggio.
 
 ## La guida e le norme
 
@@ -44,25 +44,25 @@ Questa guida è una buona pratica volontaria, non un atto normativo. Il CSV non 
 **Obblighi di legge.** Ogni norma ha i propri destinatari: controlla quali si applicano al tuo ente.
 
 - i dati oggetto di pubblicazione obbligatoria vanno in formato di tipo aperto ([d.lgs. 33/2013, art. 7](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33~art7!vig=));
-- i dati pubblicati senza licenza si intendono aperti, salvo i dati personali ([CAD, art. 52, comma 2](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art52!vig=));
+- i dati pubblicati senza licenza si intendono aperti, salvo i dati personali ([Codice dell'amministrazione digitale (CAD), art. 52, comma 2](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art52!vig=));
 - un formato aperto è documentato e neutro rispetto agli strumenti, e i dati di tipo aperto sono anche adatti all'uso automatico e provvisti di metadati ([CAD, art. 1, comma 1, lettere l-bis e l-ter](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art1!vig=));
 - ogni anno si pubblicano sul sito dell'ente gli elenchi delle categorie di dati detenuti ([d.lgs. 36/2006, art. 9](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2006-01-24;36~art9!vig=)).
 
 **Regole tecniche**, nelle [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/) (determinazione 183/2023):
 
 - formato aperto e leggibile meccanicamente, di almeno 3 stelle: il CSV le raggiunge ([requisito 2](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-2));
-- metadati conformi a DCAT-AP_IT o, per i dati territoriali, alle Linee guida RNDT ([requisiti 15](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-15) e [16](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16)), da inserire e tenere aggiornati su dati.gov.it o nel RNDT ([requisiti 29](https://ondata.github.io/linee-guida-opendata/capitolo-7.html#req-29) e [30](https://ondata.github.io/linee-guida-opendata/capitolo-7.html#req-30));
-- licenza CC BY per i nuovi dati aperti nativi; una licenza diversa da CC BY 4.0 o CC0 va motivata formalmente ([requisiti 20](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-20) e [21](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-21)).
+- metadati conformi al profilo italiano (DCAT-AP_IT) o, per i dati territoriali, alle Linee guida del Repertorio nazionale dei dati territoriali (RNDT) ([requisiti 15](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-15) e [16](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16)), da inserire e tenere aggiornati su dati.gov.it o nel RNDT ([requisiti 29](https://ondata.github.io/linee-guida-opendata/capitolo-7.html#req-29) e [30](https://ondata.github.io/linee-guida-opendata/capitolo-7.html#req-30));
+- licenza CC BY per i nuovi dati aperti nativi, cioè prodotti dalle amministrazioni; una licenza diversa da CC BY 4.0 o CC0 va motivata formalmente ([requisiti 20](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-20) e [21](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-21)).
 
 **Buona pratica:** le regole di questa guida, che dettagliano ciò che le norme lasciano aperto. Dove riprendono l'[Allegato B delle Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv), sono indicazioni e non requisiti.
 
-**Quando il CSV non basta.** I dati dinamici e le serie di dati di elevato valore vanno resi disponibili anche attraverso API ([requisiti 5](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-5) e [7](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-7); [Regolamento di esecuzione (UE) 2023/138](https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:32023R0138)). Il CSV resta utile per lo scaricamento in blocco.
+**Quando il CSV non basta.** I dati dinamici e le serie di dati di elevato valore vanno resi disponibili anche attraverso API, interfacce con cui un programma interroga i dati ([requisiti 5](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-5) e [7](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-7); [Regolamento di esecuzione (UE) 2023/138](https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:32023R0138)). Il CSV resta utile per lo scaricamento in blocco.
 
 ## Come adottarla in un ente
 
 Quella che segue è una proposta, non una procedura prevista da una norma.
 
-Le Linee guida AgID raccomandano di affidare al Responsabile per la transizione digitale (RTD) un gruppo di lavoro sull'apertura dei dati ([raccomandazione 4](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#racc-4)): è il posto in cui assumere questa guida come riferimento interno, citandone una versione precisa, con numero e DOI, come spiegato in [Partecipa](../partecipa.md).
+Le Linee guida AgID raccomandano di affidare al Responsabile per la transizione digitale (RTD) un gruppo di lavoro sull'apertura dei dati ([raccomandazione 4](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#racc-4)): quel gruppo può adottare questa guida come riferimento interno, citandone una versione precisa, con numero e DOI, come spiegato in [Partecipa](../partecipa.md).
 
 La guida può entrare anche nei contratti. Il CAD chiede di prevedere nei capitolati che riguardano formazione, raccolta e gestione di dati clausole che ne consentano l'utilizzazione ([art. 52, comma 3](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art52!vig=)). Le Linee guida AgID raccomandano un approccio «open by design» fin dalla progettazione, con clausole contrattuali sulla proprietà del dataset e sulla sua fruibilità nel tempo, compreso l'uso di formati aperti ([par. 6.1.2](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#sec-buone-pratiche-approccio-open-by-design)).
 

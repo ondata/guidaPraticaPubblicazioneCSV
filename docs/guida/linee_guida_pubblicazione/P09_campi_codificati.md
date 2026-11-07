@@ -50,13 +50,13 @@ Un codice senza zeri non è più lo stesso codice: `82053` non corrisponde a `08
 - **Codici di cifre.** La regola vale per codici Istat, CAP, codici fiscali e di attività. Dichiara queste colonne come testo nel [dizionario dei dati](../dizionario_dati.md) e controlla che gli zeri siano ancora lì prima di pubblicare, aprendo il file con un editor di testo.
 - **Comune come territorio.** Per l'Italia il codice è quello Istat del comune, di 6 caratteri ([SITUAS](https://situas.istat.it/web/), il Sistema informativo territoriale delle unità amministrative e statistiche), e la colonna `comune` contiene il suo nome.
 - **Comune come ente.** Se la colonna indica invece l'amministrazione che ha prodotto il dato o che eroga un servizio, il riferimento è il [codice IPA](https://www.indicepa.gov.it/ipa-portale/)[^1].
-- **Nome della colonna nel valore.** Se la colonna si chiama `comune`, le celle non devono ripetere le parole «Comune di».
-- **Dove trovare i codici.** La pagina [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md) raccoglie classificazioni e standard riutilizzabili.
+- **Niente ripetizioni nei valori.** Se la colonna si chiama `comune`, le celle non devono ripetere le parole «Comune di».
+- **Dove trovare i codici.** La pagina [Codici e classificazioni](Tassonomie_elenchi_codici.md) raccoglie classificazioni e standard riutilizzabili.
 
 [^1]: Indice dei domicili digitali delle pubbliche amministrazioni, dei gestori di pubblici servizi e delle società a controllo pubblico (Codice dell'amministrazione digitale, CAD, art. 6-ter)
 
 ## Come si fa nel foglio di calcolo
 
-Excel toglie gli zeri iniziali quando apre un CSV, anche con l'importazione da Data > From Text/CSV se lasci il rilevamento predefinito: `082053` diventa `82053`. Prima di esportare, imposta le colonne di codici sul formato Testo; per aprire un CSV senza rovinarlo segui la procedura in [Esportare un CSV da Excel o LibreOffice](Linee_guida_importazione_esportazione.md).
+Excel toglie gli zeri iniziali quando apre un CSV, anche con l'importazione da Dati > Da testo/CSV (Data > From Text/CSV) se lasci il rilevamento predefinito: `082053` diventa `82053`. Prima di esportare, imposta le colonne di codici sul formato Testo; per aprire un CSV senza rovinarlo segui la procedura in [Esportare un CSV da Excel o LibreOffice](Linee_guida_importazione_esportazione.md#aprire-un-csv-in-excel-senza-rovinarlo).
 
-Vedi anche: [Un solo tipo di dato per colonna](P07_tipi_dati.md), [Scrivi la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md), [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md)
+Vedi anche: [7. Un solo tipo di dato per colonna](P07_tipi_dati.md), [8. Scrivi la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md), [Codici e classificazioni](Tassonomie_elenchi_codici.md).

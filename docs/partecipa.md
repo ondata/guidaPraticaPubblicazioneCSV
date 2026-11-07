@@ -18,7 +18,7 @@ Se usi git e GitHub puoi proporre la modifica direttamente, in due modi:
 
 [![Il tasto per modificare una pagina, in alto a destra](imgs/edit_page.png)](imgs/edit_page.png)
 
-Il testo della guida è nella cartella [`docs`](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs) del [repository](https://github.com/ondata/guidaPraticaPubblicazioneCSV/).
+Il testo della guida è nella cartella [`docs`](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs) del [repository](https://github.com/ondata/guidaPraticaPubblicazioneCSV/). Prima di proporre una modifica, leggi le [note per chi scrive](note_redazione.md).
 
 ## Riusa
 

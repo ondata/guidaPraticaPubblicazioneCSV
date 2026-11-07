@@ -7,7 +7,7 @@ title: Metti tra virgolette il testo che lo richiede
 
 # 10. Metti tra virgolette il testo che lo richiede
 
-Un testo che contiene una virgola, delle virgolette o un'interruzione di riga deve stare tra virgolette (`"`). Prima di pubblicare devi togliere gli spazi superflui all'inizio e alla fine di un testo.
+Nel file CSV, un testo che contiene una virgola, delle virgolette o un a capo deve stare tra virgolette (`"`). Se esporti da un foglio di calcolo non devi scriverle tu: le aggiunge il programma. Prima di pubblicare devi togliere gli spazi superflui all'inizio e alla fine di un testo.
 
 ## Così sì e così no
 
@@ -74,8 +74,8 @@ sala ragazzi",00184
 
 ## Come si fa nel foglio di calcolo
 
-Nelle celle scrivi il testo normalmente, senza virgolette: quando salvi in CSV, Excel e LibreOffice le aggiungono da soli dove servono per il separatore usato, e raddoppiano quelle interne. Per Excel questo significa che, se salva con il `;`, una virgola nel testo resta senza virgolette; la pagina [Esportare un CSV da Excel o LibreOffice](Linee_guida_importazione_esportazione.md) spiega come arrivare alla virgola come separatore.
+Nelle celle scrivi il testo normalmente, senza virgolette: quando salvi in CSV, Excel e LibreOffice le aggiungono da soli dove servono per il separatore usato, e raddoppiano quelle interne. Se Excel salva con il `;`, una virgola nel testo resta senza virgolette, perché in quel file non è il separatore. Il file va poi convertito: vedi [Convertire in CSV con LibreOffice Calc](Linee_guida_importazione_esportazione.md#convertire-in-csv-con-libreoffice-calc).
 
 Per togliere gli spazi superflui in Excel c'è la funzione `ANNULLA.SPAZI` (`TRIM` con i menu in inglese). Riduce a uno anche gli spazi ripetuti dentro il testo.
 
-Vedi anche: [Una riga per ogni record](P02_singolo_record_riga.md), [Scrivi la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md), [Dividi gli indirizzi in colonne](P14_campi_tipo_indirizzo_postale.md)
+Vedi anche: [2. Una riga per ogni record](P02_singolo_record_riga.md), [8. Scrivi la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md), [14. Dividi gli indirizzi in colonne](P14_campi_tipo_indirizzo_postale.md).

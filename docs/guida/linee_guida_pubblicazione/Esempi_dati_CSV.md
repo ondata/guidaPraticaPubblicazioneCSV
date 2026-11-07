@@ -19,7 +19,7 @@ Senza schema `frictionless validate` guarda solo la struttura: più sotto c'è u
 
 ## Popolazione residente, ANPR
 
-[File CSV](https://raw.githubusercontent.com/italia/anpr-opendata/main/data/popolazione%5Fresidente%5Fexport.csv), Ministero dell'Interno, 7.894 righe, licenza CC0. [Schema](../../risorse/schemi/anpr-popolazione-residente.schema.yaml).
+Anagrafe nazionale della popolazione residente (ANPR). [File CSV](https://raw.githubusercontent.com/italia/anpr-opendata/main/data/popolazione%5Fresidente%5Fexport.csv), Ministero dell'Interno, 7.894 righe, licenza CC0. [Schema](../../risorse/schemi/anpr-popolazione-residente.schema.yaml).
 
 - **Fa bene:** virgola come separatore, UTF-8, un solo codice Istat di 6 caratteri per riga, con gli zeri iniziali (`001168`). Il comune di None è scritto `NONE`, senza trasformarsi in un valore mancante. Si aggiorna ogni giorno. Il [repository](https://github.com/italia/anpr-opendata) pubblica anche un Data Package.
 - **Da migliorare:** la data è `07-11-2026`, non `2026-11-07`, e i nomi sono tutti in maiuscolo. Il Data Package dichiara `COD_ISTAT_COMUNE` come numero intero, il che farebbe perdere gli zeri, e chiama `DATA ELABORAZIONE` la colonna che nel file è `DATA_ELABORAZIONE`.
@@ -28,7 +28,7 @@ Senza schema `frictionless validate` guarda solo la struttura: più sotto c'è u
 
 [File CSV](https://www.provincia.avellino.it/cprvnvll/images/OpenData/Biblioteche/Biblioteche.csv), 124 righe, licenza CC BY 4.0. [Schema](../../risorse/schemi/avellino-biblioteche.schema.yaml).
 
-- **Fa bene:** virgola come separatore, UTF-8, un codice ISIL unico per ogni biblioteca, virgolette corrette dove serve (`"via Libertà, 1"`), nessun vuoto.
+- **Fa bene:** virgola come separatore, UTF-8, un codice ISIL (l'identificativo internazionale delle biblioteche) unico per ogni biblioteca, virgolette corrette dove serve (`"via Libertà, 1"`), nessun vuoto.
 - **Da migliorare:** l'indirizzo sta in una cella sola, il comune è senza codice Istat, non ci sono coordinate.
 
 ## Biblioteche, Comune di Prato

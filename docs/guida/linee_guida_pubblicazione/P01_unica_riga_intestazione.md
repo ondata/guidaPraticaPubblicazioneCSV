@@ -33,7 +33,7 @@ Non mettere titoli o note sopra l'intestazione.
 
 Le informazioni delle righe tolte vanno nel [dizionario dei dati](../dizionario_dati.md) o nella descrizione del dataset. L'anno, se serve, sta in una colonna.
 
-Non unire le celle dell'intestazione: ogni colonna ha una sola cella con il suo nome. Qui `indirizzo` è una cella unita sulle ultime tre colonne, e i nomi veri stanno nella riga sotto.
+Non unire le celle dell'intestazione: ogni colonna ha una sola cella con il suo nome. Qui `indirizzo` è una cella unita sulle ultime tre colonne, e i nomi veri stanno nella riga sotto. `dug` è la denominazione urbanistica generica: via, piazza e simili.
 
 !!! failure "Così no"
 
@@ -52,7 +52,7 @@ Non unire le celle dell'intestazione: ogni colonna ha una sola cella con il suo 
 
 ## Perché
 
-Un programma prende la prima riga come nomi di colonna e tutte le altre come dati. Con le due righe di titolo, `Biblioteche comunali` diventa il nome della prima colonna, le altre restano senza nome e la vera intestazione finisce fra i dati. Anche `spesa_acquisti_euro` diventa testo, perché contiene quella parola in mezzo ai numeri, e chi riusa il file deve ripulirlo a mano prima di fare una somma.
+Un programma prende la prima riga come nomi di colonna e tutte le altre come dati. Con le due righe di titolo, `Biblioteche comunali` diventa il nome della prima colonna, le altre restano senza nome e la vera intestazione finisce fra i dati. Anche la colonna degli importi diventa testo, perché fra i numeri c'è la parola `spesa_acquisti_euro`, e chi riusa il file deve ripulirlo a mano prima di fare una somma.
 
 Più righe di intestazione aiutano l'occhio di chi legge e ostacolano i programmi. Il CSV non conosce le celle unite: una cella unita lascia celle vuote accanto al nome, e per sapere come si chiama una colonna occorre leggere due righe.
 
@@ -62,9 +62,9 @@ I nomi di colonna descrivono i dati ma non ne fanno parte: un file con l'intesta
 
 ### File ereditati senza intestazione
 
-Meglio aggiungere l'intestazione. Se non puoi, devi dichiarare che manca: nessun programma può capirlo da solo, perché la prima riga è scritta come tutte le altre.
+Meglio aggiungere l'intestazione. Se non puoi, devi dichiarare che manca, nel dizionario dei dati e nella descrizione del dataset: nessun programma può capirlo da solo, perché la prima riga è scritta come tutte le altre.
 
-!!! note "Come dichiararlo"
+!!! note "Per chi pubblica uno schema"
 
     In CSVW con `"dialect": {"header": false}`, in Table Dialect con `"header": false`, oppure via HTTP con `Content-Type: text/csv;header=absent`. Chi pubblica uno schema CSVW può mettere nella proprietà `dc:description` anche le informazioni tolte dalle righe di titolo.
 

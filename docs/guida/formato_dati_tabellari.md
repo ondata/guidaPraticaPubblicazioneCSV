@@ -63,7 +63,7 @@ La RFC lascia aperte alcune scelte. Questa guida le chiude, e le regole ne spieg
 
 !!! warning "Attenzione al doppio clic"
 
-    Un file con la virgola, aperto con un doppio clic su un Excel che usa `;` come separatore di elenco, finisce tutto in una sola colonna. Il file non è sbagliato: va aperto come spiega la pagina su [Excel e LibreOffice](linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md).
+    Un file con la virgola, aperto con un doppio clic su un Excel che usa `;` come separatore di elenco, un'impostazione di Windows, finisce tutto in una sola colonna. Il file non è sbagliato: va aperto come spiega la pagina su [Excel e LibreOffice](linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md#aprire-un-csv-in-excel-senza-rovinarlo).
 
 ## Glossario
 
@@ -77,4 +77,6 @@ La RFC lascia aperte alcune scelte. Questa guida le chiude, e le regole ne spieg
 - **Dataset.** Uno o più file di dati pubblicati insieme, con la loro descrizione. In altri testi si chiama set di dati.
 - **Dizionario dei dati.** Il documento che spiega ogni colonna: cosa contiene, di che tipo è, in quale unità di misura.
 - **Schema.** Il dizionario dei dati scritto in un file che i programmi sanno leggere.
+- **Metadati.** Le informazioni che descrivono un dataset nel catalogo: per esempio titolo, descrizione e licenza.
+- **Risorsa.** Ciascun file di un dataset, nel linguaggio dei portali di dati.
 - **Dati aperti.** Dati che chiunque può usare e riusare, in inglese *open data*. La definizione italiana è nel [CAD, art. 1, comma 1, lettera l-ter](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art1!vig=).

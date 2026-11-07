@@ -83,7 +83,7 @@ Ogni riga finisce con caratteri invisibili, il ritorno a capo (`CR`, *carriage r
 - **DOS e Windows:** `CR` seguito da `LF`, cioè `CRLF` o `\r\n`.
 - **UNIX e sistemi simili, incluso macOS:** `LF`, cioè `\n`.
 
-La RFC 4180 indica `CRLF`. Questa differenza può dare problemi quando si scambiano, importano o esportano file CSV fra sistemi operativi diversi.
+La RFC 4180 indica `CRLF`. Se esporti da un foglio di calcolo non devi intervenire a mano. Se un programma legge male le righe, controlla questo aspetto.
 
 ## Come si fa nel foglio di calcolo
 

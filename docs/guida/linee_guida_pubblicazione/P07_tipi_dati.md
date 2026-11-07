@@ -35,7 +35,7 @@ Nomi delle biblioteche e importi sono inventati. In questa colonna alcune celle 
 
 Il CSV è testo e non contiene tipi: a dire che una colonna è numerica sono solo i valori scritti in modo coerente con il dizionario. Un foglio di calcolo legge `1250.00 euro` come testo e la somma lo salta: nel primo esempio la spesa risulta 8500.50 invece di 25151.25, senza alcun avviso.
 
-Una colonna coerente aumenta anche la probabilità che l'esportazione in altri formati riesca, e rende i dati più facili da usare.
+
 
 ## Casi particolari
 
@@ -62,4 +62,4 @@ I tipi hanno nomi diversi a seconda del formato: Table Schema ha i propri, CSVW 
 | Anno e mese | `2023-07` | `yearmonth` | `gYearMonth` |
 | Vero o falso | `true`, oppure valori dichiarati nello schema | `boolean` | `boolean` |
 
-Vedi anche: [Nomi di colonna chiari](P03_denominazione_colonne.md), [Se un valore manca, lascia la cella vuota](P05_trattamento_valori_sconosciuti.md), [Affianca una descrizione ai codici](P09_campi_codificati.md), [Scrivi i numeri con il punto decimale](P11_campi_tipo_numerico.md), [Scrivi le date come AAAA-MM-GG](P12_campi_tipo_data.md)
+Vedi anche: [3. Nomi di colonna chiari](P03_denominazione_colonne.md), [5. Se un valore manca, lascia la cella vuota](P05_trattamento_valori_sconosciuti.md), [9. Affianca una descrizione ai codici](P09_campi_codificati.md), [11. Scrivi i numeri con il punto decimale](P11_campi_tipo_numerico.md), [12. Scrivi le date come AAAA-MM-GG](P12_campi_tipo_data.md).

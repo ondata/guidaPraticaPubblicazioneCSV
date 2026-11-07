@@ -93,23 +93,20 @@ Si usa il numero di decimali necessario. Se l'unità è la stessa per tutta la c
 
 Se l'unità cambia da riga a riga, si usa una colonna dedicata, subito dopo quella del valore. I codici si possono prendere dalla tabella delle unità di misura delle [EU Vocabularies](https://op.europa.eu/en/web/eu-vocabularies/authority-tables).
 
-!!! info "UNECE Units of measure"
-
-    La Commissione economica per l'Europa delle Nazioni Unite (UNECE) gestisce il dataset «[UNECE Units of measure](https://datahub.io/core/unece-units-of-measure)», con i codici standard introdotti dalla Recommendation 20 per rappresentare le unità di misura.
-
 ### Codici fatti di cifre
 
-Un codice fatto di cifre è un testo, non un numero: non ci si fanno operazioni e gli zeri iniziali contano. Vale per codici Istat, CAP, codici fiscali e di attività. Dichiaralo come testo nel dizionario dei dati e controlla che gli zeri siano ancora lì prima di pubblicare, aprendo il file con un editor di testo: `082053`, non `82053`. I dettagli sono nella scheda sui [codici](P09_campi_codificati.md).
+I codici fatti di cifre sono testo, non numeri: vedi la scheda sui [codici](P09_campi_codificati.md).
 
 ## Come si fa nel foglio di calcolo
 
 !!! warning "Excel e il punto decimale"
 
-    Un Excel con impostazioni italiane può leggere `1234.56` come `123456`, senza avviso. Prima di aprire un CSV leggi [come aprire un CSV in Excel](Linee_guida_importazione_esportazione.md).
+    Un Excel con impostazioni italiane può leggere `1234.56` come `123456`, senza avviso. Prima di aprire un CSV leggi [come aprire un CSV in Excel](Linee_guida_importazione_esportazione.md#aprire-un-csv-in-excel-senza-rovinarlo).
 
-- Nel foglio, prima di esportare, usa il formato Generale per i numeri: le celle escono come sono visualizzate, quindi un formato con meno decimali del dato lo arrotonda.
-- Se il file esce con `;` e la virgola nei decimali, va [convertito con LibreOffice Calc](Linee_guida_importazione_esportazione.md) prima di pubblicarlo.
-- Nella conversione con LibreOffice Calc il formato `General` toglie gli zeri finali: `1250.00` diventa `1250`. Per gli importi usa il formato `0.00` indicato [nella stessa pagina](Linee_guida_importazione_esportazione.md), così la colonna conserva lo stesso numero di decimali.
-- Controlla il tipo di dato prima di pubblicare, nel programma che genera il file o con uno degli strumenti della [cassetta degli attrezzi](Cassetta_attrezzi.md).
+- Non riscrivere i numeri a mano nel foglio: lì restano nel formato del tuo computer. Il punto decimale riguarda il file CSV, e ci arriva con la [conversione](Linee_guida_importazione_esportazione.md#convertire-in-csv-con-libreoffice-calc).
+- Nel foglio, prima di esportare, usa il formato Generale per i numeri e un formato a 2 decimali per gli importi: le celle escono come sono visualizzate, quindi un formato con meno decimali del dato lo arrotonda.
+- Se il file esce con `;` e la virgola nei decimali, va [convertito con LibreOffice Calc](Linee_guida_importazione_esportazione.md#convertire-in-csv-con-libreoffice-calc) prima di pubblicarlo.
+- Nella conversione con LibreOffice Calc il formato `General` toglie gli zeri finali: `1250.00` diventa `1250`. Per gli importi usa il formato `0.00` indicato [nella stessa pagina](Linee_guida_importazione_esportazione.md#convertire-in-csv-con-libreoffice-calc), così la colonna conserva lo stesso numero di decimali.
+- Controlla il tipo di dato prima di pubblicare, nel programma che genera il file o con uno degli strumenti della [strumenti di controllo](Cassetta_attrezzi.md).
 
 Vedi anche: [7. Un solo tipo di dato per colonna](P07_tipi_dati.md), [9. Affianca una descrizione ai codici](P09_campi_codificati.md), [15. Scrivi le coordinate in gradi decimali](P15_campi_con_coordinate_geografiche.md).

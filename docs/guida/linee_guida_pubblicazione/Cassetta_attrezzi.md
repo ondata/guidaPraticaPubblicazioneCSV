@@ -7,7 +7,7 @@ title: Strumenti di controllo
 
 # Strumenti di controllo
 
-Prima di pubblicare un CSV conviene controllarlo. Questa pagina ha tre parti: gli strumenti che non chiedono il terminale, i comandi per chi lo usa, e le trappole, cioè i casi in cui uno strumento sbaglia senza dirlo.
+Prima di pubblicare un CSV conviene controllarlo. Gli strumenti possono anche sbagliare senza dirlo: i casi sono in fondo alla pagina.
 
 ## Senza terminale
 
@@ -16,11 +16,11 @@ Prima di pubblicare un CSV conviene controllarlo. Questa pagina ha tre parti: gl
 - **[LibreOffice Calc](https://www.libreoffice.org/download/download-libreoffice/).** Va installato ed è gratuito. Quando apre un CSV mostra una finestra in cui scegliere codifica, separatore e tipo di ogni colonna: impostando come testo le colonne di codici, telefoni e mesi, zeri e `+` restano. Quando salvi, controlla il set di caratteri: nella nostra prova proponeva ISO-8859-1, e va scelto UTF-8. La procedura è nella pagina su [Excel e LibreOffice](Linee_guida_importazione_esportazione.md).
 - **[OpenRefine](https://openrefine.org/download).** Va installato ed è gratuito. Serve a pulire i dati e a raggruppare i valori simili, per [scrivere la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md). I dati restano sul tuo computer. Non lo abbiamo provato sui file di questa guida.
 
-## Cosa vuoi fare, con quale comando
+## Per chi usa il terminale
 
 Questa parte è per chi usa il terminale. I comandi sono stati provati il 7 novembre 2026 su Linux, su varianti del [file delle biblioteche](../../risorse/esempi/biblioteche.csv), con DuckDB 2.0.0, Miller 6.22.0, Frictionless 5.21.0, csvkit 2.2.0 e daff 1.4.2. Non li abbiamo provati su Windows, salvo il comando di PowerShell.
 
-`export.csv` è l'esportazione di un gestionale italiano: separatore `;`, virgola decimale, codifica Windows-1252. Al loro posto metti i nomi dei tuoi file e delle tue colonne.
+`export.csv` è l'esportazione di un gestionale italiano: separatore `;`, virgola decimale, codifica Windows-1252. Al posto di questi nomi di esempio metti i nomi dei tuoi file e delle tue colonne.
 
 ### Installare gli strumenti
 
@@ -166,8 +166,8 @@ Gli strumenti possono sbagliare in silenzio. Questi sono i casi che abbiamo misu
 - **`iconv -f ISO-8859-1`.** Su un file di Excel rovina il simbolo `€` senza segnalare errori. Usa `WINDOWS-1252`.
 - **`awk` per contare le colonne.** Su una riga con `"chiusa, per lavori"` conta 3 valori invece di 2, perché non conosce le virgolette.
 - **`csvlook` e `csvstat`.** Deducono i tipi: con `csvlook`, `082053` diventa `82,053`, `12.450` diventa `12.45` e `300,00` diventa `30,000.000`. L'opzione `-I` evita queste conversioni. Anche con `-I`, però, `csvlook` mostra vuota la cella del comune di `None`, un comune vero.
-- **`csvclean`.** Il numero che riporta è quello del record, non della riga del file: dove `csvclean` dice `2`, la riga del file è la 3.
-- **Testi inseriti da terzi.** Se una colonna raccoglie segnalazioni o commenti, controlla i valori che iniziano con `=`, `+`, `-` o `@`: un foglio di calcolo può [interpretarli come formule](https://owasp.org/www-community/attacks/CSV_Injection). Nella nostra prova Excel ha trasformato `+39-0515270001` in un calcolo. Non è una regola per alterare i dati: un telefono scritto come `+390910000001` è corretto.
+- **`csvclean`.** Il numero che riporta è quello della riga di dati, non della riga del file: dove `csvclean` dice `2`, la riga del file è la 3.
+- **Testi inseriti da terzi.** Se una colonna raccoglie segnalazioni o commenti, controlla i valori che iniziano con `=`, `+`, `-` o `@`: un foglio di calcolo può [interpretarli come formule](https://owasp.org/www-community/attacks/CSV_Injection). Nella nostra prova Excel ha trasformato `+39-0515270001` in un calcolo. Non vanno cambiati i dati per questo: un telefono scritto come `+390910000001` è corretto.
 
 ```
 duckdb -csv -c "select biblioteca,note from read_csv('segnalazioni.csv',delim=',',header=true,all_varchar=true) where regexp_matches(note,'^[=+@-]')"

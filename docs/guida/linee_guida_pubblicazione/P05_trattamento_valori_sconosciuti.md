@@ -37,7 +37,7 @@ Il dizionario dice che cosa significa ogni cella vuota: per `prestiti`, per esem
 
 Un `0` al posto di un valore mancante cambia i conti di chi riusa i dati. Nel primo esempio la media dei prestiti è 8970, perché conta lo zero della biblioteca C. Nel secondo è 11960, calcolata sulle tre biblioteche con il dato.
 
-Un testo come `N/D` in una colonna di numeri può far leggere a un programma l'intera colonna come testo. E i valori sconosciuti non spiegati portano spesso a confusione: chi legge non sa se quel dato non esiste, non è stato rilevato o vale zero.
+Un testo come `N/D` in una colonna di numeri può far leggere a un programma l'intera colonna come testo. E chi trova un valore mancante senza spiegazione non sa se quel dato non esiste, non è stato rilevato o vale zero.
 
 ## Casi particolari
 

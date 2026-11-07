@@ -47,6 +47,10 @@ C'è un solo esempio, il [dataset delle biblioteche](risorse/esempi/biblioteche.
 - Acronimi sciolti alla prima occorrenza.
 - I titoli delle pagine non iniziano con un numero, a parte le schede.
 
+## Titoli
+
+La voce di menu di una scheda è una forma corta del titolo, per tenere il menu leggibile. Il titolo completo sta nell'intestazione della scheda e nell'elenco delle regole.
+
 ## Termini
 
 | Si scrive | Non si scrive |

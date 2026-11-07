@@ -89,7 +89,7 @@ Le celle vuote reggono solo finché nessuno cambia l'ordine delle righe. Ecco la
 
 Chi riusa i dati fa i conti sulla colonna. Con la riga `Totale` la somma di `spesa_acquisti_euro` dà 50302.50 invece di 25151.25, perché ogni importo viene contato due volte, e prima di ogni calcolo bisogna scoprire quali righe togliere.
 
-Il dettaglio è la scelta che lascia aperte tutte le strade. Dai prestiti di ogni semestre si ricavano quelli dell'anno, ma dal totale dell'anno non si risale ai semestri. Un file che contiene risultati od operazioni fatte sui dati è il risultato di un'analisi, non un file di dati in senso stretto.
+Il dettaglio è la scelta che lascia aperte tutte le strade. Dai prestiti di ogni semestre si ricavano quelli dell'anno, ma dal totale dell'anno non si risale ai semestri. Un file con totali, medie o altri calcoli è il risultato di un'analisi, non il dato di partenza.
 
 ## Casi particolari
 
@@ -97,4 +97,4 @@ Il dettaglio è la scelta che lascia aperte tutte le strade. Dai prestiti di ogn
 - **Colonne di totale.** La regola vale anche per le colonne: niente `prestiti_totale` accanto ai prestiti di ogni semestre.
 - **Totali utili a chi legge.** Se servono, offrili in un file a parte, accanto a quello di dettaglio.
 
-Vedi anche: [Una riga per ogni record](P02_singolo_record_riga.md), [Righe nuove, non colonne nuove](P04_strutture_dati_verticale_orizzontale.md), [Se un valore manca, lascia la cella vuota](P05_trattamento_valori_sconosciuti.md)
+Vedi anche: [2. Una riga per ogni record](P02_singolo_record_riga.md), [4. Righe nuove, non colonne nuove](P04_strutture_dati_verticale_orizzontale.md), [5. Se un valore manca, lascia la cella vuota](P05_trattamento_valori_sconosciuti.md).

@@ -1,56 +1,49 @@
 ---
-hide:
- - toc
-# - navigation
 title: Esportare un CSV da Excel o LibreOffice
 ---
 
-L'**esportazione diretta** in formato `CSV` da **Excel** o da **Libreoffice Calc** può causare **problemi** se le tabelle di dati contengono: celle unite, formule, macro, schede di espansione dati o altre caratteristiche derivate dall'applicazione delle funzionalità proprie di questi strumenti.
+# Esportare un CSV da Excel o LibreOffice
 
-Per **esportare correttamente** i dati tabellari dagli strumenti di elaborazione dei fogli di calcolo, è necessario considerare le seguenti **linee guida**:
+Prima di esportare, sistema il foglio:
 
-- il separatore di campo della guida è la virgola e il separatore decimale è il punto. Excel prende il separatore dalle impostazioni di Windows, non dal nome del formato: su un computer con impostazioni italiane il file può uscire con `;` e con la virgola nei decimali, e va [convertito](#convertire-in-csv-con-libreoffice-calc) prima di pubblicarlo;
-- non usare **celle unite**;
-- non lasciare **righe e/o colonne vuote** tra i dati;
-- controllare i **formati delle celle**: una formula esce con il valore calcolato, ma le celle escono come sono visualizzate, quindi un formato a 2 decimali arrotonda il dato e una data può uscire come `31/01/2023`. Prima di esportare, usa il formato Generale per i numeri, `aaaa-mm-gg` per le date e Testo per i codici.
+- **Celle unite:** non usarle.
+- **Righe e colonne vuote:** non lasciarne tra i dati.
+- **Formule:** nel CSV esce il valore calcolato.
+- **Formati delle celle:** le celle escono come sono visualizzate, quindi un formato a 2 decimali arrotonda il dato e una data può uscire come `31/01/2023`. Usa il formato Generale per i numeri, `aaaa-mm-gg` per le date e Testo per i codici.
 
-Una buona pratica per **verificare** che i **dati esportati** siano formattati correttamente in `CSV` è quella di **aprire il file in un editor di testo** come Blocco note: deve esserci una riga per record, le lettere accentate devono essere leggibili (`città`, non `cittÃ `) e gli zeri iniziali devono esserci ancora (`082053`, non `82053`).
+Questa guida usa la virgola come separatore e il punto per i decimali. Excel prende il separatore dalle impostazioni di Windows: con impostazioni italiane il file può uscire con `;` e con la virgola nei decimali, e va [convertito](#convertire-in-csv-con-libreoffice-calc) prima di pubblicarlo.
 
-## Aprire un CSV in Excel senza rovinarlo
-
-All'apertura di un CSV, Excel toglie gli zeri iniziali anche se il campo è tra virgolette, trasforma in date valori come `2023-07` e toglie il `+` dai numeri di telefono. Se Windows usa la virgola come separatore decimale, legge il punto come separatore delle migliaia: `1234.56` diventa `123456`, senza alcun avviso. Con un doppio clic, inoltre, un file separato da virgole può finire tutto in una sola colonna.
-
-Per questo il doppio clic è sconsigliato. La procedura che lascia i valori integri è questa. È stata provata su Excel con i menu in inglese: i nomi italiani vengono dalla documentazione di Microsoft in italiano, tra parentesi c'è quello inglese. L'opzione del passaggio 2 non compare nella documentazione italiana e resta in inglese.
-
-1. Dati > Da testo/CSV (Data > From Text/CSV), e scegli il file.
-2. In Rilevamento del tipo di dati (Data Type Detection) scegli Do not detect data types.
-3. Clicca Trasforma dati (Transform Data), poi Usa prima riga come intestazioni (Use First Row as Headers).
-4. In Passaggi applicati (Applied Steps) elimina l'ultimo passaggio, Tipo modificato (Changed Type).
-5. Clicca Chiudi & Carica (Close & Load).
-
-Tutte le colonne restano testo. Per farci calcoli, una colonna di numeri va convertita prima del passaggio 5, come spiega [la documentazione di Microsoft](https://support.microsoft.com/it-it/excel/set-a-locale-or-region-for-data-power-query): clic destro sull'intestazione della colonna, Cambia tipo > Uso delle impostazioni locali (Change Type > Using Locale); nella finestra Modifica tipo con impostazioni locali (Change Type with Locale) scegli il tipo [Numero decimale](https://support.microsoft.com/it-it/excel/add-or-change-data-types-power-query) e una lingua che usa il punto decimale, come l'inglese. Questa conversione non è stata provata per questa guida, e Microsoft scrive l'etichetta in modi diversi da una pagina all'altra.
+Dopo l'esportazione apri il file con un editor di testo, come Blocco note. Controlla che ci sia una riga per ogni record, che le lettere accentate siano leggibili (`città`, non `cittÃ `) e che gli zeri iniziali ci siano ancora (`082053`, non `82053`).
 
 ## Salvare un CSV da Excel
 
-- si raccomanda di **esportare** i dati tabellari in formato **`CSV`** utilizzando la **codifica standard dei caratteri `UTF-8`**;
-- il formato «CSV UTF-8» di Excel conserva tutti i caratteri e aggiunge il BOM. Meglio pubblicare il file senza BOM, ma un file che lo contiene non è sbagliato: per toglierlo vedi [più sotto](#togliere-il-bom);
-- il formato «CSV» semplice scrive in Windows-1252: `à` e `€` restano, mentre caratteri come `ł` o `日` diventano `?` e non si possono più recuperare;
-- se la versione di Excel utilizzata non salva direttamente il file di dati codificato come `UTF-8`, è consigliabile **utilizzare una procedura di conversione di formato** che garantisca questa codifica di caratteri, ad esempio con LibreOffice Calc.
+Usa File > Salva con nome e scegli il formato «CSV UTF-8».
+
+- **«CSV UTF-8»:** conserva tutti i caratteri e aggiunge il BOM (Byte Order Mark, un segno invisibile all'inizio del file). Meglio pubblicare il file senza BOM, ma un file che lo contiene non è sbagliato: per toglierlo vedi [più sotto](#togliere-il-bom).
+- **«CSV» semplice:** scrive in Windows-1252. `à` e `€` restano, mentre caratteri come `ł` o `日` diventano `?` e non si possono più recuperare. Meglio evitarlo.
+- **Se la tua versione di Excel non ha «CSV UTF-8»:** converti il file con [LibreOffice Calc](#convertire-in-csv-con-libreoffice-calc).
 
 ## Convertire in CSV con LibreOffice Calc
 
 Se il file esce da Excel con `;` e la virgola nei decimali, LibreOffice Calc lo converte senza usare il terminale. I nomi italiani vengono dal pacchetto di traduzione di LibreOffice e dalla sua guida, tra parentesi c'è quello inglese.
 
-1. File > Apri (File > Open), e scegli il file. Nella finestra Importazione testo (Text Import) imposta Tipo di carattere (Character set) su Unicode (UTF-8) e Impostazioni locali (Locale) su Italiano (Italia), e controlla che il separatore riconosciuto sia `;`. Nella guida di LibreOffice queste due voci si chiamano Set di caratteri e Lingua.
+1. File > Apri (File > Open), e scegli il file. Nella finestra Importazione testo (Text Import) imposta Tipo di carattere (Character set) su Unicode (UTF-8) e Impostazioni locali (Locale) su Italiano (Italia), e controlla che il separatore riconosciuto sia `;`.
 2. Nella griglia in basso clicca l'intestazione di ogni colonna con codici, telefoni o mesi, e imposta Tipo colonna (Column type) su Testo (Text). Per le date come `31/01/2023` scegli Data (GMA), cioè giorno, mese e anno (Date (DMY)). Lascia Standard le colonne con i numeri. Poi clicca OK.
-3. Seleziona una colonna con i numeri e apri Formato > Celle (Format > Cells), scheda Numeri (Numbers). Imposta Lingua (Language), che nella versione di LibreOffice in sviluppo diventa Impostazioni locali, su Inglese (USA), e Codice del formato (Format code) su `General`. Ripeti per ogni colonna con i numeri. Per gli importi, che devono avere sempre lo stesso numero di decimali, usa il codice `0.00` al posto di `General`. Per le colonne con le date, nella stessa scheda, imposta Codice del formato su `AAAA-MM-GG`.
+3. Imposta i formati in Formato > Celle (Format > Cells), scheda Numeri (Numbers), una colonna alla volta:
+    - **Numeri:** Lingua (Language) su Inglese (USA), Codice del formato (Format code) su `General`.
+    - **Importi:** come i numeri, ma con il codice `0.00`, perché devono avere sempre lo stesso numero di decimali.
+    - **Date:** Codice del formato su `AAAA-MM-GG`.
 4. File > Salva con nome (File > Save As), formato Testo CSV (.csv), spunta Modifica impostazioni filtro (Edit filter settings) e clicca Salva. Se chiede quale formato tenere, scegli Usa il formato Testo CSV (Use Text CSV Format).
 5. Nella finestra Esportazione file di testo (Export Text File) imposta Set di caratteri (Character set) su Unicode (UTF-8), perché il valore proposto può essere ISO-8859-1. Separatore di campo (Field delimiter) su `,`, Separatore di testo (String delimiter) su `"`, e lascia la spunta su Salva il contenuto della cella come mostrato (Save cell content as shown). Poi clicca OK.
 6. Apri il file con un editor di testo e controlla il risultato.
 
-Il risultato è un file con `,` e `.`: `1234,56` diventa `1234.56`, `31/01/2023` diventa `2023-01-31`, mentre zeri iniziali e `+` restano. L'importazione e il salvataggio sono stati provati sull'interfaccia di LibreOffice per Windows, in inglese, con il punto come separatore decimale. Il tipo Data (GMA) del passaggio 2, il passaggio 3 e la spunta del passaggio 5 sono stati provati solo con comandi, da riga di comando e con LibreOffice 25.2, impostato su Italiano (Italia): la voce di menu non è stata provata.
+Il risultato è un file con `,` e `.`: `1234,56` diventa `1234.56`, `31/01/2023` diventa `2023-01-31`, mentre zeri iniziali e `+` restano.
 
-Che cosa succede se salti un passaggio, nella stessa prova:
+!!! note "Come è stata provata"
+
+    L'importazione e il salvataggio sono stati provati sull'interfaccia di LibreOffice per Windows, con i menu in inglese e con il punto come separatore decimale. Formati delle colonne ed esportazione sono stati provati senza interfaccia, con LibreOffice 25.2 impostato su Italiano (Italia): le voci di menu italiane di quei passaggi vengono dal pacchetto di traduzione e non sono state cliccate. Nella guida di LibreOffice, Tipo di carattere e Impostazioni locali si chiamano Set di caratteri e Lingua; nella versione in sviluppo Lingua diventa Impostazioni locali.
+
+Che cosa succede se salti un passaggio:
 
 - **Senza il formato inglese sulle colonne con i numeri**: se LibreOffice è impostato in italiano, i numeri escono come `"1234,56"`, con la virgola e tra virgolette, con o senza la spunta del passaggio 5. Il file non rispetta la regola del punto decimale.
 - **Senza il formato `AAAA-MM-GG` sulle date**: la colonna esce nel formato della lingua di LibreOffice. In italiano resta `31/01/2023`; in inglese diventa `01/31/2023` e `01/12/2023` diventa `12/01/2023`, con giorno e mese scambiati. Se la colonna è lasciata Standard l'esito è lo stesso.
@@ -60,11 +53,29 @@ Che cosa succede se salti un passaggio, nella stessa prova:
 
 ## Togliere il BOM
 
-Il BOM (Byte Order Mark) è un segno invisibile all'inizio del file, che indica la codifica. Alcuni programmi lo leggono come parte del nome della prima colonna, e CSV Lint lo segnala come errore «Whitespace»: non è un problema dei dati (vedi la [cassetta degli attrezzi](Cassetta_attrezzi.md)).
+Alcuni programmi lo leggono come parte del nome della prima colonna, e CSV Lint lo segnala come errore «Whitespace»: non è un problema dei dati (vedi gli [strumenti di controllo](Cassetta_attrezzi.md)).
 
 Se il file ha già `,` e `.`, per togliere il BOM basta aprirlo e salvarlo con LibreOffice Calc senza cambiare i valori. Segui i passaggi qui sopra con due differenze: al passaggio 2 imposta su Testo tutte le colonne, e salta il passaggio 3. Il separatore da controllare al passaggio 1 è `,`.
 
-Provato da riga di comando con LibreOffice 25.2 su Linux: il file esce uguale a quello di partenza, senza BOM e con i fine riga cambiati da CRLF a LF. Anche la conversione da `;` a `,` qui sopra toglie il BOM.
+Anche la conversione da `;` a `,` qui sopra toglie il BOM.
+
+## Aprire un CSV in Excel senza rovinarlo
+
+All'apertura di un CSV, Excel toglie gli zeri iniziali anche se il valore è tra virgolette, trasforma in date valori come `2023-07` e toglie il `+` dai numeri di telefono. Se Windows usa la virgola come separatore decimale, legge il punto come separatore delle migliaia: `1234.56` diventa `123456`, senza alcun avviso. Con un doppio clic, inoltre, un file separato da virgole può finire tutto in una sola colonna.
+
+Per questo il doppio clic è sconsigliato. Questa procedura lascia i valori integri. Tra parentesi c'è il nome inglese del menu.
+
+1. Dati > Da testo/CSV (Data > From Text/CSV), e scegli il file.
+2. In Rilevamento del tipo di dati (Data Type Detection) scegli Do not detect data types.
+3. Clicca Trasforma dati (Transform Data), poi Usa prima riga come intestazioni (Use First Row as Headers).
+4. In Passaggi applicati (Applied Steps) elimina l'ultimo passaggio, Tipo modificato (Changed Type).
+5. Clicca Chiudi & Carica (Close & Load).
+
+Tutte le colonne restano testo. Per farci calcoli, una colonna di numeri va convertita prima del passaggio 5, come spiega [la documentazione di Microsoft](https://support.microsoft.com/it-it/excel/set-a-locale-or-region-for-data-power-query): clic destro sull'intestazione della colonna, Cambia tipo > Uso delle impostazioni locali (Change Type > Using Locale); nella finestra Modifica tipo con impostazioni locali (Change Type with Locale) scegli il tipo [Numero decimale](https://support.microsoft.com/it-it/excel/add-or-change-data-types-power-query) e una lingua che usa il punto decimale, come l'inglese. Questa conversione non è stata provata per questa guida.
+
+!!! note "Come è stata provata"
+
+    La procedura è stata provata su Excel con i menu in inglese, non su un Excel in italiano. I nomi italiani vengono dalla documentazione di Microsoft in italiano; l'opzione del passaggio 2 lì non compare e resta in inglese.
 
 ## Per chi usa il terminale
 
@@ -78,3 +89,7 @@ soffice --headless \
 ```
 
 Con un file separato da `;` il primo `44` diventa `59` e le colonne con i numeri vanno lasciate al tipo `1`. Questo comando però non assegna formati di cella: se il profilo di LibreOffice è in italiano, i decimali restano con la virgola, e le date vanno come spiegato sopra.
+
+Provato con LibreOffice 25.2 su Linux: il file esce uguale a quello di partenza, senza BOM e con i fine riga cambiati da CRLF (ritorno a capo più nuova riga, tipico di Windows) a LF (solo nuova riga).
+
+Nel comando, il token dopo `,0,false,` dice se i numeri restano numeri e quello dopo dice se salvare i valori come mostrati: `true` su quest'ultimo corrisponde alla spunta del passaggio 5.

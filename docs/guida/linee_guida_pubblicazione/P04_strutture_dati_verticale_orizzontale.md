@@ -7,13 +7,13 @@ title: Righe nuove, non colonne nuove
 
 # 4. Righe nuove, non colonne nuove
 
-Quando i dati crescono, per un anno o una categoria in più, aggiungi righe e non colonne. Meglio una colonna per ogni tipo di informazione e una riga per ogni osservazione.
+Quando i dati crescono, per un anno o una categoria in più, devi aggiungere righe e non colonne: una colonna per ogni tipo di informazione, una riga per ogni dato, per esempio i prestiti di una biblioteca in un anno.
 
 ## Così sì e così no
 
 I nomi delle biblioteche e i prestiti sono inventati.
 
-Una serie temporale cresce per righe, non per colonne: `anno` è una colonna. La forma larga si può offrire come file aggiuntivo di consultazione, accanto a quella lunga.
+Una serie temporale cresce per righe, non per colonne: `anno` è una colonna. La forma con una colonna per anno, detta larga, si può offrire come file aggiuntivo di consultazione, accanto a quella con una riga per anno, detta lunga.
 
 !!! failure "Così no"
 

@@ -33,7 +33,7 @@ Nomi delle biblioteche, date e orari di questa pagina sono inventati.
 
 ## Perché
 
-`03/04/2023` è il 3 aprile per chi legge in Italia e il 4 marzo per chi legge negli Stati Uniti, e `15-01-10` non dice nemmeno quale numero sia l'anno. `AAAA-MM-GG` ha un solo significato e si ordina da solo: anche ordinate come testo, le date risultano in ordine cronologico. Questo facilita l'analisi delle serie temporali.
+`03/04/2023` è il 3 aprile per chi legge in Italia e il 4 marzo per chi legge negli Stati Uniti, e `15-01-10` non dice nemmeno quale numero sia l'anno. `AAAA-MM-GG` ha un solo significato e si ordina da solo: anche ordinate come testo, le date risultano in ordine cronologico.
 
 ## Casi particolari
 
@@ -78,7 +78,7 @@ Indica lo scostamento dal tempo coordinato universale (UTC): `2026-07-23T16:34:0
 ## Come si fa nel foglio di calcolo
 
 - Prima di esportare, usa per le date il formato `aaaa-mm-gg`: le celle escono come sono visualizzate, e una data può uscire come `31/01/2023`.
-- Excel può trasformare `2023-07` in una data, `01/07/2023`, quando apre il file. Per evitarlo segui la procedura per [aprire un CSV in Excel](Linee_guida_importazione_esportazione.md). In LibreOffice Calc, nella finestra di importazione, imposta come Text le colonne con i mesi.
+- Excel può trasformare `2023-07` in una data, `01/07/2023`, quando apre il file. Per evitarlo segui la procedura per [aprire un CSV in Excel](Linee_guida_importazione_esportazione.md#aprire-un-csv-in-excel-senza-rovinarlo). In LibreOffice Calc, nella finestra di importazione, imposta come Testo (Text) le colonne con i mesi.
 - Prima di pubblicare, apri il file con un editor di testo e controlla che le date siano scritte come `1985-03-12`.
 
 Vedi anche: [4. Righe nuove, non colonne nuove](P04_strutture_dati_verticale_orizzontale.md), [7. Un solo tipo di dato per colonna](P07_tipi_dati.md), [8. Scrivi la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md).
