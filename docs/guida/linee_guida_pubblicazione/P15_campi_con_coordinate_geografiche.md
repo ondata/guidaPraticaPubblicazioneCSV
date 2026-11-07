@@ -1,44 +1,68 @@
 ---
 hide:
- - toc
+- toc
 # - navigation
+title: Scrivi le coordinate in gradi decimali
 ---
 
-# Campi con coordinate geografiche
+# 15. Scrivi le coordinate in gradi decimali
 
-Il formato più usato per rappresentare le **coordinate geografiche** sulle **mappe** è:
+Scrivi latitudine e longitudine in gradi decimali, con il punto, in due colonne separate chiamate `latitudine` e `longitudine`. Dichiara sempre il sistema di riferimento nel [dizionario dei dati](../dizionario_dati.md).
 
-  - la **latitudine** e la **longitudine** in **gradi decimali**, i cui valori dovrebbero essere presentati in **colonne separate**, con intestazioni di colonna da nominare: latitudine e longitudine, rispettivamente.
+## Così sì e così no
 
-Dichiara sempre il **sistema di riferimento** nel dizionario dei dati, con il suo codice EPSG: gli stessi numeri, senza sistema dichiarato, sono ambigui. Per le pubbliche amministrazioni italiane il sistema geodetico nazionale è ETRF2000, noto anche come RDN2008 (coordinate geografiche: EPSG:6706). Molte applicazioni web usano WGS84 (EPSG:4326): anche in questo caso va dichiarato. Rendi esplicito anche l'ordine con i nomi delle colonne: GeoJSON e il tipo `geopoint` di Table Schema usano longitudine, latitudine.
+Nomi delle biblioteche e coordinate di questa pagina sono inventati.
 
-Se il dato è territoriale, i metadati vanno documentati nel Repertorio nazionale dei dati territoriali (RNDT), come chiedono le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16).
+!!! failure "Così no"
 
-Da prendere in considerazione:
+    | biblioteca | latitudine | longitudine |
+    | --- | --- | --- |
+    | Biblioteca di esempio A | 38° 06' 56.52" | 13° 21' 41.40" |
+    | Biblioteca di esempio B | 44° 55' 58.80" | 7° 32' 24.00" |
+    | Biblioteca di esempio C | 45° 05' 42.00" | 10° 13' 22.80" |
+    | Biblioteca di esempio D | 41° 53' 42.00" | 12° 29' 42.00" |
 
-  - se è necessario specificare il **nome di un'entità** di cui si riportano le **coordinate**, si usano i **suffissi** "\_latitudine" e "\_longitudine";
-  - si possono usare convertitori di coordinate UTM o convertitori da gradi sessagesimali a gradi decimali[^1];
-  - per i **dati geografici diversi dai punti**, ad esempio linee o poligoni, si può usare una colonna con la geometria in **WKT** (*Well-Known Text*, [OGC Simple Features](https://www.ogc.org/standards/sfa/)), ad esempio `POLYGON((...))`, dichiarando il sistema di riferimento nel dizionario dei dati.
+!!! success "Così sì"
 
-È consigliabile, per facilitare il loro riutilizzo, ogni volta che si pubblicano dati geografici puntuali in formati come GeoPackage, GeoJSON, [KML](https://it.wikipedia.org/wiki/Keyhole_Markup_Language) o [SHP](https://it.wikipedia.org/wiki/Shapefile), accompagnare questi file con un file CSV in cui sono incluse le coordinate geografiche.
+    | biblioteca | latitudine | longitudine |
+    | --- | ---: | ---: |
+    | Biblioteca di esempio A | 38.1157 | 13.3615 |
+    | Biblioteca di esempio B | 44.9330 | 7.5400 |
+    | Biblioteca di esempio C | 45.0950 | 10.2230 |
+    | Biblioteca di esempio D | 41.8950 | 12.4950 |
+
+Le due tabelle indicano gli stessi punti: `38° 06' 56.52"` è uguale a 38 + 6/60 + 56.52/3600, cioè `38.1157`.
+
+## Perché
+
+Un programma di mappe disegna il punto leggendo due numeri. `38.1157` è un numero, `38° 06' 56.52"` è testo: chi riusa i dati deve prima convertirlo. In più il carattere `"` costringe a [mettere la cella tra virgolette](P10_campi_tipo_testo.md) e a raddoppiarlo.
+
+## Casi particolari
+
+### Sistema di riferimento
+
+Gli stessi numeri, senza sistema dichiarato, sono ambigui, come una lunghezza senza unità di misura. Dichiara il sistema nel dizionario dei dati con il suo codice EPSG (European Petroleum Survey Group, l'organizzazione che ha creato il registro dei sistemi di riferimento).
+
+Per le pubbliche amministrazioni italiane il sistema geodetico nazionale è ETRF2000, noto anche come RDN2008 (coordinate geografiche: EPSG:6706). Molte applicazioni web usano WGS84 (EPSG:4326): anche in questo caso va dichiarato.
+
+### Ordine di longitudine e latitudine
+
+Rendi esplicito l'ordine con i nomi delle colonne: GeoJSON e il tipo `geopoint` di Table Schema usano longitudine, latitudine.
+
+### Altri casi
+
+- **Più punti nella stessa riga**: se serve il nome di ciò che ha quelle coordinate, si usano i suffissi `_latitudine` e `_longitudine`, per esempio `sede_latitudine` e `sede_longitudine`.
+- **Coordinate in altri formati**: si possono usare convertitori di coordinate UTM (Universal Transverse Mercator) o convertitori da gradi sessagesimali a gradi decimali[^1].
+- **Linee e poligoni**: si può usare una colonna con la geometria in WKT (*Well-Known Text*, [OGC Simple Features](https://www.ogc.org/standards/sfa/)), per esempio `POLYGON((...))`, dichiarando il sistema di riferimento nel dizionario dei dati. Il WKT contiene virgole, quindi nel CSV la cella va tra virgolette.
+- **Dati territoriali**: i metadati vanno documentati nel Repertorio nazionale dei dati territoriali (RNDT), come chiedono le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16).
+- **Altri formati geografici**: se pubblichi dati puntuali in formati come GeoPackage, GeoJSON, [KML](https://it.wikipedia.org/wiki/Keyhole_Markup_Language) o [SHP](https://it.wikipedia.org/wiki/Shapefile), è consigliato affiancare un CSV con le coordinate, per facilitarne il riuso.
+
+## Come si fa nel foglio di calcolo
+
+Se hai gradi, primi e secondi in tre colonne, la formula è gradi + primi/60 + secondi/3600. Con i valori in `A2`, `B2` e `C2`: `=A2+B2/60+C2/3600`.
+
+Prima di pubblicare, controlla in un editor di testo che i decimali abbiano il punto: vedi [Scrivi i numeri con il punto decimale](P11_campi_tipo_numerico.md).
 
 [^1]: [Uno strumento per la conversione di coordinate](https://www.latlong.net/degrees-minutes-seconds-to-decimal-degrees)
 
-### Esempio:
-coordinate in gradi decimali, in due colonne.
-
-!!! failure "Cattiva prassi"
-
-
-    | rivenditore | latitudine  | longitudine |
-    | ----------- | ----------- | ----------- |
-    | chevrolet   | 38° 07' 00" | 13° 21' 40" |
-    | buick       | 45° 28' 00" | 9° 11' 24"  |
-
-
-!!! success "Buona prassi"
-
-    | rivenditore | latitudine | longitudine |
-    | ----------- | ---------: | ----------: |
-    | chevrolet   | 38.116667  | 13.361111   |
-    | buick       | 45.466667  | 9.190000    |
+Vedi anche: [10. Metti tra virgolette il testo che lo richiede](P10_campi_tipo_testo.md), [11. Scrivi i numeri con il punto decimale](P11_campi_tipo_numerico.md), [14. Dividi gli indirizzi in colonne](P14_campi_tipo_indirizzo_postale.md).

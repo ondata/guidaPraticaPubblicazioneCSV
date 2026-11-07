@@ -49,36 +49,36 @@ theme:
 
 nav:
     - Home: index.md
-    - Guida:
-      - guida/index.md
-      - Formato di dati tabellari: guida/formato_dati_tabellari.md
-      - Dizionario: guida/dizionario_dati.md
-      - Linee guida pubblicazione:
-          - guida/linee_guida_pubblicazione/index.md
-          - Singola riga intestazione: guida/linee_guida_pubblicazione/P01_unica_riga_intestazione.md
-          - Singolo record per riga: guida/linee_guida_pubblicazione/P02_singolo_record_riga.md
-          - Denominazione delle colonne: guida/linee_guida_pubblicazione/P03_denominazione_colonne.md
-          - Struttura dati verticale vs orizzontale: guida/linee_guida_pubblicazione/P04_strutture_dati_verticale_orizzontale.md
-          - Valori sconosciuti o nulli: guida/linee_guida_pubblicazione/P05_trattamento_valori_sconosciuti.md
-          - Subtotali e raggruppamenti: guida/linee_guida_pubblicazione/P06_subtotali_totali_raggruppamenti.md
-          - Tipi di dati: guida/linee_guida_pubblicazione/P07_tipi_dati.md
-          - Standardizzazione valore campi: guida/linee_guida_pubblicazione/P08_standardizzazione_valori_campi.md
-          - Campi codificati: guida/linee_guida_pubblicazione/P09_campi_codificati.md
-          - Campi di testo: guida/linee_guida_pubblicazione/P10_campi_tipo_testo.md
-          - Campi di tipo numerico: guida/linee_guida_pubblicazione/P11_campi_tipo_numerico.md
-          - Campi di tipo data: guida/linee_guida_pubblicazione/P12_campi_tipo_data.md
-          - Campi con numeri telefonici: guida/linee_guida_pubblicazione/P13_campi_tipo_numero_telefonico.md
-          - Campi con indirizzi postali: guida/linee_guida_pubblicazione/P14_campi_tipo_indirizzo_postale.md
-          - Campi con coordinate geografiche: guida/linee_guida_pubblicazione/P15_campi_con_coordinate_geografiche.md
-          - Tassonomie ed elenchi di codici comunemente usati: guida/linee_guida_pubblicazione/Tassonomie_elenchi_codici.md
-          - Esportare un CSV da Excel o LibreOffice: guida/linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md
-          - Considerazione sull'archiviazione dei file: guida/linee_guida_pubblicazione/Considerazioni_archiviazione.md
-          - Prima di pubblicare i dati personali: guida/linee_guida_pubblicazione/Dati_personali.md
-          - Cassetta degli attrezzi per i file CSV: guida/linee_guida_pubblicazione/Cassetta_attrezzi.md
-          - Esempi di CSV italiani: guida/linee_guida_pubblicazione/Esempi_dati_CSV.md
-          - Link utili: guida/linee_guida_pubblicazione/Link_utili.md
+    - Le regole:
+      - guida/linee_guida_pubblicazione/index.md
+      - "1. Una sola riga di intestazione": guida/linee_guida_pubblicazione/P01_unica_riga_intestazione.md
+      - "2. Una riga per ogni record": guida/linee_guida_pubblicazione/P02_singolo_record_riga.md
+      - "3. Nomi di colonna chiari": guida/linee_guida_pubblicazione/P03_denominazione_colonne.md
+      - "4. Righe nuove, non colonne nuove": guida/linee_guida_pubblicazione/P04_strutture_dati_verticale_orizzontale.md
+      - "5. Se un valore manca": guida/linee_guida_pubblicazione/P05_trattamento_valori_sconosciuti.md
+      - "6. Niente totali": guida/linee_guida_pubblicazione/P06_subtotali_totali_raggruppamenti.md
+      - "7. Un tipo di dato per colonna": guida/linee_guida_pubblicazione/P07_tipi_dati.md
+      - "8. Sempre allo stesso modo": guida/linee_guida_pubblicazione/P08_standardizzazione_valori_campi.md
+      - "9. Descrizione accanto ai codici": guida/linee_guida_pubblicazione/P09_campi_codificati.md
+      - "10. Testo tra virgolette": guida/linee_guida_pubblicazione/P10_campi_tipo_testo.md
+      - "11. Numeri": guida/linee_guida_pubblicazione/P11_campi_tipo_numerico.md
+      - "12. Date": guida/linee_guida_pubblicazione/P12_campi_tipo_data.md
+      - "13. Telefoni": guida/linee_guida_pubblicazione/P13_campi_tipo_numero_telefonico.md
+      - "14. Indirizzi": guida/linee_guida_pubblicazione/P14_campi_tipo_indirizzo_postale.md
+      - "15. Coordinate": guida/linee_guida_pubblicazione/P15_campi_con_coordinate_geografiche.md
+    - Pratica:
+      - Esportare da Excel o LibreOffice: guida/linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md
+      - Prima di pubblicare i dati personali: guida/linee_guida_pubblicazione/Dati_personali.md
+      - Strumenti di controllo: guida/linee_guida_pubblicazione/Cassetta_attrezzi.md
+      - Esempi di CSV italiani: guida/linee_guida_pubblicazione/Esempi_dati_CSV.md
+    - Approfondimenti:
+      - Perché questa guida: guida/index.md
+      - Cos'è un CSV: guida/formato_dati_tabellari.md
+      - Il dizionario dei dati: guida/dizionario_dati.md
+      - Codici e classificazioni: guida/linee_guida_pubblicazione/Tassonomie_elenchi_codici.md
+      - Come servire i file via web: guida/linee_guida_pubblicazione/Considerazioni_archiviazione.md
+      - Fonti: guida/linee_guida_pubblicazione/Link_utili.md
     - Partecipa: partecipa.md
-    - Note: note_redazione.md
     - Grazie: grazie.md
 
 extra:

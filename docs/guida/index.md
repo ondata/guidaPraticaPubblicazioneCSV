@@ -2,35 +2,40 @@
 hide:
  - toc
 # - navigation
-title: Introduzione
+title: Perché questa guida
 ---
 
-# Introduzione
+# Perché questa guida
 
-Oggi abbiamo sempre più fonti di dati a portata di mano. Paradossalmente, però, anche se i dati sono più accessibili che mai, le possibilità di riutilizzarli sono piuttosto limitate. I potenziali utenti di questi dati spesso affrontano molteplici barriere all'accesso e all'uso: bassa qualità dei dati, metadati poco descrittivi e standardizzati, licenze imprecise o formati inappropriati.
+Molti dati pubblicati si rivelano difficili da usare solo quando li si apre: colonne spostate, totali mescolati ai dettagli, date scritte in tre modi. Chi li riusa deve prima ripulirli, e a volte rinuncia. Il problema non riguarda il contenuto ma il modo in cui il file è stato preparato, e si può prevenire con poche regole.
 
-Queste difficoltà nel riutilizzare i dati sono menzionate in studi di riferimento come l'[Open Data Barometer](https://blog.okfn.org/files/2017/06/FinalreportTheStateofOpenGovernmentDatain2017.pdf), e sono in gran parte dovute alla convinzione iniziale dei produttori di dati che l'importante era pubblicare più informazioni possibili il più presto possibile, indipendentemente dalla loro qualità.
-
-Di conseguenza, i cataloghi di dati pubblicano decine di migliaia di set di dati con carenze di qualità che possono essere identificate solo dopo aver iniziato il processo di riutilizzo, generando un carico di pulizia e preparazione che in molti casi è insostenibile per l'utente. Questo produce frustrazione e perdita di interesse nel settore del riutilizzo, colpendo la credibilità delle istituzioni editoriali e abbassando notevolmente le aspettative di ritorno e generazione di valore dal riutilizzo dei dati aperti.
-
-Per tutte queste ragioni, e tenendo conto dell'attuale stato di maturità delle iniziative sui dati aperti, è il momento di rafforzare il miglioramento della qualità dei dati che vengono pubblicati. Questa guida aiuta chi pubblica dati a usare bene il formato CSV, il più diffuso nella pubblicazione di dati aperti.
+Questa guida è per chi in un ente ha i dati in un foglio di calcolo o in un gestionale, deve pubblicarli e non programma. Spiega [cos'è un CSV](formato_dati_tabellari.md), dà [15 regole](linee_guida_pubblicazione/index.md) per prepararlo e dice come [esportarlo da Excel o LibreOffice](linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md).
 
 ## Perché il CSV
 
-- La forma tabellare dei dati è la forma più comune di trasferimento e scambio di informazioni e viene prodotta in diversi modi: file di dati con colonne delimitate o campi di lunghezza fissa, fogli di calcolo, tabelle HTML o download di tabelle di dati SQL, tra gli altri.
+- La tabella è la forma più comune per scambiare dati, e si ottiene in molti modi: fogli di calcolo, esportazioni da gestionali e database, tabelle HTML.
 
 - Su [dati.gov.it](https://www.dati.gov.it/), il portale nazionale, oltre 45 mila dataset su circa 74 mila hanno una risorsa in CSV: è il formato più presente (novembre 2026).
 
 - Sul [portale europeo](https://data.europa.eu/) sono quasi 300 mila: più numerosi sono solo i servizi di mappa WMS e WFS (novembre 2026).
 
-- È conciso, facile da interpretare sia per le persone sia per le macchine e adatto alla struttura naturale della maggior parte dei dati. I dati sono disposti in forma di tabella, con i campi separati da un carattere separatore e i record da interruzioni di riga.
+- È conciso e si lascia leggere sia dalle persone sia dai programmi. I dati sono disposti in tabella: i valori sono separati da un carattere, le righe da un'interruzione di riga.
 
-- Nessun software specifico è richiesto per aprire i file CSV, basta usare qualsiasi editor di testo disponibile su tutti i sistemi operativi.
+- Per aprirlo non serve un programma specifico: basta un editor di testo, disponibile su tutti i sistemi operativi.
 
-## Ma...
+## Il suo limite
 
-- La semplicità di CSV ha il compromesso che il formato non include alcun meccanismo per indicare che tipo di dati sono in una colonna o se i valori in una colonna devono essere espressi in modo obbligatorio. È quindi incline a errori come quelli dei valori mancanti o la mescolanza di diversi tipi di dati all'interno di una colonna.
-- La soluzione a questi problemi risiede nell'applicazione di buone pratiche nella fase di preparazione del dataset, nell'articolazione delle misure di controllo della qualità e nel collegamento del file di dati tabulari con schemi che esprimono il modello dei dati attraverso i metadati.
+Un CSV non dice se una colonna contiene numeri o testo, né se un valore è obbligatorio. Per questo è facile che ci finiscano valori mancanti o tipi mescolati.
+
+Il rimedio sta in tre cose: preparare bene il file ([le regole](linee_guida_pubblicazione/index.md)), controllarlo ([gli strumenti](linee_guida_pubblicazione/Cassetta_attrezzi.md)) e accompagnarlo con una descrizione delle colonne ([il dizionario dei dati](dizionario_dati.md)).
+
+## Cosa copre la guida
+
+Le regole e gli strumenti di questa guida riguardano la forma del file: struttura, tipi, coerenza interna. Non dicono se i valori sono giusti: un file senza errori di formato può contenere un numero di prestiti sbagliato.
+
+Le Linee guida AgID distinguono sei [livelli di validazione](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-validazione), dalla coerenza con i requisiti strutturali al confronto con i dati di altri fornitori: i controlli descritti qui si fermano, in sostanza, ai primi due, cioè alla struttura e alla coerenza all'interno del dataset. Controllare il file non basta: AgID raccomanda di garantire almeno accuratezza, coerenza, completezza e attualità dei dati ([raccomandazione 8](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#racc-8)).
+
+Nel [modello a 5 stelle](https://ondata.github.io/linee-guida-opendata/allegato-A.html) il CSV arriva a 3 stelle, il livello minimo richiesto dalle Linee guida AgID. La quarta richiede RDF e SPARQL. [Valori uniformi](linee_guida_pubblicazione/P08_standardizzazione_valori_campi.md) e [codici standard](linee_guida_pubblicazione/P09_campi_codificati.md) non fanno salire di stella, ma preparano quel passaggio.
 
 ## La guida e le norme
 
@@ -52,3 +57,15 @@ Questa guida è una buona pratica volontaria, non un atto normativo. Il CSV non 
 **Buona pratica:** le regole di questa guida, che dettagliano ciò che le norme lasciano aperto. Dove riprendono l'[Allegato B delle Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv), sono indicazioni e non requisiti.
 
 **Quando il CSV non basta.** I dati dinamici e le serie di dati di elevato valore vanno resi disponibili anche attraverso API ([requisiti 5](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-5) e [7](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-7); [Regolamento di esecuzione (UE) 2023/138](https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:32023R0138)). Il CSV resta utile per lo scaricamento in blocco.
+
+## Come adottarla in un ente
+
+Quella che segue è una proposta, non una procedura prevista da una norma.
+
+Le Linee guida AgID raccomandano di affidare al Responsabile per la transizione digitale (RTD) un gruppo di lavoro sull'apertura dei dati ([raccomandazione 4](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#racc-4)): è il posto in cui assumere questa guida come riferimento interno, citandone una versione precisa, con numero e DOI, come spiegato in [Partecipa](../partecipa.md).
+
+La guida può entrare anche nei contratti. Il CAD chiede di prevedere nei capitolati che riguardano formazione, raccolta e gestione di dati clausole che ne consentano l'utilizzazione ([art. 52, comma 3](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art52!vig=)). Le Linee guida AgID raccomandano un approccio «open by design» fin dalla progettazione, con clausole contrattuali sulla proprietà del dataset e sulla sua fruibilità nel tempo, compreso l'uso di formati aperti ([par. 6.1.2](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#sec-buone-pratiche-approccio-open-by-design)).
+
+!!! note "Bozza di clausola, da adattare e da far rivedere a chi scrive i capitolati"
+
+    I dati tabellari prodotti nell'ambito del contratto sono consegnati in formato CSV conforme alla RFC 4180 e alle raccomandazioni dell'Allegato B delle Linee guida AgID (determinazione 183/2023), secondo le 15 regole della «Guida pratica alla pubblicazione di dati in CSV», versione [numero], e corredati di dizionario dei dati.

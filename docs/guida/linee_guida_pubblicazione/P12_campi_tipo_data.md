@@ -2,71 +2,83 @@
 hide:
 - toc
 # - navigation
-title: Campi di tipo data
+title: Scrivi le date come AAAA-MM-GG
 ---
 
-# Campi di tipo data
+# 12. Scrivi le date come AAAA-MM-GG
 
-Codificare le **date** utilizzando uno **standard** è fondamentale per facilitare l'analisi dei dati delle serie temporali. Lo **standard di riferimento** è quello **definito dalla norma [ISO8601](https://it.wikipedia.org/wiki/ISO_8601)**, che codifica i valori di data con il formato `AAAA-MM-GG` per le date e `AAAA-MM-GGTHH:MM:SS` per data e ora insieme.
+Le date devono seguire la norma [ISO 8601](https://it.wikipedia.org/wiki/ISO_8601): `AAAA-MM-GG` per le date, come `1985-03-12`, e `AAAA-MM-GGTHH:MM:SS` per data e ora insieme.
 
-## Date
+## Così sì e così no
 
-Nel caso delle date è utile utilizzare le seguenti raccomandazioni:
+Nomi delle biblioteche, date e orari di questa pagina sono inventati.
 
-- riempire di zeri i valori 0-9 per indicare `MM`, `GG`, `HH`, `MM` e `SS`, poiché ogni valore deve avere un numero fisso di cifre;
-- usare `-` come separatore per le date e `:` per le ore;
-- usare la lettera `T` come carattere separatore tra una data e un'ora;
-- usare la data completa, `AAAA-MM-GG`, quando la si conosce;
-- se il dato è mensile usare `AAAA-MM`, mai `AAAAMM`; se è annuale, `AAAA`;
-- non inventare il giorno che manca: l'ultimo giorno del mese si usa solo quando il dato si riferisce davvero a quel giorno, per esempio una consistenza al 31 dicembre;
-- le colonne `anno` e `mese` separate restano un'alternativa.
+!!! failure "Così no"
 
-## Ore
-
-Nel caso delle ore è utile utilizzare le seguenti raccomandazioni:
-
-- usare preferibilmente il formato 24 ore `HH:MM:SS` piuttosto che il formato 12 ore `HH:MM:SS AM/PM`;
-- usare un unico campo per includere i valori che rappresentano la data e l'ora combinate usando il formato `AAAA-MM-GGTHH:MM:SS`;
-- indicare lo scostamento da UTC: `2026-07-23T16:34:00+02:00`, oppure `2026-07-23T14:34:00Z`. Se tutti gli orari sono locali e non si può indicare lo scostamento, dichiararlo nel dizionario dei dati.
-
-### Esempio 1:
-
-campi con date in forma breve
-
-!!! failure "Cattiva prassi"
-
-    | marchio | data_lancio |
+    | biblioteca | data_apertura |
     | --- | --- |
-    | chevrolet chevelle malibu | 15 gennaio 1970 |
-    | buick skylark 320 | 23/07/1970 |
-    | plymouth satellite | 1 febbraio 1970 |
+    | Biblioteca di esempio A | 12 marzo 1985 |
+    | Biblioteca di esempio B | 30/09/2001 |
+    | Biblioteca di esempio C | 15-01-10 |
+    | Biblioteca di esempio D | 1 giugno 1998 |
 
-!!! success "Buona prassi"
+!!! success "Così sì"
 
-    | marchio | data_lancio |
+    | biblioteca | data_apertura |
     | --- | --- |
-    | chevrolet chevelle malibu | 1970-01-15 |
-    | buick skylark 320 | 1970-07-23 |
-    | plymouth satellite | 1970-02-01 |
+    | Biblioteca di esempio A | 1985-03-12 |
+    | Biblioteca di esempio B | 2001-09-30 |
+    | Biblioteca di esempio C | 2010-01-15 |
+    | Biblioteca di esempio D | 1998-06-01 |
 
+## Perché
 
-### Esempio 2:
+`03/04/2023` è il 3 aprile per chi legge in Italia e il 4 marzo per chi legge negli Stati Uniti, e `15-01-10` non dice nemmeno quale numero sia l'anno. `AAAA-MM-GG` ha un solo significato e si ordina da solo: anche ordinate come testo, le date risultano in ordine cronologico. Questo facilita l'analisi delle serie temporali.
 
-campi con date e orari in forma estesa
+## Casi particolari
 
-!!! failure "Cattiva prassi"
+### Come si scrive
 
-    | identificativo_veicolo | data_vendita |
+- **Zeri**: mese, giorno, ore, minuti e secondi hanno sempre due cifre: `03`, non `3`.
+- **Separatori**: `-` nelle date, `:` nelle ore, la lettera `T` tra data e ora.
+
+### Date incomplete
+
+Usa la data completa, `AAAA-MM-GG`, quando la conosci. Se il dato è mensile usa `AAAA-MM`, mai `AAAAMM`; se è annuale, `AAAA`.
+
+Non inventare il giorno che manca: l'ultimo giorno del mese si usa solo quando il dato si riferisce davvero a quel giorno, per esempio una consistenza al 31 dicembre. Le colonne `anno` e `mese` separate restano un'alternativa.
+
+| biblioteca | mese | prestiti |
+| --- | --- | ---: |
+| Biblioteca di esempio A | 2023-07 | 1040 |
+| Biblioteca di esempio A | 2023-08 | 615 |
+
+### Ore
+
+Meglio il formato 24 ore, `HH:MM:SS`, rispetto al formato 12 ore con AM e PM. Data e ora stanno in una sola colonna, nel formato `AAAA-MM-GGTHH:MM:SS`.
+
+Indica lo scostamento dal tempo coordinato universale (UTC): `2026-07-23T16:34:00+02:00`, oppure `2026-07-23T14:34:00Z`. Sono lo stesso istante: `+02:00` dice che l'orologio locale è due ore avanti rispetto a UTC, `Z` che l'orario è già in UTC. In Italia lo scostamento è `+01:00` in inverno e `+02:00` in estate. Se tutti gli orari sono locali e non puoi indicare lo scostamento, dichiaralo nel [dizionario dei dati](../dizionario_dati.md).
+
+!!! failure "Così no"
+
+    | biblioteca | ultimo_prestito |
     | --- | --- |
-    | 0003407G236 | 12 gennaio 1970, alle 15:10 |
-    | 0003507H003 | 23/07/1970 - 04:34 PM |
-    | 0003407G237 | 1-Febbraio-1970-12-23-34 |
+    | Biblioteca di esempio A | 29 dicembre 2023, alle 15:10 |
+    | Biblioteca di esempio B | 14/07/2023 - 04:34 PM |
+    | Biblioteca di esempio D | 1-Febbraio-2023-12-23-34 |
 
-!!! success "Buona prassi"
+!!! success "Così sì"
 
-    | identificativo_veicolo | data_vendita |
+    | biblioteca | ultimo_prestito |
     | --- | --- |
-    | 0003407G236 | 1970-01-12T15:10:00 |
-    | 0003507H003 | 1970-07-23T16:34:00 |
-    | 0003407G237 | 1970-02-01T12:23:34 |
-    
+    | Biblioteca di esempio A | 2023-12-29T15:10:00+01:00 |
+    | Biblioteca di esempio B | 2023-07-14T16:34:00+02:00 |
+    | Biblioteca di esempio D | 2023-02-01T12:23:34+01:00 |
+
+## Come si fa nel foglio di calcolo
+
+- Prima di esportare, usa per le date il formato `aaaa-mm-gg`: le celle escono come sono visualizzate, e una data può uscire come `31/01/2023`.
+- Excel può trasformare `2023-07` in una data, `01/07/2023`, quando apre il file. Per evitarlo segui la procedura per [aprire un CSV in Excel](Linee_guida_importazione_esportazione.md). In LibreOffice Calc, nella finestra di importazione, imposta come Text le colonne con i mesi.
+- Prima di pubblicare, apri il file con un editor di testo e controlla che le date siano scritte come `1985-03-12`.
+
+Vedi anche: [4. Righe nuove, non colonne nuove](P04_strutture_dati_verticale_orizzontale.md), [7. Un solo tipo di dato per colonna](P07_tipi_dati.md), [8. Scrivi la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md).

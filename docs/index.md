@@ -14,10 +14,10 @@ Se pubblichi dati in tabella per un Comune, un ente o un'associazione, questa gu
 Un CSV ([RFC 4180](https://datatracker.ietf.org/doc/html/rfc4180)) è un file di testo: una riga per ogni record, con i valori separati da un carattere, di solito la virgola.
 
 ```
-nome_comune,abitanti,cod_istat
-Palermo,636783,082053
-None,8028,001168
-Cella Dati,506,019028
+codice_istat_comune,comune,abitanti
+082053,Palermo,636783
+001168,None,8028
+019028,Cella Dati,506
 ```
 
 Il CSV si apre ovunque, ed è il formato più presente su [dati.gov.it](https://www.dati.gov.it/). Però non dice se una colonna contiene numeri o date, né se un valore è obbligatorio: queste regole servono a colmare quel vuoto.

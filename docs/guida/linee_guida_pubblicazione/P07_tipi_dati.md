@@ -2,44 +2,64 @@
 hide:
  - toc
 # - navigation
+title: Un solo tipo di dato per colonna
 ---
 
-# Tipi di dati
+# 7. Un solo tipo di dato per colonna
 
-Il CSV è testo e non contiene tipi: ogni valore va scritto in modo coerente con il [tipo di dati](https://www.w3.org/TR/xmlschema11-2/) dichiarato nel dizionario o nello schema.
+Ogni colonna deve contenere un solo tipo di dato: solo numeri, solo date oppure solo testo, come dichiarato nel [dizionario dei dati](../dizionario_dati.md). L'unità di misura deve stare nel nome della colonna, non nelle celle.
 
-| dato | tipo |
-| --- | --- |
-| Testo | string |
-| Numero | integer, decimal, float, double |
-| Data | date, time, dateTime, gYear, gYearMonth |
-|Vero/Falso| boolean (`true`/`false`, oppure valori dichiarati nello schema) |
+## Così sì e così no
 
-Da tenere in considerazione:
+Nomi delle biblioteche e importi sono inventati. In questa colonna alcune celle contengono un numero, altre un numero seguito da testo.
 
-- Utilizzare un formato corretto per i campi, in base al tipo di dati che contengono, aumenta la probabilità che un'esportazione in altri formati abbia successo e rende i dati meglio utilizzabili.
+!!! failure "Così no"
 
-### Esempio:
-tipi di dati in tre colonne (string, integer, integer).
+    | biblioteca | anno | spesa_acquisti |
+    | --- | ---: | --- |
+    | Biblioteca di esempio A | 2023 | 8200.50 |
+    | Biblioteca di esempio B | 2023 | 1250.00 euro |
+    | Biblioteca di esempio C | 2023 | 300.00 |
+    | Biblioteca di esempio D | 2023 | 15400.75 euro |
 
-!!! failure "Cattiva prassi"
+!!! success "Così sì"
 
-    | marca | consumo | potenza |
-    | --- | --- | --- |
-    | chevrolet chevelle malibu | 18 | 130 CV |
-    | buick skylark 320 | 15 mpg | 165 |
-    | plymouth satellite | 18 | 150 CV |
-    | amc rebel sst | 16 mpg | 150 CV |
-    | ford torino | 17 | 140 |
-
-!!! success "Buona prassi"
-
-    | marca | consumo_mpg | potenza_cv |
+    | biblioteca | anno | spesa_acquisti_euro |
     | --- | ---: | ---: |
-    | chevrolet chevelle malibu | 18 | 130 |
-    | buick skylark 320 | 15 | 165 |
-    | plymouth satellite | 18 | 150 |
-    | amc rebel sst | 16 | 150 |
-    | ford torino | 17 | 140 |
+    | Biblioteca di esempio A | 2023 | 8200.50 |
+    | Biblioteca di esempio B | 2023 | 1250.00 |
+    | Biblioteca di esempio C | 2023 | 300.00 |
+    | Biblioteca di esempio D | 2023 | 15400.75 |
 
-Se l'unità è la stessa per tutta la colonna, si indica nel nome (`consumo_mpg`, `potenza_cv`) e si ripete nel [dizionario dei dati](../dizionario_dati.md). Se pubblichi anche uno schema, descrivila lì: nel campo `description` di Table Schema puoi aggiungere dettagli che nel nome non ci stanno, come il codice dell'unità o la fonte. Se l'unità cambia da riga a riga, si usa una colonna dedicata subito dopo quella del valore.
+## Perché
+
+Il CSV è testo e non contiene tipi: a dire che una colonna è numerica sono solo i valori scritti in modo coerente con il dizionario. Un foglio di calcolo legge `1250.00 euro` come testo e la somma lo salta: nel primo esempio la spesa risulta 8500.50 invece di 25151.25, senza alcun avviso.
+
+Una colonna coerente aumenta anche la probabilità che l'esportazione in altri formati riesca, e rende i dati più facili da usare.
+
+## Casi particolari
+
+- **Unità uguale per tutta la colonna.** Si indica nel nome (`spesa_acquisti_euro`) e si ripete nel [dizionario dei dati](../dizionario_dati.md).
+- **Unità che cambia da riga a riga.** Si usa una colonna dedicata, subito dopo quella del valore.
+- **Valore mancante.** La cella vuota non cambia il tipo della colonna: `prestiti` resta una colonna di numeri interi anche se per una biblioteca il dato non c'è.
+- **Codici fatti di cifre.** Sono testo, non numeri: dichiara `082053` come testo.
+
+### Se pubblichi anche uno schema
+
+Uno schema è un file che descrive le colonne in una forma che i programmi sanno leggere. Descrivi lì anche l'unità: nel campo `description` di Table Schema puoi aggiungere dettagli che nel nome non ci stanno, come il codice dell'unità o la fonte.
+
+I tipi hanno nomi diversi a seconda del formato: Table Schema ha i propri, CSVW (CSV on the Web) usa quelli di [XML Schema](https://www.w3.org/TR/xmlschema11-2/). Nel dizionario basta la prima colonna della tabella.
+
+| Dato | Esempio | Table Schema | XML Schema |
+| --- | --- | --- | --- |
+| Testo | `Roma` | `string` | `string` |
+| Numero intero | `12450` | `integer` | `integer` |
+| Numero decimale | `8200.50` | `number` | `decimal`, `float`, `double` |
+| Data | `1985-03-12` | `date` | `date` |
+| Ora | `15:10:00` | `time` | `time` |
+| Data e ora | `1970-01-12T15:10:00` | `datetime` | `dateTime` |
+| Anno | `2023` | `year` | `gYear` |
+| Anno e mese | `2023-07` | `yearmonth` | `gYearMonth` |
+| Vero o falso | `true`, oppure valori dichiarati nello schema | `boolean` | `boolean` |
+
+Vedi anche: [Nomi di colonna chiari](P03_denominazione_colonne.md), [Se un valore manca, lascia la cella vuota](P05_trattamento_valori_sconosciuti.md), [Affianca una descrizione ai codici](P09_campi_codificati.md), [Scrivi i numeri con il punto decimale](P11_campi_tipo_numerico.md), [Scrivi le date come AAAA-MM-GG](P12_campi_tipo_data.md)

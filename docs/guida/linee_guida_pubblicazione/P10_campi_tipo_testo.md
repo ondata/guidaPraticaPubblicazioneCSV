@@ -1,52 +1,81 @@
 ---
 hide:
-- toc
+ - toc
 # - navigation
-title: Campi di tipo testo
+title: Metti tra virgolette il testo che lo richiede
 ---
 
-I campi di tipo testo non devono avere spazi iniziali o finali, se non significativi: secondo la RFC 4180 fanno parte del valore, mentre altri lettori li eliminano. Non si può contare sul comportamento di chi legge: gli spazi superflui si tolgono prima di pubblicare.
+# 10. Metti tra virgolette il testo che lo richiede
 
-## In generale:
-I campi di testo possono sempre essere delimitati da virgolette (`"`) e le applicazioni che eseguono operazioni di lettura dei dati analizzeranno e scarteranno tali delimitatori.
+Un testo che contiene una virgola, delle virgolette o un'interruzione di riga deve stare tra virgolette (`"`). Prima di pubblicare devi togliere gli spazi superflui all'inizio e alla fine di un testo.
 
-Da prendere in considerazione:
+## Così sì e così no
 
-se il valore di un campo contiene una qualsiasi stringa di testo che appartiene ad uno dei seguenti casi, deve essere trattato come indicato:
+I nomi delle biblioteche sono inventati. Nel file la riga è scritta così: `Palermo,Biblioteca di esempio A, sede centrale,90133`. La virgola dentro il nome viene letta come separatore, e chi apre il file vede una colonna in più.
 
-- se gli spazi bianchi all'inizio o alla fine di una stringa di testo sono significativi e devono essere preservati, il campo deve essere delimitato da virgolette (`"`);
-- se la stringa include una o più virgole il campo deve essere delimitato da doppi apici;
-- se la stringa include del testo quotato le virgolette (`"`) devono essere duplicate e il campo deve essere delimitato da virgolette (`"`);
-- se la stringa include delle interruzioni di riga il campo deve essere racchiuso tra virgolette (`"`).
+!!! failure "Così no"
 
-### Esempio 1:
-comportamento nell'esportazione di una tabella con valori contenenti spazi vuoti (iniziali o finali), quando si esporta la tabella come CSV, i valori vuoti scompaiono.
+    | comune | biblioteca | cap |  |
+    | --- | --- | --- | --- |
+    | Palermo | Biblioteca di esempio A | sede centrale | 90133 |
+    | None | Biblioteca di esempio B | 10060 |  |
 
-| marca | anno | cilindri |
-| --- | --- | ---: |
-| BBBBBBchevrolet chevelle malibu | 1970 | 8 |
-| BBBBBBbuick skylark 320BBBB | 1970 | 8 |
-| plymouth satellite | 1970 | 8 |
+!!! success "Così sì"
 
-Nell'esempio precedente, gli spazi bianchi sono visualizzati attraverso il carattere (`B`) a scopo illustrativo, gli spazi bianchi non sono visualizzati attraverso un carattere.
+    ```
+    comune,biblioteca,cap
+    Palermo,"Biblioteca di esempio A, sede centrale",90133
+    None,Biblioteca di esempio B,10060
+    ```
+
+    | comune | biblioteca | cap |
+    | --- | --- | --- |
+    | Palermo | Biblioteca di esempio A, sede centrale | 90133 |
+    | None | Biblioteca di esempio B | 10060 |
+
+Qui il simbolo `␣` indica uno spazio, che altrimenti non si vedrebbe.
+
+!!! failure "Così no"
+
+    | comune | biblioteca | cap |
+    | --- | --- | --- |
+    | Palermo | ␣␣Biblioteca di esempio A | 90133 |
+    | None | Biblioteca di esempio B␣␣ | 10060 |
+
+!!! success "Così sì"
+
+    | comune | biblioteca | cap |
+    | --- | --- | --- |
+    | Palermo | Biblioteca di esempio A | 90133 |
+    | None | Biblioteca di esempio B | 10060 |
+
+## Perché
+
+Se una virgola nel testo sposta i valori, `sede centrale` finisce nella colonna `cap` e il CAP in una colonna senza nome: tutta la riga è sbagliata, e chi riusa i dati può accorgersene tardi.
+
+Gli spazi sono più difficili da vedere. Secondo la RFC 4180 (il documento che descrive il formato CSV) fanno parte del valore, mentre altri programmi li eliminano: `␣␣Biblioteca di esempio A` e `Biblioteca di esempio A` possono risultare due biblioteche diverse oppure la stessa. Non si può contare sul comportamento di chi legge.
+
+## Casi particolari
+
+- **Virgolette facoltative.** Qualunque testo può stare tra virgolette, anche se non serve: i programmi di lettura le riconoscono e le scartano.
+- **Virgolette nel testo.** Si raddoppiano, e l'intero testo deve stare tra virgolette: `Biblioteca "Esempio" B` si scrive `"Biblioteca ""Esempio"" B"`.
+- **Interruzioni di riga.** Il testo deve stare tra virgolette, anche se nel file prosegue sulla riga dopo.
+- **Spazi che contano.** Se gli spazi all'inizio o alla fine di un testo sono significativi e devono restare, il testo deve stare tra virgolette: `"␣␣Biblioteca di esempio A"`.
+
+Questo file ha insieme virgole, virgolette e un'interruzione di riga, con tre righe di dati e tre colonne in ciascuna:
 
 ```
-marca,anno,cilindri
-"chevrolet chevelle malibu",1970,8
-"buick skylark 320",1970,8
-"plymouth satellite",1970,8
+comune,biblioteca,cap
+Palermo,"Biblioteca di esempio A, sede centrale",90133
+None,"Biblioteca ""Esempio"" B",10060
+Roma,"Biblioteca di esempio D
+sala ragazzi",00184
 ```
 
-### Esempio 2:
-comportamento dell'importazione di un file CSV con valori contenenti spazi vuoti (iniziali o finali) e caratteri quotati.
+## Come si fa nel foglio di calcolo
 
-```
-campo1,campo2,campo3
-"valore del campo1","   valore del campo2 con spazi iniziali","valore del campo ""3"" che include un dato dentro doppie virgolette"
-```
+Nelle celle scrivi il testo normalmente, senza virgolette: quando salvi in CSV, Excel e LibreOffice le aggiungono da soli dove servono per il separatore usato, e raddoppiano quelle interne. Per Excel questo significa che, se salva con il `;`, una virgola nel testo resta senza virgolette; la pagina [Esportare un CSV da Excel o LibreOffice](Linee_guida_importazione_esportazione.md) spiega come arrivare alla virgola come separatore.
 
-| campo1 | campo2 | campo3 |
-| --- | --- | --- |
-| valore del campo1 | ␣␣␣valore del campo2 | valore del campo "3" che include un dato dentro doppie virgolette |
+Per togliere gli spazi superflui in Excel c'è la funzione `ANNULLA.SPAZI` (`TRIM` con i menu in inglese). Riduce a uno anche gli spazi ripetuti dentro il testo.
 
-Qui sopra, gli spazi bianchi sono visualizzati attraverso il carattere (`␣`) a scopo illustrativo, gli spazi bianchi non sono visualizzati attraverso un carattere.
+Vedi anche: [Una riga per ogni record](P02_singolo_record_riga.md), [Scrivi la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md), [Dividi gli indirizzi in colonne](P14_campi_tipo_indirizzo_postale.md)

@@ -13,21 +13,21 @@ Una sola tabella per file, separatore virgola, codifica UTF-8, e un [dizionario 
 
 | N. | Regola | Così sì | Così no |
 | --- | --- | --- | --- |
-| 1 | [Una sola riga di intestazione, nella prima riga](P01_unica_riga_intestazione.md) | `marca,anno,vendite` | titolo sopra i nomi delle colonne |
-| 2 | [Una riga per ogni record, con lo stesso numero di colonne](P02_singolo_record_riga.md) | `Palermo,636783` | un record spezzato su due righe |
-| 3 | [Nomi di colonna brevi, minuscoli, senza spazi né accenti](P03_denominazione_colonne.md) | `data_lancio` | `Data di lancio`, `Cil.` |
-| 4 | [Una colonna per variabile: i dati nuovi vanno in righe](P04_strutture_dati_verticale_orizzontale.md) | `marca,anno,domanda` | `marca,1972,1973` |
-| 5 | [Se un valore manca, cella vuota e spiegazione nel dizionario](P05_trattamento_valori_sconosciuti.md) | `Palermo,,2023` | `NA`, oppure `0` al posto del vuoto |
+| 1 | [Una sola riga di intestazione, nella prima riga](P01_unica_riga_intestazione.md) | `comune,anno,prestiti` | titolo sopra i nomi delle colonne |
+| 2 | [Una riga per ogni record, con lo stesso numero di colonne](P02_singolo_record_riga.md) | `Palermo,2023,12450` | un record spezzato su due righe |
+| 3 | [Nomi di colonna chiari, meglio minuscoli e senza spazi né accenti](P03_denominazione_colonne.md) | `data_apertura` | `Data di apertura`, `Ap.` |
+| 4 | [Righe nuove, non colonne nuove, quando i dati crescono](P04_strutture_dati_verticale_orizzontale.md) | `comune,anno,prestiti` | `comune,2022,2023` |
+| 5 | [Se un valore manca, cella vuota e spiegazione nel dizionario](P05_trattamento_valori_sconosciuti.md) | `Cella Dati,2023,` | `NA`, oppure `0` al posto del vuoto |
 | 6 | [Niente totali e subtotali](P06_subtotali_totali_raggruppamenti.md) | solo righe di dettaglio | una riga `Totale` |
-| 7 | [Un solo tipo di dato per colonna, unità nel nome](P07_tipi_dati.md) | `potenza_cv` con `130` | `130 CV` |
+| 7 | [Un solo tipo di dato per colonna, unità nel nome](P07_tipi_dati.md) | `spesa_acquisti_euro` con `300.00` | `300 euro` |
 | 8 | [La stessa cosa sempre allo stesso modo, meglio con un codice standard](P08_standardizzazione_valori_campi.md) | `Reggio nell'Emilia`, `035033` | `Reggio Emilia`, `35033` |
-| 9 | [Se usi un codice, affiancagli la descrizione](P09_campi_codificati.md) | `M,Manuale` | solo `M` |
-| 10 | [Testo con separatori, a capo o virgolette: tra virgolette](P10_campi_tipo_testo.md) | `"via Libertà, 1"` | `via Libertà, 1` |
-| 11 | [Numeri con il punto decimale, senza migliaia né simboli](P11_campi_tipo_numerico.md) | `1230.50` | `1.230,50`, `€50` |
-| 12 | [Date nel formato anno-mese-giorno](P12_campi_tipo_data.md) | `2019-09-30` | `30/09/19` |
-| 13 | [Telefoni meglio in formato internazionale, senza separatori](P13_campi_tipo_numero_telefonico.md) | `+390515270001` | `051 527 0001` |
-| 14 | [Indirizzi divisi in colonne](P14_campi_tipo_indirizzo_postale.md) | `Via,Roma,10` | `Via Roma n° 10, Milano` |
-| 15 | [Latitudine e longitudine in due colonne, in gradi decimali, con il sistema di riferimento dichiarato](P15_campi_con_coordinate_geografiche.md) | `38.1157` | `43° 14' 04"` |
+| 9 | [Se usi un codice, affiancagli la descrizione](P09_campi_codificati.md) | `082053,Palermo` | solo `082053` |
+| 10 | [Testo con virgole, a capo o virgolette: tra virgolette](P10_campi_tipo_testo.md) | `"Biblioteca, sede centrale"` | `Biblioteca, sede centrale` |
+| 11 | [Numeri con il punto decimale, senza migliaia né simboli](P11_campi_tipo_numerico.md) | `8200.50` | `8.200,50`, `€ 8200` |
+| 12 | [Date nel formato anno-mese-giorno](P12_campi_tipo_data.md) | `1985-03-12` | `12/03/85` |
+| 13 | [Telefoni meglio in formato internazionale, senza separatori](P13_campi_tipo_numero_telefonico.md) | `+390910000001` | `091 000 0001` |
+| 14 | [Indirizzi meglio divisi in colonne](P14_campi_tipo_indirizzo_postale.md) | `Via,Roma,10` | `Via Roma n. 10, Palermo` |
+| 15 | [Latitudine e longitudine in due colonne, in gradi decimali, con il sistema di riferimento dichiarato](P15_campi_con_coordinate_geografiche.md) | `38.1157` | `38° 06' 57"` |
 
 </div>
 

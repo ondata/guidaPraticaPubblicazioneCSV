@@ -2,90 +2,91 @@
 hide:
  - toc
 # - navigation
-title: Singolo record per riga
+title: Una riga per ogni record
 ---
 
-# Singolo record per riga
+# 2. Una riga per ogni record
 
-Le tabelle di dati contengono osservazioni sui dati e ogni osservazione o *record* di dati deve occupare una riga. In ogni *record* ci deve essere esattamente lo stesso numero di campi.
+Ogni riga del file, detta anche record, deve descrivere una sola cosa, e ogni cosa descritta deve stare in una sola riga. Tutte le righe devono avere lo stesso numero di colonne.
 
-Da prendere in considerazione:
+## Così sì e così no
 
-- Ogni *record* o riga è contrassegnato da una sequenza di uno o più caratteri invisibili, chiamati caratteri di controllo, il ritorno a capo (`CR`, *carriage return*) e l'avanzamento di linea (`LF`, *line feed*). Sfortunatamente, i sistemi operativi li rappresentano usando sequenze diverse:
-    - Tutte le versioni DOS / Microsoft Windows rappresentano i fine riga come `CR` seguito da `LF`, cioè `CRLF` ovvero `\r\n`.
-    - UNIX e sistemi operativi simili, incluso MacOS, rappresentano le terminazioni di riga come LF ovvero `\n`.
+I nomi delle biblioteche e i telefoni sono inventati.
 
-Il documento di riferimento `RFC4180`[^1] per i dati in formato CSV riporta che le righe devono terminare con caratteri di controllo `CRLF`. Pertanto, è importante essere consapevoli che questo, può causare alcuni problemi quando si scambiano, importano o esportano file CSV provenienti da diversi sistemi operativi.
+Qui i dati di una biblioteca sono spezzati su due righe.
 
-L'esistenza di caratteri di ritorno a capo `CR` all'interno di un valore di campo - per esempio campi che contengono più righe o commenti - impone che questo debba essere racchiuso tra virgolette (`"`).
+!!! failure "Così no"
 
-[^1]: [Common Format and MIME Type for Comma-Separated Values (CSV) Files](https://datatracker.ietf.org/doc/html/rfc4180)
+    | comune | biblioteca | telefono | data_apertura |
+    | --- | --- | --- | --- |
+    | Palermo | Biblioteca di esempio A | +390910000001 | 1985-03-12 |
+    | Roma | Biblioteca di esempio D |  |  |
+    |  |  | +390600000004 | 1998-06-01 |
 
-### Esempio 1:
-importare un file CSV contenente spazi vuoti e/o ritorni a capo in varie circostanze.
+!!! success "Così sì"
 
-#### Caso 1:
-importare un CSV con valori di campo che includono spazi bianchi tra virgolette e separati da `,`.
+    | comune | biblioteca | telefono | data_apertura |
+    | --- | --- | --- | --- |
+    | Palermo | Biblioteca di esempio A | +390910000001 | 1985-03-12 |
+    | Roma | Biblioteca di esempio D | +390600000004 | 1998-06-01 |
 
+Vale anche al contrario: due biblioteche non stanno nella stessa riga.
 
-```
-marca,anno,cilindri
-"chevrolet chevelle malibu",1970,8
-"buick skylark 320",1970,8
-"plymouth satellite",1970,8
-```
+## Perché
 
-:material-arrow-down:
+Chi riusa i dati conta e filtra per righe. Nel primo esempio le biblioteche risultano tre invece di due, e chi filtra le righe di Roma perde il telefono e la data di apertura.
 
-!!! success "Importazione corretta"
+## Casi particolari
 
-    |marca|anno|cilindri|
-    |-------|----|--------|
-    |chevrolet chevelle malibu|1970|8|
-    |buick skylark 320|1970|8|
-    |plymouth satellite|1970|8|
+### Virgole, virgolette e a capo dentro un valore
 
-#### Caso 2:
-importare un CSV con valori di campo che includono spazi vuoti e un carattere CR non racchiuso tra virgolette.
+Un valore deve stare tra virgolette (`"`) se contiene il separatore, delle virgolette o un'interruzione di riga. Per gli altri valori le virgolette sono facoltative. Le virgolette dentro un valore si scrivono raddoppiate (`""`). Sono le regole della [RFC 4180](https://datatracker.ietf.org/doc/html/rfc4180), il documento di riferimento per il formato CSV.
 
-```
-marca,anno,cilindri
-chevrolet chevelleCRmalibu,1970,8
-buick skylark 320,1970,8
-plymouth satellite,1970,8
-```
+Questa tabella
 
-:material-arrow-down:
+| comune | biblioteca | prestiti |
+| --- | --- | --- |
+| Palermo | Biblioteca di esempio A<br>Sala ragazzi | 12450 |
+| Roma | Biblioteca di esempio D, sede centrale | 20310 |
+| Cella Dati | Biblioteca "di esempio" C |  |
 
-!!! error "Importazione problematica"
+nel file CSV si scrive così:
 
-    |marca|anno|cilindri|
-    |-------|----|--------|
-    |chevrolet chevelle| | |
-    |malibu|1970|8|
-    |buick skylark 320|1970|8|
-    |plymouth satellite|1970|8|
-
-Nell'esempio precedente, il carattere di controllo *carriage return* (`CR`) è incluso a scopo illustrativo. Entrambi i caratteri `CR` e `LF` non sono visibili.
-
-**Esempio 2**: comportamento nell'esportazione di una tabella con campi che includono spazi vuoti o interruzioni di riga nei loro valori.
-
-I valori che contengono separatori, virgolette o interruzioni di riga devono stare tra virgolette; per gli altri è facoltativo.
-
-|campo_1|campo_2|campo_3|
-|-------|-------:|-------:|
-|aaaaa|Bbbb<br>Bbb<br>Bbbb<br>Bb|ccccc|
-|Aa aa|Bb,bb|c|
-|Aaa<br>aaaaa|Bbbbb bbb bbb bbb bb|Ccc<br>ccccc|
-
-:material-arrow-down:
-
-```
-campo_1,campo_2,campo_3CRLF
-aaaaa,"BbbbCRLFBbbCRLFBbbbCRLFBb",cccccCRLF
-Aa aa,"Bb,bb",cCRLF
-"AaaCRLFaaaaa",Bbbbb bbb bbb bbb bb,"CccCRLFccccc"CRLF
+```csv
+comune,biblioteca,prestiti
+Palermo,"Biblioteca di esempio A
+Sala ragazzi",12450
+Roma,"Biblioteca di esempio D, sede centrale",20310
+Cella Dati,"Biblioteca ""di esempio"" C",
 ```
 
-I caratteri di controllo di fine linea (`LF`) e di ritorno a capo (`CR`) sono inclusi a scopo illustrativo, poiché non sono visibili.
+Il file ha cinque righe di testo, ma tre righe di dati: l'a capo tra virgolette fa parte del valore.
 
+Senza virgolette, chi legge il file vede una riga finita a metà e una riga nuova che comincia con il resto del valore.
+
+!!! failure "Così no: l'a capo senza virgolette"
+
+    | comune | biblioteca | prestiti |
+    | --- | --- | --- |
+    | Palermo | Biblioteca di esempio A |  |
+    | Sala ragazzi | 12450 |  |
+    | Roma | Biblioteca di esempio D, sede centrale | 20310 |
+
+### Spazi
+
+Secondo la RFC 4180 gli spazi fanno parte del valore. Un valore con spazi in mezzo alle parole non ha bisogno di virgolette: `Biblioteca di esempio A` e `"Biblioteca di esempio A"` sono lo stesso valore. Per gli spazi all'inizio e alla fine vedi la [scheda 10](P10_campi_tipo_testo.md).
+
+### Caratteri di fine riga
+
+Ogni riga finisce con caratteri invisibili, il ritorno a capo (`CR`, *carriage return*) e l'avanzamento di linea (`LF`, *line feed*). I sistemi operativi li scrivono in modo diverso:
+
+- **DOS e Windows:** `CR` seguito da `LF`, cioè `CRLF` o `\r\n`.
+- **UNIX e sistemi simili, incluso macOS:** `LF`, cioè `\n`.
+
+La RFC 4180 indica `CRLF`. Questa differenza può dare problemi quando si scambiano, importano o esportano file CSV fra sistemi operativi diversi.
+
+## Come si fa nel foglio di calcolo
+
+Non scrivere le virgolette a mano. Il programma le aggiunge da solo quando esporta il CSV e raddoppia quelle interne, come abbiamo provato con LibreOffice 25.2. Se le scrivi tu dentro la cella, diventano parte del valore.
+
+Vedi anche: [1. Una sola riga di intestazione](P01_unica_riga_intestazione.md), [4. Righe nuove, non colonne nuove](P04_strutture_dati_verticale_orizzontale.md), [10. Metti tra virgolette il testo che lo richiede](P10_campi_tipo_testo.md).

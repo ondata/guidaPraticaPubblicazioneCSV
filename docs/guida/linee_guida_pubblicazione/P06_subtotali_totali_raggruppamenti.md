@@ -2,83 +2,99 @@
 hide:
  - toc
 # - navigation
+title: Niente totali e subtotali
 ---
 
-# Subtotali, totali o raggruppamenti
+# 6. Niente totali e subtotali
 
-Nessuna riga o colonna con totali o subtotali dovrebbe essere inclusa, a meno che non sia assolutamente necessario, mantenendo il massimo livello possibile di disaggregazione dei dati.
+Il file deve contenere solo righe di dettaglio, tutte allo stesso livello, senza righe o colonne di totali e subtotali. Ogni riga deve riportare tutti i suoi valori, senza celle lasciate vuote per raggruppare le righe.
 
-Da prendere in considerazione:
+## Così sì e così no
 
-- un file contenente risultati e/o operazioni eseguite sui dati non può essere considerato un file di dati in senso stretto, ma appunto un file contenente i risultati di una determinata analisi dei dati;
-- quando si includono righe o colonne con valori di dati aggregati, per esempio come risultato di un'operazione, è molto difficile e a volte impossibile recuperare i dati disaggregati;
-- un set di dati deve essere coerente al livello di granularità dei dati che contiene. Se il livello di granularità è impostato secondo una certa dimensione, per esempio le vendite mensili, i dati con un altro livello di granularità, per esempio le vendite annuali, non dovrebbero essere mescolati con i precedenti;
-- un livello superiore di granularità può sempre essere ottenuto da un livello inferiore, ma non viceversa. Seguendo l'esempio, è possibile ricavare le vendite annuali dai dati di vendita mensili, ma non è possibile recuperare i dati di vendita mensili dalle vendite annuali;
-- il raggruppamento di righe relative a un'entità, lasciando alcune celle vuote senza ripetere l'entità per tutte le righe del raggruppamento, dovrebbe essere evitato. Questo problema è comune e può causare errori quando si cambia l'ordine originale delle righe.
+Nomi delle biblioteche e numeri sono inventati, i codici Istat e i nomi dei comuni sono veri. Il primo esempio mostra una riga di totale.
 
-### Esempio 1:
-vendite semestrali di automobili (in migliaia), con subtotali (mix di livelli di granularità) e senza subtotali (stesso livello di granularità).
+!!! failure "Così no"
 
-!!! failure "Cattiva prassi"
-
-    | marca | anno | vendite_semestrali |
-    | --- | --- | --- |
-    | chevrolet chevelle malibu | 1998 | 2.5 |
-    | chevrolet chevelle malibu | 1998 | 2.63 |
-    | Subtotale annuale | 1998 | 5.13 |
-    | buick skylark 320 | 1999 | 3.4 |
-    | buick skylark 320 | 1999 | 3.57 |
-    | Subtotale annuale | 1999 | 6.97 |
-    | plymouth satellite | 2000 | 2.4 |
-    | plymouth satellite | 2000 | 2.52 |
-    | Subtotale annuale | 2000 | 4.92 |
-
-!!! success "Buona prassi"
-
-    | marca | anno | semestre | vendite |
+    | comune | biblioteca | anno | spesa_acquisti_euro |
     | --- | --- | --- | ---: |
-    | chevrolet chevelle malibu | 1998 | 1 | 2.5 |
-    | chevrolet chevelle malibu | 1998 | 2 | 2.63 |
-    | buick skylark 320 | 1999 | 1 | 3.4 |
-    | buick skylark 320 | 1999 | 2 | 3.57 |
-    | plymouth satellite | 2000 | 1 | 2.4 |
-    | plymouth satellite | 2000 | 2 | 2.52 |
+    | Palermo | Biblioteca di esempio A | 2023 | 8200.50 |
+    | None | Biblioteca di esempio B | 2023 | 1250.00 |
+    | Cella Dati | Biblioteca di esempio C | 2023 | 300.00 |
+    | Roma | Biblioteca di esempio D | 2023 | 15400.75 |
+    | Totale |  | 2023 | 25151.25 |
 
-### Esempio 2:
-non usare raggruppamenti basati sull'uso di celle vuote.
+!!! success "Così sì"
 
-!!! failure "Cattiva prassi"
+    | comune | biblioteca | anno | spesa_acquisti_euro |
+    | --- | --- | --- | ---: |
+    | Palermo | Biblioteca di esempio A | 2023 | 8200.50 |
+    | None | Biblioteca di esempio B | 2023 | 1250.00 |
+    | Cella Dati | Biblioteca di esempio C | 2023 | 300.00 |
+    | Roma | Biblioteca di esempio D | 2023 | 15400.75 |
 
-    | marca | anno | vendite_semestrali |
-    | --- | --- | --- |
-    | chevrolet chevelle malibu | 1998 | 2.5 |
-    |  | 1999 | 2.63 |
-    |  | 2000 | 3.13 |
-    | buick skylark 320 | 1998 | 3.4 |
-    |  | 1999 | 3.57 |
-    |  | 2000 | 3.97 |
+Il secondo esempio mescola due livelli di dettaglio: i prestiti di ogni semestre e il loro subtotale annuale.
 
+!!! failure "Così no"
 
-!!! success "Buona prassi"
+    | biblioteca | anno | semestre | prestiti |
+    | --- | ---: | ---: | ---: |
+    | Biblioteca di esempio A | 2023 | 1 | 6100 |
+    | Biblioteca di esempio A | 2023 | 2 | 6350 |
+    | Subtotale annuale | 2023 |  | 12450 |
+    | Biblioteca di esempio D | 2023 | 1 | 9800 |
+    | Biblioteca di esempio D | 2023 | 2 | 10510 |
+    | Subtotale annuale | 2023 |  | 20310 |
 
-    | marca | anno | vendite_semestrali |
-    | --- | ---: | ---: |
-    | chevrolet chevelle malibu | 1998 | 2.5 |
-    | chevrolet chevelle malibu | 1999 | 2.63 |
-    | chevrolet chevelle malibu | 2000 | 3.13 |
-    | buick skylark 320 | 1998 | 3.4 |
-    | buick skylark 320 | 1999 | 3.57 |
-    | buick skylark 320 | 2000 | 3.97 |
+!!! success "Così sì"
 
-È importante tenere presente che l'esistenza di celle vuote può produrre effetti indesiderati in caso di ordinamento dei dati. La tabella seguente mostra l'effetto dell'ordinamento della tabella iniziale secondo i valori del campo `marca`.
+    | biblioteca | anno | semestre | prestiti |
+    | --- | ---: | ---: | ---: |
+    | Biblioteca di esempio A | 2023 | 1 | 6100 |
+    | Biblioteca di esempio A | 2023 | 2 | 6350 |
+    | Biblioteca di esempio D | 2023 | 1 | 9800 |
+    | Biblioteca di esempio D | 2023 | 2 | 10510 |
 
-!!! failure "Cattiva prassi"
+Il terzo esempio usa le celle vuote per raggruppare: il comune e la biblioteca sono scritti solo nella prima riga del gruppo.
 
-    | marca | anno | vendite_semestrali |
-    | --- | --- | --- |
-    | buick skylark 320 | 1998 | 3.4 |
-    | chevrolet chevelle malibu | 1998 | 2.5 |
-    |  | 1999 | 2.63 |
-    |  | 2000 | 3.13 |
-    |  | 1999 | 3.57 |
-    |  | 2000 | 3.97 |
+!!! failure "Così no"
+
+    | comune | biblioteca | semestre | prestiti |
+    | --- | --- | ---: | ---: |
+    | Palermo | Biblioteca di esempio A | 1 | 6100 |
+    |  |  | 2 | 6350 |
+    | Roma | Biblioteca di esempio D | 1 | 9800 |
+    |  |  | 2 | 10510 |
+
+!!! success "Così sì"
+
+    | comune | biblioteca | semestre | prestiti |
+    | --- | --- | ---: | ---: |
+    | Palermo | Biblioteca di esempio A | 1 | 6100 |
+    | Palermo | Biblioteca di esempio A | 2 | 6350 |
+    | Roma | Biblioteca di esempio D | 1 | 9800 |
+    | Roma | Biblioteca di esempio D | 2 | 10510 |
+
+Le celle vuote reggono solo finché nessuno cambia l'ordine delle righe. Ecco la tabella con le celle vuote dopo un ordinamento per `comune`: le righe del secondo semestre finiscono in fondo e non si capisce più a quale biblioteca appartengono.
+
+!!! failure "Così no"
+
+    | comune | biblioteca | semestre | prestiti |
+    | --- | --- | ---: | ---: |
+    | Palermo | Biblioteca di esempio A | 1 | 6100 |
+    | Roma | Biblioteca di esempio D | 1 | 9800 |
+    |  |  | 2 | 6350 |
+    |  |  | 2 | 10510 |
+
+## Perché
+
+Chi riusa i dati fa i conti sulla colonna. Con la riga `Totale` la somma di `spesa_acquisti_euro` dà 50302.50 invece di 25151.25, perché ogni importo viene contato due volte, e prima di ogni calcolo bisogna scoprire quali righe togliere.
+
+Il dettaglio è la scelta che lascia aperte tutte le strade. Dai prestiti di ogni semestre si ricavano quelli dell'anno, ma dal totale dell'anno non si risale ai semestri. Un file che contiene risultati od operazioni fatte sui dati è il risultato di un'analisi, non un file di dati in senso stretto.
+
+## Casi particolari
+
+- **Livello di dettaglio.** Un dataset deve restare a un solo livello, detto anche granularità: se le righe sono mensili, non devono esserci anche righe annuali. Pubblica il livello più dettagliato che hai.
+- **Colonne di totale.** La regola vale anche per le colonne: niente `prestiti_totale` accanto ai prestiti di ogni semestre.
+- **Totali utili a chi legge.** Se servono, offrili in un file a parte, accanto a quello di dettaglio.
+
+Vedi anche: [Una riga per ogni record](P02_singolo_record_riga.md), [Righe nuove, non colonne nuove](P04_strutture_dati_verticale_orizzontale.md), [Se un valore manca, lascia la cella vuota](P05_trattamento_valori_sconosciuti.md)

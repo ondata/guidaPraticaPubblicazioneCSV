@@ -2,58 +2,69 @@
 hide:
  - toc
 # - navigation
-title: Denominazione delle colonne
+title: Nomi di colonna chiari
 ---
 
-# Denominazione delle colonne
+# 3. Nomi di colonna chiari
 
-I nomi dei campi o delle colonne in una tabella di dati devono essere comprensibili alle persone.
+I nomi di colonna devono essere comprensibili alle persone, e meglio se scritti in modo che i programmi li leggano senza intoppi: minuscole, cifre e trattini bassi.
 
-Da prendere in considerazione:
+## Così sì e così no
 
-- in molti casi, le colonne delle tabelle di dati mantengono i nomi assegnati dai sistemi di gestione delle banche dati, di solito soggetti a convenzioni tecniche che sono difficili da capire per le persone;
-- alcune raccomandazioni per i nomi dei campi:
-    - non ripetere i nomi dei campi, che siano univoci;
-    - usare nomi brevi, purché il risparmio di caratteri non porti a un'errata interpretazione;
-    - non iniziare un nome con una cifra;
-    - evitare di usare abbreviazioni;
-    - usare solo caratteri ASCII minuscoli (a-z; 0-9);
-    - non usare caratteri speciali (per esempio äüöàéèê, ecc.);
-    - non includere accenti o segni di punteggiatura;
-    - usare i trattini bassi `_` per separare le parole che compongono i nomi delle colonne invece degli spazi bianchi;
-    - evitare l'uso di codici, e se assolutamente necessario, dovrebbero essere illustrati nel [dizionario dei dati](../dizionario_dati.md) che documenta il set di dati;
-    - i nomi dei campi devono corrispondere a quelli specificati nel dizionario dei dati.
+I nomi delle biblioteche, i telefoni, i prestiti e le spese sono inventati.
 
-### Esempio:
-nomi comprensibili delle colonne.
+!!! failure "Così no"
 
-!!! failure "Cattiva prassi"
+    | Cod. Istat | Comune | Nome | Tel. | N. prestiti | Spesa (€) |
+    | --- | --- | --- | --- | --- | --- |
+    | 082053 | Palermo | Biblioteca di esempio A | +390910000001 | 12450 | 8200.50 |
+    | 058091 | Roma | Biblioteca di esempio D | +390600000004 | 20310 | 15400.75 |
 
-    |Identificatore_M|Anno|Cil.|Consumo_per_100_k<br>ms_di_viaggio_urbano|HP|m/sec^2|
-    |---|---|---|---|----|----|
-    |chevrolet chevelle malibu|1970|8|18|130|12|
-    |buick skylark 320|1970|8|15|165|11.5|
-    |plymouth satellite|1970|8|18|150|11|
+!!! success "Così sì"
 
-!!! success "Buona prassi"
+    | codice_istat_comune | comune | biblioteca | telefono | prestiti | spesa_acquisti_euro |
+    | --- | --- | --- | --- | --- | --- |
+    | 082053 | Palermo | Biblioteca di esempio A | +390910000001 | 12450 | 8200.50 |
+    | 058091 | Roma | Biblioteca di esempio D | +390600000004 | 20310 | 15400.75 |
 
-    |marca|anno|cilindri|consumo|potenza|accelerazione|
-    |---|---|---|---|----|----|
-    |chevrolet chevelle malibu|1970|8|18|130|12|
-    |buick skylark 320|1970|8|15|165|11.5|
-    |plymouth satellite|1970|8|18|150|11|
+I nomi di colonna:
 
-Se c'è un'entità che è definita da diverse caratteristiche separate in diversi campi, è conveniente iniziare a nominare i campi con quell'entità e poi con gli attributi più specifici (dal più generale al più specifico). Per esempio:
+- **Unici:** due colonne non devono avere lo stesso nome.
+- **Allineati al dizionario:** devono coincidere con quelli del [dizionario dei dati](../dizionario_dati.md).
+- **Brevi:** meglio corti, purché il risparmio di caratteri non porti a capire male.
+- **Senza abbreviazioni e codici:** meglio evitarli. Se un codice serve davvero, va spiegato nel dizionario dei dati.
+- **Senza una cifra iniziale:** meglio che comincino con una lettera.
+- **Solo minuscole e cifre:** meglio usare solo le lettere a-z e le cifre 0-9, cioè caratteri ASCII, senza accenti, segni di punteggiatura o caratteri speciali come `äüöàéèê`.
+- **Trattini bassi al posto degli spazi:** meglio separare le parole con `_`.
 
-|cliente_nome|cliente_addebito|richiedente_tipo|richiedente_comune|
-|---|---|---|---|
-| ... | ... | ... | ... |
+Se l'unità di misura è la stessa per tutta la colonna, si indica nel nome, come in `spesa_acquisti_euro`: vedi la [scheda 7](P07_tipi_dati.md).
 
-I campi che sono identificatori possono includere il suffisso `_id` nel nome del campo, tranne in casi eccezionali in cui un nome alternativo è più conveniente, perché fornisce informazioni sul sistema di identificazione usato, ad esempio `codice_ipa`.
+## Perché
 
-Per i campi che contengono la descrizione di quell'identificatore, si raccomanda di includere il suffisso `_nome`, a meno che non ci sia un modo più conveniente per nominare il campo.
+Chi riusa i dati scrive questi nomi nelle formule e nei programmi. Spazi, punti e simboli come `(€)` spesso costringono a metterli tra virgolette, e un accento si può storpiare se il file viene letto con un'altra codifica. Chi legge `N. prestiti` non sa a che periodo si riferisce e chi legge `Nome` non sa di cosa è il nome: deve andare a chiedere o tirare a indovinare.
 
-|rivenditore_id|rivenditore_nome|
-|---|---|
-| ... | ... |
+## Casi particolari
 
+### Nomi che arrivano dal gestionale
+
+Spesso le colonne conservano i nomi assegnati dal sistema che gestisce i dati, scritti secondo convenzioni tecniche difficili da capire. Meglio rinominarle prima di pubblicare.
+
+### Più colonne sulla stessa cosa
+
+Se più colonne descrivono la stessa cosa, meglio far iniziare il nome con quella cosa e proseguire con il dettaglio, dal generale al particolare. Così le colonne si ritrovano vicine in ordine alfabetico e si capisce a chi si riferisce ciascuna.
+
+| biblioteca_nome | biblioteca_telefono | ente_nome | ente_telefono |
+| --- | --- | --- | --- |
+| Biblioteca di esempio A | +390910000001 | Comune di Palermo | +390910000099 |
+
+### Identificatori e descrizioni
+
+Una colonna che contiene un identificatore può avere il suffisso `_id`. Fa eccezione il caso in cui un altro nome dice di più, perché indica il sistema di identificazione usato, come `codice_ipa` o `codice_istat_comune`.
+
+Per la colonna con la descrizione di quell'identificatore è consigliato il suffisso `_nome`, a meno che un altro nome sia più chiaro.
+
+| biblioteca_id | biblioteca_nome |
+| --- | --- |
+| BIB001 | Biblioteca di esempio A |
+
+Vedi anche: [1. Una sola riga di intestazione](P01_unica_riga_intestazione.md), [7. Un solo tipo di dato per colonna](P07_tipi_dati.md), [9. Affianca una descrizione ai codici](P09_campi_codificati.md).

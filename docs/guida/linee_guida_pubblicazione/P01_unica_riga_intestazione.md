@@ -5,143 +5,77 @@ hide:
 title: Una sola riga di intestazione
 ---
 
+# 1. Una sola riga di intestazione
+
 Il file contiene sempre una, e una sola, riga di intestazione, nella prima riga. Il formato CSV ammette anche file senza intestazione (RFC 4180), ma chi pubblica dati non dovrebbe usare questa possibilità: lo raccomandano anche le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv).
 
-Da prendere in considerazione:
+## Così sì e così no
 
-- L'esistenza di più righe di intestazione, mentre possono aumentare l'interpretabilità dei dati per gli esseri umani a causa della loro espressività e formato, rendono difficile l'elaborazione per le macchine, quindi qualsiasi informazione aggiuntiva sui dati deve essere inclusa nella descrizione dei dati utilizzando i metadati appropriati nel dizionario dei dati.
+I nomi delle biblioteche e le spese sono inventati.
 
-- I **nomi delle colonne** inclusi nella riga di intestazione sono un tipo di annotazione o metadati che descrivono ogni colonna e **non fanno parte dei dati**, cioè non dovrebbero essere considerati quando si conta il numero di righe di dati in una tabella.
+Non mettere titoli o note sopra l'intestazione.
 
-- Per nominare le colonne si devono usare **celle singole** e in nessun caso celle unite.
+!!! failure "Così no"
 
-- Per i file ereditati senza intestazione, l'assenza va dichiarata: in CSVW con `"dialect": {"header": false}`, in Table Dialect con `"header": false`, oppure via HTTP con `Content-Type: text/csv;header=absent`. Nessun programma può capirlo da solo, perché la prima riga è codificata come qualsiasi altra.
+    | Biblioteche comunali |  |  |  |
+    | --- | --- | --- | --- |
+    | Dati del 2023 |  |  |  |
+    | comune | biblioteca | anno | spesa_acquisti_euro |
+    | Palermo | Biblioteca di esempio A | 2023 | 8200.50 |
+    | Roma | Biblioteca di esempio D | 2023 | 15400.75 |
 
+!!! success "Così sì"
 
-### Esempio 1:
-non usare celle multiple di intestazione.
+    | comune | biblioteca | anno | spesa_acquisti_euro |
+    | --- | --- | --- | --- |
+    | Palermo | Biblioteca di esempio A | 2023 | 8200.50 |
+    | Roma | Biblioteca di esempio D | 2023 | 15400.75 |
 
-!!! failure "Cattiva prassi"
+Le informazioni delle righe tolte vanno nel [dizionario dei dati](../dizionario_dati.md) o nella descrizione del dataset. L'anno, se serve, sta in una colonna.
 
-    <table class="tabella">
-    	<tbody>
-    		<tr class="arancione_grassetto">
-    			<td rowspan="1" colspan="3">Dati sulle vendite di auto (anni 1998 - 1999)</td>
-    		</tr>
-    		<tr class="arancione_grassetto">
-    			<td rowspan="1" colspan="3">Unit&agrave; espresse in migliaia</td>
-    		</tr>
-    		<tr class="arancione_grassetto">
-    			<td>marca</td>
-    			<td>anno</td>
-    			<td>vendite_per_anno</td>
-    		</tr>
-    		<tr>
-    			<td>chevrolet chevelle malibu</td>
-    			<td>1998</td>
-    			<td>2.5</td>
-    		</tr>
-    		<tr>
-    			<td>chevrolet chevelle malibu</td>
-    			<td>1999</td>
-    			<td>2.63</td>
-    		</tr>
-    		<tr>
-    			<td>buick skylark 320</td>
-    			<td>1998</td>
-    			<td>3.4</td>
-    		</tr>
-    		<tr>
-    			<td>buick skylark 320</td>
-    			<td>1999</td>
-    			<td>3.57</td>
-    		</tr>
-    	</tbody>
-    </table>
+Non unire le celle dell'intestazione: ogni colonna ha una sola cella con il suo nome. Qui `indirizzo` è una cella unita sulle ultime tre colonne, e i nomi veri stanno nella riga sotto.
 
-!!! success "Buona prassi"
+!!! failure "Così no"
 
-    <table xmlns="http://www.w3.org/1999/xhtml" class="tabella">
-    	<tbody>
-    		<tr class="arancione_grassetto">
-    			<td>marca</td>
-    			<td>anno</td>
-    			<td>vendite_per_anno</td>
-    		</tr>
-    		<tr>
-    			<td>chevrolet chevelle malibu</td>
-    			<td>1998</td>
-    			<td>2.5</td>
-    		</tr>
-    		<tr>
-    			<td>chevrolet chevelle malibu</td>
-    			<td>1999</td>
-    			<td>2.63</td>
-    		</tr>
-    		<tr>
-    			<td>buick skylark 320</td>
-    			<td>1998</td>
-    			<td>3.4</td>
-    		</tr>
-    		<tr>
-    			<td>buick skylark 320</td>
-    			<td>1999</td>
-    			<td>3.57</td>
-    		</tr>
-    	</tbody>
-    </table>
+    | biblioteca | indirizzo |  |  |
+    | --- | --- | --- | --- |
+    |  | dug | denominazione | civico |
+    | Biblioteca di esempio A | Via | Roma | 10 |
+    | Biblioteca di esempio D | Via | Cavour | 20 |
 
+!!! success "Così sì"
 
+    | biblioteca | dug | denominazione | civico |
+    | --- | --- | --- | --- |
+    | Biblioteca di esempio A | Via | Roma | 10 |
+    | Biblioteca di esempio D | Via | Cavour | 20 |
 
-Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "`dc:description`".
+## Perché
 
-### Esempio 2:
-non usare celle unite.
+Un programma prende la prima riga come nomi di colonna e tutte le altre come dati. Con le due righe di titolo, `Biblioteche comunali` diventa il nome della prima colonna, le altre restano senza nome e la vera intestazione finisce fra i dati. Anche `spesa_acquisti_euro` diventa testo, perché contiene quella parola in mezzo ai numeri, e chi riusa il file deve ripulirlo a mano prima di fare una somma.
 
-!!! failure "Cattiva prassi"
+Più righe di intestazione aiutano l'occhio di chi legge e ostacolano i programmi. Il CSV non conosce le celle unite: una cella unita lascia celle vuote accanto al nome, e per sapere come si chiama una colonna occorre leggere due righe.
 
-    <table xmlns="http://www.w3.org/1999/xhtml" class="tabella">
-    	<tbody>
-    		<tr class="arancione_grassetto">
-    			<td rowspan="2" colspan="1">marca</td>
-    			<td rowspan="1" colspan="2">contatto_concessionario</td>
-    		</tr>
-    		<tr class="arancione_grassetto">
-    			<td>concessionario_mail</td>
-    			<td>concessionario_telefono</td>
-    		</tr>
-    		<tr>
-    			<td>chevrolet chevelle malibu</td>
-    			<td>mail@concessionario_chevrolet.com</td>
-    			<td>+39-1111111</td>
-    		</tr>
-    		<tr>
-    			<td>buick skylark 320</td>
-    			<td>mail@concessionario_buick.com</td>
-    			<td>+39-2222222</td>
-    		</tr>
-    	</tbody>
-    </table>
+I nomi di colonna descrivono i dati ma non ne fanno parte: un file con l'intestazione e quattro biblioteche ha quattro righe di dati.
 
+## Casi particolari
 
-!!! success "Buona prassi"
+### File ereditati senza intestazione
 
-    <table xmlns="http://www.w3.org/1999/xhtml" class="tabella">
-    	<tbody>
-    		<tr class="arancione_grassetto">
-    			<td>marca</td>
-    			<td>contatto_concessionario_mail</td>
-    			<td>contatto_concessionario_telefono</td>
-    		</tr>
-    		<tr>
-    			<td>chevrolet chevelle malibu</td>
-    			<td>mail@concessionario_chevrolet.com</td>
-    			<td>+39-1111111</td>
-    		</tr>
-    		<tr>
-    			<td>buick skylark 320</td>
-    			<td>mail@concessionario_buick.com</td>
-    			<td>+39-2222222</td>
-    		</tr>
-    	</tbody>
-    </table>
+Meglio aggiungere l'intestazione. Se non puoi, devi dichiarare che manca: nessun programma può capirlo da solo, perché la prima riga è scritta come tutte le altre.
+
+!!! note "Come dichiararlo"
+
+    In CSVW con `"dialect": {"header": false}`, in Table Dialect con `"header": false`, oppure via HTTP con `Content-Type: text/csv;header=absent`. Chi pubblica uno schema CSVW può mettere nella proprietà `dc:description` anche le informazioni tolte dalle righe di titolo.
+
+## Come si fa nel foglio di calcolo
+
+Prima di esportare il CSV:
+
+1. Elimina le righe sopra l'intestazione, così che i nomi di colonna stiano nella riga 1.
+2. Annulla l'unione delle celle e scrivi un nome in ogni colonna.
+3. Sposta titoli, legende e note in un altro foglio o nel dizionario dei dati.
+
+Per l'esportazione vedi [Esportare un CSV da Excel o LibreOffice](Linee_guida_importazione_esportazione.md).
+
+Vedi anche: [2. Una riga per ogni record](P02_singolo_record_riga.md), [3. Nomi di colonna chiari](P03_denominazione_colonne.md), [6. Niente totali e subtotali](P06_subtotali_totali_raggruppamenti.md).

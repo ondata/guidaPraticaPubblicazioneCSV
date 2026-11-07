@@ -5,31 +5,29 @@ hide:
 title: Partecipa
 ---
 
-Questa **guida** è un **bene comune**, sia per il **lettore** che per l'**autore**.
+# Partecipa
 
+## Segnala o proponi
 
-Da **lettore** 👓, sei libero di:
+Hai trovato un errore o un esempio migliore? [Apri una discussione](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions): bastano poche righe, e serve un account GitHub. Puoi usarla anche per fare una domanda, o per raccontare a cosa ti è servita la guida. Cerchiamo soprattutto esempi veri di CSV pubblicati da enti italiani.
 
-- **Condividere** — riprodurre, distribuire, comunicare al pubblico, esporre in pubblico, rappresentare, eseguire e recitare questo materiale con qualsiasi mezzo e formato
-- **Modificare** — remixare, trasformare il materiale e basarti su di esso per le tue opere per qualsiasi fine, anche commerciale.
-- Alle seguenti **condizioni**:
-    - **Attribuzione** — Devi riconoscere una menzione di paternità adeguata, fornire un link alla licenza e indicare se sono state effettuate delle modifiche. Puoi fare ciò in qualsiasi maniera ragionevole possibile, ma non con modalità tali da suggerire che il licenziante avalli te o il tuo utilizzo del materiale.
-    - **Divieto di restrizioni aggiuntive** — Non puoi applicare termini legali o misure tecnologiche che impongano ad altri soggetti dei vincoli giuridici su quanto la licenza consente loro di fare.
+Se usi git e GitHub puoi proporre la modifica direttamente, in due modi:
 
+- clonare il repository e aprire una pull request;
+- usare il tasto <kbd>EDIT</kbd> che trovi in alto a destra in ogni pagina (vedi immagine sotto), che apre il testo nell'interfaccia web di GitHub e crea la pull request da lì.
 
-Da **autore** 🔧 puoi:
+[![Il tasto per modificare una pagina, in alto a destra](imgs/edit_page.png)](imgs/edit_page.png)
 
-- se **non sai usare git e GitHub**: [**aprire una nuova discussione qui**](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions), con delle proposte, suggerimenti, domande o per mostrarci per cosa ti è stata utile questa guida;
-- se **sai usare git e GitHub**:
-    - clonare il *repository* e fare dell ***Pull Request***;
-    - proporre delle modifiche al testo e suggerire delle correzioni, utilizzando il tasto <kbd>EDIT</kbd>, che trovi in ogni pagina, in alto a destra (vedi immagine sotto) e fare sempre delle ***Pull Request***, ma più "visuali", direttamente dall'interfaccia web.
+Il testo della guida è nella cartella [`docs`](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs) del [repository](https://github.com/ondata/guidaPraticaPubblicazioneCSV/).
 
-[![](imgs/edit_page.png)](imgs/edit_page.png)
+## Riusa
 
-!!! info
+Puoi copiare, modificare e riusare questa guida con qualsiasi mezzo, anche per fini commerciali, citando la fonte ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it)). Le condizioni sono due:
 
-    Il testo della guida è quello che trovi nella cartella [`docs`](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs) di [questo *repository* GitHub](https://github.com/ondata/guidaPraticaPubblicazioneCSV/).
+- **Attribuzione.** Devi indicare chi ha scritto il materiale, dare un link alla licenza e dire se lo hai modificato, senza lasciar intendere che chi lo ha scritto approvi te o il tuo uso.
+- **Nessuna restrizione aggiuntiva.** Non puoi imporre ad altri, con termini legali o misure tecnologiche, vincoli su ciò che la licenza consente.
 
+Il testo originale è soggetto alle [condizioni di riuso di datos.gob.es](https://datos.gob.es/es/aviso-legal).
 
 ## Citare questa guida
 
@@ -38,4 +36,3 @@ Per citare questa guida puoi usare questa riga:
 onData (2026). *Guida pratica alla pubblicazione di dati in CSV*, versione 0.9. <https://doi.org/10.5281/zenodo.24042988>. Licenza CC BY 4.0.
 
 Per citare sempre l'ultima versione, usa il DOI <https://doi.org/10.5281/zenodo.24042987>.
-

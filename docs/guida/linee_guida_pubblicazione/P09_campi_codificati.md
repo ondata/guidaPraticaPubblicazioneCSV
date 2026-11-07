@@ -2,39 +2,61 @@
 hide:
  - toc
 # - navigation
+title: Affianca una descrizione ai codici
 ---
 
-È bene riferirsi a schemi standard, *liste di codici* e tassonomie di termini per valori prestabiliti e codificati di attributi.
+# 9. Affianca una descrizione ai codici
 
-Da prendere in considerazione:
+Quando una colonna contiene un codice, è consigliato affiancarle una colonna con la descrizione: `codice_istat_comune` e `comune`. Un codice fatto di cifre è un testo, non un numero: non ci si fanno operazioni e gli zeri iniziali contano.
 
-  - un codice fatto di cifre è un testo, non un numero: non ci si fanno operazioni e gli zeri iniziali contano. Vale per codici Istat, CAP, codici fiscali e di attività. Dichiaralo come testo nel dizionario e controlla che gli zeri siano ancora lì prima di pubblicare, aprendo il file con un editor di testo;
-  - i codici sono molto utili per eseguire analisi di dati categorizzati, ad esempio per estrarre modelli, filtrare, riassumere e ordinare, ma possono essere difficili da interpretare per le persone che non hanno familiarità con tali codifiche, se non sono spiegate con precisione nel *dataset* stesso o attraverso il [dizionario dei dati](../dizionario_dati.md);
-  - la pagina [Tassonomie ed elenchi di codici](./Tassonomie_elenchi_codici.md) raccoglie classificazioni e standard riutilizzabili;
-  - se possibile, si dovrebbe aggiungere una colonna che includa il valore standard dell'attributo in questione; per esempio, se il campo si riferisce ai **comuni**, è consigliabile mantenere due colonne: **"codice_comune"** e **"comune"**; il codice sarà, per l'Italia, il codice Istat del comune, di 6 caratteri ([SITUAS](https://situas.istat.it/web/)), e il valore della colonna "comune" sarà il suo nome. Se la colonna indica invece l'amministrazione che ha prodotto il dato o che eroga un servizio, il riferimento è il [codice IPA](https://www.indicepa.gov.it/ipa-portale/)[^1];
-  - in linea con quanto detto in precedenza, il nome del campo non dovrebbe essere incluso nel valore dello stesso, per esempio se il nome della colonna è "comune" il valore in ogni riga non dovrebbe includere le parole "Comune di".
+## Così sì e così no
 
-[^1]: Indice dei domicili digitali delle pubbliche amministrazioni, dei gestori di pubblici servizi e delle società a controllo pubblico (CAD, art. 6-ter)
+Nomi delle biblioteche e prestiti sono inventati, i codici Istat e i nomi dei comuni sono veri. Qui c'è solo il codice: chi legge deve cercare altrove di quale comune si tratta.
 
-### Esempio: uso di campi codificati
+!!! failure "Così no"
 
-!!! failure "Cattiva prassi"
+    | codice_istat_comune | biblioteca | prestiti |
+    | --- | --- | ---: |
+    | 082053 | Biblioteca di esempio A | 12450 |
+    | 001168 | Biblioteca di esempio B | 3120 |
+    | 058091 | Biblioteca di esempio D | 20310 |
 
+!!! success "Così sì"
 
-    | marca | consumo | potenza | cambio | accelerazione |
-    | --- | ---: | ---: | --- | ---: |
-    | chevrolet chevelle malibu | 18 | 130 | M | 12 |
-    | buick skylark 320 | 15 | 165 | A | 11.5 |
-    | plymouth satellite | 18 | 150 | A | 11 |
-    | amc rebel sst | 16 | 150 | M | 12 |
-    | ford torino | 17 | 140 | M | 10.5 |
+    | codice_istat_comune | comune | biblioteca | prestiti |
+    | --- | --- | --- | ---: |
+    | 082053 | Palermo | Biblioteca di esempio A | 12450 |
+    | 001168 | None | Biblioteca di esempio B | 3120 |
+    | 058091 | Roma | Biblioteca di esempio D | 20310 |
 
-!!! success "Buona prassi"
+Qui il codice è stato trattato come un numero e ha perso gli zeri iniziali.
 
-    | marca | consumo | potenza | cambio | cambio_descrizione | accelerazione |
-    | --- | ---: | ---: | --- | --- | ---: |
-    | chevrolet chevelle malibu | 18 | 130 | M | Manuale | 12 |
-    | buick skylark 320 | 15 | 165 | A | Automatico | 11.5 |
-    | plymouth satellite | 18 | 150 | A | Automatico | 11 |
-    | amc rebel sst | 16 | 150 | M | Manuale | 12 |
-    | ford torino | 17 | 140 | M | Manuale | 10.5 |
+!!! failure "Così no"
+
+    | codice_istat_comune | comune | biblioteca | prestiti |
+    | ---: | --- | --- | ---: |
+    | 82053 | Palermo | Biblioteca di esempio A | 12450 |
+    | 1168 | None | Biblioteca di esempio B | 3120 |
+    | 58091 | Roma | Biblioteca di esempio D | 20310 |
+
+## Perché
+
+I codici sono utili per filtrare, riassumere, ordinare e unire i dati, ma chi non li conosce non sa interpretarli se non sono spiegati. Con la descrizione accanto il file si legge senza aprire altri documenti, e il codice resta disponibile per i programmi.
+
+Un codice senza zeri non è più lo stesso codice: `82053` non corrisponde a `082053`, e chi prova a unire il tuo file a un elenco ufficiale dei comuni perde quelle righe.
+
+## Casi particolari
+
+- **Codici di cifre.** La regola vale per codici Istat, CAP, codici fiscali e di attività. Dichiara queste colonne come testo nel [dizionario dei dati](../dizionario_dati.md) e controlla che gli zeri siano ancora lì prima di pubblicare, aprendo il file con un editor di testo.
+- **Comune come territorio.** Per l'Italia il codice è quello Istat del comune, di 6 caratteri ([SITUAS](https://situas.istat.it/web/), il Sistema informativo territoriale delle unità amministrative e statistiche), e la colonna `comune` contiene il suo nome.
+- **Comune come ente.** Se la colonna indica invece l'amministrazione che ha prodotto il dato o che eroga un servizio, il riferimento è il [codice IPA](https://www.indicepa.gov.it/ipa-portale/)[^1].
+- **Nome della colonna nel valore.** Se la colonna si chiama `comune`, le celle non devono ripetere le parole «Comune di».
+- **Dove trovare i codici.** La pagina [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md) raccoglie classificazioni e standard riutilizzabili.
+
+[^1]: Indice dei domicili digitali delle pubbliche amministrazioni, dei gestori di pubblici servizi e delle società a controllo pubblico (Codice dell'amministrazione digitale, CAD, art. 6-ter)
+
+## Come si fa nel foglio di calcolo
+
+Excel toglie gli zeri iniziali quando apre un CSV, anche con l'importazione da Data > From Text/CSV se lasci il rilevamento predefinito: `082053` diventa `82053`. Prima di esportare, imposta le colonne di codici sul formato Testo; per aprire un CSV senza rovinarlo segui la procedura in [Esportare un CSV da Excel o LibreOffice](Linee_guida_importazione_esportazione.md).
+
+Vedi anche: [Un solo tipo di dato per colonna](P07_tipi_dati.md), [Scrivi la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md), [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md)

@@ -1,165 +1,160 @@
 ---
 hide:
 #   - navigation
-title: Dizionari di dati
+title: Il dizionario dei dati
 ---
 
+# Il dizionario dei dati
 
-# Dizionari di dati
+Il dizionario dei dati è la legenda della tabella: dice che cosa contiene ogni colonna, di che tipo è, in quale unità di misura, e come è fatto il file. Con il dizionario, chi riusa i dati li capisce senza dover chiedere nulla a chi li ha pubblicati.
 
-- Il **dizionario dei dati** è un complemento essenziale per qualsiasi serie di dati, poiché **fornisce** all'utente le **informazioni** sufficienti per elaborare e comprenderne il contenuto senza ambiguità.
-- Il suo scopo è quello di **garantire** che la **struttura del *set* di dati** sia **definita in termini** facilmente **comprensibili** dagli utenti.
-- **Ogni *set* di dati** pubblicabile deve **includere** il suo **dizionario di dati** come documento separato, di solito accessibile tramite un URL presente nello spazio di download dei dati.
-- Il contenuto di un **dizionario di dati** può essere espresso in diversi modi, anche **come un file di testo** che **descrive il contenuto di ogni colonna** del set di dati.
-- Le **caratteristiche o annotazioni** espresse nel **dizionario dei dati** sono le **proprietà** delle tabelle, **colonne**, **righe** e **celle** che compongono l'insieme di dati.
-- Quello che segue è un esempio di un dizionario di dati espresso come file di testo, che può essere fornito attraverso un server web. Per esempio, tramite l'URL: `https://sito_di_esempio.it/automobili-dizionario.txt`.
+Ogni dataset deve avere il suo dizionario, in un documento separato dal file dei dati e scaricabile accanto a esso.
 
+## Il dizionario come tabella
 
-## Esempio di dizionario dati espresso come file di testo
+Questo è il punto di partenza, e per chi lavora con un foglio di calcolo basta. Il dizionario si prepara in un foglio a parte, si salva come file a sé e si pubblica accanto ai dati.
 
-``` title="automobili-dizionario.txt"
-File di dati: https://sito_di_esempio.it/automobili.csv
-Descrizione: tabella con dati sulle auto d'epoca
-Editore: Autore di esempio
-Licenza: CC BY 4.0
-Separatore: ,
-Delimitatore di testo: "
-Codifica: UTF-8
-Colonna 1:
-      Titolo: marca
-      Descrizione: Questo campo contiene informazioni sulla marca e il modello di ogni veicolo.
-      Tipo di dati: stringa
-Colonna 2:
-      Titolo: anno
-      Descrizione: Questo campo contiene informazioni sull'anno di fabbricazione di ogni veicolo.
-      Tipo di dati: data
-Colonna 3:
-      Titolo: cilindri
-      Descrizione: Questo campo contiene informazioni sul numero di cilindri di ogni veicolo.
-      Tipo di dati: intero
-Colonna 4:
-      Titolo: consumo
-      Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in miglia per gallone.
-      Tipo di dati: decimale
-Colonna 5:
-      Titolo: potenza
-      Descrizione: Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV.
-      Tipo di dati: decimale
-Colonna 6:
-      Titolo: accelerazione
-      Descrizione: Questo campo contiene il tempo di accelerazione di ogni veicolo, misurato in secondi.
-      Tipo di dati: decimale
-```
+L'esempio descrive il [dataset delle biblioteche](../risorse/esempi/biblioteche.csv) usato in tutta la guida. Nome della biblioteca, telefoni, spese e prestiti sono inventati; codici Istat e nomi dei comuni sono veri.
 
-- È buona pratica che il **dizionario dei dati** sia espresso in un **formato *machine readable***, ad esempio [`JSON`](https://www.rfc-editor.org/rfc/rfc8259) o [`JSON-LD`](https://www.w3.org/TR/json-ld11/), utilizzando un **vocabolario standardizzato** per definire ciascuna delle caratteristiche o annotazioni su ciascuno degli elementi del file di dati.
-- In alcune piattaforme Open Data, ad esempio quelle implementate con [CKAN](https://ckan.org/), il **dizionario dei dati** è specificato come una **sezione associata a ciascuna risorsa** in un set di dati.
-- Per le pubbliche amministrazioni italiane, i metadati del dataset seguono il profilo [DCAT-AP_IT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-15) e, per i dati territoriali, le [Linee guida RNDT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16). Il dizionario dei dati non sostituisce questi metadati.
-- Dichiara la **licenza** nei metadati del dataset. Per i dati aperti di una pubblica amministrazione il riferimento è la CC BY 4.0, oppure CC0: le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-20) chiedono di motivare formalmente una scelta più restrittiva, e sconsigliano licenze locali come la IODL.
-- Quando si impostano i **valori delle proprietà**, è consigliabile usare un **linguaggio chiaro e conciso**, poiché gli utenti finali dei dati potrebbero non avere necessariamente familiarità con i dati.
-## Schema e validazione
+Prima le informazioni sul file:
 
-Uno schema è il dizionario dei dati scritto in un file che i programmi sanno leggere: dice di che tipo è ogni colonna e quali vincoli ha. Così un programma può controllare il CSV da solo e indicare riga e colonna sbagliate. Per chi lavora con un foglio di calcolo basta il dizionario qui sopra; lo schema è il passo successivo.
+| Voce | Valore |
+| --- | --- |
+| File di dati | `biblioteche.csv` |
+| Descrizione | Biblioteche comunali, dati di esempio. Una riga per ogni biblioteca, riferita all'anno indicato |
+| Licenza | CC BY 4.0 |
+| Separatore | `,` |
+| Delimitatore di testo | `"` |
+| Codifica | UTF-8 |
 
-Il formato che consigliamo è [Table Schema](https://datapackage.org/standard/table-schema/), del progetto Frictionless Data, indicato a titolo di esempio dalle [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-modellazione-e-documentazione). Non è un obbligo.
+Le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv) chiedono di dichiarare il separatore. Dichiarare anche delimitatore e codifica evita a chi legge di doverli indovinare.
 
-``` yaml title="automobili.schema.yaml"
+Poi una riga per ogni colonna:
+
+| Colonna | Descrizione | Tipo | Unità di misura | Valori mancanti |
+| --- | --- | --- | --- | --- |
+| `codice_istat_comune` | Codice Istat del comune | testo |  |  |
+| `comune` | Nome del comune | testo |  |  |
+| `biblioteca` | Nome della biblioteca | testo |  |  |
+| `dug` | Denominazione urbanistica generica | testo |  |  |
+| `denominazione` | Denominazione della strada | testo |  |  |
+| `civico` | Numero civico | numero intero |  |  |
+| `esponente` | Esponente del civico | testo |  | cella vuota = nessun esponente |
+| `cap` | Codice di avviamento postale | testo |  |  |
+| `telefono` | Telefono della biblioteca in formato internazionale | testo |  | cella vuota = non disponibile |
+| `data_apertura` | Data di apertura della biblioteca | data (AAAA-MM-GG) |  |  |
+| `anno` | Anno a cui si riferiscono prestiti e spesa | numero intero |  |  |
+| `prestiti` | Prestiti effettuati nell'anno | numero intero | prestiti | cella vuota = dato non rilevato |
+| `spesa_acquisti_euro` | Spesa per acquisti di libri nell'anno | numero decimale | euro |  |
+| `latitudine` | Latitudine in gradi decimali | numero decimale | gradi (WGS84 EPSG:4326) |  |
+| `longitudine` | Longitudine in gradi decimali | numero decimale | gradi (WGS84 EPSG:4326) |  |
+
+Lo stesso dizionario si scarica come [file CSV](../risorse/esempi/biblioteche-dizionario.csv). Va bene anche un semplice file di testo con le stesse informazioni.
+
+Tre consigli per riempirlo:
+
+- **Descrizioni.** Usa frasi brevi e chiare: chi legge può non conoscere i tuoi dati.
+- **Celle vuote.** Spiega che cosa significa una [cella vuota](linee_guida_pubblicazione/P05_trattamento_valori_sconosciuti.md) in quella colonna.
+- **Codici.** Indica la data degli [elenchi di codici](linee_guida_pubblicazione/Tassonomie_elenchi_codici.md) che hai usato, perché i codici cambiano nel tempo.
+
+## Dizionario, metadati e licenza
+
+Il dizionario non sostituisce i metadati del dataset. Per le pubbliche amministrazioni italiane i metadati seguono il profilo [DCAT-AP_IT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-15) e, per i dati territoriali, le [Linee guida RNDT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16).
+
+La licenza si dichiara nei metadati del dataset. Per i dati aperti di una pubblica amministrazione il riferimento è la CC BY 4.0, oppure CC0: le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-20) chiedono di motivare formalmente una scelta più restrittiva, e sconsigliano licenze locali come la IODL.
+
+In alcune piattaforme di dati aperti, per esempio quelle basate su [CKAN](https://ckan.org/), il dizionario è una sezione associata a ciascuna risorsa del dataset.
+
+## Per renderlo leggibile dai programmi
+
+Da qui in poi la pagina è per chi usa il terminale o coordina i dati. Non è una condizione per pubblicare un buon CSV.
+
+Uno schema è il dizionario dei dati scritto in un file che i programmi sanno leggere: dice di che tipo è ogni colonna e quali vincoli ha. Così un programma può controllare il CSV da solo e indicare riga e colonna sbagliate. Qui sotto ci sono due formati, e nessuno dei due è un obbligo.
+
+### Table Schema
+
+Il formato che consigliamo è [Table Schema](https://datapackage.org/standard/table-schema/), del progetto Frictionless Data, indicato a titolo di esempio dalle [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-modellazione-e-documentazione).
+
+``` yaml title="biblioteche.schema.yaml"
 fields:
-  - {name: marca, type: string, title: Marca e modello, constraints: {required: true}}
-  - {name: anno, type: year, title: Anno di fabbricazione}
-  - {name: cilindri, type: integer}
-  - {name: consumo, type: number, description: Consumo medio in miglia per gallone}
-  - {name: potenza, type: number, description: Potenza in CV}
-  - {name: accelerazione, type: number, description: Tempo di accelerazione in secondi}
+  - {name: codice_istat_comune, type: string, title: Codice Istat del comune, constraints: {required: true, pattern: "[0-9]{6}"}}
+  - {name: comune, type: string, constraints: {required: true}}
+  - {name: biblioteca, type: string, constraints: {required: true}}
+  - {name: dug, type: string, title: Denominazione urbanistica generica}
+  - {name: denominazione, type: string, title: Denominazione della strada}
+  - {name: civico, type: integer}
+  - {name: esponente, type: string}
+  - {name: cap, type: string, title: Codice di avviamento postale, constraints: {pattern: "[0-9]{5}"}}
+  - {name: telefono, type: string, constraints: {pattern: "\\+[0-9]{8,15}"}}
+  - {name: data_apertura, type: date}
+  - {name: anno, type: year, title: Anno a cui si riferiscono prestiti e spesa}
+  - {name: prestiti, type: integer, constraints: {minimum: 0}}
+  - {name: spesa_acquisti_euro, type: number, description: Spesa per acquisti di libri nell'anno in euro}
+  - {name: latitudine, type: number, description: Gradi decimali in WGS84 (EPSG 4326)}
+  - {name: longitudine, type: number, description: Gradi decimali in WGS84 (EPSG 4326)}
 missingValues: [""]
 ```
 
-Il controllo si fa con [Frictionless Framework](./linee_guida_pubblicazione/Cassetta_attrezzi.md):
+Il file si [scarica qui](../risorse/esempi/biblioteche.schema.yaml). Table Schema non ha una proprietà per l'unità di misura: se serve, sta nel nome della colonna e in `description`.
+
+Il controllo si fa con [Frictionless Framework](linee_guida_pubblicazione/Cassetta_attrezzi.md):
 
 ```
-frictionless validate automobili.csv --encoding utf-8 --schema automobili.schema.yaml
+frictionless validate biblioteche.csv --encoding utf-8 --schema biblioteche.schema.yaml
 ```
 
-Se in una riga l'anno è `settanta`, il comando segnala un `type-error` con il numero di riga e il nome della colonna. Più schemi e i loro file si possono raccogliere in un [Data Package](https://datapackage.org/standard/data-package/). La pagina [Esempi di CSV italiani](./linee_guida_pubblicazione/Esempi_dati_CSV.md) ha tre schemi di file reali da cui partire.
+Su questo file il risultato è `VALID`. Se nella prima biblioteca l'anno diventa `duemilaventitre`, il comando segnala un `type-error` con il numero di riga e il nome della colonna. Se al codice `082053` cade lo zero iniziale, segnala un `constraint-error`, perché il valore non rispetta il vincolo di 6 cifre.
 
-## CSVW, lo standard del W3C
+Più schemi e i loro file si possono raccogliere in un [Data Package](https://datapackage.org/standard/data-package/). La pagina [Esempi di CSV italiani](linee_guida_pubblicazione/Esempi_dati_CSV.md) ha tre schemi di file reali da cui partire.
 
-[CSV on the Web](https://www.w3.org/TR/tabular-data-model/) (CSVW) è la Raccomandazione del W3C del 2015 per descrivere i file CSV. Resta valida e stabile, ma non è più sviluppata: il suo [Community Group](https://www.w3.org/community/csvw/) ha chiuso il 21 maggio 2026.
+### CSVW, lo standard del W3C
 
-- Il W3C raccomanda un [modello per i dati tabulari](https://www.w3.org/TR/tabular-data-model/) e propone un [vocabolario per la descrizione di queste proprietà](https://www.w3.org/TR/tabular-metadata/).
-- Il vocabolario W3C è molto esaustivo, tuttavia, ci sono un certo numero di proprietà che è consigliabile prendere in considerazione per qualsiasi file tabellare:
-    - Per le tabelle:
-         - Titolo della tabella `["dc:title"]`
-         - Descrizione `["dc:description"]`
-         - Titolare del dato `["dc:creator"]`
-         - URL della tabella `["url"]`
-    - Per le colonne:
-         - Nome della colonna `["name"]`
-         - Titolo della colonna `["titles"]`
-         - Descrizione `["dc:description"]`
-         - Tipo di dato: `["datatype"]`
-- Inoltre, è possibile annotare attraverso l'uso di diverse proprietà, altri metadati: ordine delle colonne, valori attesi, valori richiesti, valori univoci, chiavi esterne, elenchi di valori, formati, restrizioni, validazioni, istruzioni per la trasformazione del CSV in un altro formato.
-- Quello che segue è un esempio di un dizionario di dati espresso in formato JSON che può essere reso disponibile tramite un server web. Per esempio, tramite l'URL: `https://sito_di_esempio.it/automobili.csv-metadata.json`.
+[CSV on the Web](https://www.w3.org/TR/tabular-data-model/) (CSVW) è la Raccomandazione del W3C del 2015 per descrivere i file CSV. Resta valida e stabile, ma non è più sviluppata: il suo [Community Group](https://www.w3.org/community/csvw/) ha chiuso il 21 maggio 2026. Il W3C definisce un [modello per i dati tabellari](https://www.w3.org/TR/tabular-data-model/) e un [vocabolario per descriverli](https://www.w3.org/TR/tabular-metadata/), in [JSON](https://www.rfc-editor.org/rfc/rfc8259) e [JSON-LD](https://www.w3.org/TR/json-ld11/).
 
+Questo è il file che descrive le biblioteche. Va salvato nella stessa cartella del CSV: `url` indica il file dei dati.
 
-## Esempio di dizionario dati in formato json-ld
-
-``` json title="automobili.csv-metadata.json"
+``` json title="biblioteche.csv-metadata.json"
 {
-  "@context": "http://www.w3.org/ns/csvw",
-  "@type": "Table",
-  "url": "https://sito_di_esempio.it/automobili.csv",
-  "dc:description": "Tabella con dati sulle auto d'epoca",
-  "dc:creator": "Autore dell'esempio",
+  "@context": ["http://www.w3.org/ns/csvw", {"@language": "it"}],
+  "url": "biblioteche.csv",
+  "dc:title": "Biblioteche comunali, dati di esempio",
+  "dc:description": "Dati inventati a scopo di esempio. Una riga per ogni biblioteca, riferita all'anno indicato.",
+  "dc:creator": "onData",
+  "dc:license": {"@id": "https://creativecommons.org/licenses/by/4.0/"},
+  "dialect": {"delimiter": ",", "quoteChar": "\"", "encoding": "utf-8", "header": true},
   "tableSchema": {
     "columns": [
-      {
-        "name": "marca",
-        "titles": "marca",
-        "dc:description": "Questo campo contiene informazioni sulla marca e il modello di ogni veicolo",
-        "datatype": "string"
-      },
-      {
-        "name": "anno",
-        "titles": "anno",
-        "dc:description": "Questo campo contiene informazioni su l'anno di fabbricazione di ogni veicolo",
-        "datatype": "gYear"
-      },
-      {
-        "name": "cilindri",
-        "titles": "cilindri",
-        "dc:description": "Questo campo contiene informazioni sul numero di cilindri di ogni veicolo",
-        "datatype": "integer"
-      },
-      {
-        "name": "consumo",
-        "titles": "consumo",
-        "dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in miglia per gallone",
-        "datatype": "decimal"
-      },
-      {
-        "name": "potenza",
-        "titles": "potenza",
-        "dc:description": "Questo campo contiene informazioni sulla potenza di ogni veicolo, misurata in CV",
-        "datatype": "decimal"
-      },
-      {
-        "name": "accelerazione",
-        "titles": "accelerazione",
-        "dc:description": "Questo campo contiene il tempo di accelerazione di ogni veicolo, misurato in secondi",
-        "datatype": "decimal"
-      }
+      {"name": "codice_istat_comune", "titles": "codice_istat_comune", "dc:description": "Codice Istat del comune", "required": true, "datatype": {"base": "string", "format": "[0-9]{6}"}},
+      {"name": "comune", "titles": "comune", "dc:description": "Nome del comune", "required": true, "datatype": "string"},
+      {"name": "biblioteca", "titles": "biblioteca", "dc:description": "Nome della biblioteca", "required": true, "datatype": "string"},
+      {"name": "dug", "titles": "dug", "dc:description": "Denominazione urbanistica generica", "datatype": "string"},
+      {"name": "denominazione", "titles": "denominazione", "dc:description": "Denominazione della strada", "datatype": "string"},
+      {"name": "civico", "titles": "civico", "dc:description": "Numero civico", "datatype": "integer"},
+      {"name": "esponente", "titles": "esponente", "dc:description": "Esponente del civico. Cella vuota: nessun esponente", "datatype": "string"},
+      {"name": "cap", "titles": "cap", "dc:description": "Codice di avviamento postale", "datatype": {"base": "string", "format": "[0-9]{5}"}},
+      {"name": "telefono", "titles": "telefono", "dc:description": "Telefono della biblioteca in formato internazionale. Cella vuota: non disponibile", "datatype": {"base": "string", "format": "\\+[0-9]{8,15}"}},
+      {"name": "data_apertura", "titles": "data_apertura", "dc:description": "Data di apertura della biblioteca", "datatype": "date"},
+      {"name": "anno", "titles": "anno", "dc:description": "Anno a cui si riferiscono prestiti e spesa", "datatype": "gYear"},
+      {"name": "prestiti", "titles": "prestiti", "dc:description": "Prestiti effettuati nell'anno. Cella vuota: dato non rilevato", "datatype": {"base": "integer", "minimum": 0}},
+      {"name": "spesa_acquisti_euro", "titles": "spesa_acquisti_euro", "dc:description": "Spesa per acquisti di libri nell'anno, in euro", "datatype": "decimal"},
+      {"name": "latitudine", "titles": "latitudine", "dc:description": "Latitudine in gradi decimali, WGS84 (EPSG:4326)", "datatype": "decimal"},
+      {"name": "longitudine", "titles": "longitudine", "dc:description": "Longitudine in gradi decimali, WGS84 (EPSG:4326)", "datatype": "decimal"}
     ]
   }
 }
-
 ```
 
-Il dizionario dei dati mostrato come esempio è associato al set di dati mostrato in questa guida.
+Il file si controlla con la libreria [csvw](https://pypi.org/project/csvw/):
 
-- Tra le altre proprietà, il nome di ogni colonna viene descritto utilizzando la proprietà `name`.
-- La proprietà `titles` è usata per definire un titolo *human-readable* per la colonna.
-- Il `titles` della colonna può essere accompagnato da un codice di lingua in modo che la riga di intestazione possa essere descritta in diverse lingue.
-- La proprietà `datatype` è usata per descrivere il tipo di dato in cui è espressa la colonna corrispondente.
-- La proprietà `dc:description` permette di includere un testo descrittivo del contenuto di ogni colonna.
-- Strumenti come quelli descritti nella sezione [Cassetta degli attrezzi per i file CSV](./linee_guida_pubblicazione/Cassetta_attrezzi.md) di questa guida, per esempio CSVlint, permettono di controllare la coerenza del dataset confrontando il contenuto del dizionario dei dati e la struttura del file dei dati.
-- Tra gli altri controlli, è possibile convalidare il numero di colonne e i loro nomi, il tipo di valori ammessi, se questi valori devono essere univoci o se ci sono collegamenti di questi valori ad altre tabelle (chiavi esterne).
+```
+uvx --from csvw csvwvalidate biblioteche.csv-metadata.json
+```
+
+Il comando risponde `OK`, oppure `FAIL` con le righe sbagliate.
+
+Conviene compilare almeno queste proprietà:
+
+- **Per la tabella.** `url` (il file), `dc:title` (titolo), `dc:description` (descrizione), `dc:creator` (titolare del dato), `dc:license` (licenza), `dialect` (separatore, delimitatore, codifica, intestazione).
+- **Per la colonna.** `name` (nome), `titles` (titolo per chi legge, che può portare anche un codice di lingua), `dc:description` (descrizione), `datatype` (tipo di dato).
+
+Con altre proprietà si possono annotare valori obbligatori (`required`), valori ammessi, formati, chiavi primarie ed esterne verso altre tabelle.

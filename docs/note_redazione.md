@@ -2,46 +2,67 @@
 hide:
 # - toc
  - navigation
-title: Note sulla guida
+title: Note per chi scrive
 ---
 
-# Note sulla guida
+# Note per chi scrive
 
-A seguire alcune note utili ai redattori della guida
+## Come è fatta la guida
 
-## Modalità di pubblicazione
+La guida è basata su [MkDocs](https://www.mkdocs.org/) e sul tema [Material](https://squidfunk.github.io/mkdocs-material/). Il testo è nella cartella `docs`. Prima di proporre una modifica, `mkdocs build --strict` deve terminare senza avvisi.
 
-La guida è basata su [MkDocs](https://www.mkdocs.org/) e sul tema [Material](https://squidfunk.github.io/mkdocs-material/).
+La cartella [risorse](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/risorse) del repository contiene i file originali della guida spagnola.
+
+## Per chi scriviamo
+
+Chi in un ente ha i dati in un foglio di calcolo o in un gestionale, deve pubblicarli e non programma. I dettagli per chi usa il terminale o gli schemi stanno in un paragrafo a parte, in fondo, e non sono mai una condizione per capire la regola.
+
+## Le schede delle regole
+
+Ogni scheda ha, in quest'ordine:
+
+1. il titolo con la regola all'imperativo;
+2. una o due frasi con la regola, chiare anche senza il resto;
+3. «Così sì e così no», con i riquadri `failure` e `success`;
+4. «Perché», con una conseguenza concreta per chi riusa i dati;
+5. «Casi particolari», solo se ce ne sono;
+6. «Come si fa nel foglio di calcolo», solo se c'è qualcosa di utile e provato;
+7. «Vedi anche», all'ultima riga.
+
+Per la forza delle regole si usa «deve» per ciò che è obbligatorio per la guida, «meglio» o «è consigliato» per il consiglio.
+
+## Gli esempi
+
+C'è un solo esempio, il [dataset delle biblioteche](risorse/esempi/biblioteche.csv), con il suo [dizionario](risorse/esempi/biblioteche-dizionario.csv) e il suo [schema](risorse/esempi/biblioteche.schema.yaml). Nome della biblioteca, telefoni, spese e prestiti sono inventati, e lo si dice dove serve; codici Istat e nomi dei comuni sono veri.
+
+- Le tabelle «Così sì» rispettano tutte le regole della guida, non solo quella della scheda.
+- Gli esempi «Così no» mostrano un solo problema per volta, quando si può.
+- Ogni tabella ha lo stesso numero di celle in tutte le righe. Ogni blocco CSV è un CSV valido e coerente con la tabella vicina.
 
 ## Stile
 
-- creare - ove possibile - i **link ipertestuali** tra i **capitoli**. Quindi ad esempio aggiungere tutti gli *hyperlink* all'indice di [questa pagina](guida/index.md), o laddove si legge qualcosa come "questa possibilità deve essere spiegata nel dizionario", inserire hyperlink al [capitolo sul dizionario](guida/dizionario_dati.md);
-- fare attenzione a tradurre ove possibile tutto. Non lasciare nelle tabelle di esempio, i nomi colonna in spagnolo;
+- Italiano semplice, frasi brevi, forma attiva, con un'immagine quando il concetto è astratto.
+- Niente enfasi, superlativi e avverbi di rinforzo. Grassetti solo per il nome di una voce in un elenco.
+- Solo il trattino della tastiera, `-`. Un paragrafo per riga, senza a capo forzati.
+- Acronimi sciolti alla prima occorrenza.
+- I titoli delle pagine non iniziano con un numero, a parte le schede.
 
-## File originali della guida
+## Termini
 
-La cartella [risorse](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/risorse) del *repository* contiene i file "ufficiali" della guida.
+| Si scrive | Non si scrive |
+| --- | --- |
+| colonna | campo, attributo, variabile |
+| riga (una volta: «detta anche record») | osservazione |
+| dataset | set di dati, insieme di dati |
+| tabellare | tabulare |
+| dizionario dei dati | dizionario di dati, dizionario dati |
+| dati aperti | open data, salvo alla prima occorrenza |
+| chi pubblica | editore |
 
-## Foglio con le tabelle di esempio della guida originale
+Nei nomi degli standard restano i termini originali. Si evitano anche «buona prassi», «cattiva prassi», «digitare» e «quotato».
 
-È stato creato un <!--- :material-table: --> :material-table: [foglio elettronico](https://docs.google.com/spreadsheets/d/1CAR685UYBmaKVB3zE4yuRj-n0fZBL6HohFDat66Zqic/edit#gid=775453510), dove raccogliere senza alcuna formattazione, le tabelle presenti nella guida originale. Sarà comodo per produrre la versione "italiana" da inserire in questa guida.
+## Fatti e link
 
-!!! note "Note per i nomi dei fogli"
-
-    I numeri pagina e la numerazione tabella sempre in doppia cifra (quindi pagina, diventa `01`) e se c'è una sola tabella nella pagina si mantiene lo `01`.<br>
-    Come numero pagina, usare quello che si legge nel piede del PDF.
-
-Se per qualche ragione è utile avere anche un `CSV` delle tabelle, inserirle qui nel repo: [docs/risorse/tabelle](https://github.com/ondata/guidaPraticaPubblicazioneCSV/tree/main/docs/risorse/tabelle).
-
-## Come creare tabelle HTML
-
-Nella guida originale in PDF sono presenti tabelle come quella sottostante:
-
-![](imgs/tabella.png)
-
-Non è possibile riprodurla con una tabella in markdown, ma è necessario usare l'HTML. Qui una [guida audio-video](https://www.youtube.com/watch?v=j1jrFGaQh9c), sul come farlo:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/j1jrFGaQh9c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-Il *tool online* usato nel video di sopra, per trasformare la tabella di un foglio elettronico in `HTML` è [TableCleaner](https://www.r2h.nl/html-word-excel-table-code-cleaner/index.php).
-
+- Ogni fatto, norma, numero o comando va verificato prima di scriverlo. Se non si può verificare, non si scrive. I numeri portano la data della verifica.
+- I link alle Linee guida AgID puntano alla [versione HTML](https://ondata.github.io/linee-guida-opendata/), alla sezione o al requisito precisi.
+- Si collegano i capitoli fra loro: dove si legge «va spiegato nel dizionario», il link porta al [dizionario dei dati](guida/dizionario_dati.md).

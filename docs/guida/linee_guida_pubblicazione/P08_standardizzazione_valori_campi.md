@@ -2,81 +2,50 @@
 hide:
  - toc
 # - navigation
-title: Standardizzazione del valori dei campi
+title: Scrivi la stessa cosa sempre allo stesso modo
 ---
 
-# Standardizzazione del valori dei campi
+# 8. Scrivi la stessa cosa sempre allo stesso modo
 
-L'utilizzo di classificazioni, vocabolari e più in generale di metadati "standard" permette di combinare tra loro dati provenienti da fonti differenti, abilitandone in questo modo l'interoperabilità.
+Un valore deve essere scritto sempre allo stesso modo in tutta la tabella: se scegli `Palermo`, non usi anche `Comune di Palermo`. Quando esiste un codice o un vocabolario standard, è consigliato usarlo.
 
-Vanno considerati tecnicamente corretti quei dati che:
+## Così sì e così no
 
-- usano la stessa codifica e normalizzazione per lo stesso tipo di dati, pubblicati in diversi dataset di un catalogo, per esempio, gli indirizzi sono sempre pubblicati con la stessa struttura, tipo, formato, in qualsiasi dataset e i dati geografici hanno lo stesso sistema di coordinate;
-- la codifica e la standardizzazione utilizzate si basano su alcuni standard comuni proposti e utilizzati da altre organizzazioni nazionali o internazionali come ad esempio [EUROSTAT](https://ec.europa.eu/eurostat/web/nace) o [ISTAT](https://www.istat.it/it/metodi-e-strumenti/classificazioni).
+Nomi delle biblioteche e prestiti sono inventati, i codici Istat e i nomi dei comuni sono veri. Qui lo stesso comune è scritto in due modi.
 
-Si raccomanda:
+!!! failure "Così no"
 
-- di utilizzare vocabolari comunemente usati, per standardizzare la struttura e i valori delle informazioni pubblicate nei dataset[^1];
-- nel caso in cui non si utilizzino vocabolari di riferimento, il valore assegnato ad un dato attributo deve essere unico e coerente in tutta la tabella; in altre parole, se si sceglie di usare il valore "Palermo" per riferirsi a questa città, non si dovrebbe usare ad esempio il valore "Comune di Palermo".
+    | comune | biblioteca | anno | prestiti |
+    | --- | --- | ---: | ---: |
+    | Palermo | Biblioteca di esempio A | 2022 | 11980 |
+    | Comune di Palermo | Biblioteca di esempio A | 2023 | 12450 |
+    | Roma | Biblioteca di esempio D | 2022 | 19870 |
+    | ROMA | Biblioteca di esempio D | 2023 | 20310 |
 
-[^1]: Le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-arricchimento) indicano il Catalogo nazionale della semantica dei dati.
+!!! success "Così sì"
 
+    | codice_istat_comune | comune | biblioteca | anno | prestiti |
+    | --- | --- | --- | ---: | ---: |
+    | 082053 | Palermo | Biblioteca di esempio A | 2022 | 11980 |
+    | 082053 | Palermo | Biblioteca di esempio A | 2023 | 12450 |
+    | 058091 | Roma | Biblioteca di esempio D | 2022 | 19870 |
+    | 058091 | Roma | Biblioteca di esempio D | 2023 | 20310 |
 
-## Esempio 1
+## Perché
 
-Un caso che si presenta di frequente è quando abbiamo un dato in cui in una colonna compare la dimensione territoriale. Abbiamo ad esempio una colonna "Comune" oppure "Provincia" o "Regione". Spesso ci si limita a valorizzare il campo con la descrizione di quel Comune, quella Provincia o quella Regione, ma  diventa così molto facile utilizzare descrizioni non standard. Ad esempio "Reggio Emilia" al posto di "Reggio nell'Emilia" o "Reggio Calabria" al posto di "Reggio di Calabria". Generando peraltro ulteriore confusione sul fatto che andrebbe specificato se ci si sta riferendo al comune o alla provincia "Reggio di Calabria" .  Per ovviare a questo problema è possibile introdurre nel nostro dataset una nuova colonna con il codice standard Istat di quel comune.
+Per un programma `Palermo` e `Comune di Palermo` sono due comuni diversi. Chi filtra le righe di Palermo perde quelle scritte nell'altro modo, e chi conta i prestiti per comune ottiene quattro comuni invece di due.
 
-!!! failure "Cattiva prassi"
+Un codice standard è come una chiave uguale per tutte le porte: chi ha un altro dataset con il codice Istat del comune può unirlo al tuo senza confrontare i nomi. Con i soli nomi è facile sbagliare: si trova `Reggio Emilia` al posto di `Reggio nell'Emilia` (`035033`) e `Reggio Calabria` al posto di `Reggio di Calabria` (`080063`).
 
-    | territorio | popolazione_residente_al_31_dicembre |
-    | --- | --- |
-    | Reggio nell'Emilia | 170601 |
-    | Reggio di Calabria | 173026 |
-    | Napoli | 922094 |
+## Casi particolari
 
-!!! success "Buona prassi"
+- **Tra un dataset e l'altro.** È consigliato usare la stessa codifica e la stessa struttura per lo stesso tipo di dato in tutti i dataset di un catalogo: per esempio gli indirizzi hanno sempre le stesse colonne e i dati geografici lo stesso sistema di coordinate.
+- **Standard comuni.** Meglio basare codifiche e valori su standard proposti e usati da altre organizzazioni nazionali o internazionali, come le classificazioni di [Eurostat](https://ec.europa.eu/eurostat/web/nace) e di [Istat](https://www.istat.it/it/metodi-e-strumenti/classificazioni), e su vocabolari di uso comune[^1].
+- **Senza un vocabolario di riferimento.** Il valore scelto deve comunque essere unico e coerente in tutta la tabella.
+- **Attività economica.** Il riferimento è la [classificazione Ateco 2025 di Istat](https://www.istat.it/classificazione/ateco-2025/), dove `91.11` è «Attività di biblioteche». Le classificazioni hanno versioni: dichiara quella usata, per esempio nel nome della colonna (`codice_ateco_2025`).
+- **Codici che cambiano.** I codici Istat cambiano con fusioni e riforme territoriali: indica nel dizionario dei dati la data dei codici usati. Vedi [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md).
+- **Tempo di riferimento.** Ogni dato si riferisce a un momento. I prestiti sono un dato annuale, quindi serve una colonna che indichi l'anno, come `anno` nell'esempio.
 
-     | territorio | codice_territorio | popolazione_residente_al_31_dicembre |
-    | --- | --- | --- |
-    | Reggio nell'Emilia | 035033 | 170601 |
-    | Reggio di Calabria | 080063 | 173026 |
-    | Napoli | 063049 | 922094 |
+[^1]: Le [Linee guida dell'Agenzia per l'Italia digitale (AgID)](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-arricchimento) indicano il Catalogo nazionale della semantica dei dati.
 
-
-Tutti i dati hanno poi un "tempo" a cui si riferiscono. Poichè il dato sulla popolazione residente è un dato annuale, diventa importante l'inserimento di una colonna che specifichi l'anno di riferimento. La tabella con i dati comunali diventa coì la seguente
-
-!!! success "Buona prassi"
-
-     | territorio | codice_territorio | popolazione_residente_al_31_dicembre | anno |
-    | --- | --- | --- | --- |
-    | Reggio nell'Emilia | 035033 | 170601 | 2020 |
-    | Reggio di Calabria | 080063 | 173026 | 2020 |
-    | Napoli | 063049 | 922094 | 2020 |
-
-
-
-I codici Istat cambiano con fusioni e riforme territoriali: indica nel dizionario dei dati la data dei codici usati. Vedi [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md).
-
-## Esempio 2
-
-Un altro esempio lo possiamo avere con la standardizzazione del nome e del codice dell'attività economica. Nell'esempio che segue è stato introdotto nella tabella il codice Ateco delle attività economiche, nella classificazione di Istat
-
-!!! failure "Cattiva prassi"
-
-    | marca | attivita_vendite |
-    | --- | --- |
-    | chevrolet | Vendite di auto |
-    | buick | Vendita di veicoli |
-    | plymouth | Vendita |
-
-!!! success "Buona prassi"
-
-    | marca | codice_ateco_2025 | attivita_vendite |
-    | --- | --- | --- |
-    | chevrolet | 47.81 | Commercio al dettaglio di autoveicoli |
-    | buick | 47.81 | Commercio al dettaglio di autoveicoli |
-    | plymouth | 46.71 | Commercio all'ingrosso di autoveicoli |
-
-
-
-I valori del campo `codice_ateco_2025` sono quelli della [classificazione Ateco 2025 di Istat](https://www.istat.it/classificazione/ateco-2025/). Le classificazioni hanno versioni: dichiara quella usata, come fa qui il nome della colonna.
+Vedi anche: [Affianca una descrizione ai codici](P09_campi_codificati.md), [Dividi gli indirizzi in colonne](P14_campi_tipo_indirizzo_postale.md), [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md)

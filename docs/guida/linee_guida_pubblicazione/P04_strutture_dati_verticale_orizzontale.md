@@ -2,95 +2,72 @@
 hide:
  - toc
 # - navigation
-title: Strutture dati verticale vs orizzontale
+title: Righe nuove, non colonne nuove
 ---
 
+# 4. Righe nuove, non colonne nuove
 
-# Strutture dati: verticale vs orizzontale
-Quando si progettano strutture di dati tabulari è consigliabile evitare la crescita orizzontale dei valori.
+Quando i dati crescono, per un anno o una categoria in più, aggiungi righe e non colonne. Meglio una colonna per ogni tipo di informazione e una riga per ogni osservazione.
 
+## Così sì e così no
 
-!!! failure "Modalità sconsigliata"
+I nomi delle biblioteche e i prestiti sono inventati.
 
-    ||osservazione|osservazione|osservazione|
-    |---|---|---|---|
-    |variabile||||
-    |variabile||||
+Una serie temporale cresce per righe, non per colonne: `anno` è una colonna. La forma larga si può offrire come file aggiuntivo di consultazione, accanto a quella lunga.
 
-!!! success "Modalità consigliata"
+!!! failure "Così no"
 
-    ||variabile|variabile|variabile|
-    |---|---|---|---|
-    |osservazione||||
-    |osservazione||||
+    | biblioteca | 2021 | 2022 | 2023 |
+    | --- | --- | --- | --- |
+    | Biblioteca di esempio A | 11800 | 12100 | 12450 |
+    | Biblioteca di esempio D | 19750 | 20040 | 20310 |
 
+!!! success "Così sì"
 
+    | biblioteca | anno | prestiti |
+    | --- | --- | --- |
+    | Biblioteca di esempio A | 2021 | 11800 |
+    | Biblioteca di esempio A | 2022 | 12100 |
+    | Biblioteca di esempio A | 2023 | 12450 |
+    | Biblioteca di esempio D | 2021 | 19750 |
+    | Biblioteca di esempio D | 2022 | 20040 |
+    | Biblioteca di esempio D | 2023 | 20310 |
 
-<!-- ![](../../imgs/p04-wrong.png)
-![](../../imgs/p04-correct.png) -->
+Vale anche per le categorie. Una colonna per ogni tipo di prestito obbliga a cambiare la struttura del file ogni volta che ne compare uno nuovo.
 
-Quando è possibile, è preferibile mettere le variabili o gli attributi dei dati nelle colonne di una tabella e aggiungere i valori corrispondenti alle osservazioni dei dati nelle righe.
+!!! failure "Così no"
 
-La crescita orizzontale di una struttura di dati tabulari può rendere difficile la manutenzione e la creazione di visualizzazioni.
+    | biblioteca | anno | prestiti_libri | prestiti_dvd | prestiti_periodici |
+    | --- | --- | --- | --- | --- |
+    | Biblioteca di esempio A | 2023 | 11000 | 1200 | 250 |
+    | Biblioteca di esempio D | 2023 | 18000 | 1800 | 510 |
 
-In generale, è più facile identificare le relazioni tra le variabili nelle colonne che tra le righe, ed è più facile fare confronti tra gruppi di osservazioni nelle righe che tra gruppi di colonne.
+!!! success "Così sì"
 
-Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze di aggiornamento dei dati:
+    | biblioteca | anno | tipo_prestito | prestiti |
+    | --- | --- | --- | --- |
+    | Biblioteca di esempio A | 2023 | libri | 11000 |
+    | Biblioteca di esempio A | 2023 | dvd | 1200 |
+    | Biblioteca di esempio A | 2023 | periodici | 250 |
+    | Biblioteca di esempio D | 2023 | libri | 18000 |
+    | Biblioteca di esempio D | 2023 | dvd | 1800 |
+    | Biblioteca di esempio D | 2023 | periodici | 510 |
 
-- Se è necessario registrare nuove variabili o attributi che non sono stati registrati in precedenza, per esempio un'informazione mai raccolta prima, allora è ragionevole far crescere la struttura dei dati orizzontalmente, cioè aggiungere nuove colonne. Questo permetterà di inserire le osservazioni per le nuove variabili mantenendo i valori vuoti nelle osservazioni pre-aggiornamento per queste nuove colonne, se non esiste un valore assegnabile per quelle osservazioni. Quando si aggiungono nuove osservazioni, si devono necessariamente inserire nuove righe.
+## Perché
 
-### Esempio:
-crescita orizzontale vs. verticale.
+Immagina un registro: ogni anno aggiungi una riga in fondo alla pagina, non ristampi il modulo con una colonna in più. Con una colonna per anno, ogni aggiornamento cambia la struttura del file, e chi ha costruito un foglio, un grafico o un programma su quel file deve correggerli.
 
-!!! failure "Cattiva prassi"
+Nella forma lunga si filtra un anno, si ordina per prestiti e si confrontano i gruppi con le funzioni di base di qualsiasi programma. Nella forma larga anche un grafico dell'andamento richiede di ricostruire prima la colonna `anno`.
 
-    |marca|guasto_radiatore|guasto_carburatore|guasto_sospensione|guasto_frizione|
-    |-------|-------------------|---------------------|-------------------------|-------------------------|
-    |chevrolet chevelle malibu|0|7|1|0|
-    |buick skylark 320|1|2|2|2|
-    |plymouth satellite|0|4|4|1|
+## Casi particolari
 
+### Quando una colonna nuova serve davvero
 
-!!! success "Buona prassi"
+Una colonna nuova serve quando arriva un'informazione mai raccolta prima, non un altro valore di una che già c'è. Nelle righe precedenti, dove quel valore non esiste, la cella resta vuota.
 
-    |marca|tipo_guasto|quantita_guasti|
-    |-------|-----------|---------------------|
-    |chevrolet chevelle malibu|radiatore|0|
-    |chevrolet chevelle malibu|carburatore|7|
-    |chevrolet chevelle malibu|sospensione|1|
-    |chevrolet chevelle malibu|frizione|0|
-    |buick skylark 320|radiatore|1|
-    |buick skylark 320|carburatore|2|
-    |buick skylark 320|sospensione|2|
-    |buick skylark 320|frizione|2|
-    |plymouth satellite|radiatore|0|
-    |plymouth satellite|carburatore|4|
-    |plymouth satellite|sospensione|4|
-    |plymouth satellite|frizione|1|
+| biblioteca | anno | prestiti | spesa_acquisti_euro |
+| --- | --- | --- | --- |
+| Biblioteca di esempio A | 2022 | 12100 |  |
+| Biblioteca di esempio A | 2023 | 12450 | 8200.50 |
 
-
-L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, '`tipo_guasto`' e '`quantita_guasti`', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
-
-### Serie temporali
-
-Una serie temporale cresce per righe, non per colonne: `anno` è una variabile. La forma larga si può offrire come file aggiuntivo di consultazione, accanto a quella lunga.
-
-!!! failure "Cattiva prassi"
-
-    |marca|1972|1973|1974|
-    |-------|----|----|----|
-    |chevrolet chevelle malibu|345|423|1234|
-    |buick skylark 320|124|252|785|
-
-!!! success "Buona prassi"
-
-    |marca|anno|domanda|
-    |-------|----|-------|
-    |chevrolet chevelle malibu|1972|345|
-    |chevrolet chevelle malibu|1973|423|
-    |chevrolet chevelle malibu|1974|1234|
-    |buick skylark 320|1972|124|
-    |buick skylark 320|1973|252|
-    |buick skylark 320|1974|785|
-
-
+Vedi anche: [2. Una riga per ogni record](P02_singolo_record_riga.md), [5. Se un valore manca, lascia la cella vuota](P05_trattamento_valori_sconosciuti.md), [6. Niente totali e subtotali](P06_subtotali_totali_raggruppamenti.md).
