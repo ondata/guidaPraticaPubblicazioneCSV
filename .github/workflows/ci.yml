@@ -14,9 +14,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: 3.x
-      - run: pip install markupsafe==2.0.1 mkdocs-material markdown mkdocstrings mkdocs-rss-plugin  mkdocs-click
+      - run: pip install mkdocs-material==9.8.1
+      - run: mkdocs build --strict
       - run: mkdocs gh-deploy --force
