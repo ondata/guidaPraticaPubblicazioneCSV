@@ -1,0 +1,8 @@
+fields:
+  - {name: X, type: number}
+  - {name: Y, type: number}
+  - {name: indirizzo, type: string, constraints: {required: true}}
+  - {name: nome, type: string, constraints: {required: true, unique: true}}
+  - {name: longitude, type: number, constraints: {required: true, minimum: 6, maximum: 19}}
+  - {name: latitude, type: number, constraints: {required: true, minimum: 35, maximum: 48}}
+missingValues: [""]

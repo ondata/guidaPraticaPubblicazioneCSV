@@ -28,5 +28,6 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [Considerazioni sull'archiviazione dei file](Considerazioni_archiviazione.md)
 - [Prima di pubblicare i dati personali](Dati_personali.md)
 - [Cassetta degli attrezzi per i file CSV](Cassetta_attrezzi.md)
+- [Esempi di CSV italiani](Esempi_dati_CSV.md)
 - [Link utili](Link_utili.md)
 
