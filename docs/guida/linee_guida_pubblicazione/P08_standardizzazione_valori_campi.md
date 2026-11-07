@@ -55,6 +55,8 @@ Tutti i dati hanno poi un "tempo" a cui si riferiscono. Poichè il dato sulla po
 
 
 
+I codici Istat cambiano con fusioni e riforme territoriali: indica nel dizionario dei dati la data dei codici usati. Vedi [Tassonomie ed elenchi di codici](Tassonomie_elenchi_codici.md).
+
 ## Esempio 2
 
 Un altro esempio lo possiamo avere con la standardizzazione del nome e del codice dell'attività economica. Nell'esempio che segue è stato introdotto nella tabella il codice Ateco delle attività economiche, nella classificazione di Istat

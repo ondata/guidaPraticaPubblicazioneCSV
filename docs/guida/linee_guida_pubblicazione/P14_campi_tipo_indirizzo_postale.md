@@ -11,7 +11,7 @@ L'indirizzo di un privato è un dato personale: vedi [Prima di pubblicare i dati
 
 Utilizzare una **codifica accurata degli indirizzi postali** è essenziale per **gestire le dimensioni geografiche con i dati**. Indirizzi postali ben strutturati **possono essere geolocalizzati**, generando coordinate di latitudine e longitudine attraverso l'uso di applicazioni specifiche.
 
-In **Italia** esiste una **regola tecnica** con le specifiche per la modellazione dei dati relativi all'**anagrafe nazionale dei numeri civici e delle strade urbane** definita da AgID[^1] , semplificando al massimo le definizioni previste possiamo raccomandare la definizione degli indirizzi attraverso i seguenti campi:
+In **Italia** il riferimento nazionale per strade e numeri civici è l'[Archivio nazionale dei numeri civici e delle strade urbane](https://www.anncsu.gov.it/it/) (ANNCSU), gestito da Istat e Agenzia delle Entrate con i dati certificati dai Comuni, e pubblicato anche in [CSV aperti](https://www.anncsu.gov.it/it/consultazione-dellarchivio/open-data/) aggiornati ogni mese[^1]. Se puoi, aggiungi il progressivo nazionale del civico e il codice Istat del comune: permettono di incrociare il dato con l'archivio. In forma semplificata, consigliamo questi campi:
 
 - **denominazione urbanistica generica** (DUG) come `campo di testo`;
 - **denominazione** come `campo di testo`;
@@ -41,7 +41,7 @@ definizione dell'indirizzo attraverso campi specifici.
 
 Nel caso sia possibile o necessaria la **georeferenziazione degli indirizzi**, ad esempio per una visualizzazione in mappa, è consigliabile **aggiungere due campi** separati per i valori di **latitudine** e **longitudine** corrispondenti al punto geografico dell'indirizzo postale, come suggerito nel capitolo [campi con coordinate geografiche](P15_campi_con_coordinate_geografiche.md).
 
-[^1]: [Linee guida AgID](https://geodati.gov.it/geoportale/datiterritoriali/regole-tecniche) per la modellazione dei dati relativi all'anagrafe nazionale dei numeri civici e delle strade urbane.
+[^1]: Gli indirizzi fanno parte dei dati di elevato valore del Regolamento di esecuzione (UE) 2023/138. Le specifiche sono di [Istat e Agenzia delle Entrate](https://www.istat.it/wp-content/uploads/2022/05/Specifiche-tecniche-anccsu-2024.pdf); per la modellazione vedi le [regole tecniche sui dati territoriali](https://geodati.gov.it/geoportale/datiterritoriali/regole-tecniche).
 
 ### Esempio 2:
 definizione dell'indirizzo attraverso campi specifici e attraverso le coordinate geografiche.
