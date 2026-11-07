@@ -26,6 +26,7 @@ La seguente sezione di questa guida fornisce linee guida sugli aspetti più comu
 - [Linee guida per esportazione/importazione di dati tabulari da strumenti di foglio di calcolo a CSV](Linee_guida_importazione_esportazione.md)
 - [Tassonomie ed elenchi di codici comunemente usati](Tassonomie_elenchi_codici.md)
 - [Considerazioni sull'archiviazione dei file](Considerazioni_archiviazione.md)
+- [Prima di pubblicare i dati personali](Dati_personali.md)
 - [Cassetta degli attrezzi per i file CSV](Cassetta_attrezzi.md)
 - [Link utili](Link_utili.md)
 

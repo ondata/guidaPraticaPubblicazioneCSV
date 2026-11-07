@@ -7,6 +7,8 @@ title: Campi con indirizzi postali
 
 # Campi con indirizzi postali
 
+L'indirizzo di un privato è un dato personale: vedi [Prima di pubblicare i dati personali](Dati_personali.md).
+
 Utilizzare una **codifica accurata degli indirizzi postali** è essenziale per **gestire le dimensioni geografiche con i dati**. Indirizzi postali ben strutturati **possono essere geolocalizzati**, generando coordinate di latitudine e longitudine attraverso l'uso di applicazioni specifiche.
 
 In **Italia** esiste una **regola tecnica** con le specifiche per la modellazione dei dati relativi all'**anagrafe nazionale dei numeri civici e delle strade urbane** definita da AgID[^1] , semplificando al massimo le definizioni previste possiamo raccomandare la definizione degli indirizzi attraverso i seguenti campi:

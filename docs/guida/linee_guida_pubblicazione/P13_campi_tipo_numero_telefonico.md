@@ -7,7 +7,7 @@ title: Campi con numeri telefonici
 
 # Campi con numeri telefonici
 
-È consigliato scrivere i numeri nel formato internazionale, senza spazi né trattini: `+390515270001`, cioè `+`, il prefisso del Paese e il numero. La colonna è di testo. Per i numeri interni si usa una colonna a parte.
+È consigliato scrivere i numeri nel formato internazionale, senza spazi né trattini: `+390515270001`, cioè `+`, il prefisso del Paese e il numero. La colonna è di testo. Per i numeri interni si usa una colonna a parte. Il telefono di un privato è un dato personale: vedi [Prima di pubblicare i dati personali](Dati_personali.md).
 
 Excel e LibreOffice possono togliere il `+` quando aprono il file: per conservarlo importa la colonna come testo, e non salvare il file dopo averlo aperto con un doppio clic.
 

@@ -45,11 +45,11 @@ nomi comprensibili delle colonne.
 
 Se c'è un'entità che è definita da diverse caratteristiche separate in diversi campi, è conveniente iniziare a nominare i campi con quell'entità e poi con gli attributi più specifici (dal più generale al più specifico). Per esempio:
 
-|cliente_nome|cliente_addebito|richiedente_tipo_documento|richiedente_numero_documento|
+|cliente_nome|cliente_addebito|richiedente_tipo|richiedente_comune|
 |---|---|---|---|
 | ... | ... | ... | ... |
 
-I campi che sono identificatori possono includere il suffisso `_id` nel nome del campo, tranne in casi eccezionali in cui un nome alternativo è più conveniente, perché fornisce informazioni sul sistema di identificazione usato, ad esempio `codice_fiscale`.
+I campi che sono identificatori possono includere il suffisso `_id` nel nome del campo, tranne in casi eccezionali in cui un nome alternativo è più conveniente, perché fornisce informazioni sul sistema di identificazione usato, ad esempio `codice_ipa`.
 
 Per i campi che contengono la descrizione di quell'identificatore, si raccomanda di includere il suffisso `_nome`, a meno che non ci sia un modo più conveniente per nominare il campo.
 
