@@ -61,7 +61,7 @@ La RFC lascia aperte alcune scelte. Questa guida le chiude, e le regole ne spieg
 - tutto ciò che non è un valore, come descrizioni, commenti e unità di misura, sta nel [dizionario dei dati](dizionario_dati.md), che dichiara anche separatore, delimitatore e codifica;
 - per i nomi dei file è meglio usare lettere minuscole a-z, cifre 0-9 e il trattino basso `_` al posto degli spazi: si evitano problemi su server e programmi diversi.
 
-Le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv) dicono che il separatore dovrebbe essere la virgola, e riportano anche il suggerimento del documento europeo di usare il punto e virgola, perché la virgola compare spesso nei decimali. Questa guida usa la virgola: con il punto come separatore decimale il problema non si pone.
+Le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv) dicono che il separatore dovrebbe essere la virgola, e riportano anche il suggerimento delle [linee guida europee sulla qualità dei dati](https://op.europa.eu/webpub/op/data-quality-guidelines/en/) di usare il punto e virgola, perché la virgola compare spesso nei valori, per esempio nei decimali. Questa guida usa la virgola: i decimali hanno il punto, e il testo che contiene una virgola va tra [virgolette](linee_guida_pubblicazione/P10_campi_tipo_testo.md).
 
 !!! warning "Attenzione al doppio clic"
 

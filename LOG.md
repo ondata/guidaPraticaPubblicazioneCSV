@@ -2,6 +2,7 @@
 
 ## 2026-11-07
 
+- Dopo la v1.0: rilettura indipendente delle ultime correzioni, frasi e rimandi corretti sul sito; l'archivio Zenodo resta quello del tag.
 - Rilascio v1.0 su GitHub e Zenodo, DOI 10.5281/zenodo.24043615: esempio unico delle biblioteche, schede su modello unico, pagine generali riscritte; revisione tecnica e di linguaggio indipendenti. Corretto l'effetto della spunta «come mostrato» di LibreOffice, tolte le vecchie tabelle.
 - Revisione della guida su quattro filoni (standard, PA e norme, comunicazione, strumenti): 96 segnalazioni, decise le regole di fondo.
 - Scelte: separatore `,` e decimale `.`, valore mancante come cella vuota, meglio senza BOM, Table Schema prima di CSVW, lettore principale chi usa un foglio di calcolo, nome «Guida pratica alla pubblicazione di dati in CSV».

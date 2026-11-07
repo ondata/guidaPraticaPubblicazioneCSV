@@ -2,7 +2,7 @@
 
 ## Dopo la 1.0
 
-Correzioni sul sito, non comprese nell'archivio Zenodo della 1.0: una frase rotta in P11 e una in P08, rimandi della sezione per il terminale nella pagina Excel, schema in pagina allineato al file, formulazione su AgID e separatore.
+Correzioni sul sito, non comprese nell'archivio Zenodo della 1.0, tra le altre: una frase rotta in P11 e una in P08, rimandi della sezione per il terminale nella pagina Excel, schema in pagina allineato al file, formulazione su AgID e separatore, clausola per i capitolati.
 
 ## 1.0 - 2026-11-07
 

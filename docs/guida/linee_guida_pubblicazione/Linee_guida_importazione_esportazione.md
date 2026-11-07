@@ -46,7 +46,7 @@ Il risultato è un file con `,` e `.`: `1234,56` diventa `1234.56`, `31/01/2023`
 Che cosa succede se salti un passaggio:
 
 - **Senza il formato inglese sulle colonne con i numeri**: se LibreOffice è impostato in italiano, i numeri escono come `"1234,56"`, con la virgola e tra virgolette, con o senza la spunta del passaggio 5. Il file non rispetta la regola del punto decimale.
-- **Senza il formato `AAAA-MM-GG` sulle date**: la colonna esce nel formato della lingua di LibreOffice. In italiano resta `31/01/2023`; in inglese diventa `01/31/2023` e `01/12/2023` diventa `12/01/2023`, con giorno e mese scambiati. Se la colonna è lasciata Standard l'esito è lo stesso.
+- **Senza il formato `AAAA-MM-GG` sulle date**: la colonna esce nel formato della lingua di LibreOffice. In italiano resta `31/01/2023`; in inglese diventa `01/31/23` e `01/12/2023` diventa `12/01/23`, con giorno e mese scambiati e l'anno a due cifre. Se la colonna è lasciata Standard l'esito è lo stesso.
 - **Con la colonna delle date in Testo**: `31/01/2023` esce così com'è, e va riscritta a parte.
 - **Con il formato `General`**: gli zeri finali spariscono, `1250,00` diventa `1250`. Il valore non cambia. Con il formato `0.00` esce `1250.00`.
 - **Togliendo la spunta del passaggio 5**: il formato `0.00` non viene più applicato e `1250,00` esce come `1250`. Numeri e date non escono tra virgolette.
