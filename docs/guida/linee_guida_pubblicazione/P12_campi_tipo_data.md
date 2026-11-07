@@ -62,7 +62,7 @@ campi con date e orari in forma estesa
 
 !!! success "Buona prassi"
 
-| identificativo_veicolo | data_vendita |
+    | identificativo_veicolo | data_vendita |
     | --- | --- |
     | 0003407G236 | 1970-01-31T15:10:00 |
     | 0003507H003 | 1970-07-23T16:34:00 |

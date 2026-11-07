@@ -30,14 +30,11 @@ definizione dell'indirizzo attraverso campi specifici.
 
 !!! success "Buona prassi"
 
-   | marchio | rivenditore_indirizzo_dug | rivenditore_indirizzo_denominazione | rivenditore_indirizzo_civico | rivenditore_indirizzo_esponente | rivenditore_indirizzo_citta | rivenditore_indirizzo_cap |
-   | --- | --- | --- | ---: | --- | --- | ---: |
-   | chevrolet chevelle malibu | Viale | Giuseppe Mazzini | 5 | A | Milano | 20100 |
-   | buick skylark 320 | Località | Fabbre | 33 | `NULL` | Brera | 20151 |
+    | marchio | rivenditore_indirizzo_dug | rivenditore_indirizzo_denominazione | rivenditore_indirizzo_civico | rivenditore_indirizzo_esponente | rivenditore_indirizzo_citta | rivenditore_indirizzo_cap |
+    | --- | --- | --- | ---: | --- | --- | ---: |
+    | chevrolet chevelle malibu | Viale | Giuseppe Mazzini | 5 | A | Milano | 20100 |
+    | buick skylark 320 | Località | Fabbre | 33 |  | Brera | 20151 |
 
-Nel caso precedente per evidenziare che il civico non ha esponente e quindi il campo è stato lasciato intenzionalmente vuoto e per evidenziarlo abbiamo inserito il termine `NULL`, in un caso reale nulla sarebbe stato visualizzato.
-
-**ATTENZIONE DEFINIZIONI IN CONTRASTO CON QUANTO DESCRITTO NEL CAPITOLO SUI VALORI NULL**
 
 
 Nel caso sia possibile o necessaria la **georeferenziazione degli indirizzi**, ad esempio per una visualizzazione in mappa, è consigliabile **aggiungere due campi** separati per i valori di **latitudine** e **longitudine** corrispondenti al punto geografico dell'indirizzo postale, come suggerito nel capitolo [campi con coordinate geografiche](P15_campi_con_coordinate_geografiche.md).

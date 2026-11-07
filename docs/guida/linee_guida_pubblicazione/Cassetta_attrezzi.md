@@ -16,8 +16,6 @@ Ci sono **strumenti** disponibili per l'**elaborazione di file `CSV`** che forni
 
 ## Strumento: CSV Lint
 
-**:x: NON FUNZIONA TESTATO CON [CSV ISTAT](../../risorse/tabelle/demo_CSV_ISTAT.csv)**
-
 **CSV Lint** è uno **strumento online** gestito dall'**Open Data Institute** realizzato per **verificare che un file `CSV` sia perfettamente leggibile e ben formato**, cioè verifica se contiene le colonne e i tipi di valori che dovrebbe. Permette di **convalidare file `CSV` e schemi di tabelle di dati**, l'analisi viene eseguita su file caricati direttamente su CSV Lint o disponibili online.
 L'analisi **restituisce informazioni sugli errori** invalidanti per l'utilizzo dei dati, degli avvertimenti per elementi la cui correzione aiuta gli utenti dei dati e **messaggi informativi** su alcuni **consigli e suggerimenti** per facilitare l'utilizzo dei dati.
 Lo strumento **genera un badge** che può essere **incorporato nel sito web del proprietario del file `CSV`** utilizzando il codice `HTML` corrispondente.
@@ -45,8 +43,6 @@ Googtables è un **servizio di validazione continua** per i dati tabulari della 
 Le tabelle contenute nel repository GitHub che contiene questa guida cono state inserite nel monitoraggio continuo e l'esito è :material-check-bold:{ .spunta_verde } [![goodtables.io](https://goodtables.io/badge/github/ondata/guidaPraticaPubblicazioneCSV.svg)](https://goodtables.io/github/ondata/guidaPraticaPubblicazioneCSV)
 
 ## Strumento: Data curator
-
-**:x: NON FUNZIONA TESTATO CON [CSV ISTAT](../../risorse/tabelle/demo_CSV_ISTAT.csv)**
 
 Data Curator è uno **strumento desktop** implementato dall'Open Data Institute che **permette la modifica, la convalida e la pubblicazione** di file di dati tabulari riutilizzabili come Open Data. Con questo strumento **è possibile generare dati tabulari** in formato `CSV`, `TSV`[^3], partendo da zero o da modelli di strutture dati e schemi. **Corregge automaticamente i problemi** comuni che si trovano nei file `CSV` ed in quelli prodotti con Excel. È possibile **creare automaticamente schemi** che descrivono i campi di dati e includono **specifiche regole di convalida** (ad esempio, unico, obbligatorio, lunghezza minima o massima o soggetto a espressioni regolari), così come **descrivere la provenienza dei dati**. Lo **strumento di convalida** analizza il file di dati rispetto allo schema definito e genera un file di valori separati nei vari dialetti `CSV` (separatore `,`, `;`, `TAB` o campi a larghezza fissa). Permette inoltre l'**incapsulamento dei dati e dello schema** per l'esportazione usando la specifica `Data Package`, i **file di dati descritti e validati** possono essere **pubblicati direttamente** sui portali di dati `CKAN`.
 
