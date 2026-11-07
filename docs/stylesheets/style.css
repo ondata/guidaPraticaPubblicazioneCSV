@@ -69,3 +69,25 @@ table[class="tabella"]  td{
 .croce_rossa {
   color: #cc1221;
 }
+
+/* le 15 regole in una pagina: niente scorrimento laterale, stampabile su A4 */
+.regole .md-typeset__scrollwrap { overflow: visible; margin: 0; }
+.regole .md-typeset__table { display: block; padding: 0; }
+.md-typeset .regole table:not([class]) { display: table; width: 100%; table-layout: fixed; }
+.md-typeset .regole table:not([class]) th:nth-child(1) { width: 3em; }
+.md-typeset .regole table:not([class]) th:nth-child(2) { width: 38%; }
+.md-typeset .regole td, .md-typeset .regole th { padding: 0.5em 0.5em; overflow-wrap: anywhere; }
+.md-typeset .regole td:first-child, .md-typeset .regole th:first-child { overflow-wrap: normal; white-space: nowrap; }
+.md-typeset .regole code { white-space: normal; overflow-wrap: anywhere; }
+
+@page { size: A4; margin: 12mm; }
+
+@media print {
+  .regole-altro { display: none; }
+  .md-container, .md-main__inner, .md-content__inner { margin: 0 !important; padding: 0 !important; }
+  .md-content__inner::before { display: none; }
+  .md-typeset h1 { margin: 0 0 0.5em; }
+  .md-typeset p { margin: 0.5em 0; }
+  .md-typeset .regole table:not([class]) { font-size: 8pt; line-height: 1.25; }
+  .md-typeset .regole td, .md-typeset .regole th { padding: 0.3em 0.45em; }
+}
