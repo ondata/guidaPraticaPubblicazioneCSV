@@ -32,5 +32,23 @@ Per tutte queste ragioni, e tenendo conto dell'attuale stato di maturità delle 
 - La semplicità di CSV ha il compromesso che il formato non include alcun meccanismo per indicare che tipo di dati sono in una colonna o se i valori in una colonna devono essere espressi in modo obbligatorio. È quindi incline a errori come quelli dei valori mancanti o la mescolanza di diversi tipi di dati all'interno di una colonna.
 - La soluzione a questi problemi risiede nell'applicazione di buone pratiche nella fase di preparazione del dataset, nell'articolazione delle misure di controllo della qualità e nel collegamento del file di dati tabulari con schemi che esprimono il modello dei dati attraverso i metadati.
 
+## La guida e le norme
 
+Questa guida è una buona pratica volontaria, non un atto normativo. Il CSV non è obbligatorio in sé: è un modo per rispettare gli obblighi qui sotto. Ultimo controllo dei riferimenti: 7 novembre 2026.
 
+**Obblighi di legge.** Ogni norma ha i propri destinatari: controlla quali si applicano al tuo ente.
+
+- i dati oggetto di pubblicazione obbligatoria vanno in formato di tipo aperto ([d.lgs. 33/2013, art. 7](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2013-03-14;33~art7!vig=));
+- i dati pubblicati senza licenza si intendono aperti, salvo i dati personali ([CAD, art. 52, comma 2](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art52!vig=));
+- un formato aperto è documentato e neutro rispetto agli strumenti, e i dati di tipo aperto sono anche adatti all'uso automatico e provvisti di metadati ([CAD, art. 1, comma 1, lettere l-bis e l-ter](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-03-07;82~art1!vig=));
+- ogni anno si pubblicano sul sito dell'ente gli elenchi delle categorie di dati detenuti ([d.lgs. 36/2006, art. 9](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2006-01-24;36~art9!vig=)).
+
+**Regole tecniche**, nelle [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/) (determinazione 183/2023):
+
+- formato aperto e leggibile meccanicamente, di almeno 3 stelle: il CSV le raggiunge ([requisito 2](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-2));
+- metadati conformi a DCAT-AP_IT o, per i dati territoriali, alle Linee guida RNDT ([requisiti 15](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-15) e [16](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16)), da inserire e tenere aggiornati su dati.gov.it o nel RNDT ([requisiti 29](https://ondata.github.io/linee-guida-opendata/capitolo-7.html#req-29) e [30](https://ondata.github.io/linee-guida-opendata/capitolo-7.html#req-30));
+- licenza CC BY per i nuovi dati aperti nativi; una licenza diversa da CC BY 4.0 o CC0 va motivata formalmente ([requisiti 20](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-20) e [21](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-21)).
+
+**Buona pratica:** le regole di questa guida, che dettagliano ciò che le norme lasciano aperto. Dove riprendono l'[Allegato B delle Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv), sono indicazioni e non requisiti.
+
+**Quando il CSV non basta.** I dati dinamici e le serie di dati di elevato valore vanno resi disponibili anche attraverso API ([requisiti 5](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-5) e [7](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-7); [Regolamento di esecuzione (UE) 2023/138](https://eur-lex.europa.eu/legal-content/IT/TXT/HTML/?uri=CELEX:32023R0138)). Il CSV resta utile per lo scaricamento in blocco.
