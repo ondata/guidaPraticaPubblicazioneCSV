@@ -35,5 +35,7 @@ Da **autore** 🔧 puoi:
 
 Per citare questa guida puoi usare questa riga:
 
-onData (2026). *Guida pratica alla pubblicazione di dati in CSV*, versione 0.9. <https://ondata.github.io/guidaPraticaPubblicazioneCSV/>. Licenza CC BY 4.0.
+onData (2026). *Guida pratica alla pubblicazione di dati in CSV*, versione 0.9. <https://doi.org/10.5281/zenodo.24042988>. Licenza CC BY 4.0.
+
+Per citare sempre l'ultima versione, usa il DOI <https://doi.org/10.5281/zenodo.24042987>.
 

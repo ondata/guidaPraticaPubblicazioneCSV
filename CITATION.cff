@@ -5,6 +5,7 @@ type: dataset
 authors:
   - name: onData
 version: "0.9"
+doi: 10.5281/zenodo.24042988
 date-released: 2026-11-07
 license: CC-BY-4.0
 url: "https://ondata.github.io/guidaPraticaPubblicazioneCSV/"
