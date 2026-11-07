@@ -33,16 +33,7 @@ Da **autore** 🔧 puoi:
 
 ## Citare questa guida
 
-Per citare questa guida puoi fare riferimento a questo testo:
+Per citare questa guida puoi usare questa riga:
 
-<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">"<a href="https://ondata.github.io/guidaPraticaPubblicazioneCSV/">Guida pratica alla pubblicazione di dati in CSV</a>"</span> dell'<a xmlns:cc="http://creativecommons.org/ns#" href="https://ondata.it/" property="cc:attributionName" rel="cc:attributionURL">Associazione onData</a>, distribuita con Licenza <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribuzione 4.0 Internazionale</a> | <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+onData (2026). *Guida pratica alla pubblicazione di dati in CSV*, versione 0.9. <https://ondata.github.io/guidaPraticaPubblicazioneCSV/>. Licenza CC BY 4.0.
 
-O direttamente a questo codice HTML:
-
-```HTML
-<span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">"<a href="https://ondata.github.io/guidaPraticaPubblicazioneCSV/">Guida pratica alla pubblicazione di dati in CSV</a>"</span> dell'<a xmlns:cc="http://creativecommons.org/ns#" href="https://ondata.it/" property="cc:attributionName" rel="cc:attributionURL">Associazione onData</a>, distribuita con Licenza <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribuzione 4.0 Internazionale</a> | <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
-```
-
-Potrai scrivere ad esempio:
-
-> Fonte: <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">"<a href="https://ondata.github.io/guidaPraticaPubblicazioneCSV/">Guida pratica alla pubblicazione di dati in CSV</a>"</span> dell'<a xmlns:cc="http://creativecommons.org/ns#" href="https://ondata.it/" property="cc:attributionName" rel="cc:attributionURL">Associazione onData</a>, distribuita con Licenza <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribuzione 4.0 Internazionale</a> | <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licenza Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>

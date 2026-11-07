@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Per citare questa guida usa questi metadati."
+title: "Guida pratica alla pubblicazione di dati in CSV"
+type: dataset
+authors:
+  - name: onData
+version: "0.9"
+date-released: 2026-11-07
+license: CC-BY-4.0
+url: "https://ondata.github.io/guidaPraticaPubblicazioneCSV/"
+repository-code: "https://github.com/ondata/guidaPraticaPubblicazioneCSV"

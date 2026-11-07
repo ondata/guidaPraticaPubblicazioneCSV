@@ -1,0 +1,11 @@
+{
+  "title": "Guida pratica alla pubblicazione di dati in CSV",
+  "description": "Quindici regole per pubblicare dati in CSV che altri possano riusare senza doverli ripulire. Nasce come adattamento della guida spagnola pubblicata da datos.gob.es, scritta da Carlos de la Fuente García.",
+  "creators": [{"name": "onData"}],
+  "license": "cc-by-4.0",
+  "upload_type": "publication",
+  "publication_type": "other",
+  "language": "ita",
+  "version": "0.9",
+  "keywords": ["csv", "open data", "dati aperti", "pubblica amministrazione"]
+}
