@@ -106,7 +106,7 @@ I codici fatti di cifre sono testo, non numeri: vedi la scheda sui [codici](P09_
 - Non riscrivere i numeri a mano nel foglio: lì restano nel formato del tuo computer. Il punto decimale riguarda il file CSV, e ci arriva con la [conversione](Linee_guida_importazione_esportazione.md#convertire-in-csv-con-libreoffice-calc).
 - Nel foglio, prima di esportare, usa il formato Generale per i numeri e un formato a 2 decimali per gli importi: le celle escono come sono visualizzate, quindi un formato con meno decimali del dato lo arrotonda.
 - Se il file esce con `;` e la virgola nei decimali, va [convertito con LibreOffice Calc](Linee_guida_importazione_esportazione.md#convertire-in-csv-con-libreoffice-calc) prima di pubblicarlo.
-- Nella conversione con LibreOffice Calc il formato `General` toglie gli zeri finali: `1250.00` diventa `1250`. Per gli importi usa il formato `0.00` indicato [nella stessa pagina](Linee_guida_importazione_esportazione.md#convertire-in-csv-con-libreoffice-calc), così la colonna conserva lo stesso numero di decimali.
-- Controlla il tipo di dato prima di pubblicare, nel programma che genera il file o con uno degli strumenti della [strumenti di controllo](Cassetta_attrezzi.md).
+- Nella conversione con LibreOffice Calc il formato `General` toglie gli zeri finali: `1250,00` diventa `1250`. Per gli importi usa il formato `0.00` indicato [nella stessa pagina](Linee_guida_importazione_esportazione.md#convertire-in-csv-con-libreoffice-calc), così la colonna conserva lo stesso numero di decimali.
+- Controlla il tipo di dato prima di pubblicare, nel programma che genera il file o con uno degli [strumenti di controllo](Cassetta_attrezzi.md).
 
 Vedi anche: [7. Un solo tipo di dato per colonna](P07_tipi_dati.md), [9. Affianca una descrizione ai codici](P09_campi_codificati.md), [15. Scrivi le coordinate in gradi decimali](P15_campi_con_coordinate_geografiche.md).

@@ -9,7 +9,7 @@ Prima di esportare, sistema il foglio:
 - **Celle unite:** non usarle.
 - **Righe e colonne vuote:** non lasciarne tra i dati.
 - **Formule:** nel CSV esce il valore calcolato.
-- **Formati delle celle:** le celle escono come sono visualizzate, quindi un formato a 2 decimali arrotonda il dato e una data può uscire come `31/01/2023`. Usa il formato Generale per i numeri, un formato a 2 decimali per gli importi, `aaaa-mm-gg` per le date e Testo per i codici.
+- **Formati delle celle:** le celle escono come sono visualizzate, quindi un formato con meno decimali del dato lo arrotonda e una data può uscire come `31/01/2023`. Usa il formato Generale per i numeri, un formato a 2 decimali per gli importi, `aaaa-mm-gg` per le date e Testo per i codici.
 
 Questa guida usa la virgola come separatore e il punto per i decimali. Excel prende il separatore dalle impostazioni di Windows: con impostazioni italiane il file può uscire con `;` e con la virgola nei decimali, e va [convertito](#convertire-in-csv-con-libreoffice-calc) prima di pubblicarlo.
 
@@ -79,7 +79,7 @@ Tutte le colonne restano testo. Per farci calcoli, una colonna di numeri va conv
 
 ## Per chi usa il terminale
 
-La stessa conversione per togliere il BOM si fa con un comando. Qui ci sono cinque colonne, tutte di tipo Testo (`1/2/2/2/3/2/4/2/5/2` indica la colonna e il tipo: `1` Standard, `2` Testo, `4` Data GMA):
+La conversione con LibreOffice Calc che [toglie il BOM](#togliere-il-bom) si fa anche con un comando. Qui ci sono cinque colonne, tutte di tipo Testo (`1/2/2/2/3/2/4/2/5/2` indica la colonna e il tipo: `1` Standard, `2` Testo, `4` Data GMA):
 
 ```bash
 soffice --headless \
@@ -88,8 +88,8 @@ soffice --headless \
   --outdir uscita dati.csv
 ```
 
-Con un file separato da `;` il primo `44` diventa `59` e le colonne con i numeri vanno lasciate al tipo `1`. Questo comando però non assegna formati di cella: se il profilo di LibreOffice è in italiano, i decimali restano con la virgola, e le date vanno come spiegato sopra.
+Con un file separato da `;` il primo `44` diventa `59` e le colonne con i numeri vanno lasciate al tipo `1`. Questo comando però non assegna formati di cella: se il profilo di LibreOffice è in italiano, i decimali restano con la virgola, e le date vanno trattate come spiega la sezione [Convertire in CSV con LibreOffice Calc](#convertire-in-csv-con-libreoffice-calc).
 
 Provato con LibreOffice 25.2 su Linux: il file esce uguale a quello di partenza, senza BOM e con i fine riga cambiati da CRLF (ritorno a capo più nuova riga, tipico di Windows) a LF (solo nuova riga).
 
-Nel comando, l'ultimo `true` dopo `,0,false,true,` corrisponde alla spunta del passaggio 5.
+Nel comando, l'ultimo `true` dopo `,0,false,true,` corrisponde alla spunta del passaggio 5 di quella conversione, Salva il contenuto della cella come mostrato.

@@ -68,4 +68,4 @@ La guida può entrare anche nei contratti. Il CAD chiede di prevedere nei capito
 
 !!! note "Bozza di clausola, da adattare e da far rivedere a chi scrive i capitolati"
 
-    I dati tabellari prodotti nell'ambito del contratto sono consegnati in formato CSV secondo la RFC 4180 e le raccomandazioni dell'Allegato B delle Linee guida AgID (determinazione 183/2023), secondo le 15 regole della «Guida pratica alla pubblicazione di dati in CSV», versione [numero], e corredati di dizionario dei dati.
+    I dati tabellari prodotti nell'ambito del contratto sono consegnati in formato CSV, nel rispetto della RFC 4180 e delle raccomandazioni dell'Allegato B delle Linee guida AgID (determinazione 183/2023), secondo le 15 regole della «Guida pratica alla pubblicazione di dati in CSV», versione [numero], e corredati di dizionario dei dati.

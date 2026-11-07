@@ -77,7 +77,7 @@ Il formato che consigliamo è [Table Schema](https://datapackage.org/standard/ta
 
 ``` yaml title="biblioteche.schema.yaml"
 fields:
-  - {name: codice_istat_comune, type: string, title: Codice Istat del comune, constraints: {required: true, pattern: "[0-9]{6}"}}
+  - {name: codice_istat_comune, type: string, title: "Codice Istat del comune, elenco SITUAS al 2026-11-07", constraints: {required: true, pattern: "[0-9]{6}"}}
   - {name: comune, type: string, constraints: {required: true}}
   - {name: biblioteca, type: string, constraints: {required: true}}
   - {name: dug, type: string, title: Denominazione urbanistica generica}

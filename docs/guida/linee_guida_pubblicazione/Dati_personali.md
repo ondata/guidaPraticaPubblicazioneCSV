@@ -7,7 +7,7 @@ title: Prima di pubblicare i dati personali
 
 # Prima di pubblicare i dati personali
 
-Un numero di telefono, un indirizzo o un codice fiscale in un CSV possono essere dati personali. Questa guida spiega come scrivere quelle colonne, non se puoi pubblicarli: prima di pubblicare, controlla che cosa contiene il file. In una pubblica amministrazione la valutazione del caso concreto spetta a chi ne è responsabile, con il Responsabile della protezione dei dati (RPD).
+Un numero di telefono, un indirizzo o un codice fiscale in un CSV possono essere dati personali. Questa guida spiega come scrivere quelle colonne, non se puoi pubblicare quei dati: prima di pubblicare, controlla che cosa contiene il file. In una pubblica amministrazione la valutazione del caso concreto spetta a chi ne è responsabile, con il Responsabile della protezione dei dati (RPD).
 
 ## Cosa dicono le norme
 

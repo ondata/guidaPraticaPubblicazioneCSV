@@ -1,5 +1,9 @@
 # Registro delle modifiche
 
+## Dopo la 1.0
+
+Correzioni sul sito, non comprese nell'archivio Zenodo della 1.0: una frase rotta in P11 e una in P08, rimandi della sezione per il terminale nella pagina Excel, schema in pagina allineato al file, formulazione su AgID e separatore.
+
 ## 1.0 - 2026-11-07
 
 - Esempio unico delle biblioteche in tutte le schede, con CSV, schema e dizionario in `docs/risorse/esempi/`, validati in automatico.

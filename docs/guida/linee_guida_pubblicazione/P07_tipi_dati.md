@@ -35,8 +35,6 @@ Nomi delle biblioteche e importi sono inventati. In questa colonna alcune celle 
 
 Il CSV è testo e non contiene tipi: a dire che una colonna è numerica sono solo i valori scritti in modo coerente con il dizionario. Un foglio di calcolo legge `1250.00 euro` come testo e la somma lo salta: nel primo esempio la spesa risulta 8500.50 invece di 25151.25, senza alcun avviso.
 
-
-
 ## Casi particolari
 
 - **Unità uguale per tutta la colonna.** Si indica nel nome (`spesa_acquisti_euro`) e si ripete nel [dizionario dei dati](../dizionario_dati.md).

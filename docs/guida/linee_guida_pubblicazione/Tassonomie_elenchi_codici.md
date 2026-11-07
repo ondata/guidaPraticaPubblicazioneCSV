@@ -11,7 +11,7 @@ Usa questi elenchi per i valori delle colonne: chi riusa i dati può così unire
 
 ## Codici italiani
 
-I codici sono sempre testo, non numeri: vanno pubblicati così come sono, zeri iniziali compresi. Nella tabella i valori di esempio sono quelli del Comune di Palermo.
+I codici sono sempre testo, non numeri: vanno pubblicati così come sono, zeri iniziali compresi. Nella tabella i valori di esempio sono quelli del Comune di Palermo; per il numero civico non ne indichiamo uno.
 
 | Codice | Identifica | Come si scrive | Esempio | Dove si trova |
 | --- | --- | --- | --- | --- |
