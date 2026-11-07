@@ -25,8 +25,9 @@ Nel caso delle date è utile utilizzare le seguenti raccomandazioni:
 
 Nel caso delle ore è utile utilizzare le seguenti raccomandazioni:
 
-- usare preferibile il formato 24 ore `HH:MM:SS` piuttosto che il formato 12 ore `HH:MM:SS AM/PM`;
-- usare un unico campo per includere i valori che rappresentano la data e l'ora combinate usando il formato `AAAA-MM-GGTHH:MM:SS`.
+- usare preferibilmente il formato 24 ore `HH:MM:SS` piuttosto che il formato 12 ore `HH:MM:SS AM/PM`;
+- usare un unico campo per includere i valori che rappresentano la data e l'ora combinate usando il formato `AAAA-MM-GGTHH:MM:SS`;
+- indicare lo scostamento da UTC: `2026-07-23T16:34:00+02:00`, oppure `2026-07-23T14:34:00Z`. Se tutti gli orari sono locali e non si può indicare lo scostamento, dichiararlo nel dizionario dei dati.
 
 ### Esempio 1:
 
