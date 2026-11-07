@@ -7,7 +7,7 @@ title: Benvenute/i
 
 # Benvenute/i 👋
 
-Questo progetto nasce per creare una **guida** per la **pubblicazione** sul web di **dati** in **formato** **`CSV`**[^1] (*Comma Separated Values*). È un formato di testo strutturato, che può avere una riga di intestazione, in cui i valori di ogni colonna sono distinti con un separatore (di solito è la `,`).
+Questo progetto nasce per creare una **guida** per la **pubblicazione** sul web di **dati** in **formato** **`CSV`**[^1] (*Comma Separated Values*). È un formato di testo strutturato, con una riga di intestazione, in cui i valori di ogni colonna sono distinti con un separatore (di solito è la `,`).
 
 Ad esempio:
 

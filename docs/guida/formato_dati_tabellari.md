@@ -30,7 +30,7 @@ Anche se non esiste uno standard ufficiale per il formato "Comma Separated Value
 - Ogni file deve contenere solo una tabella di dati.
 - Ogni record o riga è una linea.
 - Tutti i record contengono lo stesso numero di campi o colonne, almeno uno.
-- Facoltativamente, ci può essere una prima riga di intestazione contenente solo i nomi dei campi.
+- La prima riga è sempre l'intestazione e contiene solo i nomi dei campi.
 - Le celle nella stessa colonna forniscono valori per la stessa proprietà delle osservazioni descritte in ciascuna riga.
 - Tutti i valori nella stessa colonna devono essere dello stesso tipo di dati (testo, intero, decimale, data, ecc.).
 - Ogni campo è separato dal successivo da un singolo carattere: per esempio, una virgola `,`, un punto e virgola `;`, un carattere *pipe* `|` o un carattere di tabulazione `TAB`.

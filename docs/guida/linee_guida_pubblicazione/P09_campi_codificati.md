@@ -14,7 +14,7 @@ Da prendere in considerazione:
   - se possibile, si dovrebbe aggiungere una colonna che includa il valore standard dell'attributo in questione; per esempio, se il campo si riferisce ai **comuni**, è consigliabile mantenere due colonne: **"codice_comune"** e **"comune"**; il codice sarà, per l'Italia, il codice Istat del comune, di 6 caratteri ([SITUAS](https://situas.istat.it/web/)), e il valore della colonna "comune" sarà il suo nome. Se la colonna indica invece l'amministrazione che ha prodotto il dato o che eroga un servizio, il riferimento è il [codice IPA](https://www.indicepa.gov.it/ipa-portale/)[^1];
   - in linea con quanto detto in precedenza, il nome del campo non dovrebbe essere incluso nel valore dello stesso, per esempio se il nome della colonna è "comune" il valore in ogni riga non dovrebbe includere le parole "Comune di".
 
-[^1]: Indice della Pubblica Amministrazione
+[^1]: Indice dei domicili digitali delle pubbliche amministrazioni, dei gestori di pubblici servizi e delle società a controllo pubblico (CAD, art. 6-ter)
 
 ### Esempio: uso di campi codificati
 

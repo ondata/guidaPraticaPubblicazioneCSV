@@ -5,7 +5,7 @@ hide:
 title: Campi di tipo testo
 ---
 
-I campi di tipo testo devono contenere stringhe di testo senza spazi vuoti iniziali o finali; gli eventuali caratteri (spazi o tabulazioni) adiacenti ai separatori di campo saranno ignorati.
+I campi di tipo testo non devono avere spazi iniziali o finali, se non significativi: secondo la RFC 4180 fanno parte del valore, mentre altri lettori li eliminano. Non si può contare sul comportamento di chi legge: gli spazi superflui si tolgono prima di pubblicare.
 
 ## In generale:
 I campi di testo possono sempre essere delimitati da virgolette (`"`) e le applicazioni che eseguono operazioni di lettura dei dati analizzeranno e scarteranno tali delimitatori.

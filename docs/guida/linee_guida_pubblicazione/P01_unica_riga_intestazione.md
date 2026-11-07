@@ -2,10 +2,10 @@
 hide:
  - toc
 # - navigation
-title: Singola linea di intestazione opzionale
+title: Una sola riga di intestazione
 ---
 
-Le tabelle di dati possono opzionalmente contenere una e una sola riga di intestazione per specificare i nomi dei campi.
+Il file contiene sempre una, e una sola, riga di intestazione, nella prima riga. Il formato CSV ammette anche file senza intestazione (RFC 4180), ma chi pubblica dati non dovrebbe usare questa possibilità: lo raccomandano anche le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv).
 
 Da prendere in considerazione:
 
@@ -15,9 +15,7 @@ Da prendere in considerazione:
 
 - Per nominare le colonne si devono usare **celle singole** e in nessun caso celle unite.
 
-- Si noti che non c'è alcun meccanismo per discernere automaticamente se il primo record in un CSV è una riga di intestazione, poiché è codificato come qualsiasi altro record. Pertanto, è buona pratica specificare la presenza o l'assenza di una riga di intestazione attraverso il dizionario dei dati includendo la proprietà "**`title`**".
-
-- Un altro modo per indicare la presenza o l'assenza della linea di intestazione è un parametro content-type quando il file di dati è trasmesso via HTTP, della forma: **Content-Type: text/csv;header=absent**.
+- Per i file ereditati senza intestazione, l'assenza va dichiarata: in CSVW con `"dialect": {"header": false}`, in Table Dialect con `"header": false`, oppure via HTTP con `Content-Type: text/csv;header=absent`. Nessun programma può capirlo da solo, perché la prima riga è codificata come qualsiasi altra.
 
 
 ### Esempio 1:
@@ -95,7 +93,7 @@ non usare celle multiple di intestazione.
 
 
 
-Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "`description`".
+Le informazioni "Dati di vendita delle auto (anni 1998 - 1999)" e "Unità espresse in migliaia" dovrebbero essere trasferite al dizionario dei dati usando la proprietà "`dc:description`".
 
 ### Esempio 2:
 non usare celle unite.
