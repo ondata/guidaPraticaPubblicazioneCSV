@@ -43,7 +43,7 @@ Un testo come `N/D` in una colonna di numeri può far leggere a un programma l'i
 
 !!! note "La posizione europea"
 
-    Le [linee guida europee sulla qualità dei dati](https://op.europa.eu/webpub/op/data-quality-guidelines/en/) considerano ambigua la cella vuota e preferiscono un marcatore esplicito, come `null`. Chi sceglie questa strada usa un solo marcatore in tutto il file e lo dichiara nel dizionario o nello schema (`null` in CSVW, `missingValues` in Table Schema): molti programmi hanno un'opzione per indicare qual è il valore nullo, ma per usarla chi legge deve saperlo.
+    Le [linee guida europee sulla qualità dei dati](https://op.europa.eu/webpub/op/data-quality-guidelines/en/) considerano ambigua la cella vuota e preferiscono un marcatore esplicito, come `null` o `NA`: questa guida sconsiglia `NA` per il motivo spiegato più sotto. Chi sceglie questa strada usa un solo marcatore in tutto il file e lo dichiara nel dizionario o nello schema (`null` in CSVW, `missingValues` in Table Schema): molti programmi hanno un'opzione per indicare qual è il valore nullo, ma per usarla chi legge deve saperlo.
 
 ### Zero non è vuoto
 

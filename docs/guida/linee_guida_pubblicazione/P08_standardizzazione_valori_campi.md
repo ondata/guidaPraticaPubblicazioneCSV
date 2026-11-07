@@ -17,18 +17,18 @@ Nomi delle biblioteche e prestiti sono inventati, i codici Istat e i nomi dei co
 
     | comune | biblioteca | anno | prestiti |
     | --- | --- | ---: | ---: |
-    | Palermo | Biblioteca di esempio A | 2022 | 11980 |
+    | Palermo | Biblioteca di esempio A | 2022 | 12100 |
     | Comune di Palermo | Biblioteca di esempio A | 2023 | 12450 |
-    | Roma | Biblioteca di esempio D | 2022 | 19870 |
+    | Roma | Biblioteca di esempio D | 2022 | 20040 |
     | ROMA | Biblioteca di esempio D | 2023 | 20310 |
 
 !!! success "Così sì"
 
     | codice_istat_comune | comune | biblioteca | anno | prestiti |
     | --- | --- | --- | ---: | ---: |
-    | 082053 | Palermo | Biblioteca di esempio A | 2022 | 11980 |
+    | 082053 | Palermo | Biblioteca di esempio A | 2022 | 12100 |
     | 082053 | Palermo | Biblioteca di esempio A | 2023 | 12450 |
-    | 058091 | Roma | Biblioteca di esempio D | 2022 | 19870 |
+    | 058091 | Roma | Biblioteca di esempio D | 2022 | 20040 |
     | 058091 | Roma | Biblioteca di esempio D | 2023 | 20310 |
 
 ## Perché

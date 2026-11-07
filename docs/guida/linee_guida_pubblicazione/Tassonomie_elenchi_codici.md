@@ -19,7 +19,7 @@ I codici sono sempre testo, non numeri: vanno pubblicati così come sono, zeri i
 | Catastale | Il comune nel catasto | 4 caratteri | `G273` | [IndicePA](https://www.indicepa.gov.it/ipa-portale/) |
 | IPA | L'amministrazione come ente | Testo | `c_g273` | [IndicePA](https://www.indicepa.gov.it/ipa-portale/) |
 | Codice fiscale dell'ente | L'ente | 11 cifre, può iniziare per zero | `80016350821` | [IndicePA](https://www.indicepa.gov.it/ipa-portale/) |
-| Ateco 2025 | L'attività economica | Con i punti | `47.81` | [Istat](https://www.istat.it/classificazione/ateco-2025/) |
+| Ateco 2025 | L'attività economica | Con i punti | `84.11` | [Istat](https://www.istat.it/classificazione/ateco-2025/) |
 | Numero civico | Il civico | Progressivo nazionale | Non indicato | [ANNCSU](https://www.anncsu.gov.it/it/consultazione-dellarchivio/open-data/) |
 
 Il codice fiscale di una persona è un [dato personale](Dati_personali.md).

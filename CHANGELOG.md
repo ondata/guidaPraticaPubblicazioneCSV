@@ -1,5 +1,21 @@
 # Registro delle modifiche
 
+## 1.0 - 2026-11-07
+
+- Esempio unico delle biblioteche in tutte le schede, con CSV, schema e dizionario in `docs/risorse/esempi/`, validati in automatico.
+- Le 15 schede riscritte su un modello unico: regola, così sì e così no, perché, casi particolari, come si fa, vedi anche.
+- Introduzione, formato CSV, dizionario dei dati, strumenti, codici, archiviazione e fonti riscritti.
+- Pagina Excel e LibreOffice riordinata, con menu in italiano e con la dichiarazione di che cosa è stato provato.
+- Menu riordinato: regole, pratica, approfondimenti.
+- Tolte le vecchie tabelle in `docs/risorse/tabelle/`: restano nell'archivio della 0.9.
+
+Limiti noti:
+
+- la procedura di Excel è provata con i menu in inglese, e quella di LibreOffice in parte senza interfaccia: i nomi italiani dei menu non sono stati cliccati;
+- la pagina sui dati personali non è stata rivista da un RPD (Responsabile della protezione dei dati) o da un giurista;
+- la conferma di datos.gob.es sulle condizioni di riuso è stata chiesta e non è ancora arrivata;
+- Material for MkDocs, il tema del sito, finisce il supporto il 5 maggio 2027.
+
 ## 0.9 - 2026-11-07
 
 Prima versione numerata. Il testo è utilizzabile e gli errori noti sono corretti, ma la revisione non è finita.

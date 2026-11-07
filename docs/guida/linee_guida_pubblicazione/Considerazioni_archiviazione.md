@@ -22,7 +22,7 @@ Content-Type: text/csv; charset=utf-8; header=present
 ## Come controllare
 
 ```
-curl -sI https://ondata.github.io/guidaPraticaPubblicazioneCSV/risorse/tabelle/pag26_tab01.csv | grep -i content-type
+curl -sI https://ondata.github.io/guidaPraticaPubblicazioneCSV/risorse/esempi/biblioteche.csv | grep -i content-type
 ```
 
 Il comando mostra quello che il server dichiara davvero. Se la risposta è diversa da `text/csv`, chiedi di correggerla a chi gestisce il server o il portale.

@@ -12,7 +12,7 @@ Prima di pubblicare un CSV conviene controllarlo. Gli strumenti possono anche sb
 ## Senza terminale
 
 - **Editor di testo.** È il primo controllo, e c'è già su ogni computer (su Windows, Blocco note). Mostra il file com'è, senza che un programma lo interpreti: guarda se ci sono ancora gli zeri iniziali dei codici e il `+` dei telefoni, qual è il separatore, se sopra l'intestazione ci sono righe di titolo. Si apre e si chiude senza salvare.
-- **[CSV Lint](https://csvlint.io/).** È un servizio online dell'Open Data Institute, che non chiede installazioni. Controlla che il file sia leggibile e ben formato, e distingue errori, avvertimenti e consigli. Ha due avvertenze. Il file finisce su un servizio esterno, che dichiara di cancellarlo dopo il controllo: non caricare file con [dati personali](Dati_personali.md) non ancora pubblicabili. E segnala come errore «Whitespace» il BOM che Excel aggiunge salvando in «CSV UTF-8»: non è un problema dei dati.
+- **[CSV Lint](https://csvlint.io/).** È un servizio online ospitato dall'Open Data Institute, che non chiede installazioni. Controlla che il file sia leggibile e ben formato, e distingue errori, avvertimenti e consigli. Ha due avvertenze. Il file finisce su un servizio esterno, che dichiara di cancellarlo dopo il controllo: non caricare file con [dati personali](Dati_personali.md) non ancora pubblicabili. E segnala come errore «Whitespace» il BOM che Excel aggiunge salvando in «CSV UTF-8»: non è un problema dei dati.
 - **[LibreOffice Calc](https://www.libreoffice.org/download/download-libreoffice/).** Va installato ed è gratuito. Quando apre un CSV mostra una finestra in cui scegliere codifica, separatore e tipo di ogni colonna: impostando come testo le colonne di codici, telefoni e mesi, zeri e `+` restano. Quando salvi, controlla il set di caratteri: nella nostra prova proponeva ISO-8859-1, e va scelto UTF-8. La procedura è nella pagina su [Excel e LibreOffice](Linee_guida_importazione_esportazione.md).
 - **[OpenRefine](https://openrefine.org/download).** Va installato ed è gratuito. Serve a pulire i dati e a raggruppare i valori simili, per [scrivere la stessa cosa sempre allo stesso modo](P08_standardizzazione_valori_campi.md). I dati restano sul tuo computer. Non lo abbiamo provato sui file di questa guida.
 
@@ -34,7 +34,7 @@ uv tool install daff
 
 ### Codifica
 
-Vedere la codifica. `charset=utf-8` e `charset=us-ascii` vanno bene: un file UTF-8 senza accenti risulta `us-ascii`. `unknown-8bit` indica un file che non è in UTF-8.
+Vedere la codifica. `charset=utf-8` e `charset=us-ascii` vanno bene: un file UTF-8 senza accenti risulta `us-ascii`. Qualunque altro valore, come `iso-8859-1` o `unknown-8bit`, indica un file che non è in UTF-8.
 
 ```
 file -bi export.csv
@@ -130,10 +130,10 @@ Lo stesso con DuckDB, che scrive un nuovo file.
 duckdb -c "copy (select * replace (replace(replace(spesa_acquisti_euro,'.',''),',','.') as spesa_acquisti_euro, replace(prestiti,'.','') as prestiti) from read_csv('export_utf8.csv',delim=';',header=true,all_varchar=true)) to 'pulito.csv' (header, delimiter ',')"
 ```
 
-Riscrivere le date come `AAAA-MM-GG`. Una data impossibile come `31/02/2010` diventa `(error)`, quindi si vede.
+Riscrivere le date come `AAAA-MM-GG`. Una cella vuota resta vuota. Una data impossibile come `31/02/2010` diventa `(error)`, quindi si vede.
 
 ```
-mlr --icsv --ifs ';' --ocsv --ofs ';' put '$data_apertura=strftime(strptime($data_apertura,"%d/%m/%Y"),"%Y-%m-%d")' export_utf8.csv
+mlr --icsv --ifs ';' --ocsv --ofs ';' put 'is_not_empty($data_apertura){$data_apertura=strftime(strptime($data_apertura,"%d/%m/%Y"),"%Y-%m-%d")}' export_utf8.csv
 ```
 
 Passare [dalle colonne alle righe](P04_strutture_dati_verticale_orizzontale.md), con un file che ha una colonna per anno.
@@ -160,6 +160,7 @@ duckdb -csv -c "from read_csv('v2.csv',delim=',',header=true,all_varchar=true) e
 
 Gli strumenti possono sbagliare in silenzio. Questi sono i casi che abbiamo misurato sui file di prova.
 
+- **Frictionless, schema con percorso assoluto.** Rifiuta lo schema (`path ... is not safe`) e il file risulta `INVALID` anche se i dati sono corretti. Lancia il comando dalla cartella del file, con un percorso relativo.
 - **DuckDB, senza `delim` e `header`.** Su un file con righe di lunghezza diversa mette tutto in una sola colonna, senza errori. Su un file con le colonne `comune,2021,2022,2023` non riconosce l'intestazione e nomina le colonne `column0`, `column1` e così via. Scrivi sempre `delim=',',header=true`.
 - **Frictionless, senza `--encoding utf-8`.** Dà `VALID` a un file in Windows-1252.
 - **Frictionless, senza schema.** Controlla solo la struttura: dà `VALID` a un codice Istat senza lo zero iniziale, o a un CAP di tre cifre. Quando deduce lo schema da solo, considera `codice_istat_comune` un numero intero.

@@ -9,7 +9,7 @@ Prima di esportare, sistema il foglio:
 - **Celle unite:** non usarle.
 - **Righe e colonne vuote:** non lasciarne tra i dati.
 - **Formule:** nel CSV esce il valore calcolato.
-- **Formati delle celle:** le celle escono come sono visualizzate, quindi un formato a 2 decimali arrotonda il dato e una data può uscire come `31/01/2023`. Usa il formato Generale per i numeri, `aaaa-mm-gg` per le date e Testo per i codici.
+- **Formati delle celle:** le celle escono come sono visualizzate, quindi un formato a 2 decimali arrotonda il dato e una data può uscire come `31/01/2023`. Usa il formato Generale per i numeri, un formato a 2 decimali per gli importi, `aaaa-mm-gg` per le date e Testo per i codici.
 
 Questa guida usa la virgola come separatore e il punto per i decimali. Excel prende il separatore dalle impostazioni di Windows: con impostazioni italiane il file può uscire con `;` e con la virgola nei decimali, e va [convertito](#convertire-in-csv-con-libreoffice-calc) prima di pubblicarlo.
 
@@ -61,7 +61,7 @@ Anche la conversione da `;` a `,` qui sopra toglie il BOM.
 
 ## Aprire un CSV in Excel senza rovinarlo
 
-All'apertura di un CSV, Excel toglie gli zeri iniziali anche se il valore è tra virgolette, trasforma in date valori come `2023-07` e toglie il `+` dai numeri di telefono. Se Windows usa la virgola come separatore decimale, legge il punto come separatore delle migliaia: `1234.56` diventa `123456`, senza alcun avviso. Con un doppio clic, inoltre, un file separato da virgole può finire tutto in una sola colonna.
+All'apertura di un CSV, Excel toglie gli zeri iniziali anche se il valore è tra virgolette, può trasformare in date valori come `2023-07` e toglie il `+` dai numeri di telefono. Se Windows usa la virgola come separatore decimale, legge il punto come separatore delle migliaia: `1234.56` diventa `123456`, senza alcun avviso. Con un doppio clic, inoltre, un file separato da virgole può finire tutto in una sola colonna.
 
 Per questo il doppio clic è sconsigliato. Questa procedura lascia i valori integri. Tra parentesi c'è il nome inglese del menu.
 
@@ -84,7 +84,7 @@ La stessa conversione per togliere il BOM si fa con un comando. Qui ci sono cinq
 ```bash
 soffice --headless \
   --infilter='CSV:44,34,76,1,1/2/2/2/3/2/4/2/5/2,1040' \
-  --convert-to 'csv:Text - txt - csv (StarCalc):44,34,76,1,,0,false,true,false,false,false' \
+  --convert-to 'csv:Text - txt - csv (StarCalc):44,34,76,1,,0,false,true,true,false,false' \
   --outdir uscita dati.csv
 ```
 
@@ -92,4 +92,4 @@ Con un file separato da `;` il primo `44` diventa `59` e le colonne con i numeri
 
 Provato con LibreOffice 25.2 su Linux: il file esce uguale a quello di partenza, senza BOM e con i fine riga cambiati da CRLF (ritorno a capo più nuova riga, tipico di Windows) a LF (solo nuova riga).
 
-Nel comando, il token dopo `,0,false,` dice se i numeri restano numeri e quello dopo dice se salvare i valori come mostrati: `true` su quest'ultimo corrisponde alla spunta del passaggio 5.
+Nel comando, l'ultimo `true` dopo `,0,false,true,` corrisponde alla spunta del passaggio 5.

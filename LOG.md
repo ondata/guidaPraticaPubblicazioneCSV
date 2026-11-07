@@ -2,6 +2,7 @@
 
 ## 2026-11-07
 
+- Rilascio v1.0: esempio unico delle biblioteche, schede su modello unico, pagine generali riscritte; revisione tecnica e di linguaggio indipendenti. Corretto l'effetto della spunta «come mostrato» di LibreOffice, tolte le vecchie tabelle.
 - Revisione della guida su quattro filoni (standard, PA e norme, comunicazione, strumenti): 96 segnalazioni, decise le regole di fondo.
 - Scelte: separatore `,` e decimale `.`, valore mancante come cella vuota, meglio senza BOM, Table Schema prima di CSVW, lettore principale chi usa un foglio di calcolo, nome «Guida pratica alla pubblicazione di dati in CSV».
 - Corretti errori negli esempi, link rotti, note di lavoro, strumenti superati, affermazioni su Excel, residui spagnoli e provenienza.

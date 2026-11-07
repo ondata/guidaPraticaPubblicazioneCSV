@@ -9,5 +9,5 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v10.3.3
-      - run: uvx frictionless==5.21.0 validate --encoding utf-8 docs/risorse/tabelle/*.csv
+      - run: uvx frictionless==5.21.0 validate --encoding utf-8 docs/risorse/esempi/biblioteche-dizionario.csv
       - run: uvx frictionless==5.21.0 validate --encoding utf-8 --schema docs/risorse/esempi/biblioteche.schema.yaml docs/risorse/esempi/biblioteche.csv

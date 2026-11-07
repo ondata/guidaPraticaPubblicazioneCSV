@@ -41,7 +41,7 @@ Se l'unità di misura è la stessa per tutta la colonna, si indica nel nome, com
 
 ## Perché
 
-Chi riusa i dati scrive questi nomi nelle formule e nei programmi. Spazi, punti e simboli come `(€)` spesso costringono a metterli tra virgolette, e un accento si può storpiare se il file viene letto con un'altra codifica. Chi legge `N. prestiti` non sa a che periodo si riferisce e chi legge `Nome` non sa di cosa è il nome: deve andare a chiedere o tirare a indovinare.
+Chi riusa i dati scrive questi nomi nelle formule e nei programmi. Spazi, punti e simboli come `(€)` spesso costringono a metterli tra virgolette, e un accento si può storpiare se il file viene letto con un'altra codifica. Chi legge `Nome` non sa di cosa è il nome: deve andare a chiedere o tirare a indovinare.
 
 ## Casi particolari
 

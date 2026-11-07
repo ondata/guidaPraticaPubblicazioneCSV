@@ -27,13 +27,13 @@ Prima le informazioni sul file:
 | Delimitatore di testo | `"` |
 | Codifica | UTF-8 |
 
-Le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv) chiedono di dichiarare il separatore. Dichiarare anche delimitatore e codifica evita a chi legge di doverli indovinare.
+Le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv) raccomandano di dichiarare il separatore e il delimitatore di testo. Dichiarare anche la codifica evita a chi legge di doverla indovinare.
 
 Poi una riga per ogni colonna:
 
 | Colonna | Descrizione | Tipo | Unità di misura | Valori mancanti |
 | --- | --- | --- | --- | --- |
-| `codice_istat_comune` | Codice Istat del comune | testo |  |  |
+| `codice_istat_comune` | Codice Istat del comune, elenco SITUAS al 2026-11-07 | testo |  |  |
 | `comune` | Nome del comune | testo |  |  |
 | `biblioteca` | Nome della biblioteca | testo |  |  |
 | `dug` | Denominazione urbanistica generica | testo |  |  |
@@ -43,9 +43,9 @@ Poi una riga per ogni colonna:
 | `cap` | Codice di avviamento postale | testo |  |  |
 | `telefono` | Telefono della biblioteca in formato internazionale | testo |  | cella vuota = non disponibile |
 | `data_apertura` | Data di apertura della biblioteca | data (AAAA-MM-GG) |  |  |
-| `anno` | Anno a cui si riferiscono prestiti e spesa | numero intero |  |  |
+| `anno` | Anno a cui si riferiscono prestiti e spesa | anno |  |  |
 | `prestiti` | Prestiti effettuati nell'anno | numero intero | prestiti | cella vuota = dato non rilevato |
-| `spesa_acquisti_euro` | Spesa per acquisti di libri nell'anno | numero decimale | euro |  |
+| `spesa_acquisti_euro` | Spesa per acquisti di libri nell'anno | numero decimale | euro (EUR) |  |
 | `latitudine` | Latitudine in gradi decimali | numero decimale | gradi (WGS84 EPSG:4326) |  |
 | `longitudine` | Longitudine in gradi decimali | numero decimale | gradi (WGS84 EPSG:4326) |  |
 
@@ -61,7 +61,7 @@ Tre consigli per riempirlo:
 
 Il dizionario non sostituisce i metadati del dataset. Per le pubbliche amministrazioni italiane i metadati seguono il profilo [DCAT-AP_IT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-15) e, per i dati territoriali, le [Linee guida RNDT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16).
 
-La licenza si dichiara nei metadati del dataset. Per i dati aperti di una pubblica amministrazione il riferimento è la CC BY 4.0, oppure CC0: le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-20) chiedono di motivare formalmente una scelta più restrittiva, e sconsigliano licenze locali come la IODL.
+La licenza si dichiara nei metadati del dataset. Per i dati aperti di una pubblica amministrazione il riferimento è la CC BY 4.0, oppure CC0: le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-21) chiedono di motivare formalmente una licenza diversa, e sconsigliano licenze locali come la IODL.
 
 In alcune piattaforme di dati aperti, per esempio quelle basate su [CKAN](https://ckan.org/), il dizionario è una sezione associata a ciascuna risorsa del dataset.
 
@@ -124,7 +124,7 @@ Questo è il file che descrive le biblioteche. Va salvato nella stessa cartella 
   "dialect": {"delimiter": ",", "quoteChar": "\"", "encoding": "utf-8", "header": true},
   "tableSchema": {
     "columns": [
-      {"name": "codice_istat_comune", "titles": "codice_istat_comune", "dc:description": "Codice Istat del comune", "required": true, "datatype": {"base": "string", "format": "[0-9]{6}"}},
+      {"name": "codice_istat_comune", "titles": "codice_istat_comune", "dc:description": "Codice Istat del comune, elenco SITUAS al 2026-11-07", "required": true, "datatype": {"base": "string", "format": "[0-9]{6}"}},
       {"name": "comune", "titles": "comune", "dc:description": "Nome del comune", "required": true, "datatype": "string"},
       {"name": "biblioteca", "titles": "biblioteca", "dc:description": "Nome della biblioteca", "required": true, "datatype": "string"},
       {"name": "dug", "titles": "dug", "dc:description": "Denominazione urbanistica generica", "datatype": "string"},
@@ -150,7 +150,7 @@ Il file si controlla con la libreria [csvw](https://pypi.org/project/csvw/):
 uvx --from csvw csvwvalidate biblioteche.csv-metadata.json
 ```
 
-Il comando risponde `OK`, oppure `FAIL` con le righe sbagliate.
+Il comando risponde `OK` o `FAIL`; con `-v` indica il valore sbagliato, non la riga. Nella versione 4.2.0 non controlla le colonne `gYear`.
 
 Conviene compilare almeno queste proprietà:
 

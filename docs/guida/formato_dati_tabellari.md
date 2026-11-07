@@ -30,7 +30,7 @@ E questa è la stessa cosa vista come tabella:
 
 ## Righe, colonne, celle
 
-- **Riga.** Descrive una cosa sola, qui una biblioteca in un anno.
+- **Riga.** Descrive una cosa sola, qui una biblioteca.
 - **Colonna.** Contiene una sola informazione, ripetuta per ogni riga, qui il nome del comune o i prestiti.
 - **Cella.** È l'incrocio di una riga e di una colonna. Può essere vuota: la Biblioteca C non ha il dato dei prestiti, e fra le due virgole non c'è nulla.
 - **Tabella.** È l'insieme delle righe. Un file ne contiene una sola.
@@ -60,6 +60,8 @@ La RFC lascia aperte alcune scelte. Questa guida le chiude, e le regole ne spieg
 - ogni colonna ha [un solo tipo di dato](linee_guida_pubblicazione/P07_tipi_dati.md);
 - tutto ciò che non è un valore, come descrizioni, commenti e unità di misura, sta nel [dizionario dei dati](dizionario_dati.md), che dichiara anche separatore, delimitatore e codifica;
 - per i nomi dei file è meglio usare lettere minuscole a-z, cifre 0-9 e il trattino basso `_` al posto degli spazi: si evitano problemi su server e programmi diversi.
+
+Sul separatore la guida si scosta da altri testi: le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv) riportano il suggerimento del documento europeo di usare il punto e virgola, perché la virgola compare spesso nei decimali. Con il punto come separatore decimale il problema non si pone.
 
 !!! warning "Attenzione al doppio clic"
 
