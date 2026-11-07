@@ -1,10 +1,10 @@
-site_name: Guida per la pubblicazione di CSV
+site_name: Guida pratica alla pubblicazione di dati in CSV
 site_url:  https://ondata.github.io/guidaPraticaPubblicazioneCSV/
-site_description: Guida pratica per la pubblicazione di dati tabellari in formato CSV
+site_description: Quindici regole per pubblicare dati in CSV che altri possano riusare senza doverli ripulire.
 
 
 repo_url: https://github.com/ondata/guidaPraticaPubblicazioneCSV
-repo_name: guidaPubblicazioneCSV
+repo_name: guidaPraticaPubblicazioneCSV
 edit_uri: edit/main/docs/
 
 copyright: 'Questa guida è un progetto dell''<a href="https://twitter.com/ondatait" target="_blank">associazione onData</a> | licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank">CC BY 4.0</a>'
@@ -71,7 +71,7 @@ nav:
           - Campi con indirizzi postali: guida/linee_guida_pubblicazione/P14_campi_tipo_indirizzo_postale.md
           - Campi con coordinate geografiche: guida/linee_guida_pubblicazione/P15_campi_con_coordinate_geografiche.md
           - Tassonomie ed elenchi di codici comunemente usati: guida/linee_guida_pubblicazione/Tassonomie_elenchi_codici.md
-          - Linee guida per esportazione/importazione di dati: guida/linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md
+          - Esportare un CSV da Excel o LibreOffice: guida/linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md
           - Considerazione sull'archiviazione dei file: guida/linee_guida_pubblicazione/Considerazioni_archiviazione.md
           - Prima di pubblicare i dati personali: guida/linee_guida_pubblicazione/Dati_personali.md
           - Cassetta degli attrezzi per i file CSV: guida/linee_guida_pubblicazione/Cassetta_attrezzi.md
