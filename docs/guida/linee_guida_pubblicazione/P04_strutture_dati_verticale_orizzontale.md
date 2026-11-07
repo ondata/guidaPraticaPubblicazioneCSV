@@ -47,7 +47,8 @@ crescita orizzontale vs. verticale.
     |marca|guasto_radiatore|guasto_carburatore|guasto_sospensione|guasto_frizione|
     |-------|-------------------|---------------------|-------------------------|-------------------------|
     |chevrolet chevelle malibu|0|7|1|0|
-    |buick skylark 320|1|2|2|2|1|
+    |buick skylark 320|1|2|2|2|
+    |plymouth satellite|0|4|4|1|
 
 
 !!! success "Buona prassi"
@@ -74,7 +75,7 @@ D'altra parte, quando vengono pubblicate serie temporali, per esempio la storia 
 
 |marca|1972|1973|1974|1975|1976|1977|
 |-------|----|----|----|----|----|----|
-|chevrolet chevelle malibu|345|423|1234|1690|2345|2134|04|27|
+|chevrolet chevelle malibu|345|423|1234|1690|2345|2134|
 |buick skylark 320|124|252|785|914|1353|896|
 |plymouth satellite|57|71|165|315|1104|1561|
 

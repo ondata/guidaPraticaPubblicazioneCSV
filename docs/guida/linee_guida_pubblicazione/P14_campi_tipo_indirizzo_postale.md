@@ -16,7 +16,7 @@ In **Italia** esiste una **regola tecnica** con le specifiche per la modellazion
 - **civico** come `campo numerico`;
 - **esponente** come `campo di testo`;
 - **città** come `campo di testo`;
-- **codice di avviamento postale** (CAP) come `campo numerico`.
+- **codice di avviamento postale** (CAP) come `campo di testo`, di 5 caratteri.
 
 ### Esempio 1:
 definizione dell'indirizzo attraverso campi specifici.
@@ -31,9 +31,9 @@ definizione dell'indirizzo attraverso campi specifici.
 !!! success "Buona prassi"
 
     | marchio | rivenditore_indirizzo_dug | rivenditore_indirizzo_denominazione | rivenditore_indirizzo_civico | rivenditore_indirizzo_esponente | rivenditore_indirizzo_citta | rivenditore_indirizzo_cap |
-    | --- | --- | --- | ---: | --- | --- | ---: |
-    | chevrolet chevelle malibu | Viale | Giuseppe Mazzini | 5 | A | Milano | 20100 |
-    | buick skylark 320 | Località | Fabbre | 33 |  | Brera | 20151 |
+    | --- | --- | --- | ---: | --- | --- | --- |
+    | chevrolet chevelle malibu | Viale | Giuseppe Mazzini | 5 | A | Milano | 20121 |
+    | buick skylark 320 | Località | Fabbre | 33 |  | Milano | 20151 |
 
 
 
@@ -45,5 +45,5 @@ Nel caso sia possibile o necessaria la **georeferenziazione degli indirizzi**, a
 definizione dell'indirizzo attraverso campi specifici e attraverso le coordinate geografiche.
 
 | marchio | rivenditore_indirizzo_dug | rivenditore_indirizzo_denominazione | rivenditore_indirizzo_civico | rivenditore_indirizzo_esponente | rivenditore_indirizzo_citta | rivenditore_indirizzo_cap | latitudine | longitudine |
-| --- | --- | --- | ---: | --- | --- | ---: | ---: | ---: |
-| chevrolet chevelle malibu | via | Giuseppe Mazzini | 5 | A | Milano | 20100| 44.115684 | 11.123456 |
+| --- | --- | --- | ---: | --- | --- | --- | ---: | ---: |
+| chevrolet chevelle malibu | Viale | Giuseppe Mazzini | 5 | A | Milano | 20121 | 45.47 | 9.19 |

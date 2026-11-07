@@ -29,7 +29,7 @@ importare un CSV con valori di campo che includono spazi bianchi tra virgolette 
 
 
 ```
-marca, anno, cilindri
+marca,anno,cilindri
 "chevrolet chevelle malibu",1970,8
 "buick skylark 320",1970,8
 "plymouth satellite",1970,8
@@ -41,18 +41,18 @@ marca, anno, cilindri
 
     |marca|anno|cilindri|
     |-------|----|--------|
-    |chevrolet chevrolet chevelle malibu|1970|8|
-    |chevelle 320|1970|8|
-    |malibu buick skylark|1970|8|
+    |chevrolet chevelle malibu|1970|8|
+    |buick skylark 320|1970|8|
+    |plymouth satellite|1970|8|
 
 #### Caso 2:
 importare un CSV con valori di campo che includono spazi vuoti e un carattere CR non racchiuso tra virgolette.
 
 ```
-marca, anno, cilindri
+marca,anno,cilindri
 chevrolet chevelleCRmalibu,1970,8
 buick skylark 320,1970,8
-satellite plymouth, 1970, 8
+plymouth satellite,1970,8
 ```
 
 :material-arrow-down:
@@ -70,7 +70,7 @@ Nell'esempio precedente, il carattere di controllo *carriage return* (`CR`) è i
 
 **Esempio 2**: comportamento nell'esportazione di una tabella con campi che includono spazi vuoti o interruzioni di riga nei loro valori.
 
-Il CSV generato dalla tabella deve contenere il valore di ogni campo tra virgolette, compresi i caratteri di controllo, in un unico record.
+I valori che contengono separatori, virgolette o interruzioni di riga devono stare tra virgolette; per gli altri è facoltativo.
 
 |campo_1|campo_2|campo_3|
 |-------|-------:|-------:|
@@ -82,9 +82,9 @@ Il CSV generato dalla tabella deve contenere il valore di ogni campo tra virgole
 
 ```
 campo_1,campo_2,campo_3CRLF
-"aaaaa", "BbbbCRLFBbbCRLFBbbbCRLFbb","ccccc"CRLF
-“Aa aa”,” bb,bb”,”c”CRLF
-“AaaCRLFaaaaaa”,” Bbbbb bbb bb”,” CccCRLFccccc”LF
+aaaaa,"BbbbCRLFBbbCRLFBbbbCRLFBb",cccccCRLF
+Aa aa,"Bb,bb",cCRLF
+"AaaCRLFaaaaa",Bbbbb bbb bbb bbb bb,"CccCRLFccccc"CRLF
 ```
 
 I caratteri di controllo di fine linea (`LF`) e di ritorno a capo (`CR`) sono inclusi a scopo illustrativo, poiché non sono visibili.

@@ -21,7 +21,7 @@ Da prendere in considerazione:
 [^1]: [Uno strumento per la conversione di coordinate](https://www.latlong.net/degrees-minutes-seconds-to-decimal-degrees)
 
 ### Esempio:
-uso di campi codificati.
+coordinate in gradi decimali, in due colonne.
 
 !!! failure "Cattiva prassi"
 

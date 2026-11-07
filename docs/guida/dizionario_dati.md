@@ -35,7 +35,7 @@ Colonna 3:
       Tipo di dati: intero
 Colonna 4:
       Titolo: consumo
-      Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in litri/100 km.
+      Descrizione: Questo campo contiene informazioni sul consumo medio di ogni veicolo, misurato in miglia per gallone.
       Tipo di dati: decimale
 Colonna 5:
       Titolo: potenza
@@ -43,7 +43,7 @@ Colonna 5:
       Tipo di dati: decimale
 Colonna 6:
       Titolo: accelerazione
-      Descrizione: Questo campo contiene dati sull'accelerazione di ogni veicolo, misurata in m/sec2.
+      Descrizione: Questo campo contiene il tempo di accelerazione di ogni veicolo, misurato in secondi.
       Tipo di dati: decimale
 ```
 
@@ -60,7 +60,7 @@ Colonna 6:
          - URL della tabella `["url"]`
     - Per le colonne:
          - Nome della colonna `["name"]`
-         - Titolo della colonna `["titoli"]`
+         - Titolo della colonna `["titles"]`
          - Descrizione `["dc:description"]`
          - Tipo di dato: `["datatype"]`
 - Inoltre, è possibile annotare attraverso l'uso di diverse proprietà, altri metadati: ordine delle colonne, valori attesi, valori richiesti, valori univoci, chiavi esterne, elenchi di valori, formati, restrizioni, validazioni, istruzioni per la trasformazione del CSV in un altro formato.
@@ -77,9 +77,9 @@ Colonna 6:
   "dc:description": "Tabella con dati sulle auto d'epoca",
   "dc:creator": "Autore dell'esempio",
   "tableSchema": {
-    "colonne": [
+    "columns": [
       {
-        "name": "identificatore",
+        "name": "marca",
         "titles": "marca",
         "dc:description": "Questo campo contiene informazioni sulla marca e il modello di ogni veicolo",
         "datatype": "string"
@@ -88,10 +88,7 @@ Colonna 6:
         "name": "anno",
         "titles": "anno",
         "dc:description": "Questo campo contiene informazioni su l'anno di fabbricazione di ogni veicolo",
-        "datatype": {
-          "base": "data",
-          "format": "yyyy"
-        }
+        "datatype": "gYear"
       },
       {
         "name": "cilindri",
@@ -102,7 +99,7 @@ Colonna 6:
       {
         "name": "consumo",
         "titles": "consumo",
-        "dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in litri/100 km",
+        "dc:description": "Questo campo contiene informazioni sul consumo medio di carburante di ogni veicolo, misurato in miglia per gallone",
         "datatype": "decimal"
       },
       {
@@ -114,7 +111,7 @@ Colonna 6:
       {
         "name": "accelerazione",
         "titles": "accelerazione",
-        "dc:description": "Questo campo contiene dati sull'accelerazione di ogni veicolo misurata in m/sec2",
+        "dc:description": "Questo campo contiene il tempo di accelerazione di ogni veicolo, misurato in secondi",
         "datatype": "decimal"
       }
     ]

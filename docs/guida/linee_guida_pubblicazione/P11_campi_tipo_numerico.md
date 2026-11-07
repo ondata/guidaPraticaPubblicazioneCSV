@@ -74,7 +74,7 @@ non usare i separatori di migliaia, uso del separatore decimale, coerenza nel nu
 In questo esempio, la valuta usata per tutti i valori nel campo `ricavi_vendite` è la stessa e sarà descritta nel dizionario dei dati. In alternativa, il nome del campo potrebbe essere `ricavi_vendite_euro`.
 
 ### Esempio 2:
-utilizzare il numero di decimali appropriato per ogni tipo di dato numerico, usare il segno meno `-` per i valori negativi, digitare degli zeri significativi come valori di testo.
+utilizzare il numero di decimali appropriato per ogni tipo di dato numerico, usare il segno meno `-` per i valori negativi, trattare come testo i valori con zeri iniziali che contano.
 
 !!! failure "Cattiva prassi"
 

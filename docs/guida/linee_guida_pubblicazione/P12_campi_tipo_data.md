@@ -7,25 +7,26 @@ title: Campi di tipo data
 
 # Campi di tipo data
 
-Codificare le **date** utilizzando uno **standard** è fondamentale per facilitare l'analisi dei dati delle serie temporali. Lo **standard di riferimento** è quello **definito dalla norma [ISO8601](https://es.wikipedia.org/wiki/ISO_8601)**, che codifica i valori di data con il formato `YYYYY-MM-DD`, nella sua forma abbreviata, o `YYYYY-MM-DDTHH:MM:SS`, nella sua versione estesa.
+Codificare le **date** utilizzando uno **standard** è fondamentale per facilitare l'analisi dei dati delle serie temporali. Lo **standard di riferimento** è quello **definito dalla norma [ISO8601](https://es.wikipedia.org/wiki/ISO_8601)**, che codifica i valori di data con il formato `AAAA-MM-GG` per le date e `AAAA-MM-GGTHH:MM:SS` per data e ora insieme.
 
 ## Date
 
 Nel caso delle date è utile utilizzare le seguenti raccomandazioni:
 
-- riempire di zeri i valori 0-9 per indicare `MM`, `DD`, `HH`, `MM` e `SS`, poiché ogni valore deve avere un numero fisso di cifre;
+- riempire di zeri i valori 0-9 per indicare `MM`, `GG`, `HH`, `MM` e `SS`, poiché ogni valore deve avere un numero fisso di cifre;
 - usare `-` come separatore per le date e `:` per le ore;
-- usare la lettera `T` come carattere separatore tra una data e un'ora quando usi la versione estesa;
-- usare preferibilmente le date complete `AAAA-MM-GG` piuttosto che indicare solo i mesi o gli anni quando i dati lo consentono;
-- se sono disponibili solo dati mensili, l'opzione migliore quella di includere una data completa riferita all'ultimo giorno del mese; per esempio, per settembre `2019-09-30`;
-- se la data completa non può essere inclusa è preferibile esprimere l'anno e il mese in colonne separate (colonna `anno` e colonna `mese`).
+- usare la lettera `T` come carattere separatore tra una data e un'ora;
+- usare la data completa, `AAAA-MM-GG`, quando la si conosce;
+- se il dato è mensile usare `AAAA-MM`, mai `AAAAMM`; se è annuale, `AAAA`;
+- non inventare il giorno che manca: l'ultimo giorno del mese si usa solo quando il dato si riferisce davvero a quel giorno, per esempio una consistenza al 31 dicembre;
+- le colonne `anno` e `mese` separate restano un'alternativa.
 
 ## Ore
 
 Nel caso delle ore è utile utilizzare le seguenti raccomandazioni:
 
 - usare preferibile il formato 24 ore `HH:MM:SS` piuttosto che il formato 12 ore `HH:MM:SS AM/PM`;
-- usare un unico campo per includere i valori che rappresentano la data e l'ora combinate usando il formato `YYYYY-MM-DDTHH:MM:SS`.
+- usare un unico campo per includere i valori che rappresentano la data e l'ora combinate usando il formato `AAAA-MM-GGTHH:MM:SS`.
 
 ### Esempio 1:
 
@@ -35,7 +36,7 @@ campi con date in forma breve
 
     | marchio | data_lancio |
     | --- | --- |
-    | chevrolet chevelle malibu | Gennaio 1970 |
+    | chevrolet chevelle malibu | 15 gennaio 1970 |
     | buick skylark 320 | 23/07/1970 |
     | plymouth satellite | 1 febbraio 1970 |
 
@@ -43,7 +44,7 @@ campi con date in forma breve
 
     | marchio | data_lancio |
     | --- | --- |
-    | chevrolet chevelle malibu | 1970-01-31 |
+    | chevrolet chevelle malibu | 1970-01-15 |
     | buick skylark 320 | 1970-07-23 |
     | plymouth satellite | 1970-02-01 |
 
@@ -64,7 +65,7 @@ campi con date e orari in forma estesa
 
     | identificativo_veicolo | data_vendita |
     | --- | --- |
-    | 0003407G236 | 1970-01-31T15:10:00 |
+    | 0003407G236 | 1970-01-12T15:10:00 |
     | 0003507H003 | 1970-07-23T16:34:00 |
     | 0003407G237 | 1970-02-01T12:23:34 |
     

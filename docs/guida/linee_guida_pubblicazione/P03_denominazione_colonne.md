@@ -32,7 +32,7 @@ nomi comprensibili delle colonne.
     |---|---|---|---|----|----|
     |chevrolet chevelle malibu|1970|8|18|130|12|
     |buick skylark 320|1970|8|15|165|11.5|
-    |plymouth satellite|1970|8|18||150|11|
+    |plymouth satellite|1970|8|18|150|11|
 
 !!! success "Buona prassi"
 
