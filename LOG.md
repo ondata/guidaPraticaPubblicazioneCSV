@@ -1,5 +1,9 @@
 # Log
 
+## 2026-11-08
+
+- Conversione con LibreOffice provata sull'interfaccia in italiano (26.2, Windows): corretti tre nomi di voci e la rimozione del BOM, che dall'interfaccia richiede un foglio nuovo. Excel in italiano non provato: la lingua di Office segue l'account.
+
 ## 2026-11-07
 
 - Dopo la v1.0: rilettura indipendente delle ultime correzioni, frasi e rimandi corretti sul sito; l'archivio Zenodo resta quello del tag.

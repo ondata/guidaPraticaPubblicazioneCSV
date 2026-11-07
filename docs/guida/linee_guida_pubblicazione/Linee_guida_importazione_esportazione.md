@@ -25,23 +25,23 @@ Usa File > Salva con nome e scegli il formato «CSV UTF-8».
 
 ## Convertire in CSV con LibreOffice Calc
 
-Se il file esce da Excel con `;` e la virgola nei decimali, LibreOffice Calc lo converte senza usare il terminale. I nomi italiani vengono dal pacchetto di traduzione di LibreOffice e dalla sua guida, tra parentesi c'è quello inglese.
+Se il file esce da Excel con `;` e la virgola nei decimali, LibreOffice Calc lo converte senza usare il terminale. I nomi dei menu sono quelli di LibreOffice in italiano, tra parentesi c'è quello inglese.
 
 1. File > Apri (File > Open), e scegli il file. Nella finestra Importazione testo (Text Import) imposta Tipo di carattere (Character set) su Unicode (UTF-8) e Impostazioni locali (Locale) su Italiano (Italia), e controlla che il separatore riconosciuto sia `;`.
 2. Nella griglia in basso clicca l'intestazione di ogni colonna con codici, telefoni o mesi, e imposta Tipo colonna (Column type) su Testo (Text). Per le date come `31/01/2023` scegli Data (GMA), cioè giorno, mese e anno (Date (DMY)). Lascia Standard le colonne con i numeri. Poi clicca OK.
 3. Imposta i formati in Formato > Celle (Format > Cells), scheda Numeri (Numbers), una colonna alla volta:
-    - **Numeri:** Lingua (Language) su Inglese (USA), Codice del formato (Format code) su `General`.
+    - **Numeri:** Impostazioni locali (Locale) su Inglese (USA). Il Codice del formato (Format Code) diventa da solo `General`.
     - **Importi:** come i numeri, ma con il codice `0.00`, perché devono avere sempre lo stesso numero di decimali.
     - **Date:** Codice del formato su `AAAA-MM-GG`.
-4. File > Salva con nome (File > Save As), formato Testo CSV (.csv), spunta Modifica impostazioni filtro (Edit filter settings) e clicca Salva. Se chiede quale formato tenere, scegli Usa il formato Testo CSV (Use Text CSV Format).
-5. Nella finestra Esportazione file di testo (Export Text File) imposta Set di caratteri (Character set) su Unicode (UTF-8), perché il valore proposto può essere ISO-8859-1. Separatore di campo (Field delimiter) su `,`, Separatore di testo (String delimiter) su `"`, e lascia la spunta su Salva il contenuto della cella come mostrato (Save cell content as shown). Poi clicca OK.
+4. File > Salva con nome (File > Save As), in Salva come scegli Testo CSV (*.csv), spunta Modifica impostazioni filtro (Edit filter settings) e clicca Salva. Se chiede quale formato tenere, scegli Usa il formato Testo CSV (Use Text CSV Format).
+5. Nella finestra Esportazione file di testo (Export Text File) imposta Set di caratteri (Character set) su Unicode (UTF-8), perché il valore proposto può essere un altro, come Europa occidentale (Windows-1252/WinLatin 1). Separatore di campo (Field delimiter) su `,`, Delimitatore di stringa (String delimiter) su `"`, e lascia la spunta su Salva il contenuto della cella come mostrato (Save cell content as shown). Poi clicca OK.
 6. Apri il file con un editor di testo e controlla il risultato.
 
-Il risultato è un file con `,` e `.`: `1234,56` diventa `1234.56`, `31/01/2023` diventa `2023-01-31`, mentre zeri iniziali e `+` restano.
+Il risultato è un file con `,` e `.`: `1234,56` diventa `1234.56`, `31/01/2023` diventa `2023-01-31`, mentre zeri iniziali e `+` restano. Se il file di partenza aveva il BOM, lo ha anche quello salvato: per toglierlo vedi [più sotto](#togliere-il-bom).
 
 !!! note "Come è stata provata"
 
-    L'importazione e il salvataggio sono stati provati sull'interfaccia di LibreOffice per Windows, con i menu in inglese e con il punto come separatore decimale. Formati delle colonne ed esportazione sono stati provati senza interfaccia, con LibreOffice 25.2 impostato su Italiano (Italia): le voci di menu italiane di quei passaggi vengono dal pacchetto di traduzione e non sono state cliccate. Nella guida di LibreOffice, Tipo di carattere e Impostazioni locali si chiamano Set di caratteri e Lingua; nella versione in sviluppo Lingua diventa Impostazioni locali.
+    La procedura è stata provata tutta sull'interfaccia di LibreOffice 26.2 per Windows, con i menu in italiano e impostato su Italiano (Italia), su un file come quelli che escono da Excel, con `;`, virgola nei decimali e BOM. I nomi inglesi vengono dall'interfaccia in inglese. Nella guida in linea di LibreOffice alcune voci hanno ancora il nome delle versioni precedenti: Set di caratteri per Tipo di carattere, Lingua per Impostazioni locali.
 
 Che cosa succede se salti un passaggio:
 
@@ -55,9 +55,14 @@ Che cosa succede se salti un passaggio:
 
 Alcuni programmi lo leggono come parte del nome della prima colonna, e CSV Lint lo segnala come errore «Whitespace»: non è un problema dei dati (vedi gli [strumenti di controllo](Cassetta_attrezzi.md)).
 
-Se il file ha già `,` e `.`, per togliere il BOM basta aprirlo e salvarlo con LibreOffice Calc senza cambiare i valori. Segui i passaggi qui sopra con due differenze: al passaggio 2 imposta su Testo tutte le colonne, e salta il passaggio 3. Il separatore da controllare al passaggio 1 è `,`.
+Per toglierlo con LibreOffice Calc non basta aprire il file e salvarlo: il file salvato ha ancora il BOM. I dati vanno copiati in un foglio nuovo:
 
-Anche la conversione da `;` a `,` qui sopra toglie il BOM.
+1. Apri il file come ai passaggi 1 e 2 della [conversione](#convertire-in-csv-con-libreoffice-calc), con due differenze: il separatore da controllare è `,`, e tutte le colonne vanno impostate su Testo, così i valori restano come sono. Poi clicca OK.
+2. Modifica > Seleziona tutto (Edit > Select All), poi Modifica > Copia (Edit > Copy).
+3. File > Nuovo > Foglio elettronico (File > New > Spreadsheet), poi Modifica > Incolla (Edit > Paste).
+4. Salva il foglio nuovo come ai passaggi 4 e 5 della conversione. Per un foglio nuovo, Salva come propone il formato di LibreOffice (.ods): va cambiato in Testo CSV (*.csv).
+
+Provato con LibreOffice 26.2 per Windows: il file esce uguale a quello di partenza, senza BOM. Vale anche per un file appena convertito da `;` a `,`, che il BOM lo conserva.
 
 ## Aprire un CSV in Excel senza rovinarlo
 
@@ -79,7 +84,7 @@ Tutte le colonne restano testo. Per farci calcoli, una colonna di numeri va conv
 
 ## Per chi usa il terminale
 
-La conversione con LibreOffice Calc che [toglie il BOM](#togliere-il-bom) si fa anche con un comando. Qui ci sono cinque colonne, tutte di tipo Testo (`1/2/2/2/3/2/4/2/5/2` indica la colonna e il tipo: `1` Standard, `2` Testo, `4` Data GMA):
+Il BOM si toglie anche con un comando, senza copiare i dati in un foglio nuovo: la conversione senza interfaccia non lo rimette. Qui ci sono cinque colonne, tutte di tipo Testo (`1/2/2/2/3/2/4/2/5/2` indica la colonna e il tipo: `1` Standard, `2` Testo, `4` Data GMA):
 
 ```bash
 soffice --headless \
@@ -90,6 +95,6 @@ soffice --headless \
 
 Con un file separato da `;` il primo `44` diventa `59` e le colonne con i numeri vanno lasciate al tipo `1`. Questo comando però non assegna formati di cella: se il profilo di LibreOffice è in italiano, i decimali restano con la virgola, e le date vanno trattate come spiega la sezione [Convertire in CSV con LibreOffice Calc](#convertire-in-csv-con-libreoffice-calc).
 
-Provato con LibreOffice 25.2 su Linux: il file esce uguale a quello di partenza, senza BOM e con i fine riga cambiati da CRLF (ritorno a capo più nuova riga, tipico di Windows) a LF (solo nuova riga).
+Provato con LibreOffice 25.2 su Linux: il file esce uguale a quello di partenza, senza BOM e con i fine riga cambiati da CRLF (ritorno a capo più nuova riga, tipico di Windows) a LF (solo nuova riga). Con LibreOffice 26.2 su Windows il BOM sparisce allo stesso modo, e i fine riga restano CRLF.
 
 Nel comando, l'ultimo `true` dopo `,0,false,true,` corrisponde alla spunta del passaggio 5 di quella conversione, Salva il contenuto della cella come mostrato.
