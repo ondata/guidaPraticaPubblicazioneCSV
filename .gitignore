@@ -1,7 +1,4 @@
 tmp*
 .~lock*
 run_docker.sh
-
-# copie integrali degli esempi negativi: in git solo manifest ed estratti
-tasks/revisione-2026-11-07/esempi-negativi/*.csv
-!tasks/revisione-2026-11-07/esempi-negativi/*.estratto.csv
+tasks/
