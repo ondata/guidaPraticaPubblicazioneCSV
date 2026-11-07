@@ -14,7 +14,8 @@ Da prendere in considerazione:
 - in molti casi, le colonne delle tabelle di dati mantengono i nomi assegnati dai sistemi di gestione delle banche dati, di solito soggetti a convenzioni tecniche che sono difficili da capire per le persone;
 - alcune raccomandazioni per i nomi dei campi:
     - non ripetere i nomi dei campi, che siano univoci;
-    - usare nomi brevi (non più di 20 caratteri) ma tenendo sempre presente che il risparmio di caratteri non deve portare a un'errata interpretazione del nome del campo;
+    - usare nomi brevi, purché il risparmio di caratteri non porti a un'errata interpretazione;
+    - non iniziare un nome con una cifra;
     - evitare di usare abbreviazioni;
     - usare solo caratteri ASCII minuscoli (a-z; 0-9);
     - non usare caratteri speciali (per esempio äüöàéèê, ecc.);

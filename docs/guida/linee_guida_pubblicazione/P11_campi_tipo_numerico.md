@@ -12,7 +12,7 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 ## In generale:
 
   - non si devono usare i **separatori delle migliaia** (quindi semplicemente `1230` e non `1.230`);
-  - il **separatore dei decimali** può essere una `,` o un `.`, a seconda della configurazione "locale" delle applicazioni di elaborazione dati e/o del sistema operativo; in Italia, Spagna, Francia o Germania, ad esempio, si usa la `,`, mentre nell'area anglosassone il `.`. L'uso dell'uno o dell'altro carattere, può comportare una pre elaborazione del dato, per quei linguaggi di programmazione o programmi in cui il separatore dei decimali è soltanto di un tipo;
+  - il **separatore dei decimali** è il punto (`1234.56`): è il valore predefinito di CSVW e di Table Schema, e nel file non cambia con le impostazioni di chi legge. Attenzione: un Excel con impostazioni italiane può leggere `1234.56` come `123456`, vedi [come aprire un CSV in Excel](Linee_guida_importazione_esportazione.md);
   - i **valori negativi** devono essere preceduti da un segno meno `-`; in alcuni *software* i numeri negativi sono tra parentesi tonde, non usarle per rappresentare questo tipo di valori;
   - se una colonna contiene sia valori **interi** che **decimali**, il **tipo di dati** deve essere **decimale** e deve essere inserito il numero corretto di cifre decimali (che può dipendere dall'entità misurata, dalla strumentazione usata per raccogliere quei valori, ecc.);
   - se una colonna contiene **solo valori interi**, essi devono essere espressi **senza separatore decimale**;
@@ -27,8 +27,8 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 ## Unità di misura:
 
   - si deve usare il **numero di decimali necessario**;
-  - si raccomanda di usare il **[dizionario dei dati](../dizionario_dati.md)** per definire le unità di misura associate ai valori numerici, se non c'è un dizionario è possibile indicare l'**unità di misura nel nome del campo** (per esempio `distanza_metri`), purché tutti i valori della colonna abbiano la stessa unità di misura associata;
-  - nel caso in cui l'**unità di misura** sia diversa per una stessa colonna, questa deve essere **indicata in una colonna separata**, da inserite subito dopo quella a cui fa riferimento.
+  - se l'**unità di misura** è la stessa per tutta la colonna, si indica nel nome (per esempio `distanza_metri`) e si ripete nel [dizionario dei dati](../dizionario_dati.md). Se pubblichi anche uno schema, descrivila lì: nel campo `description` di Table Schema puoi aggiungere dettagli che nel nome non ci stanno, come il codice dell'unità o la fonte;
+  - se l'**unità di misura** cambia da riga a riga, si usa una **colonna dedicata**, subito dopo quella del valore. I codici si possono prendere dalla tabella delle unità di misura delle [EU Vocabularies](https://op.europa.eu/en/web/eu-vocabularies/authority-tables).
 
 !!! info "UNECE Units of measure"
 
@@ -38,10 +38,10 @@ I campi numerici devono essere codificati esclusivamente come tipi di dati numer
 
 | marca | prezzo_vendita | valuta |
 | --- | ---: | --- |
-| chevrolet chevelle malibu | 23540,20 | EUR |
-| buick skylark 320 | 22189,00 | EUR |
-| plymouth satellite | 28362,65 | USD |
-| amc rebel sst | 29200,00 | USD |
+| chevrolet chevelle malibu | 23540.20 | EUR |
+| buick skylark 320 | 22189.00 | EUR |
+| plymouth satellite | 28362.65 | USD |
+| amc rebel sst | 29200.00 | USD |
 
 ## Valori codificati
 
@@ -56,22 +56,22 @@ non usare i separatori di migliaia, uso del separatore decimale, coerenza nel nu
     | marca | ricavi_vendite |
     | --- | --- |
     | chevrolet chevelle malibu | 1.234.454,34 € |
-    | buick skylark 320 | 2.345.567,892 euro |
+    | buick skylark 320 | 2.345.567,89 euro |
     | plymouth satellite | 344,678.23 |
     | amc rebel sst | 267.331 |
     | ford torino | 1.234678.67 |
 
 !!! success "Buona prassi"
 
-    | marca | ricavi_vendite |
+    | marca | ricavi_vendite_euro |
     | --- | ---: |
-    | chevrolet chevelle malibu | 1234454,34 |
-    | buick skylark 320 | 2345567,89 |
-    | plymouth satellite | 344678,23 |
-    | amc rebel sst | 267331,00 |
-    | ford torino | 1234678,67 |
+    | chevrolet chevelle malibu | 1234454.34 |
+    | buick skylark 320 | 2345567.89 |
+    | plymouth satellite | 344678.23 |
+    | amc rebel sst | 267331.00 |
+    | ford torino | 1234678.67 |
 
-In questo esempio, la valuta usata per tutti i valori nel campo `ricavi_vendite` è la stessa e sarà descritta nel dizionario dei dati. In alternativa, il nome del campo potrebbe essere `ricavi_vendite_euro`.
+In questo esempio la valuta è la stessa per tutti i valori, quindi è nel nome del campo e si ripete nel dizionario dei dati.
 
 ### Esempio 2:
 utilizzare il numero di decimali appropriato per ogni tipo di dato numerico, usare il segno meno `-` per i valori negativi, trattare come testo i valori con zeri iniziali che contano.
@@ -87,8 +87,8 @@ utilizzare il numero di decimali appropriato per ogni tipo di dato numerico, usa
 
     | identificatore_di_marca | punto_chilometrico | latitudine | longitudine |
     | --- | ---: | ---: | ---: |
-    | 0000345600 | 2,334 | 43,2345678 | -5,1234567 |
-    | 0000345601 | 12,567 | 43,3456789 | -5,2345678 |
+    | 0000345600 | 2.3 | 43.2345678 | -5.1234567 |
+    | 0000345601 | 12.56 | 43.345 | -5.2345678 |
 
 ### Esempio 3:
 cosa avviene quando si ordinano campi.

@@ -37,7 +37,7 @@ In generale, è più facile identificare le relazioni tra le variabili nelle col
 
 Tuttavia, questa raccomandazione dovrebbe essere adattata in base alle esigenze di aggiornamento dei dati:
 
-- Se è necessario registrare nuove variabili o attributi che non sono stati registrati in precedenza, per esempio una serie temporale, allora è ragionevole far crescere la struttura dei dati orizzontalmente, cioè aggiungere nuove colonne. Questo permetterà di inserire le osservazioni per le nuove variabili mantenendo i valori vuoti nelle osservazioni pre-aggiornamento per queste nuove colonne, se non esiste un valore assegnabile per quelle osservazioni. Quando si aggiungono nuove osservazioni, si devono necessariamente inserire nuove righe.
+- Se è necessario registrare nuove variabili o attributi che non sono stati registrati in precedenza, per esempio un'informazione mai raccolta prima, allora è ragionevole far crescere la struttura dei dati orizzontalmente, cioè aggiungere nuove colonne. Questo permetterà di inserire le osservazioni per le nuove variabili mantenendo i valori vuoti nelle osservazioni pre-aggiornamento per queste nuove colonne, se non esiste un valore assegnabile per quelle osservazioni. Quando si aggiungono nuove osservazioni, si devono necessariamente inserire nuove righe.
 
 ### Esempio:
 crescita orizzontale vs. verticale.
@@ -71,12 +71,26 @@ crescita orizzontale vs. verticale.
 
 L'esempio mostra un modo di organizzare i dati evitando la crescita orizzontale della struttura dei dati aggiungendo nuove variabili simili a quelle esistenti. La trasposizione in una struttura verticale creando due nuove variabili, '`tipo_guasto`' e '`quantita_guasti`', permette di aggiungere facilmente nuove osservazioni sotto forma di righe.
 
-D'altra parte, quando vengono pubblicate serie temporali, per esempio la storia della domanda di veicoli per gli anni 1972-1977, la crescita orizzontale della struttura è ragionevole se si presenta la necessità, per esempio, di completare la serie temporale per gli anni '70.
+### Serie temporali
 
-|marca|1972|1973|1974|1975|1976|1977|
-|-------|----|----|----|----|----|----|
-|chevrolet chevelle malibu|345|423|1234|1690|2345|2134|
-|buick skylark 320|124|252|785|914|1353|896|
-|plymouth satellite|57|71|165|315|1104|1561|
+Una serie temporale cresce per righe, non per colonne: `anno` è una variabile. La forma larga si può offrire come file aggiuntivo di consultazione, accanto a quella lunga.
+
+!!! failure "Cattiva prassi"
+
+    |marca|1972|1973|1974|
+    |-------|----|----|----|
+    |chevrolet chevelle malibu|345|423|1234|
+    |buick skylark 320|124|252|785|
+
+!!! success "Buona prassi"
+
+    |marca|anno|domanda|
+    |-------|----|-------|
+    |chevrolet chevelle malibu|1972|345|
+    |chevrolet chevelle malibu|1973|423|
+    |chevrolet chevelle malibu|1974|1234|
+    |buick skylark 320|1972|124|
+    |buick skylark 320|1973|252|
+    |buick skylark 320|1974|785|
 
 

@@ -6,14 +6,14 @@ hide:
 
 # Tipi di dati
 
-I valori in una tabella di dati devono essere formattati secondo il [tipo di dati](https://www.w3.org/TR/xmlschema/) relativo. In particolare, i numeri dovrebbero essere sempre nei formati/tipi di cella "Numero", i campi di tipo testo dovrebbero essere nel formato/tipo di cella "Testo" e i campi di tipo data dovrebbero essere nel formati/tipi di cella "Data".
+Il CSV è testo e non contiene tipi: ogni valore va scritto in modo coerente con il [tipo di dati](https://www.w3.org/TR/xmlschema11-2/) dichiarato nel dizionario o nello schema.
 
 | dato | tipo |
 | --- | --- |
 | Testo | string |
 | Numero | integer, decimal, float, double |
-| Data | date, time, datetime, Year, Month, Day |
-|Vero/Falso| boolean |
+| Data | date, time, dateTime, gYear, gYearMonth |
+|Vero/Falso| boolean (`true`/`false`, oppure valori dichiarati nello schema) |
 
 Da tenere in considerazione:
 
@@ -27,14 +27,14 @@ tipi di dati in tre colonne (string, integer, integer).
     | marca | consumo | potenza |
     | --- | --- | --- |
     | chevrolet chevelle malibu | 18 | 130 CV |
-    | buick skylark 320 | 15 litri | 165 |
+    | buick skylark 320 | 15 mpg | 165 |
     | plymouth satellite | 18 | 150 CV |
-    | amc rebel sst | 16 l. | 150 CV |
+    | amc rebel sst | 16 mpg | 150 CV |
     | ford torino | 17 | 140 |
 
 !!! success "Buona prassi"
 
-    | marca | consumo | potenza |
+    | marca | consumo_mpg | potenza_cv |
     | --- | ---: | ---: |
     | chevrolet chevelle malibu | 18 | 130 |
     | buick skylark 320 | 15 | 165 |
@@ -42,4 +42,4 @@ tipi di dati in tre colonne (string, integer, integer).
     | amc rebel sst | 16 | 150 |
     | ford torino | 17 | 140 |
 
-La buona pratica indica che le unità di misura dovrebbero essere descritte nel [dizionario dei dati](../dizionario_dati.md) e non nella denominazione dei campi, o come valori delle celle. Come ultima risorsa, se non c'è un dizionario, è possibile indicare l'unità di misura nel nome del campo, per esempio `consumo_litri` o `potenza_cv`, purché tutti i valori della colonna abbiano la stessa unità di misura associata.
+Se l'unità è la stessa per tutta la colonna, si indica nel nome (`consumo_mpg`, `potenza_cv`) e si ripete nel [dizionario dei dati](../dizionario_dati.md). Se pubblichi anche uno schema, descrivila lì: nel campo `description` di Table Schema puoi aggiungere dettagli che nel nome non ci stanno, come il codice dell'unità o la fonte. Se l'unità cambia da riga a riga, si usa una colonna dedicata subito dopo quella del valore.

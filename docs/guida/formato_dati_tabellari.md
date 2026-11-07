@@ -33,10 +33,9 @@ Anche se non esiste uno standard ufficiale per il formato "Comma Separated Value
 - La prima riga è sempre l'intestazione e contiene solo i nomi dei campi.
 - Le celle nella stessa colonna forniscono valori per la stessa proprietà delle osservazioni descritte in ciascuna riga.
 - Tutti i valori nella stessa colonna devono essere dello stesso tipo di dati (testo, intero, decimale, data, ecc.).
-- Ogni campo è separato dal successivo da un singolo carattere: per esempio, una virgola `,`, un punto e virgola `;`, un carattere *pipe* `|` o un carattere di tabulazione `TAB`.
+- Ogni campo è separato dal successivo dalla virgola `,`, e i decimali si scrivono con il punto `.`. Il separatore, il carattere di delimitazione dei testi e la codifica si dichiarano nel dizionario dei dati, come chiedono le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv).
 - Quando i campi sono separati da un carattere di tabulazione `TAB`, il formato del file è [**TSV**](https://www.iana.org/assignments/media-types/text/tab-separated-values).
-- In alternativa, i campi possono avere una lunghezza fissa di caratteri.
-- I valori dei campi che includono virgolette, virgole o ritorni a capo devono essere racchiusi tra virgolette.
+- I valori dei campi che includono il separatore, virgolette o ritorni a capo devono essere racchiusi tra virgolette.
 - I file in formato CSV devono utilizzare la codifica dei caratteri `UTF-8`.
 - Per quanto riguarda i nomi dei file, si raccomanda di usare lettere minuscole con i caratteri a-z, le cifre 0-9 e l'underscore (`_`) invece degli spazi bianchi, per assicurare la corretta elaborazione dei nomi dei file sia sui server che sulle applicazioni client.
 - Qualsiasi informazione diversa dai valori dei dati, come metadati, descrizioni, commenti o unità di misura, deve essere fornita come allegato al file di dati sotto forma di dizionario dei dati.

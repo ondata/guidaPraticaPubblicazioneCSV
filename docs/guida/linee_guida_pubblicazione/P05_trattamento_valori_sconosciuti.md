@@ -9,20 +9,18 @@ title: Trattamento dei valori sconosciuti o nulli
 
 - I valori dei dati devono essere completi ed espressi in un modo che sia accurato e coerente con il tipo di dati del campo, in modo che possano essere trattati nei termini del loro valore effettivo.
 
-- Come regola generale, tutte le celle di una tabella dovrebbero essere valorizzate e dovrebbe essere scelto un codice comune per i dati sconosciuti.
+- Se un valore manca, lascia la cella vuota e spiega nel [dizionario dei dati](../dizionario_dati.md) che cosa significa.
 
 - Da prendere in considerazione:
-    - I valori sconosciuti, quando non vengono spiegati o sono semplicemente assenti, portano spesso a confusione, specialmente quando la colonna di dati è numerica. D'altra parte, generano risultati errati in termini di ordinamento.
+    - I valori sconosciuti, quando non vengono spiegati, portano spesso a confusione, specialmente quando la colonna di dati è numerica.
     - Raccomandazioni:
-         - Se la cella vuota rappresenta uno zero, allora il valore deve essere `0`.
-         - Se la cella vuota rappresenta un valore "sconosciuto" o "non ottenuto", allora questa possibilità deve essere spiegata nel dizionario dei dati e indicata eventualmente con un codice specifico.
-         - Se un valore di cella vuota ha un significato, dovrebbe essere considerata l'opzione di aggiungere una nuova colonna, per includere la spiegazione del "non valore" come possibile valore.
-         - Una terminologia accettata per indicare valori sconosciuti o mancanti è il valore/codice `NA` o `N/A`[^1].
-         - Il codice usato eventualmente per indicare valori sconosciuti o mancanti, ad esempio NA, deve essere specificato nel dizionario dei dati.
+         - Una cella vuota non significa zero: se il valore è zero, si scrive `0`.
+         - Se la cella vuota può avere più significati (non rilevato, non applicabile, sotto soglia), aggiungi una colonna che spieghi il motivo.
+         - Evita `NA`, che è anche la sigla di Napoli: alcuni programmi lo leggono come valore mancante anche quando è un dato.
 
-!!! note "Nota"
+!!! note "La posizione europea"
 
-    Per i programmi che leggono i file `CSV`, nella gran parte dei casi, è preferibile che un valore non definito, sia rappresentato da una cella vuota: spesso non hanno l'opzione per mappare il codice definito come valore sconosciuto (come `NA`).
+    Le [linee guida europee sulla qualità dei dati](https://op.europa.eu/webpub/op/data-quality-guidelines/en/) considerano ambigua la cella vuota e preferiscono un marcatore esplicito, come `null`. Chi sceglie questa strada usa un solo marcatore in tutto il file e lo dichiara nel dizionario o nello schema (`null` in CSVW, `missingValues` in Table Schema): molti programmi hanno un'opzione per indicare qual è il valore nullo, ma per usarla chi legge deve saperlo.
 
 ### Esempio 1
 
@@ -47,14 +45,14 @@ title: Trattamento dei valori sconosciuti o nulli
     | chevrolet chevelle malibu | 1998 | Alto | 2.5 |
     | chevrolet chevelle malibu | 1999 | Basso | 2.63 |
     | chevrolet chevelle malibu | 2000 | Medio | 0 |
-    | buick skylark 320 | 1998 | NA | 3.4 |
+    | buick skylark 320 | 1998 |  | 3.4 |
     | buick skylark 320 | 1999 | Medio | 3.57 |
-    | buick skylark 320 | 2000 | Medio | NA |
-    | plymouth satellite | 1998 | NA | 2.4 |
-    | plymouth satellite | 1999 | NA | 2.52 |
+    | buick skylark 320 | 2000 | Medio |  |
+    | plymouth satellite | 1998 |  | 2.4 |
+    | plymouth satellite | 1999 |  | 2.52 |
     | plymouth satellite | 2000 | Alto | 3.6 |
 
-Nell'esempio si osserva che il valore `0` nella colonna "vendite", indica che per quell'anno le vendite di auto di quel modello sono state `0`. Quando invece il dato di "vendite" e/o di "consumo" è sconosciuto, è indicato con `NA`. Tutti i valori sconosciuti in qualsiasi colonna sono indicati con lo stesso codice: `NA`.
+Nell'esempio si osserva che il valore `0` nella colonna "vendite" indica che per quell'anno le vendite di auto di quel modello sono state `0`. Quando invece il dato di "vendite" e/o di "consumo" è sconosciuto, la cella è vuota, in tutte le colonne.
 
 ### Esempio 2
 
@@ -65,11 +63,11 @@ Nell'esempio si osserva che il valore `0` nella colonna "vendite", indica che pe
     | chevrolet chevelle malibu | 1998 | Alto | 2.5 |
     | chevrolet chevelle malibu | 1999 | Basso | 2.63 |
     | chevrolet chevelle malibu | 2000 | Medio |  |
-    | buick skylark 320 | 1998 | NA | 3.4 |
+    | buick skylark 320 | 1998 |  | 3.4 |
     | buick skylark 320 | 1999 | Medio | 3.57 |
     | buick skylark 320 | 2000 | Medio |  |
-    | plymouth satellite | 1998 | NA | 2.4 |
-    | plymouth satellite | 1999 | NA | 2.52 |
+    | plymouth satellite | 1998 |  | 2.4 |
+    | plymouth satellite | 1999 |  | 2.52 |
     | plymouth satellite | 2000 | Alto | 3.6 |
 
 !!! success "Buona prassi"
@@ -79,16 +77,13 @@ Nell'esempio si osserva che il valore `0` nella colonna "vendite", indica che pe
     | chevrolet chevelle malibu | 1998 | Alto | 2.5 |  |
     | chevrolet chevelle malibu | 1999 | Basso | 2.63 |  |
     | chevrolet chevelle malibu | 2000 | Medio |  | <soglia minima (0.1) |
-    | buick skylark 320 | 1998 | NA | 3.4 |  |
+    | buick skylark 320 | 1998 |  | 3.4 |  |
     | buick skylark 320 | 1999 | Medio | 3.57 |  |
     | buick skylark 320 | 2000 | Medio |  | <soglia minima (0.1) |
-    | plymouth satellite | 1998 | NA | 2.4 |  |
-    | plymouth satellite | 1999 | NA | 2.52 |  |
+    | plymouth satellite | 1998 |  | 2.4 |  |
+    | plymouth satellite | 1999 |  | 2.52 |  |
     | plymouth satellite | 2000 | Alto | 3.6 |  |
 
 
 Nell'esempio viene aggiunta una nuova colonna per spiegare il significato del valore mancante nella colonna “vendite”.
-Ci sono circostanze in cui determinate misurazioni non possono essere registrate, perché i dispositivi o i sistemi utilizzati per misurare determinate grandezze registrano solo valori al di sopra di una certa soglia (ad esempio un sensore di inquinamento ambientale). In questi casi, sarà spiegato nel dizionario dei dati e indicato nella tabella con un codice comune.
-
-
-[^1]: Dall'inglese, *not available* (non disponibile), *not applicable* (non applicabile al caso) o *no answer* (nessuna risposta; sebbene questo significato viene utilizzato solo in determinate situazioni). <https://en.wikipedia.org/wiki/N/A>
+Ci sono circostanze in cui determinate misurazioni non possono essere registrate, perché i dispositivi o i sistemi utilizzati per misurare determinate grandezze registrano solo valori al di sopra di una certa soglia (ad esempio un sensore di inquinamento ambientale). In questi casi, il motivo si spiega nel dizionario dei dati e nella colonna aggiunta.

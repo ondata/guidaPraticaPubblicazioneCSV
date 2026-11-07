@@ -35,11 +35,14 @@ vendite semestrali di automobili (in migliaia), con subtotali (mix di livelli di
 
 !!! success "Buona prassi"
 
-    | marca | anno | vendite_s1 | vendite_s2 |
-    | --- | ---: | ---: | ---: |
-    | chevrolet chevelle malibu | 1998 | 2.5 | 2.63 |
-    | buick skylark 320 | 1999 | 3.4 | 3.57 |
-    | plymouth satellite | 2000 | 2.4 | 2.52 |
+    | marca | anno | semestre | vendite |
+    | --- | --- | --- | ---: |
+    | chevrolet chevelle malibu | 1998 | 1 | 2.5 |
+    | chevrolet chevelle malibu | 1998 | 2 | 2.63 |
+    | buick skylark 320 | 1999 | 1 | 3.4 |
+    | buick skylark 320 | 1999 | 2 | 3.57 |
+    | plymouth satellite | 2000 | 1 | 2.4 |
+    | plymouth satellite | 2000 | 2 | 2.52 |
 
 ### Esempio 2:
 non usare raggruppamenti basati sull'uso di celle vuote.
