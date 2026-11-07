@@ -23,7 +23,7 @@ Non è però fortemente consigliato come formato di "lavoro": non è possibile d
 
 💡 Vista la sua diffusione, abbiamo creato una **guida** per la **"buona" pubblicazione** di **questi file**.
 
-È ispirata fortemente (ne è in parte la traduzione) alla [**bella guida del "Ministry of Economic Affairs and Digital Transformation” di Spagna**](https://datos.gob.es/en/documentacion/guia-practica-para-la-publicacion-de-datos-tabulares-en-archivos-csv) (a loro un grazie!), ma non ne è una perfetta copia, ci sono nuove sezioni e alcuni contenuti sono stati modificati o aggiornati.<br>
+Nasce come adattamento della [guida spagnola pubblicata da datos.gob.es](https://datos.gob.es/es/conocimiento/guia-practica-para-la-publicacion-de-datos-tabulares-en-archivos-csv), scritta da Carlos de la Fuente García, che ringraziamo, ed è stata modificata e ampliata. Il testo originale è soggetto alle [condizioni di riuso di datos.gob.es](https://datos.gob.es/es/aviso-legal); l'ente che lo ha pubblicato, oggi la Secretaría de Estado de Digitalización e Inteligencia Artificial, non partecipa a questo adattamento e non lo sostiene.
 
 [Leggi la guida :fontawesome-brands-readme:](guida/index.md){ .md-button .md-button--primary }
 

@@ -112,12 +112,12 @@ non usare celle unite.
     		</tr>
     		<tr>
     			<td>chevrolet chevelle malibu</td>
-    			<td>mail@concesionario_chevrolet.com</td>
+    			<td>mail@concessionario_chevrolet.com</td>
     			<td>+39-1111111</td>
     		</tr>
     		<tr>
     			<td>buick skylark 320</td>
-    			<td>mail@concesionario_buick.com</td>
+    			<td>mail@concessionario_buick.com</td>
     			<td>+39-2222222</td>
     		</tr>
     	</tbody>
@@ -135,12 +135,12 @@ non usare celle unite.
     		</tr>
     		<tr>
     			<td>chevrolet chevelle malibu</td>
-    			<td>mail@concesionario_chevrolet.com</td>
+    			<td>mail@concessionario_chevrolet.com</td>
     			<td>+39-1111111</td>
     		</tr>
     		<tr>
     			<td>buick skylark 320</td>
-    			<td>mail@concesionario_buick.com</td>
+    			<td>mail@concessionario_buick.com</td>
     			<td>+39-2222222</td>
     		</tr>
     	</tbody>

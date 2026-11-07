@@ -17,9 +17,9 @@ Vanno considerati tecnicamente corretti quei dati che:
 Si raccomanda:
 
 - di utilizzare vocabolari comunemente usati, per standardizzare la struttura e i valori delle informazioni pubblicate nei dataset[^1];
-- nel caso in cui non si utilizzino vocabolari di riferimento, il valore assegnato ad un dato attributo deve essere unico e coerente in tutta la tabella; in altre parole, se si sceglie di usare il valore "Barcellona" per riferirsi a questa città, non si dovrebbe usare ad esempio il valore "Città di Barcellona".
+- nel caso in cui non si utilizzino vocabolari di riferimento, il valore assegnato ad un dato attributo deve essere unico e coerente in tutta la tabella; in altre parole, se si sceglie di usare il valore "Palermo" per riferirsi a questa città, non si dovrebbe usare ad esempio il valore "Comune di Palermo".
 
-[^1]: Lo standard AENOR 137801:2015 include un elenco di vocabolari di riferimento: <http://vocab.linkeddata.es/datosabiertos/>
+[^1]: Le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-arricchimento) indicano il Catalogo nazionale della semantica dei dati.
 
 
 ## Esempio 1

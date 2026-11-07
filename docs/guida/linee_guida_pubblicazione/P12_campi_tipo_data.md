@@ -7,7 +7,7 @@ title: Campi di tipo data
 
 # Campi di tipo data
 
-Codificare le **date** utilizzando uno **standard** è fondamentale per facilitare l'analisi dei dati delle serie temporali. Lo **standard di riferimento** è quello **definito dalla norma [ISO8601](https://es.wikipedia.org/wiki/ISO_8601)**, che codifica i valori di data con il formato `AAAA-MM-GG` per le date e `AAAA-MM-GGTHH:MM:SS` per data e ora insieme.
+Codificare le **date** utilizzando uno **standard** è fondamentale per facilitare l'analisi dei dati delle serie temporali. Lo **standard di riferimento** è quello **definito dalla norma [ISO8601](https://it.wikipedia.org/wiki/ISO_8601)**, che codifica i valori di data con il formato `AAAA-MM-GG` per le date e `AAAA-MM-GGTHH:MM:SS` per data e ora insieme.
 
 ## Date
 

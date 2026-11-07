@@ -16,7 +16,7 @@ Da prendere in considerazione:
   - si possono usare convertitori di coordinate UTM o convertitori da gradi sessagesimali a gradi decimali[^1];
   - per i **dati geografici diversi dai punti**, ad esempio linee o poligoni, si può usare una colonna con la geometria in **WKT** (*Well-Known Text*, [OGC Simple Features](https://www.ogc.org/standards/sfa/)), ad esempio `POLYGON((...))`, dichiarando il sistema di riferimento nel dizionario dei dati.
 
-È consigliabile, per facilitare il loro riutilizzo, ogni volta che si pubblicano dati geografici puntuali in formati come [SHP](https://es.wikipedia.org/wiki/Shapefile) o [KML](https://es.wikipedia.org/wiki/KML), accompagnare questi file con un file CSV in cui sono incluse le coordinate geografiche.
+È consigliabile, per facilitare il loro riutilizzo, ogni volta che si pubblicano dati geografici puntuali in formati come [SHP](https://it.wikipedia.org/wiki/Shapefile) o [KML](https://it.wikipedia.org/wiki/Keyhole_Markup_Language), accompagnare questi file con un file CSV in cui sono incluse le coordinate geografiche.
 
 [^1]: [Uno strumento per la conversione di coordinate](https://www.latlong.net/degrees-minutes-seconds-to-decimal-degrees)
 

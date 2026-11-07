@@ -77,7 +77,7 @@ Nell'esempio si osserva che il valore `0` nella colonna "vendite", indica che pe
     | marca | anno | consumo | vendite | significato_valore_mancante_vendite |
     | --- | --- | --- | --- | --- |
     | chevrolet chevelle malibu | 1998 | Alto | 2.5 |  |
-    | chevrolet chevelle malibu | 1999 | Bajo | 2.63 |  |
+    | chevrolet chevelle malibu | 1999 | Basso | 2.63 |  |
     | chevrolet chevelle malibu | 2000 | Medio |  | <soglia minima (0.1) |
     | buick skylark 320 | 1998 | NA | 3.4 |  |
     | buick skylark 320 | 1999 | Medio | 3.57 |  |
