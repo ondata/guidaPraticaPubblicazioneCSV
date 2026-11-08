@@ -8,8 +8,9 @@ Correzioni rispetto all'archivio della 1.0.
 - BOM: aprendo e salvando un file dall'interfaccia di LibreOffice il BOM resta, quindi i dati vanno copiati in un foglio nuovo. La pagina ora dice che cos'è e perché toglierlo.
 - Procedure provate con i menu in italiano su LibreOffice 26.2 ed Excel: corretti i nomi delle voci, provata la conversione dei numeri in Excel, segnalato che «CSV UTF-8 (delimitato da virgole)» con Windows in italiano esce con `;`.
 - Comando da terminale: con un file separato da `;` e punto decimale le colonne con i numeri restano di tipo Testo, altrimenti `1.234` diventa `1234`.
-- Strumenti di controllo: solo DuckDB, Miller e Frictionless, tolti csvkit e daff. Nuovi controlli regola per regola, comandi provati su DuckDB 2.0.0 e Miller 6.22.0, anche su Windows.
-- BOM e doppio clic in Excel, letture sicure per chi riusa i dati, forma NFC, dimensione e impronta del file, `Link describedby`, FAIR e Data on the Web Best Practices.
+- Strumenti di controllo: solo DuckDB, Miller e Frictionless, tolti csvkit e daff. Nuovi controlli regola per regola, comandi di DuckDB e Miller provati su DuckDB 2.0.0 e Miller 6.22.0, anche su Windows.
+- BOM e doppio clic in Excel, letture sicure per chi riusa i dati, forma NFC, dimensione e impronta del file, FAIR e Data on the Web Best Practices.
+- Aggiunto Open Data Editor tra gli strumenti senza terminale.
 - Altre correzioni: frasi rotte in P11 e P08, rimandi della sezione per il terminale, schema in pagina allineato al file, formulazione su AgID e separatore, clausola per i capitolati, ritocchi delle riletture.
 
 Limiti noti: restano quelli della 1.0 sui dati personali, su datos.gob.es e sul tema del sito.

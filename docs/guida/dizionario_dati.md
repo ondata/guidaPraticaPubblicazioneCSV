@@ -59,7 +59,7 @@ Tre consigli per riempirlo:
 
 ## Dizionario, metadati e licenza
 
-Il dizionario non sostituisce i metadati del dataset. Per le pubbliche amministrazioni italiane i metadati seguono il profilo [DCAT-AP_IT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-15) e, per i dati territoriali, le [Linee guida RNDT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16). Per ogni file conviene indicare anche la dimensione in byte e l'impronta (*checksum*, per esempio SHA-256), con cui chi scarica controlla di avere il file integro.
+Il dizionario non sostituisce i metadati del dataset. Per le pubbliche amministrazioni italiane i metadati seguono il profilo [DCAT-AP_IT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-15) e, per i dati territoriali, le [Linee guida RNDT](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16). Per ogni file conviene indicare anche la dimensione in byte e l'impronta (*checksum*, un codice calcolato dal contenuto del file), con cui chi scarica controlla di avere il file integro.
 
 La licenza si dichiara nei metadati del dataset. Per i dati aperti di una pubblica amministrazione il riferimento è la CC BY 4.0, oppure CC0: le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-6.html#req-21) chiedono di motivare formalmente una licenza diversa, e sconsigliano licenze locali come la IODL.
 
