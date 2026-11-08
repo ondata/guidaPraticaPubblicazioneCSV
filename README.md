@@ -32,6 +32,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://coseerobe.gbvitrano.it/"><img src="https://avatars.githubusercontent.com/u/20488693?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Giovan Battista Vitrano</b></sub></a><br /><a href="#content-gbvitrano" title="Content">🖋</a> <a href="#example-gbvitrano" title="Examples">💡</a></td>
     <td align="center"><a href="https://github.com/lorenzoperone"><img src="https://avatars.githubusercontent.com/u/5204799?v=4?s=100" width="100px;" alt=""/><br /><sub><b>lorenzo perone</b></sub></a><br /><a href="#content-lorenzoperone" title="Content">🖋</a> <a href="#example-lorenzoperone" title="Examples">💡</a></td>
     <td align="center"><a href="https://github.com/dennisangemi"><img src="https://avatars.githubusercontent.com/u/77018886?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dennis Angemi</b></sub></a><br /><a href="#content-dennisangemi" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/aborruso"><img src="https://avatars.githubusercontent.com/u/30607?v=4" width="100px;" alt=""/><br /><sub><b>Andrea Borruso</b></sub></a><br /><a href="#content-aborruso" title="Content">🖋</a> <a href="#example-aborruso" title="Examples">💡</a></td>
   </tr>
 </table>
 
