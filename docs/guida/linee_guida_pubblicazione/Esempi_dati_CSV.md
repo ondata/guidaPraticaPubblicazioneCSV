@@ -43,7 +43,7 @@ Se uno di questi file è cambiato, o se un ente preferisce che l'esempio venga a
 
 ## Per chi usa il terminale
 
-Per ogni file abbiamo scritto uno schema in [Table Schema](https://datapackage.org/standard/table-schema/) e controllato le colonne a vista. Con lo schema si può ripetere il controllo:
+Per ognuno dei tre file di riferimento abbiamo scritto uno schema in [Table Schema](https://datapackage.org/standard/table-schema/) e controllato le colonne a vista. Con lo schema si può ripetere il controllo:
 
 ```
 frictionless validate file.csv --encoding utf-8 --schema file.schema.yaml
