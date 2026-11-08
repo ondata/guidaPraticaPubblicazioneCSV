@@ -2,6 +2,7 @@
 
 ## 2026-11-08
 
+- Rilascio v1.0.1 su GitHub e Zenodo, DOI 10.5281/zenodo.24051007.
 - Conversione con LibreOffice provata sull'interfaccia in italiano (26.2, Windows): corretti tre nomi di voci e la rimozione del BOM, che dall'interfaccia richiede un foglio nuovo. 
 - Excel provato con i menu in italiano: corretti i nomi, conversione dei numeri provata, «CSV UTF-8 (delimitato da virgole)» esce con `;` su Windows in italiano.
 - Conversione con LibreOffice riscritta: procedura base con tutte le colonne in Testo, passaggi sui formati solo per decimali con la virgola e date non ISO. Spiegati BOM e motivo per toglierlo. Ritocchi residui delle riletture.
