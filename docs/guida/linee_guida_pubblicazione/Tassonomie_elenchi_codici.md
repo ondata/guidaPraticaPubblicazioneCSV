@@ -38,6 +38,15 @@ opensituas cerca-codice comune Cagliari
 
 Il primo comando produce l'elenco dei comuni, con il codice Istat nella colonna `PRO_COM_T`. Per i dati di IndicePA c'è `openipa-pp-cli`, che richiede un codice di accesso gratuito da chiedere al portale.
 
+## Vocabolari nazionali
+
+Prima di inventare un elenco di valori, guarda se ne esiste già uno. Il Catalogo nazionale della semantica dei dati, indicato dalle [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-arricchimento), raccoglie vocabolari controllati e ontologie. Il suo [repository](https://github.com/italia/dati-semantic-assets) pubblica molti vocabolari anche in CSV, con licenza CC BY 4.0. Per esempio:
+
+- **[Licenze](https://github.com/italia/dati-semantic-assets/blob/master/VocabolariControllati/licences/licences.csv).** `A.1.1` è la CC0 1.0.
+- **[Luoghi di interesse culturale](https://github.com/italia/dati-semantic-assets/blob/master/VocabolariControllati/classifications-for-culture/cultural-interest-places/cultural-interest-places.csv).** `D.4` è «Biblioteca».
+
+Controlla la versione del vocabolario: la classificazione Ateco che si trova nel repository è quella del 2007, mentre il riferimento attuale è [Ateco 2025](https://www.istat.it/classificazione/ateco-2025/).
+
 ## Altri riferimenti
 
 - [Classificazioni Istat, armonizzate a livello nazionale e internazionale](https://www.istat.it/it/metodi-e-strumenti/classificazioni)
@@ -48,7 +57,5 @@ Il primo comando produce l'elenco dei comuni, con il codice Istat nella colonna 
 - [ISO 4217, codici di valuta](https://www.iso.org/iso-4217-currency-codes.html)
 - [ISO 3166-1, codici dei Paesi](https://www.iso.org/iso-3166-country-codes.html)
 - [Unità di misura UN / UN/CEFACT](https://unece.org/fileadmin/DAM/cefact/recommendations/rec20/rec20_rev3_Annex3e.pdf)
-- [Ontologie e vocabolari controllati AgID](https://github.com/italia/dati-semantic-assets)
-- Catalogo nazionale della semantica dei dati, indicato dalle [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-5.html#sec-arricchimento)
 - [Tabelle di riferimento di EU Vocabularies](https://op.europa.eu/en/web/eu-vocabularies/authority-tables)
 

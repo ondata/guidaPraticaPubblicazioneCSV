@@ -105,6 +105,12 @@ Trovare i valori che non stanno in un elenco ammesso. `dug_ammessi.csv` ha una c
 duckdb -csv -c "select t.biblioteca,t.dug from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true) t anti join read_csv('dug_ammessi.csv',delim=',',header=true,all_varchar=true) v on t.dug=v.dug where t.dug is not null"
 ```
 
+L'elenco può essere un [vocabolario nazionale](Tassonomie_elenchi_codici.md#vocabolari-nazionali), letto direttamente dal suo indirizzo. Qui `catalogo.csv` ha una colonna `licenza` con i codici del vocabolario delle licenze.
+
+```
+duckdb -csv -c "select t.dataset,t.licenza from read_csv('catalogo.csv',delim=',',header=true,all_varchar=true) t anti join read_csv('https://raw.githubusercontent.com/italia/dati-semantic-assets/master/VocabolariControllati/licences/licences.csv',delim=',',header=true,all_varchar=true) v on t.licenza=v.code_level_3 where t.licenza is not null"
+```
+
 Validare il file con uno [schema](../dizionario_dati.md). Gli errori hanno il numero di riga e il nome della colonna. Per un file con `;` si aggiunge `--dialect '{"delimiter":";"}'`.
 
 ```

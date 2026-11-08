@@ -1,5 +1,9 @@
 # Registro delle modifiche
 
+## Dopo la 1.0.1
+
+Correzioni sul sito, non comprese nell'archivio Zenodo della 1.0.1: vocabolari nazionali del Catalogo della semantica dei dati, con il comando per confrontare una colonna con un vocabolario.
+
 ## 1.0.1 - 2026-11-08
 
 Correzioni rispetto all'archivio della 1.0.

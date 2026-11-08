@@ -40,7 +40,7 @@ Un codice standard è come una chiave uguale per tutte le porte: chi ha un altro
 ## Casi particolari
 
 - **Tra un dataset e l'altro.** È consigliato usare la stessa codifica e la stessa struttura per lo stesso tipo di dato in tutti i dataset di un catalogo: per esempio gli indirizzi hanno sempre le stesse colonne e i dati geografici lo stesso sistema di coordinate.
-- **Standard comuni.** Meglio usare gli standard che altri già usano, come le classificazioni di [Eurostat](https://ec.europa.eu/eurostat/web/nace) e di [Istat](https://www.istat.it/it/metodi-e-strumenti/classificazioni), e vocabolari di uso comune[^1].
+- **Standard comuni.** Meglio usare gli standard che altri già usano, come le classificazioni di [Eurostat](https://ec.europa.eu/eurostat/web/nace) e di [Istat](https://www.istat.it/it/metodi-e-strumenti/classificazioni), e vocabolari di uso comune[^1]. Prima di inventare un elenco di valori, guarda se esiste già tra i [vocabolari nazionali](Tassonomie_elenchi_codici.md#vocabolari-nazionali).
 - **Senza un vocabolario di riferimento.** Il valore scelto deve comunque essere unico e coerente in tutta la tabella.
 - **Attività economica.** Il riferimento è la [classificazione Ateco 2025 di Istat](https://www.istat.it/classificazione/ateco-2025/), dove `91.11` è «Attività di biblioteche». Le classificazioni hanno versioni: dichiara quella usata, per esempio nel nome della colonna (`codice_ateco_2025`).
 - **Codici che cambiano.** I codici Istat cambiano con fusioni e riforme territoriali: indica nel dizionario dei dati la data dei codici usati. Vedi [Codici e classificazioni](Tassonomie_elenchi_codici.md).
