@@ -111,6 +111,16 @@ Validare il file con uno [schema](../dizionario_dati.md). Gli errori hanno il nu
 frictionless validate biblioteche.csv --schema biblioteche.schema.yaml --encoding utf-8
 ```
 
+Lo stesso controllo con il [validatore della Commissione europea](https://www.itb.ec.europa.eu/csv/swagger-ui/index.html), che si può interrogare anche da un programma. Il file va ai server della Commissione, che dichiara di non conservarlo. Servono anche `curl` e `jq`; i comandi sono per Linux e WSL. Lo schema va in JSON: il primo comando lo converte, e per un file separato da `;` cambia il valore di `delimiter`. La risposta dice se il file è valido, con riga e colonna di ogni errore.
+
+```
+uv run --with pyyaml python -c "import json,yaml; json.dump(yaml.safe_load(open('biblioteche.schema.yaml')),open('biblioteche.schema.json','w'))"
+base64 -w0 biblioteche.csv > dati.b64
+base64 -w0 biblioteche.schema.json > schema.b64
+jq -n --rawfile c dati.b64 --rawfile s schema.b64 '{contentToValidate:$c,embeddingMethod:"BASE64",validationType:"any",hasHeaders:true,delimiter:",",externalSchemas:[{schema:$s,embeddingMethod:"BASE64"}]}' > richiesta.json
+curl -s -H 'Content-Type: application/json' -H 'Accept: application/json' -d @richiesta.json https://www.itb.ec.europa.eu/csv/any/api/validate | jq '{result,counters,errori:[.reports.error[]?|{description,location}]}'
+```
+
 ### Un controllo per regola
 
 Ogni comando cerca le violazioni di una regola e non cambia il file. Se non mostra righe di dati, il controllo è passato: DuckDB lascia l'intestazione, Miller non stampa nulla. Sono scritti per il file delle biblioteche: cambia i nomi delle colonne con i tuoi.

@@ -10,7 +10,7 @@ Correzioni rispetto all'archivio della 1.0.
 - Comando da terminale: con un file separato da `;` e punto decimale le colonne con i numeri restano di tipo Testo, altrimenti `1.234` diventa `1234`.
 - Strumenti di controllo: solo DuckDB, Miller e Frictionless, tolti csvkit e daff. Nuovi controlli regola per regola, comandi di DuckDB e Miller provati su DuckDB 2.0.0 e Miller 6.22.0, anche su Windows.
 - BOM e doppio clic in Excel, letture sicure per chi riusa i dati, forma NFC, dimensione e impronta del file, FAIR e Data on the Web Best Practices.
-- Aggiunti tra gli strumenti senza terminale Open Data Editor, SIMBA di AgID e il validatore CSV della Commissione europea.
+- Aggiunti tra gli strumenti senza terminale Open Data Editor, SIMBA di AgID e il validatore CSV della Commissione europea, anche attraverso la sua API.
 - Altre correzioni: frasi rotte in P11 e P08, rimandi della sezione per il terminale, schema in pagina allineato al file, formulazione su AgID e separatore, clausola per i capitolati, ritocchi delle riletture.
 
 Limiti noti: restano quelli della 1.0 sui dati personali, su datos.gob.es e sul tema del sito.
