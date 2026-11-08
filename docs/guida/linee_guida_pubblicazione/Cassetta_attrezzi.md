@@ -18,7 +18,7 @@ Prima di pubblicare un CSV conviene controllarlo. Gli strumenti possono anche sb
 
 ## Per chi usa il terminale
 
-Questa parte è per chi usa il terminale. I comandi sono stati provati il 7 novembre 2026 su Linux, su varianti del [file delle biblioteche](../../risorse/esempi/biblioteche.csv), con DuckDB 2.0.0, Miller 6.22.0, Frictionless 5.21.0, csvkit 2.2.0 e daff 1.4.2. Non li abbiamo provati su Windows, salvo il comando di PowerShell.
+I comandi sono stati provati il 7 novembre 2026 su Linux, su varianti del [file delle biblioteche](../../risorse/esempi/biblioteche.csv), con DuckDB 2.0.0, Miller 6.22.0, Frictionless 5.21.0, csvkit 2.2.0 e daff 1.4.2. Non li abbiamo provati su Windows, salvo il comando di PowerShell.
 
 `export.csv` è l'esportazione di un gestionale italiano: separatore `;`, virgola decimale, codifica Windows-1252. Al posto di questi nomi di esempio metti i nomi dei tuoi file e delle tue colonne.
 

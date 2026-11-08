@@ -9,6 +9,8 @@ title: Come servire i file via web
 
 Quando un programma scarica il tuo CSV, il server gli dice di che tipo di file si tratta, con l'intestazione HTTP `Content-Type`. È l'etichetta sulla scatola: se è giusta, il programma sa come aprirla senza tirare a indovinare.
 
+Se pubblichi su un portale, questa impostazione non dipende da te: la pagina ti serve per sapere che cosa chiedere a chi lo gestisce.
+
 ## L'intestazione da usare
 
 ```

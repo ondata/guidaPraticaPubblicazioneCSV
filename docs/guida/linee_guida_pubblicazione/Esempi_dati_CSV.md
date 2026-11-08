@@ -9,14 +9,6 @@ title: Esempi di CSV italiani
 
 Tre file pubblicati da enti italiani che puoi guardare come riferimento. Per ciascuno diciamo anche cosa si potrebbe migliorare. La situazione descritta è quella del 7 novembre 2026, e i file possono cambiare.
 
-Per ogni file abbiamo scritto uno schema in [Table Schema](https://datapackage.org/standard/table-schema/) e controllato le colonne a vista. Con lo schema si può ripetere il controllo:
-
-```
-frictionless validate file.csv --encoding utf-8 --schema file.schema.yaml
-```
-
-Senza schema `frictionless validate` guarda solo la struttura: più sotto c'è un file che risulta valido anche con un CAP di tre cifre.
-
 ## Popolazione residente, ANPR
 
 Anagrafe nazionale della popolazione residente (ANPR). [File CSV](https://raw.githubusercontent.com/italia/anpr-opendata/main/data/popolazione%5Fresidente%5Fexport.csv), Ministero dell'Interno, 7.894 righe, licenza CC0. [Schema](../../risorse/schemi/anpr-popolazione-residente.schema.yaml).
@@ -48,3 +40,13 @@ Questi esempi servono a capire problemi comuni e non sono una critica ai file o 
 - **Decimale con la virgola.** Nei [numeri civici del Comune di Palermo](https://web.archive.org/web/20261107163617/https://opendata.comune.palermo.it/js/server/uploads/dataset/csv/_01042026064924.csv) le coordinate sono `13,367798`, con `;` come separatore. Il file ha il codice Istat con gli zeri e i progressivi nazionali di strada e accesso. Chi lo legge con un programma deve dichiarare la virgola come decimale, e questa guida usa il punto.
 
 Se uno di questi file è cambiato, o se un ente preferisce che l'esempio venga aggiornato, scrivici: [apri una discussione](https://github.com/ondata/guidaPraticaPubblicazioneCSV/discussions).
+
+## Per chi usa il terminale
+
+Per ogni file abbiamo scritto uno schema in [Table Schema](https://datapackage.org/standard/table-schema/) e controllato le colonne a vista. Con lo schema si può ripetere il controllo:
+
+```
+frictionless validate file.csv --encoding utf-8 --schema file.schema.yaml
+```
+
+Senza schema `frictionless validate` guarda solo la struttura: più sopra c'è un file che risulta valido anche con un CAP di tre cifre.

@@ -30,10 +30,7 @@ E questa è la stessa cosa vista come tabella:
 
 ## Righe, colonne, celle
 
-- **Riga.** Descrive una cosa sola, qui una biblioteca.
-- **Colonna.** Contiene una sola informazione, ripetuta per ogni riga, qui il nome del comune o i prestiti.
-- **Cella.** È l'incrocio di una riga e di una colonna. Può essere vuota: la Biblioteca C non ha il dato dei prestiti, e fra le due virgole non c'è nulla.
-- **Tabella.** È l'insieme delle righe. Un file ne contiene una sola.
+Qui ogni riga è una biblioteca, ogni colonna un'informazione. La Biblioteca C non ha il dato dei prestiti: fra le due virgole non c'è nulla. Un file contiene una sola tabella.
 
 Questa disposizione corrisponde alle regole note come *tidy data*, descritte da [Hadley Wickham nel 2014](https://www.jstatsoft.org/article/view/v059i10) e riprese dalle [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.html#csv): ogni riga è un'osservazione, ogni colonna è una variabile. Dati disposti così sono più facili da ordinare, filtrare e rappresentare.
 
