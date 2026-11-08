@@ -1,10 +1,16 @@
 # Registro delle modifiche
 
-## Dopo la 1.0
+## 1.0.1 - 2026-11-08
 
-Correzioni sul sito, non comprese nell'archivio Zenodo della 1.0, tra le altre: una frase rotta in P11 e una in P08, rimandi della sezione per il terminale nella pagina Excel, schema in pagina allineato al file, formulazione su AgID e separatore, clausola per i capitolati.
+Correzioni rispetto all'archivio della 1.0.
 
-Il 2026-11-08 la conversione con LibreOffice è stata provata sull'interfaccia in italiano (LibreOffice 26.2 per Windows). Corretti tre nomi di voci (Impostazioni locali, Delimitatore di stringa, Testo CSV (*.csv)) e la parte sul BOM: aprendo e salvando un file dall'interfaccia, LibreOffice lo rimette, quindi i dati vanno copiati in un foglio nuovo. Provata anche la procedura di Excel con i menu in italiano: corretti i nomi di voci e passaggi, provata la conversione dei numeri, segnalato che «CSV UTF-8 (delimitato da virgole)» con Windows in italiano esce con `;`.
+- Conversione con LibreOffice riscritta: procedura base con tutte le colonne in Testo, passaggi sui formati solo per decimali con la virgola e date non ISO, codifica scelta in base al file.
+- BOM: aprendo e salvando un file dall'interfaccia di LibreOffice il BOM resta, quindi i dati vanno copiati in un foglio nuovo. La pagina ora dice che cos'è e perché toglierlo.
+- Procedure provate con i menu in italiano su LibreOffice 26.2 ed Excel: corretti i nomi delle voci, provata la conversione dei numeri in Excel, segnalato che «CSV UTF-8 (delimitato da virgole)» con Windows in italiano esce con `;`.
+- Comando da terminale: con un file separato da `;` e punto decimale le colonne con i numeri restano di tipo Testo, altrimenti `1.234` diventa `1234`.
+- Altre correzioni: frasi rotte in P11 e P08, rimandi della sezione per il terminale, schema in pagina allineato al file, formulazione su AgID e separatore, clausola per i capitolati, ritocchi delle riletture.
+
+Limiti noti: restano quelli della 1.0 sui dati personali, su datos.gob.es e sul tema del sito.
 
 ## 1.0 - 2026-11-07
 

@@ -4,9 +4,9 @@ title: "Guida pratica alla pubblicazione di dati in CSV"
 type: dataset
 authors:
   - name: onData
-version: "1.0"
-doi: 10.5281/zenodo.24043615
-date-released: 2026-11-07
+version: "1.0.1"
+doi: 10.5281/zenodo.24042987
+date-released: 2026-11-08
 license: CC-BY-4.0
 url: "https://ondata.github.io/guidaPraticaPubblicazioneCSV/"
 repository-code: "https://github.com/ondata/guidaPraticaPubblicazioneCSV"

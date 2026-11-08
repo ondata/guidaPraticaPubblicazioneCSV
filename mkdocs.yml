@@ -7,7 +7,7 @@ repo_url: https://github.com/ondata/guidaPraticaPubblicazioneCSV
 repo_name: guidaPraticaPubblicazioneCSV
 edit_uri: edit/main/docs/
 
-copyright: 'Versione 1.0, 7 novembre 2026. Un progetto dell''<a href="https://www.ondata.it/" target="_blank">associazione onData</a> | licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank">CC BY 4.0</a>'
+copyright: 'Versione 1.0.1, 8 novembre 2026. Un progetto dell''<a href="https://www.ondata.it/" target="_blank">associazione onData</a> | licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank">CC BY 4.0</a>'
 
 theme:
   name: material
