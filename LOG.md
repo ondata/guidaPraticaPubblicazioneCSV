@@ -2,7 +2,8 @@
 
 ## 2026-11-08
 
-- Conversione con LibreOffice provata sull'interfaccia in italiano (26.2, Windows): corretti tre nomi di voci e la rimozione del BOM, che dall'interfaccia richiede un foglio nuovo. Excel in italiano non provato: la lingua di Office segue l'account.
+- Conversione con LibreOffice provata sull'interfaccia in italiano (26.2, Windows): corretti tre nomi di voci e la rimozione del BOM, che dall'interfaccia richiede un foglio nuovo. 
+- Excel provato con i menu in italiano: corretti i nomi, conversione dei numeri provata, «CSV UTF-8 (delimitato da virgole)» esce con `;` su Windows in italiano.
 
 ## 2026-11-07
 

@@ -4,7 +4,7 @@
 
 Correzioni sul sito, non comprese nell'archivio Zenodo della 1.0, tra le altre: una frase rotta in P11 e una in P08, rimandi della sezione per il terminale nella pagina Excel, schema in pagina allineato al file, formulazione su AgID e separatore, clausola per i capitolati.
 
-Il 2026-11-08 la conversione con LibreOffice è stata provata sull'interfaccia in italiano (LibreOffice 26.2 per Windows). Corretti tre nomi di voci (Impostazioni locali, Delimitatore di stringa, Testo CSV (*.csv)) e la parte sul BOM: aprendo e salvando un file dall'interfaccia, LibreOffice lo rimette, quindi i dati vanno copiati in un foglio nuovo. La procedura di Excel resta provata solo con i menu in inglese.
+Il 2026-11-08 la conversione con LibreOffice è stata provata sull'interfaccia in italiano (LibreOffice 26.2 per Windows). Corretti tre nomi di voci (Impostazioni locali, Delimitatore di stringa, Testo CSV (*.csv)) e la parte sul BOM: aprendo e salvando un file dall'interfaccia, LibreOffice lo rimette, quindi i dati vanno copiati in un foglio nuovo. Provata anche la procedura di Excel con i menu in italiano: corretti i nomi di voci e passaggi, provata la conversione dei numeri, segnalato che «CSV UTF-8 (delimitato da virgole)» con Windows in italiano esce con `;`.
 
 ## 1.0 - 2026-11-07
 

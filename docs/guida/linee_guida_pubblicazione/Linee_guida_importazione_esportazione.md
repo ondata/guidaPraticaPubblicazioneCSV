@@ -17,10 +17,10 @@ Dopo l'esportazione apri il file con un editor di testo, come Blocco note. Contr
 
 ## Salvare un CSV da Excel
 
-Usa File > Salva con nome e scegli il formato «CSV UTF-8».
+Usa File > Salva con nome e, in Salva come, scegli «CSV UTF-8 (delimitato da virgole)».
 
-- **«CSV UTF-8»:** conserva tutti i caratteri e aggiunge il BOM (Byte Order Mark, un segno invisibile all'inizio del file). Meglio pubblicare il file senza BOM, ma un file che lo contiene non è sbagliato: per toglierlo vedi [più sotto](#togliere-il-bom).
-- **«CSV» semplice:** scrive in Windows-1252. `à` e `€` restano, mentre caratteri come `ł` o `日` diventano `?` e non si possono più recuperare. Meglio evitarlo.
+- **«CSV UTF-8 (delimitato da virgole)»:** conserva tutti i caratteri e aggiunge il BOM (Byte Order Mark, un segno invisibile all'inizio del file). Nonostante il nome, con Windows in italiano il separatore è `;`, e il file va [convertito](#convertire-in-csv-con-libreoffice-calc). Meglio pubblicare il file senza BOM, ma un file che lo contiene non è sbagliato: per toglierlo vedi [più sotto](#togliere-il-bom).
+- **«CSV (delimitato dal separatore di elenco)»:** scrive in Windows-1252. `à` e `€` restano, mentre caratteri come `ł` o `日` diventano `?` e non si possono più recuperare. Meglio evitarlo.
 - **Se la tua versione di Excel non ha «CSV UTF-8»:** converti il file con [LibreOffice Calc](#convertire-in-csv-con-libreoffice-calc).
 
 ## Convertire in CSV con LibreOffice Calc
@@ -66,21 +66,21 @@ Provato con LibreOffice 26.2 per Windows: il file esce uguale a quello di parten
 
 ## Aprire un CSV in Excel senza rovinarlo
 
-All'apertura di un CSV, Excel toglie gli zeri iniziali anche se il valore è tra virgolette, può trasformare in date valori come `2023-07` e toglie il `+` dai numeri di telefono. Se Windows usa la virgola come separatore decimale, legge il punto come separatore delle migliaia: `1234.56` diventa `123456`, senza alcun avviso. Con un doppio clic, inoltre, un file separato da virgole può finire tutto in una sola colonna.
+All'apertura di un CSV, Excel toglie gli zeri iniziali anche se il valore è tra virgolette, può trasformare in date valori come `2023-07` e toglie il `+` dai numeri di telefono. Con Windows in italiano può leggere il punto come separatore delle migliaia: `1234.56` diventa `123456`, senza alcun avviso. Con un doppio clic, inoltre, un file separato da virgole può finire tutto in una sola colonna.
 
 Per questo il doppio clic è sconsigliato. Questa procedura lascia i valori integri. Tra parentesi c'è il nome inglese del menu.
 
 1. Dati > Da testo/CSV (Data > From Text/CSV), e scegli il file.
-2. In Rilevamento del tipo di dati (Data Type Detection) scegli Do not detect data types.
-3. Clicca Trasforma dati (Transform Data), poi Usa prima riga come intestazioni (Use First Row as Headers).
-4. In Passaggi applicati (Applied Steps) elimina l'ultimo passaggio, Tipo modificato (Changed Type).
-5. Clicca Chiudi & Carica (Close & Load).
+2. In Rilevamento del tipo di dati (Data Type Detection) scegli Non rilevare i tipi di dati (Do not detect data types).
+3. Clicca Trasforma dati (Transform Data), poi Usa la prima riga come intestazione (Use First Row as Headers).
+4. In Passaggi applicati (Applied Steps) elimina l'ultimo passaggio, Modificato tipo (Changed Type), con la X accanto al nome.
+5. Clicca Chiudi e carica (Close & Load).
 
-Tutte le colonne restano testo. Per farci calcoli, una colonna di numeri va convertita prima del passaggio 5, come spiega [la documentazione di Microsoft](https://support.microsoft.com/it-it/excel/set-a-locale-or-region-for-data-power-query): clic destro sull'intestazione della colonna, Cambia tipo > Uso delle impostazioni locali (Change Type > Using Locale); nella finestra Modifica tipo con impostazioni locali (Change Type with Locale) scegli il tipo [Numero decimale](https://support.microsoft.com/it-it/excel/add-or-change-data-types-power-query) e una lingua che usa il punto decimale, come l'inglese. Questa conversione non è stata provata per questa guida.
+Tutte le colonne restano testo. Per farci calcoli, una colonna di numeri va convertita prima del passaggio 5, come spiega [la documentazione di Microsoft](https://support.microsoft.com/it-it/excel/set-a-locale-or-region-for-data-power-query): clic destro sull'intestazione della colonna, Modifica tipo > Uso delle impostazioni locali (Change Type > Using Locale); nella finestra Modifica tipo con impostazioni locali (Change Type with Locale) scegli il tipo [Numero decimale](https://support.microsoft.com/it-it/excel/add-or-change-data-types-power-query) e, in Impostazioni locali, una lingua che usa il punto decimale, come Inglese (Stati Uniti).
 
 !!! note "Come è stata provata"
 
-    La procedura è stata provata su Excel con i menu in inglese, non su un Excel in italiano. I nomi italiani vengono dalla documentazione di Microsoft in italiano; l'opzione del passaggio 2 lì non compare e resta in inglese.
+    La procedura e la conversione dei numeri sono state provate su Excel con i menu in italiano, su un Windows in italiano che usa il punto come separatore decimale. Con il rilevamento dei tipi lasciato attivo, `1234.56` è stato letto come `123456` anche in questa configurazione. I nomi inglesi vengono da una prova con i menu in inglese e dalla documentazione di Microsoft.
 
 ## Per chi usa il terminale
 
