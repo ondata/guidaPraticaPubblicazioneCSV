@@ -21,6 +21,12 @@ Content-Type: text/csv; charset=utf-8; header=present
 - **`charset`.** Indica la codifica. La [RFC 7111](https://www.rfc-editor.org/rfc/rfc7111) chiede di indicarla e, se manca, di assumere UTF-8. Per un file ereditato in un'altra codifica si scrive quella, per esempio `charset=ISO-8859-1`.
 - **`header`.** Dice se c'è la riga di intestazione: `present` o `absent`. Il valore `header=absent` serve solo per un file ereditato senza intestazione, cosa [da evitare](P01_unica_riga_intestazione.md).
 
+Se pubblichi anche lo schema in CSVW, il server lo può indicare con un'altra intestazione, così chi scarica il CSV sa dove trovarlo:
+
+```
+Link: <biblioteche.csv-metadata.json>; rel="describedby"; type="application/csvm+json"
+```
+
 ## Come controllare
 
 ```

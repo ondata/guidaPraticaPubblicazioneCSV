@@ -37,6 +37,8 @@ Le Linee guida AgID distinguono sei [livelli di validazione](https://ondata.gith
 
 Nel [modello a 5 stelle](https://ondata.github.io/linee-guida-opendata/allegato-A.html) il CSV arriva a 3 stelle, il livello minimo richiesto dalle Linee guida AgID. La quarta richiede RDF, un modo di descrivere i dati collegandoli fra loro, e SPARQL, il linguaggio per interrogarli. [Valori uniformi](linee_guida_pubblicazione/P08_standardizzazione_valori_campi.md) e [codici standard](linee_guida_pubblicazione/P09_campi_codificati.md) non fanno salire di stella, ma preparano quel passaggio.
 
+Schema, licenza e metadati coprono la parte dei [principi FAIR](https://www.go-fair.org/fair-principles/) (*Findable, Accessible, Interoperable, Reusable*) su interoperabilità e riuso. Per chi pubblica dati sul web, il riferimento del W3C sono le [Data on the Web Best Practices](https://www.w3.org/TR/dwbp/).
+
 ## La guida e le norme
 
 Questa guida è una buona pratica volontaria, non un atto normativo. Il CSV non è obbligatorio in sé: è un modo per rispettare gli obblighi qui sotto. Ultimo controllo dei riferimenti: 7 novembre 2026.

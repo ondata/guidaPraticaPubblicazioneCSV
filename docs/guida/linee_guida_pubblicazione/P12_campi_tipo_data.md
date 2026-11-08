@@ -39,8 +39,8 @@ Nomi delle biblioteche, date e orari di questa pagina sono inventati.
 
 ### Come si scrive
 
-- **Zeri**: mese, giorno, ore, minuti e secondi hanno sempre due cifre: `03`, non `3`.
-- **Separatori**: `-` nelle date, `:` nelle ore, la lettera `T` tra data e ora.
+- **Zeri.** Mese, giorno, ore, minuti e secondi hanno sempre due cifre: `03`, non `3`.
+- **Separatori.** `-` nelle date, `:` nelle ore, la lettera `T` tra data e ora.
 
 ### Date incomplete
 

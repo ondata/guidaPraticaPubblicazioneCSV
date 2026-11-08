@@ -29,13 +29,13 @@ I nomi delle biblioteche, i telefoni, i prestiti e le spese sono inventati.
 
 I nomi di colonna:
 
-- **Unici:** due colonne non devono avere lo stesso nome.
-- **Allineati al dizionario:** devono coincidere con quelli del [dizionario dei dati](../dizionario_dati.md).
-- **Brevi:** meglio corti, purché il risparmio di caratteri non porti a capire male.
-- **Senza abbreviazioni e codici:** meglio evitarli. Se un codice serve davvero, va spiegato nel dizionario dei dati.
-- **Senza una cifra iniziale:** meglio che comincino con una lettera.
-- **Solo minuscole e cifre:** meglio usare solo le lettere a-z e le cifre 0-9, senza accenti (`à`, `è`, `ü`), punteggiatura o simboli.
-- **Trattini bassi al posto degli spazi:** meglio separare le parole con `_`.
+- **Unici.** Due colonne non devono avere lo stesso nome.
+- **Allineati al dizionario.** Devono coincidere con quelli del [dizionario dei dati](../dizionario_dati.md).
+- **Brevi.** Meglio corti, purché il risparmio di caratteri non porti a capire male.
+- **Senza abbreviazioni e codici.** Meglio evitarli. Se un codice serve davvero, va spiegato nel dizionario dei dati.
+- **Senza una cifra iniziale.** Meglio che comincino con una lettera.
+- **Solo minuscole e cifre.** Meglio usare solo le lettere a-z e le cifre 0-9, senza accenti (`à`, `è`, `ü`), punteggiatura o simboli.
+- **Trattini bassi al posto degli spazi.** Meglio separare le parole con `_`.
 
 Se l'unità di misura è la stessa per tutta la colonna, si indica nel nome, come in `spesa_acquisti_euro`: vedi la [scheda 7](P07_tipi_dati.md).
 

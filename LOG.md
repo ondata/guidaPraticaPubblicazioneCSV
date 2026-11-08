@@ -5,7 +5,8 @@
 - Conversione con LibreOffice provata sull'interfaccia in italiano (26.2, Windows): corretti tre nomi di voci e la rimozione del BOM, che dall'interfaccia richiede un foglio nuovo. 
 - Excel provato con i menu in italiano: corretti i nomi, conversione dei numeri provata, «CSV UTF-8 (delimitato da virgole)» esce con `;` su Windows in italiano.
 - Conversione con LibreOffice riscritta: procedura base con tutte le colonne in Testo, passaggi sui formati solo per decimali con la virgola e date non ISO. Spiegati BOM e motivo per toglierlo. Ritocchi residui delle riletture.
-- Rilettura indipendente prima del rilascio: corretti codifica in ingresso, colonne con il punto decimale, frase della clausola. Rilascio v1.0.1.
+- Rilettura indipendente prima del rilascio: corretti codifica in ingresso, colonne con il punto decimale, frase della clausola. Rilascio v1.0.1 rimandato.
+- Strumenti da riga di comando ridotti a DuckDB, Miller e Frictionless, con un controllo per regola: ogni comando provato su Linux e Windows. Chiusi i residui delle revisioni.
 
 ## 2026-11-07
 

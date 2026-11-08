@@ -39,9 +39,9 @@ I trattini creano anche un altro problema: Excel può leggere `+39-0910000001` c
 
 ## Casi particolari
 
-- **Più numeri**: una colonna per ogni numero, per esempio `telefono_ufficio` e `telefono_mobile`.
-- **Numeri interni**: una colonna a parte, per esempio `interno`. È una colonna di testo, perché può contenere caratteri come `*86` o `#36`.
-- **Telefono di un privato**: è un dato personale, vedi [Prima di pubblicare i dati personali](Dati_personali.md).
+- **Più numeri.** Una colonna per ogni numero, per esempio `telefono_ufficio` e `telefono_mobile`.
+- **Numeri interni.** Una colonna a parte, per esempio `interno`. È una colonna di testo, perché può contenere caratteri come `*86` o `#36`.
+- **Telefono di un privato.** È un dato personale, vedi [Prima di pubblicare i dati personali](Dati_personali.md).
 
 | biblioteca | telefono | interno |
 | --- | --- | --- |

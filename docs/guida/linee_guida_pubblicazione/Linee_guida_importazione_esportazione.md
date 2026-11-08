@@ -68,6 +68,8 @@ Il BOM (Byte Order Mark) è una sequenza di tre byte invisibili all'inizio del f
 
 Il motivo per toglierlo è che alcuni programmi leggono quei byte come parte del nome della prima colonna. A vista il nome sembra giusto, ma uno script che cerca la colonna `codice_comune` non la trova, perché per lui si chiama `\ufeffcodice_comune`. CSV Lint lo segnala come errore «Whitespace»: non è un problema dei dati (vedi gli [strumenti di controllo](Cassetta_attrezzi.md)).
 
+C'è però un rovescio. Con un doppio clic, Excel mostra gli accenti giusti solo se il file ha il BOM: senza, `Città` diventa `CittÃ`. Con la procedura per [aprire un CSV in Excel](#aprire-un-csv-in-excel-senza-rovinarlo) gli accenti sono giusti in entrambi i casi. Se chi riceve il file lo apre soprattutto con Excel, prova l'apertura prima di decidere.
+
 Per toglierlo con LibreOffice Calc non basta aprire il file e salvarlo: il file salvato ha ancora il BOM. I dati vanno copiati in un foglio nuovo:
 
 1. Apri il file come ai passaggi 1 e 2 della [conversione](#convertire-in-csv-con-libreoffice-calc), con tutte le colonne in Testo.

@@ -18,18 +18,16 @@ Prima di pubblicare un CSV conviene controllarlo. Gli strumenti possono anche sb
 
 ## Per chi usa il terminale
 
-I comandi sono stati provati il 7 novembre 2026 su Linux, su varianti del [file delle biblioteche](../../risorse/esempi/biblioteche.csv), con DuckDB 2.0.0, Miller 6.22.0, Frictionless 5.21.0, csvkit 2.2.0 e daff 1.4.2. Non li abbiamo provati su Windows, salvo il comando di PowerShell.
+I comandi sono stati provati l'8 novembre 2026 su Linux e su varianti del [file delle biblioteche](../../risorse/esempi/biblioteche.csv), con DuckDB 2.0.0, Miller 6.22.0 e Frictionless 5.21.0. I comandi di DuckDB e di Miller sono stati provati anche su Windows, con PowerShell 7. `file` e `iconv` ci sono su Linux, macOS e WSL.
 
 `export.csv` è l'esportazione di un gestionale italiano: separatore `;`, virgola decimale, codifica Windows-1252. Al posto di questi nomi di esempio metti i nomi dei tuoi file e delle tue colonne.
 
 ### Installare gli strumenti
 
-[DuckDB](https://duckdb.org/install/) e [Miller](https://miller.readthedocs.io/en/latest/installing-miller/) si installano seguendo le loro pagine. Gli altri si installano con [uv](https://docs.astral.sh/uv/getting-started/installation/):
+Bastano tre strumenti. [DuckDB](https://duckdb.org/install/) e [Miller](https://miller.readthedocs.io/en/latest/installing-miller/) si installano seguendo le loro pagine, Frictionless con [uv](https://docs.astral.sh/uv/getting-started/installation/):
 
 ```
 uv tool install frictionless
-uv tool install csvkit
-uv tool install daff
 ```
 
 ### Codifica
@@ -58,21 +56,15 @@ Lo stesso su Windows, con PowerShell 7.
 Get-Content export.csv -Encoding windows-1252 | Set-Content export_utf8.csv -Encoding utf8NoBOM
 ```
 
-Togliere il BOM.
+Togliere il BOM. I valori non cambiano.
 
 ```
-sed '1s/^\xEF\xBB\xBF//' con_bom.csv > senza_bom.csv
+mlr --csv cat con_bom.csv > senza_bom.csv
 ```
 
 ### Struttura
 
-Trovare le righe con un numero di valori diverso dall'intestazione.
-
-```
-csvclean --length-mismatch rotto.csv
-```
-
-Le stesse righe, con il numero di riga del file e il tipo di errore. Le righe buone restano.
+Trovare le righe con un numero di valori diverso dall'intestazione, con il numero di riga del file e il tipo di errore. Le righe buone restano.
 
 ```
 duckdb -csv -c "from read_csv('rotto.csv',delim=',',header=true,store_rejects=true,all_varchar=true); select line,error_type,csv_line from reject_errors;"
@@ -116,6 +108,64 @@ Validare il file con uno [schema](../dizionario_dati.md). Gli errori hanno il nu
 frictionless validate biblioteche.csv --schema biblioteche.schema.yaml --encoding utf-8
 ```
 
+### Un controllo per regola
+
+Ogni comando cerca le violazioni di una regola e non cambia il file. Se mostra solo l'intestazione, il controllo è passato. Sono scritti per il file delle biblioteche: cambia i nomi delle colonne con i tuoi.
+
+Nomi di colonna ([regola 3](P03_denominazione_colonne.md)): minuscole, cifre e trattini bassi, con una lettera all'inizio.
+
+```
+duckdb -csv -c "select column_name from (describe from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true)) where not regexp_matches(column_name,'^[a-z][a-z0-9_]*$')"
+```
+
+Totali mescolati ai dati ([regola 6](P06_subtotali_totali_raggruppamenti.md)). È un indizio, non una prova: cerca la parola «totale» e le righe senza comune.
+
+```
+duckdb -csv -c "from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true) where biblioteca ilike '%totale%' or comune is null"
+```
+
+Spazi prima o dopo un valore ([regola 10](P10_campi_tipo_testo.md)), con la riga del file e la colonna.
+
+```
+mlr --icsv --ocsv put -q 'for (k,v in $*) { if (string(v) != strip(string(v))) { emit1 {"riga":NR+1,"colonna":k,"valore":v} } }' biblioteche.csv
+```
+
+Numeri che non hanno il punto decimale ([regola 11](P11_campi_tipo_numerico.md)).
+
+```
+duckdb -csv -c "select biblioteca,spesa_acquisti_euro from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true) where spesa_acquisti_euro is not null and try_cast(spesa_acquisti_euro as double) is null"
+```
+
+Date non scritte come `AAAA-MM-GG` ([regola 12](P12_campi_tipo_data.md)), comprese quelle impossibili come `2010-02-31`. Una data incompleta come `2023-07` viene segnalata anche se può essere corretta.
+
+```
+duckdb -csv -c "select biblioteca,data_apertura from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true) where data_apertura is not null and try_strptime(data_apertura,'%Y-%m-%d') is null"
+```
+
+Telefoni non in formato internazionale ([regola 13](P13_campi_tipo_numero_telefonico.md)).
+
+```
+duckdb -csv -c "select biblioteca,telefono from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true) where not regexp_matches(telefono,'^\+[0-9]+$')"
+```
+
+CAP che non hanno 5 cifre ([regola 14](P14_campi_tipo_indirizzo_postale.md)).
+
+```
+duckdb -csv -c "select biblioteca,cap from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true) where not regexp_matches(cap,'^[0-9]{5}$')"
+```
+
+Coordinate fuori dall'Italia, invertite o con la virgola ([regola 15](P15_campi_con_coordinate_geografiche.md)). I limiti sono un rettangolo che contiene l'Italia.
+
+```
+duckdb -csv -c "select biblioteca,latitudine,longitudine from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true) where try_cast(latitudine as double) not between 35 and 48 or try_cast(longitudine as double) not between 6 and 19 or try_cast(latitudine as double) is null or try_cast(longitudine as double) is null"
+```
+
+Lettere accentate scritte in forma scomposta. Una `à` può essere un solo carattere oppure una `a` seguita dall'accento: a vista sono uguali, ma per un programma sono valori diversi. Meglio pubblicare la forma composta (NFC).
+
+```
+duckdb -csv -c "select comune from read_csv('biblioteche.csv',delim=',',header=true,all_varchar=true) where comune <> nfc_normalize(comune)"
+```
+
 ### Portare il file al formato della guida
 
 Passare da `;` e virgola decimale a `,` e punto decimale, togliendo il separatore delle migliaia. I codici restano testo.
@@ -136,24 +186,51 @@ Riscrivere le date come `AAAA-MM-GG`. Una cella vuota resta vuota. Una data impo
 mlr --icsv --ifs ';' --ocsv --ofs ';' put 'is_not_empty($data_apertura){$data_apertura=strftime(strptime($data_apertura,"%d/%m/%Y"),"%Y-%m-%d")}' export_utf8.csv
 ```
 
+Le date impossibili si possono cercare anche prima di convertire.
+
+```
+duckdb -csv -c "select biblioteca,data_apertura from read_csv('export_utf8.csv',delim=';',header=true,all_varchar=true) where data_apertura is not null and try_strptime(data_apertura,'%d/%m/%Y') is null"
+```
+
 Passare [dalle colonne alle righe](P04_strutture_dati_verticale_orizzontale.md), con un file che ha una colonna per anno.
 
 ```
 mlr --csv reshape -r '^[0-9]{4}$' -o anno,prestiti largo.csv
 ```
 
+Lo stesso con DuckDB.
+
+```
+duckdb -csv -c "unpivot (from read_csv('largo.csv',delim=',',header=true,all_varchar=true)) on columns(* exclude comune) into name anno value prestiti"
+```
+
 ### Confrontare due versioni
 
-Vedere righe cambiate, nuove e tolte.
-
-```
-daff v1.csv v2.csv
-```
-
-Vedere solo le righe nuove o cambiate.
+Vedere le righe nuove o cambiate.
 
 ```
 duckdb -csv -c "from read_csv('v2.csv',delim=',',header=true,all_varchar=true) except from read_csv('v1.csv',delim=',',header=true,all_varchar=true)"
+```
+
+Vedere le righe tolte o cambiate.
+
+```
+duckdb -csv -c "from read_csv('v1.csv',delim=',',header=true,all_varchar=true) except from read_csv('v2.csv',delim=',',header=true,all_varchar=true)"
+```
+
+Vedere prima e dopo di una colonna, per le righe presenti in entrambe le versioni. La colonna in `using` deve identificare la riga.
+
+```
+duckdb -csv -c "select biblioteca,v1.prestiti prima,v2.prestiti dopo from read_csv('v1.csv',delim=',',header=true,all_varchar=true) v1 join read_csv('v2.csv',delim=',',header=true,all_varchar=true) v2 using (biblioteca) where v1.prestiti is distinct from v2.prestiti"
+```
+
+### Leggere un CSV senza alterarlo
+
+Chi riusa i dati può perdere zeri iniziali e valori come `NA` e `None`, se il programma deduce i tipi. Con DuckDB si usa `all_varchar=true`, come in tutti i comandi di questa pagina. Con pandas, una libreria di Python:
+
+```python
+import pandas as pd
+dati = pd.read_csv("biblioteche.csv", dtype=str, keep_default_na=False)
 ```
 
 ## Trappole
@@ -166,8 +243,6 @@ Gli strumenti possono sbagliare in silenzio. Questi sono i casi che abbiamo misu
 - **Frictionless, senza schema.** Controlla solo la struttura: dà `VALID` a un codice Istat senza lo zero iniziale, o a un CAP di tre cifre. Quando deduce lo schema da solo, considera `codice_istat_comune` un numero intero.
 - **`iconv -f ISO-8859-1`.** Su un file di Excel rovina il simbolo `€` senza segnalare errori. Usa `WINDOWS-1252`.
 - **`awk` per contare le colonne.** Su una riga con `"chiusa, per lavori"` conta 3 valori invece di 2, perché non conosce le virgolette.
-- **`csvlook` e `csvstat`.** Deducono i tipi: con `csvlook`, `082053` diventa `82,053`, `12.450` diventa `12.45` e `300,00` diventa `30,000.000`. L'opzione `-I` evita queste conversioni. Anche con `-I`, però, `csvlook` mostra vuota la cella del comune di `None`, un comune vero.
-- **`csvclean`.** Il numero che riporta è quello della riga di dati, non della riga del file: dove `csvclean` dice `2`, la riga del file è la 3.
 - **Testi inseriti da terzi.** Se una colonna raccoglie segnalazioni o commenti, controlla i valori che iniziano con `=`, `+`, `-` o `@`: un foglio di calcolo può [interpretarli come formule](https://owasp.org/www-community/attacks/CSV_Injection). Nella nostra prova Excel ha trasformato `+39-0515270001` in un calcolo. Non vanno cambiati i dati per questo: un telefono scritto come `+390910000001` è corretto.
 
 ```

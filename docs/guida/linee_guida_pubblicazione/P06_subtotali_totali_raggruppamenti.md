@@ -58,32 +58,32 @@ Il terzo esempio usa le celle vuote per raggruppare: il comune e la biblioteca s
 
 !!! failure "Così no"
 
-    | comune | biblioteca | semestre | prestiti |
-    | --- | --- | ---: | ---: |
-    | Palermo | Biblioteca di esempio A | 1 | 6100 |
-    |  |  | 2 | 6350 |
-    | Roma | Biblioteca di esempio D | 1 | 9800 |
-    |  |  | 2 | 10510 |
+    | comune | biblioteca | anno | semestre | prestiti |
+    | --- | --- | ---: | ---: | ---: |
+    | Palermo | Biblioteca di esempio A | 2023 | 1 | 6100 |
+    |  |  | 2023 | 2 | 6350 |
+    | Roma | Biblioteca di esempio D | 2023 | 1 | 9800 |
+    |  |  | 2023 | 2 | 10510 |
 
 !!! success "Così sì"
 
-    | comune | biblioteca | semestre | prestiti |
-    | --- | --- | ---: | ---: |
-    | Palermo | Biblioteca di esempio A | 1 | 6100 |
-    | Palermo | Biblioteca di esempio A | 2 | 6350 |
-    | Roma | Biblioteca di esempio D | 1 | 9800 |
-    | Roma | Biblioteca di esempio D | 2 | 10510 |
+    | comune | biblioteca | anno | semestre | prestiti |
+    | --- | --- | ---: | ---: | ---: |
+    | Palermo | Biblioteca di esempio A | 2023 | 1 | 6100 |
+    | Palermo | Biblioteca di esempio A | 2023 | 2 | 6350 |
+    | Roma | Biblioteca di esempio D | 2023 | 1 | 9800 |
+    | Roma | Biblioteca di esempio D | 2023 | 2 | 10510 |
 
 Le celle vuote reggono solo finché nessuno cambia l'ordine delle righe. Ecco la tabella con le celle vuote dopo un ordinamento per `comune`: le righe del secondo semestre finiscono in fondo e non si capisce più a quale biblioteca appartengono.
 
 !!! failure "Così no"
 
-    | comune | biblioteca | semestre | prestiti |
-    | --- | --- | ---: | ---: |
-    | Palermo | Biblioteca di esempio A | 1 | 6100 |
-    | Roma | Biblioteca di esempio D | 1 | 9800 |
-    |  |  | 2 | 6350 |
-    |  |  | 2 | 10510 |
+    | comune | biblioteca | anno | semestre | prestiti |
+    | --- | --- | ---: | ---: | ---: |
+    | Palermo | Biblioteca di esempio A | 2023 | 1 | 6100 |
+    | Roma | Biblioteca di esempio D | 2023 | 1 | 9800 |
+    |  |  | 2023 | 2 | 6350 |
+    |  |  | 2023 | 2 | 10510 |
 
 ## Perché
 

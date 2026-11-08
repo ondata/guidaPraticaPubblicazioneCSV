@@ -67,9 +67,9 @@ Se è letta come testo, il confronto va carattere per carattere, come in un dizi
 
 ## Casi particolari
 
-- **Valori negativi**: si scrivono con il segno meno, `-120.50`. Alcuni programmi mostrano i negativi tra parentesi tonde: nel file non vanno usate.
-- **Solo numeri interi**: si scrivono senza separatore decimale, `12450` e non `12450.00`.
-- **Interi e decimali nella stessa colonna**: la colonna è decimale. Il numero di decimali dipende da che cosa si misura e dallo strumento usato per misurarlo.
+- **Valori negativi.** Si scrivono con il segno meno, `-120.50`. Alcuni programmi mostrano i negativi tra parentesi tonde: nel file non vanno usate.
+- **Solo numeri interi.** Si scrivono senza separatore decimale, `12450` e non `12450.00`.
+- **Interi e decimali nella stessa colonna.** La colonna è decimale. Il numero di decimali dipende da che cosa si misura e dallo strumento usato per misurarlo.
 
 ### Valute
 

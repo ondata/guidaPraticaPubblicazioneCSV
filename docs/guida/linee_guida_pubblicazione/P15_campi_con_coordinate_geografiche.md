@@ -51,11 +51,11 @@ Alcuni formati, come GeoJSON e il tipo `geopoint` di Table Schema, scrivono prim
 
 ### Altri casi
 
-- **Più punti nella stessa riga**: aggiungi al nome il punto a cui si riferiscono, per esempio `sede_latitudine` e `sede_longitudine`.
-- **Coordinate in altri formati**: si possono usare convertitori di coordinate UTM (Universal Transverse Mercator) o convertitori da gradi sessagesimali a gradi decimali[^1].
-- **Linee e poligoni**: si può usare una colonna con la geometria in WKT (*Well-Known Text*, [OGC Simple Features](https://www.ogc.org/standards/sfa/)), per esempio `POLYGON((...))`, dichiarando il sistema di riferimento nel dizionario dei dati. Il WKT contiene virgole, quindi nel CSV la cella va tra virgolette.
-- **Dati territoriali**: i metadati vanno documentati nel Repertorio nazionale dei dati territoriali (RNDT), come chiedono le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16).
-- **Altri formati geografici**: se pubblichi dati puntuali in formati come GeoPackage, GeoJSON, [KML](https://it.wikipedia.org/wiki/Keyhole_Markup_Language) o [SHP](https://it.wikipedia.org/wiki/Shapefile), è consigliato affiancare un CSV con le coordinate, per facilitarne il riuso.
+- **Più punti nella stessa riga.** Aggiungi al nome il punto a cui si riferiscono, per esempio `sede_latitudine` e `sede_longitudine`.
+- **Coordinate in altri formati.** Si possono usare convertitori di coordinate UTM (Universal Transverse Mercator) o convertitori da gradi sessagesimali a gradi decimali[^1].
+- **Linee e poligoni.** Si può usare una colonna con la geometria in WKT (*Well-Known Text*, [OGC Simple Features](https://www.ogc.org/standards/sfa/)), per esempio `POLYGON((...))`, dichiarando il sistema di riferimento nel dizionario dei dati. Il WKT contiene virgole, quindi nel CSV la cella va tra virgolette.
+- **Dati territoriali.** I metadati vanno documentati nel Repertorio nazionale dei dati territoriali (RNDT), come chiedono le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/capitolo-4.html#req-16).
+- **Altri formati geografici.** Se pubblichi dati puntuali in formati come GeoPackage, GeoJSON, [KML](https://it.wikipedia.org/wiki/Keyhole_Markup_Language) o [SHP](https://it.wikipedia.org/wiki/Shapefile), è consigliato affiancare un CSV con le coordinate, per facilitarne il riuso.
 
 ## Come si fa nel foglio di calcolo
 

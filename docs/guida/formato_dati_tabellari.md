@@ -62,7 +62,7 @@ Le [Linee guida AgID](https://ondata.github.io/linee-guida-opendata/allegato-B.h
 
 !!! warning "Attenzione al doppio clic"
 
-    Un file con la virgola, aperto con un doppio clic su un Excel che usa `;` come separatore di elenco, un'impostazione di Windows, finisce tutto in una sola colonna. Il file non è sbagliato: va aperto come spiega la pagina su [Excel e LibreOffice](linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md#aprire-un-csv-in-excel-senza-rovinarlo).
+    Un file con la virgola, aperto con un doppio clic su un Excel che usa `;` come separatore di elenco, un'impostazione di Windows, finisce tutto in una sola colonna. Il file non è sbagliato: va aperto come spiega la pagina su [Excel e LibreOffice](linee_guida_pubblicazione/Linee_guida_importazione_esportazione.md#aprire-un-csv-in-excel-senza-rovinarlo). Chi pubblica può aggiungere una riga nella pagina del dataset, per esempio: «Per aprire questo file in Excel usa Dati > Da testo/CSV.»
 
 ## Glossario
 

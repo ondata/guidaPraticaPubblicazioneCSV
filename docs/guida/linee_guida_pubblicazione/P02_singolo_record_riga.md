@@ -80,8 +80,8 @@ Secondo la RFC 4180 gli spazi fanno parte del valore. Un valore con spazi in mez
 
 Ogni riga finisce con caratteri invisibili, il ritorno a capo (`CR`, *carriage return*) e l'avanzamento di linea (`LF`, *line feed*). I sistemi operativi li scrivono in modo diverso:
 
-- **DOS e Windows:** `CR` seguito da `LF`, cioè `CRLF` o `\r\n`.
-- **UNIX e sistemi simili, incluso macOS:** `LF`, cioè `\n`.
+- **DOS e Windows.** `CR` seguito da `LF`, cioè `CRLF` o `\r\n`.
+- **UNIX e sistemi simili, incluso macOS.** `LF`, cioè `\n`.
 
 La RFC 4180 indica `CRLF`. Se esporti da un foglio di calcolo non devi intervenire a mano. Se un programma legge male le righe, controlla questo aspetto.
 
