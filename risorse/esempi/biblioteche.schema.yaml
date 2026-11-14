@@ -1,0 +1,17 @@
+fields:
+  - {name: codice_istat_comune, type: string, title: "Codice Istat del comune, elenco SITUAS al 2026-11-07", constraints: {required: true, pattern: "[0-9]{6}"}}
+  - {name: comune, type: string, constraints: {required: true}}
+  - {name: biblioteca, type: string, constraints: {required: true}}
+  - {name: dug, type: string, title: Denominazione urbanistica generica}
+  - {name: denominazione, type: string, title: Denominazione della strada}
+  - {name: civico, type: integer}
+  - {name: esponente, type: string}
+  - {name: cap, type: string, title: Codice di avviamento postale, constraints: {pattern: "[0-9]{5}"}}
+  - {name: telefono, type: string, constraints: {pattern: "\\+[0-9]{8,15}"}}
+  - {name: data_apertura, type: date}
+  - {name: anno, type: year, title: Anno a cui si riferiscono prestiti e spesa}
+  - {name: prestiti, type: integer, constraints: {minimum: 0}}
+  - {name: spesa_acquisti_euro, type: number, description: Spesa per acquisti di libri nell'anno in euro}
+  - {name: latitudine, type: number, description: Gradi decimali in WGS84 (EPSG 4326)}
+  - {name: longitudine, type: number, description: Gradi decimali in WGS84 (EPSG 4326)}
+missingValues: [""]
