@@ -1,5 +1,9 @@
 # Log
 
+## 2026-11-15
+
+- datos.gob.es conferma la CC BY 4.0 della guida spagnola (risposta del 13 novembre, PDF aggiornato): provenienza aggiornata in home, README e Partecipa.
+
 ## 2026-11-08
 
 - Dopo la v1.0.1: vocabolari nazionali in CSV dal repository `dati-semantic-assets`; schema.gov.it non risponde (503). Chiuse 16 issue su 17.

@@ -27,7 +27,7 @@ Puoi copiare, modificare e riusare questa guida con qualsiasi mezzo, anche per f
 - **Attribuzione.** Devi indicare chi ha scritto il materiale, dare un link alla licenza e dire se lo hai modificato, senza lasciar intendere che chi lo ha scritto approvi te o il tuo uso.
 - **Nessuna restrizione aggiuntiva.** Non puoi imporre ad altri, con termini legali o misure tecnologiche, vincoli su ciò che la licenza consente.
 
-Il testo originale è soggetto alle [condizioni di riuso di datos.gob.es](https://datos.gob.es/es/aviso-legal).
+Il testo originale è distribuito con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it), come datos.gob.es ci ha confermato il 13 novembre 2026. I diritti sono del Ministerio para la Transformación Digital y de la Función Pública, attraverso la Entidad Pública Empresarial Red.es.
 
 ## Citare questa guida
 

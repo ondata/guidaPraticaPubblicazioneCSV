@@ -10,7 +10,7 @@ Quindici regole per pubblicare dati in CSV che altri possano riusare senza dover
 
 Cita: onData (2026). *Guida pratica alla pubblicazione di dati in CSV*, versione 1.0.1. [10.5281/zenodo.24051007](https://doi.org/10.5281/zenodo.24051007)
 
-Nasce come adattamento della [guida spagnola pubblicata da datos.gob.es](https://datos.gob.es/es/conocimiento/guia-practica-para-la-publicacion-de-datos-tabulares-en-archivos-csv), scritta da Carlos de la Fuente García, che ringraziamo, ed è stata modificata e ampliata. Il testo originale è soggetto alle [condizioni di riuso di datos.gob.es](https://datos.gob.es/es/aviso-legal); l'ente che lo ha pubblicato, oggi la Secretaría de Estado de Digitalización e Inteligencia Artificial, non partecipa a questo adattamento e non lo sostiene.
+Nasce come adattamento della [guida spagnola pubblicata da datos.gob.es](https://datos.gob.es/es/conocimiento/guia-practica-para-la-publicacion-de-datos-tabulares-en-archivos-csv), scritta da Carlos de la Fuente García, che ringraziamo, ed è stata modificata e ampliata. Il testo originale è distribuito con licenza [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it). I diritti sono del Ministerio para la Transformación Digital y de la Función Pública, attraverso la Entidad Pública Empresarial Red.es, che non partecipa a questo adattamento e non lo sostiene.
 
 
 ## Partecipa
