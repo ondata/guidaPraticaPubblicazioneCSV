@@ -1,0 +1,5 @@
+codice_istat_comune,comune,biblioteca,dug,denominazione,civico,esponente,cap,telefono,data_apertura,anno,prestiti,spesa_acquisti_euro,latitudine,longitudine
+082053,Palermo,Biblioteca di esempio A,Via,Roma,10,,90133,+390910000001,1985-03-12,2023,12450,8200.50,38.1157,13.3615
+001168,None,Biblioteca di esempio B,Piazza,Cavour,1,B,10060,+390110000002,2001-09-30,2023,3120,1250.00,44.9330,7.5400
+019028,Cella Dati,Biblioteca di esempio C,Via,Garibaldi,4,,26040,,2010-01-15,2023,,300.00,45.0950,10.2230
+058091,Roma,Biblioteca di esempio D,Via,Cavour,20,,00184,+390600000004,1998-06-01,2023,20310,15400.75,41.8950,12.4950

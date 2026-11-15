@@ -1,0 +1,6 @@
+fields:
+  - {name: ISIL, type: string, constraints: {required: true, unique: true, pattern: "IT-AV[0-9]{4}"}}
+  - {name: Denominazione, type: string, constraints: {required: true}}
+  - {name: Indirizzo, type: string, constraints: {required: true}}
+  - {name: Comune, type: string, constraints: {required: true}}
+missingValues: [""]

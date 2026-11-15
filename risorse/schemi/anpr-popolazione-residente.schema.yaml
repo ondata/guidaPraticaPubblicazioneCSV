@@ -1,0 +1,8 @@
+fields:
+  - {name: DATA_ELABORAZIONE, type: date, format: "%d-%m-%Y", constraints: {required: true}}
+  - {name: REGIONE, type: string, constraints: {required: true}}
+  - {name: PROVINCIA, type: string, constraints: {required: true}}
+  - {name: COD_ISTAT_COMUNE, type: string, constraints: {required: true, unique: true, pattern: "[0-9]{6}"}}
+  - {name: COMUNE, type: string, constraints: {required: true}}
+  - {name: RESIDENTI, type: integer, constraints: {required: true, minimum: 0}}
+missingValues: [""]

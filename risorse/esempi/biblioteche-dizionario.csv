@@ -1,0 +1,16 @@
+colonna,descrizione,tipo,unita_di_misura,valori_mancanti
+codice_istat_comune,"Codice Istat del comune, elenco SITUAS al 2026-11-07",testo,,
+comune,Nome del comune,testo,,
+biblioteca,Nome della biblioteca,testo,,
+dug,Denominazione urbanistica generica,testo,,
+denominazione,Denominazione della strada,testo,,
+civico,Numero civico,numero intero,,
+esponente,Esponente del civico,testo,,cella vuota = nessun esponente
+cap,Codice di avviamento postale,testo,,
+telefono,Telefono della biblioteca in formato internazionale,testo,,cella vuota = non disponibile
+data_apertura,Data di apertura della biblioteca,data (AAAA-MM-GG),,
+anno,Anno a cui si riferiscono prestiti e spesa,anno,,
+prestiti,Prestiti effettuati nell'anno,numero intero,prestiti,cella vuota = dato non rilevato
+spesa_acquisti_euro,Spesa per acquisti di libri nell'anno,numero decimale,euro (EUR),
+latitudine,Latitudine in gradi decimali,numero decimale,gradi (WGS84 EPSG:4326),
+longitudine,Longitudine in gradi decimali,numero decimale,gradi (WGS84 EPSG:4326),
